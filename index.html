@@ -274,7 +274,7 @@ function toast(msg, type="success"){
 }
 
 // ============================================================
-//  CARRITO (persistente en localStorage)
+//  CARRITO (persistente en localStorage) CON VALIDACIÓN DE STOCK
 // ============================================================
 function cargarCarrito(){
   try {
@@ -292,8 +292,16 @@ function actualizarBadge(){
   document.getElementById("cartBadge").textContent = total;
   renderCarrito();
 }
+
 function agregarAlCarrito(producto){
+  // Verificar stock disponible
+  const stockDisponible = producto.stock || 0;
   const existente = carrito.find(i => i.id === producto.id);
+  const cantidadActual = existente ? existente.cantidad : 0;
+  if (cantidadActual + 1 > stockDisponible) {
+    toast(`❌ Solo hay ${stockDisponible} unidades disponibles de "${producto.nombre}"`, "error");
+    return;
+  }
   if(existente){
     existente.cantidad += 1;
   } else {
@@ -302,22 +310,35 @@ function agregarAlCarrito(producto){
   guardarCarrito();
   toast(`✅ ${producto.nombre} agregado al carrito`);
 }
+
 function eliminarDelCarrito(id){
   carrito = carrito.filter(i => i.id !== id);
   guardarCarrito();
   renderCarrito();
 }
+
 function cambiarCantidad(id, delta){
   const item = carrito.find(i => i.id === id);
   if(!item) return;
-  item.cantidad += delta;
-  if(item.cantidad <= 0){
+  const nuevaCant = item.cantidad + delta;
+  if (nuevaCant <= 0) {
     eliminarDelCarrito(id);
     return;
   }
+  // Verificar que no exceda el stock disponible
+  const productoOriginal = DATA.find(p => p.id === id);
+  if (productoOriginal) {
+    const stockMax = productoOriginal.stock || 0;
+    if (nuevaCant > stockMax) {
+      toast(`❌ Solo hay ${stockMax} unidades disponibles`, "error");
+      return;
+    }
+  }
+  item.cantidad = nuevaCant;
   guardarCarrito();
   renderCarrito();
 }
+
 function vaciarCarrito(){
   if(carrito.length === 0) return;
   if(!confirm("¿Vaciar el carrito?")) return;
@@ -326,9 +347,11 @@ function vaciarCarrito(){
   renderCarrito();
   toast("Carrito vaciado");
 }
+
 function totalCarrito(){
   return carrito.reduce((s,i) => s + fmtRaw(i.precio, i.moneda) * i.cantidad, 0);
 }
+
 function renderCarrito(){
   const body = document.getElementById("cartBody");
   const footer = document.getElementById("cartFooter");
@@ -443,8 +466,8 @@ function cardHTML(p, idx, mostrarTag=false){
   const hasImg = p.imagen && p.imagen.length > 0;
   const imgSrc = hasImg ? p.imagen : "";
   const imgWrap = `<div class="card-img-wrap">
-    ${hasImg ? `<img class="card-img" src="${imgSrc}" alt="${p.nombre}" loading="lazy" decoding="async" data-idx="${idx}" onerror="console.warn('Imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.card-img-ph').style.display='flex'; this.parentElement.querySelector('.card-img-ph span').textContent='❌ Imagen no disponible'; this.parentElement.querySelector('.card-img-ph small').textContent='${imgSrc}';">` : ''}
-    <div class="card-img-ph" style="display:${hasImg ? 'none' : 'flex'};" data-idx="${idx}">${IMG_PH_ICO}<span>Sin foto</span><small style="font-size:8px;opacity:0.5;word-break:break-all;">${hasImg ? imgSrc : ''}</small></div>
+    ${hasImg ? `<img class="card-img" src="${imgSrc}" alt="${p.nombre}" loading="lazy" decoding="async" data-idx="${idx}" onerror="console.warn('Imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.card-img-ph').style.display='flex';">` : ''}
+    <div class="card-img-ph" style="display:${hasImg ? 'none' : 'flex'};" data-idx="${idx}">${IMG_PH_ICO}<span>Sin foto</span></div>
   </div>`;
 
   const precio = p.precio ? `<div class="card-precio">${fmt(p.precio, p.moneda)}</div>` : `<div class="card-precio" style="font-size:12px;color:var(--suave2);">Consultar</div>`;
@@ -609,7 +632,7 @@ function limpiarBusqueda(){
 }
 
 // ============================================================
-//  MODAL
+//  MODAL (mejorado: no muestra la ruta de la imagen fallida)
 // ============================================================
 let _modalProducto = null;
 function abrirModal(p){
@@ -629,9 +652,12 @@ function abrirModal(p){
   const imgSrc = hasImg ? p.imagen : "";
   const wrap = document.getElementById("mImgWrap");
   wrap.innerHTML = `
-    <div style="position:relative;">
-      ${hasImg ? `<img class="modal-img" src="${imgSrc}" alt="${p.nombre}" loading="lazy" onerror="console.warn('Modal: imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.modal-img-ph').style.display='flex'; this.parentElement.querySelector('.modal-img-ph span').textContent='❌ Imagen no disponible'; this.parentElement.querySelector('.modal-img-ph small').textContent='${imgSrc}';"` : ''}
-      <div class="modal-img-ph" style="display:${hasImg ? 'none' : 'flex'};">${IMG_PH_ICO}<span>Sin foto</span><small style="font-size:9px;opacity:0.5;word-break:break-all;">${hasImg ? imgSrc : ''}</small></div>
+    <div style="position:relative; width:100%; aspect-ratio:1/1; background:#fbfbfc; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+      ${hasImg ? `<img class="modal-img" src="${imgSrc}" alt="${p.nombre}" loading="lazy" style="max-height:100%; max-width:100%; object-fit:contain;" onerror="console.warn('❌ Modal: imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.modal-img-ph').style.display='flex';">` : ''}
+      <div class="modal-img-ph" style="display:${hasImg ? 'none' : 'flex'}; flex-direction:column; align-items:center; gap:6px; color:var(--suave2);">
+        ${IMG_PH_ICO}
+        <span style="font-size:13px; font-weight:600;">${hasImg ? '❌ Imagen no disponible' : 'Sin foto'}</span>
+      </div>
     </div>
   `;
 
@@ -691,12 +717,10 @@ if ("serviceWorker" in navigator) {
       if (reg.waiting) {
         reg.waiting.postMessage({ type: "SKIP_WAITING" });
       }
-      // Si hay una actualización, recarga automáticamente
       reg.addEventListener("updatefound", () => {
         const newWorker = reg.installing;
         newWorker.addEventListener("statechange", () => {
           if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-            // Nueva versión disponible, recargar para activar
             if (confirm("Nueva versión disponible. ¿Recargar ahora?")) {
               window.location.reload();
             }
