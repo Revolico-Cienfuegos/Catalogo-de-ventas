@@ -1,45 +1,5 @@
 [
   {
-    "id": "p_1782960062127",
-    "categoria": "electricidad",
-    "nombre": "🔥 Transfer automático AC 110V 125A/2P 🔥",
-    "precio": "45",
-    "moneda": "USD",
-    "stock": 1,
-    "descripcion": "🛡️ Garantía no tiene es nuevo en caja\n🚚 ¡DOMICILIO GRATIS en la ciudad de Cienfuegos!",
-    "imagen": "imagenes/transfer-automatico-ac-110v-125a-2p-1783019238159.jpeg"
-  },
-  {
-    "id": "p_1782960207079",
-    "categoria": "solar",
-    "nombre": "🔥 Inversor de corriente de 12V a 110V Potencia 2500W pico 5000W 🔥",
-    "precio": "220",
-    "moneda": "USD",
-    "stock": 2,
-    "descripcion": "✅ Onda pura\n✅ Pantalla frontal muestra Voltaje de batería, Voltaje de salida y Consumo en W\n🛡️ Garantía no tiene es nuevo en caja y se deja probado\n🚚 ¡DOMICILIO GRATIS en la ciudad de Cienfuegos!",
-    "imagen": "imagenes/inversor-de-corriente-de-12v-a-110v-potencia-2500w-pico-5000w-1783019272506.jpeg"
-  },
-  {
-    "id": "p_1782960277527",
-    "categoria": "moviles",
-    "nombre": "🔥 Powerbank o Cargador portátil de 10000 mAh 🔥",
-    "precio": "10",
-    "moneda": "USD",
-    "stock": 1,
-    "descripcion": "✅ 2 puertos de salida USB\n✅ Entrada de carga Tipo C\n🛡️ Garantía 72 horas solo la batería\n🚚 ¡DOMICILIO GRATIS en la ciudad de Cienfuegos!",
-    "imagen": "imagenes/powerbank-o-cargador-portatil-de-10000-mah-1783019293274.jpeg"
-  },
-  {
-    "id": "p_1782960362678",
-    "categoria": "electrodomesticos",
-    "nombre": "🔥 Olla de presión marca SACO 🔥",
-    "precio": "40",
-    "moneda": "USD",
-    "stock": 3,
-    "descripcion": "✅ 5 litros\n✅ Sirve para inducción\n🛡️ Garantía de 7 días\n🚚 ¡DOMICILIO GRATIS en la ciudad de Cienfuegos!",
-    "imagen": "imagenes/olla-de-presion-marca-saco-1783019310523.jpeg"
-  },
-  {
     "id": "p_1782960461783",
     "categoria": "audio",
     "nombre": "🔥 Bocina Bluetooth Portátil marca SACO (30W) 🔥",
