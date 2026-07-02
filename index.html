@@ -539,7 +539,6 @@ function renderBusqueda(q){
 
   const ql = q.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
   const res = DATA.map((p,idx)=>({p,idx})).filter(({p})=>{
-    // Ahora incluimos también el precio y la moneda
     const hay = `${p.nombre} ${p.descripcion||""} ${nombreCat(p.categoria)} ${p.precio||""} ${p.moneda||""}`.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
     return hay.includes(ql);
   });
@@ -626,7 +625,6 @@ function abrirModal(p){
   document.getElementById("mStock").innerHTML = stockHTML;
   document.getElementById("mDesc").textContent = p.descripcion||"";
 
-  // Imagen con placeholder robusto y consola de error
   const hasImg = p.imagen && p.imagen.length > 0;
   const imgSrc = hasImg ? p.imagen : "";
   const wrap = document.getElementById("mImgWrap");
@@ -686,21 +684,42 @@ document.getElementById("headerContact").addEventListener("click", ()=>openWA("H
 // ============================================================
 cargarCarrito();
 
-fetch("productos.json?_="+Date.now())
-  .then(r=>r.json())
-  .then(data=>{
-    DATA = Array.isArray(data)?data:[];
+// Forzar actualización del service worker
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(reg => {
+      if (reg.waiting) {
+        reg.waiting.postMessage({ type: "SKIP_WAITING" });
+      }
+      // Si hay una actualización, recarga automáticamente
+      reg.addEventListener("updatefound", () => {
+        const newWorker = reg.installing;
+        newWorker.addEventListener("statechange", () => {
+          if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+            // Nueva versión disponible, recargar para activar
+            if (confirm("Nueva versión disponible. ¿Recargar ahora?")) {
+              window.location.reload();
+            }
+          }
+        });
+      });
+    })
+    .catch(() => {});
+}
+
+// Cargar productos
+fetch("productos.json?_=" + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    DATA = Array.isArray(data) ? data : [];
     buildCatsNav();
     renderCatalogo();
   })
-  .catch(()=>{
-    document.getElementById("skeletons").style.display="none";
-    document.getElementById("vacio").style.display="block";
-    document.getElementById("vacio").innerHTML='<div class="ico">⚠️</div><div>No se pudieron cargar los productos.<br>Verifica tu conexión.</div>';
+  .catch(() => {
+    document.getElementById("skeletons").style.display = "none";
+    document.getElementById("vacio").style.display = "block";
+    document.getElementById("vacio").innerHTML = '<div class="ico">⚠️</div><div>No se pudieron cargar los productos.<br>Verifica tu conexión.</div>';
   });
-
-if("serviceWorker" in navigator)
-  window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 </script>
 </body>
 </html>
