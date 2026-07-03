@@ -157,7 +157,7 @@
   </div>
 </div>
 
-<!-- ===== FORMULARIO DE PEDIDO (con método de pago) ===== -->
+<!-- ===== FORMULARIO DE PEDIDO (PLANILLA) ===== -->
 <div class="order-form-overlay" id="orderFormOverlay">
   <div class="order-form" id="orderForm">
     <h3>📋 Completá tu pedido</h3>
@@ -234,7 +234,7 @@ const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
 // ============================================================
 let DATA = [];
 let catActiva = "todas";
-let monedaActual = "MN"; // <--- MONEDA POR DEFECTO: MN
+let monedaActual = "MN"; // MONEDA POR DEFECTO: MN
 let carrito = [];
 
 // ============================================================
@@ -388,7 +388,7 @@ document.getElementById("cartOverlay").addEventListener("click", (e)=>{
 document.getElementById("cartClear").addEventListener("click", vaciarCarrito);
 
 // ============================================================
-//  FORMULARIO DE PEDIDO (con método de pago)
+//  FORMULARIO DE PEDIDO (PLANILLA) con método de pago
 // ============================================================
 document.getElementById("cartCheckout").addEventListener("click", ()=>{
   if(carrito.length === 0){ toast("El carrito está vacío", "error"); return; }
