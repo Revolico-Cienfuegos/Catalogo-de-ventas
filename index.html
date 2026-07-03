@@ -112,7 +112,7 @@
   </div>
 </footer>
 
-<!-- ===== MODAL PRODUCTO (mejorado) ===== -->
+<!-- ===== MODAL PRODUCTO ===== -->
 <div class="overlay" id="overlay">
   <div class="modal" id="modal">
     <div class="modal-drag"></div>
@@ -651,6 +651,62 @@ function pedirProducto(p){
 }
 
 // ============================================================
+//  CARGA DE PRODUCTOS (con fallback a localStorage y manejo de errores)
+// ============================================================
+function cargarProductos(){
+  // Intentar cargar desde localStorage primero (en caso de que el admin haya guardado)
+  const local = localStorage.getItem("vc_admin_productos");
+  if(local) {
+    try {
+      const datos = JSON.parse(local);
+      if(Array.isArray(datos) && datos.length > 0) {
+        DATA = datos;
+        buildCatsNav();
+        renderCatalogo();
+        console.log("✅ Productos cargados desde localStorage (fallback)");
+        return;
+      }
+    } catch(e) {}
+  }
+
+  // Si no hay localStorage, cargar desde el servidor
+  const url = "productos.json?_=" + Date.now();
+  fetch(url, { 
+    cache: "no-store",
+    headers: { "Cache-Control": "no-cache" }
+  })
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status} - ${res.statusText}`);
+      return res.json();
+    })
+    .then(data => {
+      if (Array.isArray(data) && data.length > 0) {
+        DATA = data;
+        // Guardar en localStorage como respaldo
+        localStorage.setItem("vc_admin_productos", JSON.stringify(DATA));
+        buildCatsNav();
+        renderCatalogo();
+        console.log("✅ Productos cargados desde el servidor");
+      } else {
+        throw new Error("El archivo productos.json está vacío o no es válido");
+      }
+    })
+    .catch(err => {
+      console.error("❌ Error cargando productos:", err);
+      // Mostrar mensaje amigable
+      document.getElementById("skeletons").style.display = "none";
+      document.getElementById("vacio").style.display = "block";
+      document.getElementById("vacio").innerHTML = `
+        <div class="ico">⚠️</div>
+        <div style="font-weight:600; margin-bottom:6px;">No se pudieron cargar los productos.</div>
+        <div style="font-size:13px; color:var(--suave);">Verifica tu conexión o que el archivo <code>productos.json</code> exista en el servidor.</div>
+        <div style="font-size:12px; margin-top:8px; color:var(--suave2);">Error: ${err.message || "Desconocido"}</div>
+        <button onclick="location.reload()" style="margin-top:12px; padding:8px 20px; background:var(--azul); color:#fff; border:none; border-radius:6px; font-weight:700; cursor:pointer;">Recargar</button>
+      `;
+    });
+}
+
+// ============================================================
 //  FOOTER & CONTACTOS
 // ============================================================
 document.getElementById("anioActual").textContent = new Date().getFullYear();
@@ -659,7 +715,7 @@ document.getElementById("footerWA").addEventListener("click", e=>{ e.preventDefa
 document.getElementById("headerContact").addEventListener("click", ()=>openWA("Hola, quisiera más información sobre sus productos."));
 
 // ============================================================
-//  CARGA INICIAL
+//  INICIO
 // ============================================================
 cargarCarrito();
 
@@ -667,18 +723,8 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
 
-fetch("productos.json?_=" + Date.now())
-  .then(r => r.json())
-  .then(data => {
-    DATA = Array.isArray(data) ? data : [];
-    buildCatsNav();
-    renderCatalogo();
-  })
-  .catch(() => {
-    document.getElementById("skeletons").style.display = "none";
-    document.getElementById("vacio").style.display = "block";
-    document.getElementById("vacio").innerHTML = '<div class="ico">⚠️</div><div>No se pudieron cargar los productos.<br>Verifica tu conexión.</div>';
-  });
+// Cargar productos
+cargarProductos();
 </script>
 </body>
 </html>

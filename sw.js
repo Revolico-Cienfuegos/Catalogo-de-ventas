@@ -1,4 +1,4 @@
-const CACHE = "vc-v4"; // Cambio de versión para forzar actualización
+const CACHE = "vc-v5"; // Cambio de versión para forzar actualización
 const ASSETS = [
   "./index.html",
   "./admin-vc.html",
@@ -26,17 +26,22 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   const url = e.request.url;
 
-  // Para productos.json: siempre ir a la red primero, caché como fallback
+  // Para productos.json: siempre ir a la red, y si falla, devolver un array vacío
   if (url.includes("productos.json")) {
     e.respondWith(
-      fetch(e.request, { cache: "no-cache" })
+      fetch(e.request, { cache: "no-store" })
         .then(res => {
-          // Actualizar caché con la nueva respuesta
+          // Clonar y cachear para futuros fallos
           const clone = res.clone();
           caches.open(CACHE).then(c => c.put(e.request, clone));
           return res;
         })
-        .catch(() => caches.match(e.request))
+        .catch(() => {
+          // Si la red falla, devolver un JSON vacío en lugar de error
+          return new Response(JSON.stringify([]), {
+            headers: { "Content-Type": "application/json" }
+          });
+        })
     );
     return;
   }
