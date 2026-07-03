@@ -56,7 +56,7 @@
     "precio": "55",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "Transfer-03.jpeg"
+    "imagen": "imagenes/Transfer-03.jpeg"
   },
   {
     "id": "p_1783046581974",
@@ -65,7 +65,7 @@
     "precio": "60",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "Transfer-04.jpeg"
+    "imagen": "imagenes/Transfer-04.jpeg"
   },
   {
     "id": "p_1783046626189",
@@ -74,7 +74,7 @@
     "precio": "9",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía 72 horas",
-    "imagen": "ProtectorV-01.jpeg"
+    "imagen": "imagenes/ProtectorV-01.jpeg"
   },
   {
     "id": "p_1783046660589",
@@ -83,7 +83,7 @@
     "precio": "10",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía 72 horas",
-    "imagen": "ProtectorV-02.jpeg"
+    "imagen": "imagenes/ProtectorV-02.jpeg"
   },
   {
     "id": "p_1783046879692",
@@ -92,7 +92,7 @@
     "precio": "12",
     "moneda": "USD",
     "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
-    "imagen": "1.jpeg"
+    "imagen": "imagenes/1.jpeg"
   },
   {
     "id": "p_1783046915508",
@@ -101,7 +101,7 @@
     "precio": "18",
     "moneda": "USD",
     "descripcion": "✅ 120V/240V\n🛡️ Garantía no tiene",
-    "imagen": "1.jpeg"
+    "imagen": "imagenes/1.jpeg"
   },
   {
     "id": "p_1783046977069",
@@ -110,7 +110,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
-    "imagen": "1.jpeg"
+    "imagen": "imagenes/1.jpeg"
   },
   {
     "id": "p_1783047030164",
@@ -119,7 +119,7 @@
     "precio": "13",
     "moneda": "USD",
     "descripcion": "💵 Caja de 6 a 10 USD cada pieza\n🛡️ Garantía no tiene",
-    "imagen": "2.jpeg"
+    "imagen": "imagenes/2.jpeg"
   },
   {
     "id": "p_1783047030164",
@@ -128,7 +128,7 @@
     "precio": "16",
     "moneda": "USD",
     "descripcion": "💵 Caja de 6 a 12 USD cada pieza\n🛡️ Garantía no tiene",
-    "imagen": "2.jpeg"
+    "imagen": "imagenes/2.jpeg"
   },
   {
     "id": "p_1783047123853",
@@ -137,7 +137,7 @@
     "precio": "10",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene",
-    "imagen": "3.jpeg"
+    "imagen": "imagenes/3.jpeg"
   },
   {
     "id": "p_1783047170771",
@@ -146,7 +146,7 @@
     "precio": "10",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "22.jpeg"
+    "imagen": "imagenes/22.jpeg"
   },
   {
     "id": "p_1783047303236",
@@ -155,7 +155,7 @@
     "precio": "220",
     "moneda": "USD",
     "descripcion": "✅ Onda pura\n✅ Pantalla frontal muestra Voltaje de batería, Voltaje de salida y Consumo en W\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "Inversor-01.jpeg"
+    "imagen": "imagenes/Inversor-01.jpeg"
   },
   {
     "id": "p_1783047395563",
@@ -164,7 +164,7 @@
     "precio": "160",
     "moneda": "USD",
     "descripcion": "✅ Onda Pura\n✅ Potencia máxima 4000W / Potencia nominal 2000W\n✅ Levanta perfecto neveras, refrigerador, etc.\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "Inversor-02.jpeg"
+    "imagen": "imagenes/Inversor-02.jpeg"
   },
   {
     "id": "p_1783047515435",
@@ -173,7 +173,7 @@
     "precio": "200",
     "moneda": "USD",
     "descripcion": "✅ Onda pura\n✅ Pantalla frontal muestra Voltaje de batería, Voltaje de salida y Consumo en W\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "Inversor-05.jpeg"
+    "imagen": "imagenes/Inversor-05.jpeg"
   },
   {
     "id": "p_1783047586619",
@@ -182,7 +182,7 @@
     "precio": "150",
     "moneda": "USD",
     "descripcion": "✅ Onda Pura\n✅ Pantalla frontal muestra Voltaje de batería, Voltaje de salida y Consumo en W\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "Inversor-03.jpeg"
+    "imagen": "imagenes/Inversor-03.jpeg"
   },
   {
     "id": "p_1783047724563",
@@ -191,7 +191,7 @@
     "precio": "135",
     "moneda": "USD",
     "descripcion": "✅Para motorina\n✅ Onda Pura\n✅ Ideal para quien tiene motorina o triciclos y quiere alimentar la casa\n✅ Levanta refrigerador, nevera, luces, TV, etc.\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "Inversor-04.jpeg"
+    "imagen": "imagenes/Inversor-04.jpeg"
   },
   {
     "id": "p_1783047912138",
@@ -200,7 +200,7 @@
     "precio": "180",
     "moneda": "USD",
     "descripcion": "✅ PV INPUT 12-60VDC/30A, MAX CHARGE CURRENT 15A\n✅ POWER MAX 1200W\n✅ Baterías compatibles 48V, 60V y 72V\n✅ Incluye conector MC4 para los cables de entrada del panel solar\n✅ Regalo con la compra: breaker DC 32A y 2 conectores MC4\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "ControladorS-01.jpeg"
+    "imagen": "imagenes/ControladorS-01.jpeg"
   },
   {
     "id": "p_1783048072042",
@@ -209,7 +209,7 @@
     "precio": "200",
     "moneda": "USD",
     "descripcion": "✅ No sirve para baterías ni de ácido ni de gel, solo LiFeP04\n🛡️ Garantía 3 días",
-    "imagen": "Cargador Int-01.jpeg"
+    "imagen": "imagenes/Cargador Int-01.jpeg"
   },
   {
     "id": "p_1783048211857",
@@ -218,7 +218,7 @@
     "precio": "125",
     "moneda": "USD",
     "descripcion": "✅ Baterías Autos, Motos, AGM, GEL, LiFeP04\n🛡️ Garantía 3 días",
-    "imagen": "Cargador Int-02.jpeg"
+    "imagen": "imagenes/Cargador Int-02.jpeg"
   },
   {
     "id": "p_1783048274914",
@@ -227,7 +227,7 @@
     "precio": "75",
     "moneda": "USD",
     "descripcion": "✅ No sirve para baterías ni de ácido ni de gel, solo LiFeP04\n🛡️ Garantía 3 días",
-    "imagen": "Cargador Int-03.jpeg"
+    "imagen": "imagenes/Cargador Int-03.jpeg"
   },
   {
     "id": "p_1783048309458",
@@ -236,7 +236,7 @@
     "precio": "70",
     "moneda": "USD",
     "descripcion": "✅ Baterías Autos, Motos, AGM, GEL, LiFeP04\n🛡️ Garantía 3 días",
-    "imagen": "Cargador Int-04.jpeg"
+    "imagen": "imagenes/Cargador Int-04.jpeg"
   },
   {
     "id": "p_1783048348826",
@@ -245,7 +245,7 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "✅ Baterías Autos, Motos, AGM, GEL, LiFeP04\n🛡️ Garantía 3 días",
-    "imagen": "Cargador Int-05.jpeg"
+    "imagen": "imagenes/Cargador Int-05.jpeg"
   },
   {
     "id": "p_1783048392577",
@@ -254,7 +254,7 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅ Baterías Autos, Motos, AGM, GEL, LiFeP04\n🛡️ Garantía 72 horas",
-    "imagen": "Cargador Int-06.jpeg"
+    "imagen": "imagenes/Cargador Int-06.jpeg"
   },
   {
     "id": "p_1783048419218",
@@ -263,7 +263,7 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "4.jpeg"
+    "imagen": "imagenes/4.jpeg"
   },
   {
     "id": "p_1783048528137",
@@ -272,7 +272,7 @@
     "precio": "4",
     "moneda": "USD",
     "descripcion": "✅ Por cantidad de 5 o más: 💵 Precio por unidad 3 USD\n✅ Por cantidad de 10 o más: 💵 Precio por unidad 2.50 USD\n🛡️ Garantía no tiene",
-    "imagen": "Conector-01.jpeg"
+    "imagen": "imagenes/Conector-01.jpeg"
   },
   {
     "id": "p_1783048565298",
@@ -281,7 +281,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅ Se conecta del ECOFLOW a los cables de paneles solares\n✅ Longitud 30cm\n✅ Material del núcleo cobre puro\n✅ Calibre 10AWG, 6mm²\n✅ Corriente continua 30A y pico de 60A\n🛡️ Garantía no tien",
-    "imagen": "Cable-01.jpeg"
+    "imagen": "imagenes/Cable-01.jpeg"
   },
   {
     "id": "p_1783048601601",
@@ -290,7 +290,7 @@
     "precio": "25",
     "moneda": "USD",
     "descripcion": "✅ Compatibles con muchos modelos de estaciones de carga\n✅ Tamaño 60 cm\n🛡️ Garantía no tiene es nuevo",
-    "imagen": "Cable-03.jpeg"
+    "imagen": "imagenes/Cable-03.jpeg"
   },
   {
     "id": "p_1783048674424",
@@ -299,7 +299,7 @@
     "precio": "5",
     "moneda": "USD",
     "descripcion": "✅ Voltaje de salida 5V, 9V y 12V\n✅ Entrada USB 5V\n🛡️ Garantía se deja probado",
-    "imagen": "Cable-02.jpeg"
+    "imagen": "imagenes/Cable-02.jpeg"
   },
   {
     "id": "p_1783048730513",
@@ -308,7 +308,7 @@
     "precio": "10",
     "moneda": "USD",
     "descripcion": "✅ 2 puertos de salida USB\n✅ Entrada de carga Tipo C\n🛡️ Garantía 72 horas solo la batería",
-    "imagen": "Powerbank-01.jpeg"
+    "imagen": "imagenes/Powerbank-01.jpeg"
   },
   {
     "id": "p_1783048763769",
@@ -317,7 +317,7 @@
     "precio": "18",
     "moneda": "USD",
     "descripcion": "✅ 2 puertos de salida USB\n✅ Puertos de entrada Tipo C y V8\n✅ Colores negro y blanco\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "Powerbank-02.jpeg"
+    "imagen": "imagenes/Powerbank-02.jpeg"
   },
   {
     "id": "p_1783048795130",
@@ -326,7 +326,7 @@
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB\n✅ Entrada tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "Powerbank-03.jpeg"
+    "imagen": "imagenes/Powerbank-03.jpeg"
   },
   {
     "id": "p_1783048828512",
@@ -335,7 +335,7 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ Panel solar\n✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB, 1 puerto salida Tipo C\n✅ Puertos de entrada Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "Powerbank-04.jpeg"
+    "imagen": "imagenes/Powerbank-04.jpeg"
   },
   {
     "id": "p_1783048948857",
@@ -344,7 +344,7 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "Powerbank-05.jpeg"
+    "imagen": "imagenes/Powerbank-05.jpeg"
   },
   {
     "id": "p_1783049043720",
@@ -353,7 +353,7 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ 4 Puertos USB\n✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 4 puertos de salida USB, 1 puerto de salida Tipo C\n✅ Entrada de carga Tipo C, Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "Powerbank-06.jpeg"
+    "imagen": "imagenes/Powerbank-06.jpeg"
   },
   {
     "id": "p_1783049159441",
@@ -362,7 +362,7 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 4 puertos de salida USB, 1 puerto salida Tipo C\n✅ Puertos de entrada Tipo C y V8\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "Powerbank-07.jpeg"
+    "imagen": "imagenes/Powerbank-07.jpeg"
   },
   {
     "id": "p_1783049308928",
@@ -371,7 +371,7 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅Con panel solar\n✅ Panel solar\n✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 4 puertos de salida USB, 1 puerto salida Tipo C\n✅ Puertos de entrada Tipo C y V8\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "Powerbank-08.jpeg"
+    "imagen": "imagenes/Powerbank-08.jpeg"
   },
   {
     "id": "p_1783049376055",
@@ -380,7 +380,7 @@
     "precio": "10",
     "moneda": "USD",
     "descripcion": "✅ 2 Salidas: 1 USB y 1 Tipo C\n✅ Incluye 2 cables: uno Tipo C - Tipo C y otro USB - V8\n🛡️ Garantía no tiene es nuevo y se deja probado",
-    "imagen": "5.jpeg"
+    "imagen": "imagenes/5.jpeg"
   },
   {
     "id": "p_1783049488158",
@@ -389,7 +389,7 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ 5 litros\n✅ Sirve para inducción\n🛡️ Garantía de 7 días",
-    "imagen": "Olla-01.jpeg"
+    "imagen": "imagenes/Olla-01.jpeg"
   },
   {
     "id": "p_1783049634591",
@@ -398,7 +398,7 @@
     "precio": "60",
     "moneda": "USD",
     "descripcion": "✅ Botones táctiles\n✅ Modos de arroz, hot pot, potaje y sopa\n✅ Colores: negro, piel, amarillo, gris\n✅ Potencia de 350W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
-    "imagen": "Olla-02.jpeg"
+    "imagen": "imagenes/Olla-02.jpeg"
   },
   {
     "id": "p_1783049661623",
@@ -407,7 +407,7 @@
     "precio": "70",
     "moneda": "USD",
     "descripcion": "✅ Color: blanco y verde\n✅ Potencia de 500-900W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
-    "imagen": "Olla-03.jpeg"
+    "imagen": "imagenes/Olla-03.jpeg"
   },
   {
     "id": "p_1783049798207",
@@ -416,7 +416,7 @@
     "precio": "32",
     "moneda": "USD",
     "descripcion": "✅ Sirve para inducción\n✅ Incluye plato de cocinar al vapor\n🛡️ Garantía 7 días",
-    "imagen": "Olla-05.jpeg"
+    "imagen": "imagenes/Olla-05.jpeg"
   },
   {
     "id": "p_1783049829894",
@@ -425,7 +425,7 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ 2 resistencias\n✅ Potencia 2000 W\n✅ Color negro y blanco\n🛡️ Garantía 7 días",
-    "imagen": "Hornilla-01.jpeg"
+    "imagen": "imagenes/Hornilla-01.jpeg"
   },
   {
     "id": "p_1783049864886",
@@ -434,7 +434,7 @@
     "precio": "16",
     "moneda": "USD",
     "descripcion": "✅ Potencia 1000W\n✅ Color blanco y negro\n🛡️ Garantía 7 días",
-    "imagen": "Hornilla-02.jpeg"
+    "imagen": "imagenes/Hornilla-02.jpeg"
   },
   {
     "id": "p_1783049900310",
@@ -443,7 +443,7 @@
     "precio": "6",
     "moneda": "USD",
     "descripcion": "✅ 4 vueltas\n✅ Diámetro 14.7 cm\n🛡️ Garantía 72 horas",
-    "imagen": "resistencia.jpeg"
+    "imagen": "imagenes/resistencia.jpeg"
   },
   {
     "id": "p_1783049936542",
@@ -452,7 +452,7 @@
     "precio": "60",
     "moneda": "USD",
     "descripcion": "✅ Capacidad 3 litros\n✅ Consumo 1500 W\n✅ Control de temperatura hasta 190°\n✅ Olla desmontable de fácil limpieza\n🛡️ Garantía 3 días",
-    "imagen": "freitera.jpeg"
+    "imagen": "imagenes/freitera.jpeg"
   },
   {
     "id": "p_1783050069173",
@@ -461,7 +461,7 @@
     "precio": "12",
     "moneda": "USD",
     "descripcion": "✅ Duración 4 horas\n🛡️ Garantía no tiene es nuevo y se deja probado",
-    "imagen": "16.jpeg"
+    "imagen": "imagenes/16.jpeg"
   },
   {
     "id": "p_1783050113677",
@@ -470,7 +470,7 @@
     "precio": "25",
     "moneda": "USD",
     "descripcion": "✅ Capacidad máxima 50 kg\n✅ Material Acero laminado en frío\n🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "6.jpeg"
+    "imagen": "imagenes/6.jpeg"
   }
  {
     "id": "p_1783048291308",
@@ -479,7 +479,7 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ Compatible con impresoras Canon, Epson y HP\n🛡️ Garantía no tiene, el cliente debe saber utilizarla e informarle, no nos hacemos responsables",
-    "imagen": "8.jpeg"
+    "imagen": "imagenes/8.jpeg"
   },
   {
     "id": "p_1783048351870",
@@ -488,7 +488,7 @@
     "precio": "7",
     "moneda": "USD",
     "descripcion": "✅ 32 tonos de timbre\n✅ Batería 23A de 12V que puede durar 1 año con 20 pulsaciones por día o más si se utiliza menos\n✅ La parte que va afuera de la casa es de pilas y la de adentro que suena se conecta a un toma corriente de 110V (no es recargable)\n🛡️ Garantía no tiene es nuevo y se deja probado",
-    "imagen": "9.jpeg"
+    "imagen": "imagenes/9.jpeg"
   },
   {
     "id": "p_1783048415900",
@@ -497,7 +497,7 @@
     "precio": "100",
     "moneda": "USD",
     "descripcion": "✅ Monedas USD, EUR, CAD, MXN, etc.\n✅ Tiene batería recargable de litio para uso portátil\n✅ Pantalla táctil\n✅ Funciona como contadora de billetes\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "15.jpeg"
+    "imagen": "imagenes/15.jpeg"
   },
   {
     "id": "p_1783048566252",
@@ -506,7 +506,7 @@
     "precio": "60",
     "moneda": "USD",
     "descripcion": "✅ Hasta 40 KG\n✅ Tiene baterías recargables\n✅ Pantalla a ambos lados para que el cliente también pueda ver\n✅ Nuevas en caja\n🛡️ Garantía de 72 horas solo la batería, todo lo demás debe revisarlo al momento de la entrega",
-    "imagen": "Pesa-01.jpeg"
+    "imagen": "imagenes/Pesa-01.jpeg"
   },
   {
     "id": "p_1783048621828",
@@ -515,7 +515,7 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅ Máximo hasta 150 PSI\n✅ Es recargable\n✅ Compatible con autos, motos, bicicletas, balones, etc.\n✅ Se puede cargar con 5V puerto tipo C y 12V con entrada de autos\n✅ Accesorios: trae boquillas, cables de carga tipo C y de 12V auto, y funda para guardarlo\n🛡️ Garantía es nuevo en caja y se deja probado",
-    "imagen": "Compresor-01.jpeg"
+    "imagen": "imagenes/Compresor-01.jpeg"
   },
   {
     "id": "p_1783048732268",
@@ -524,7 +524,7 @@
     "precio": "25",
     "moneda": "USD",
     "descripcion": "✅ Entrada 12 V\n✅ Permite medir aire\n✅ Permite configurar la cantidad de aire que llevan las gomas para que cuando se llenen se detenga automáticamente\n✅ Trae múltiples boquillas\n✅ Hasta 125 psi\n🛡️ Garantía se deja probado",
-    "imagen": "Compresor-02.jpeg"
+    "imagen": "imagenes/Compresor-02.jpeg"
   },
   {
     "id": "p_1783048779413",
@@ -533,7 +533,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅ Batería de litio\n🛡️ Garantía no tiene es nuevo y se deja probado",
-    "imagen": "10.jpeg"
+    "imagen": "imagenes/10.jpeg"
   },
   {
     "id": "p_1783048825412",
@@ -542,7 +542,7 @@
     "precio": "12",
     "moneda": "USD",
     "descripcion": "✅ Incluye pilas de repuesto\n✅ Ideal para poner en disco de freno de motos o triciclos\n🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "Candado-01.jpeg"
+    "imagen": "imagenes/Candado-01.jpeg"
   },
   {
     "id": "p_1783048934333",
@@ -551,7 +551,7 @@
     "precio": "60",
     "moneda": "USD",
     "descripcion": "✅ Sistema de arranque automático con sensor de flujo\n✅ Entrada y salida de ½\n🛡️ Garantía 3 días",
-    "imagen": "21.jpeg"
+    "imagen": "imagenes/21.jpeg"
   },
   {
     "id": "p_1783049047732",
@@ -560,7 +560,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅ Duración de carga 5 horas aproximadamente\n✅ Baterías de litio 10000 mAh\n✅ Panel solar para cargar\n✅ 5 niveles de luz a seleccionar\n✅ Funciona como powerbank\n✅ Tiene soporte ajustable y para engancharla\n✅ Incluye cable USB para cargarla\n✅ Dimensiones 17x15 cm\n🛡️ Garantía 72 horas",
-    "imagen": "Lámpara-02.jpeg"
+    "imagen": "imagenes/Lámpara-02.jpeg"
   },
   {
     "id": "p_1783049199860",
@@ -569,7 +569,7 @@
     "precio": "12",
     "moneda": "USD",
     "descripcion": "✅ Duración de carga de 6 a 7 horas aproximadamente\n✅ Baterías de litio\n✅ Panel solar para cargar\n✅ Linterna de un lado\n✅ Funciona como powerbank\n✅ Dimensiones 15x11 cm\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "Lámpara-03.jpeg"
+    "imagen": "imagenes/Lámpara-03.jpeg"
   },
   {
     "id": "p_1783049420244",
@@ -578,7 +578,7 @@
     "precio": "22",
     "moneda": "USD",
     "descripcion": "✅ Duración de carga 5 horas aproximadamente\n✅ Baterías de litio 12000 mAh\n✅ Panel solar para cargar\n✅ Varios niveles de luz\n✅ Funciona como powerbank\n✅ Tiene soporte, para engancharla e imanes\n✅ Incluye cable USB para cargarla\n✅ Dimensiones 21x17 cm\n🛡️ Garantía 72 horas solo la batería",
-    "imagen": "Lámpara-04.jpeg"
+    "imagen": "imagenes/Lámpara-04.jpeg"
   },
   {
     "id": "p_1783049545283",
@@ -587,7 +587,7 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "✅ Dimensiones 22 x 52 cm\n✅ No se conectan a la corriente, solo al panel\n✅ Cogen carga en el día y la batería dura toda la noche\n✅ Tienen sensor de movimiento\n✅ Tienen mando a distancia y pilas\n✅ Incluye panel solar\n✅ Se pueden poner a la intemperie, o sea se pueden mojar\n🛡️ Garantía 3 días",
-    "imagen": "Lámpara-05.jpeg"
+    "imagen": "imagenes/Lámpara-05.jpeg"
   },
   {
     "id": "p_1783049686956",
@@ -596,7 +596,7 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅ 2 Bocinas de 4 pulgadas con salida 16 W\n✅ Incluye micrófono y mando a distancia\n✅ Tarjeta SD de hasta 32 GB\n✅ Batería 1500 mAh para una duración de 2 a 3 horas dependiendo del volumen\n✅ Tamaño 17 x 15 x 40.7 cm\n🛡️ No tiene garantía, son nuevas y se le dejan probadas al cliente",
-    "imagen": "Bocina-02.jpeg"
+    "imagen": "imagenes/Bocina-02.jpeg"
   },
   {
     "id": "p_1783049891723",
@@ -605,7 +605,7 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "✅ Alta calidad de audio\n✅ 2 Bocinas de 12W\n✅ Super calidad de audio\n✅ Bluetooth\n✅ Tarjeta SD de hasta 32 GB\n✅ Entrada USB\n✅ Batería 3600 mAh para una duración de 3 horas o más dependiendo del volumen\n✅ Tamaño 12 x 12 x 28 cm\n✅ Colores: Rojo, Negro, Gris, Naranja y Azul\n💵 Precio 50 USD\n🛡️ No tiene garantía, son nuevas y se le dejan probadas al cliente",
-    "imagen": "Bocina-05.jpeg"
+    "imagen": "imagenes/Bocina-05.jpeg"
   },
   {
     "id": "p_1783049941060",
@@ -614,7 +614,7 @@
     "precio": "10",
     "moneda": "USD",
     "descripcion": "✅ Bocina de 3 pulgadas\n✅ Salida 5 W\n✅ Bluetooth\n✅ Tarjeta SD de hasta 32 GB\n✅ Batería 1500 mAh, duración en dependencia del volumen\n✅ Tamaño 10 x 8 x 14 cm\n🛡️ No tiene garantía, son nuevas y se le dejan probadas al cliente",
-    "imagen": "Bocina-06.jpeg"
+    "imagen": "imagenes/Bocina-06.jpeg"
   },
   {
     "id": "p_1783050034291",
@@ -623,7 +623,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅ Pequeña pero muy potente y con mucha calidad de audio\n✅ Batería 800 mAh que dura 5 horas\n✅ Luces led de 5 modos y que se pueden apagar\n✅ Tamaño 87mm x 87mm\n✅ Potencia 5W con muy buena calidad de audio\n✅ Colores negro y rojo\n No tiene garantía, es nueva y se deja probada",
-    "imagen": "Bocina-07.jpeg"
+    "imagen": "imagenes/Bocina-07.jpeg"
   },
   {
     "id": "p_1783050105469",
@@ -632,6 +632,6 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ Incluye antena de 15 cm, funciona perfecto en interiores donde la señal es buena\n✅ Incluye cable HDMI\n🛡️ Garantía 1 mes",
-    "imagen": "23.jpeg"
+    "imagen": "imagenes/23.jpeg"
   }
 ]
