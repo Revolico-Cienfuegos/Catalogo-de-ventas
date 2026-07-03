@@ -112,17 +112,16 @@
   </div>
 </footer>
 
-<!-- ===== MODAL PRODUCTO ===== -->
+<!-- ===== MODAL PRODUCTO (mejorado) ===== -->
 <div class="overlay" id="overlay">
   <div class="modal" id="modal">
     <div class="modal-drag"></div>
     <button class="modal-cerrar" id="modalCerrar">✕</button>
-    <div id="mImgWrap"></div>
+    <div id="mImgWrap" style="width:100%; background:#f5f5f5; display:flex; align-items:center; justify-content:center; min-height:220px; max-height:320px; overflow:hidden;"></div>
     <div class="modal-body">
       <div class="modal-tag" id="mTag"></div>
       <h2 class="modal-nombre" id="mNombre"></h2>
       <div class="modal-precio" id="mPrecio"></div>
-      <div class="modal-stock" id="mStock"></div>
       <p class="modal-desc" id="mDesc"></p>
       <button class="modal-pedir" id="mPedir">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.5l5.797-1.52A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.583-.497-5.073-1.365l-.363-.215-3.44.902.917-3.349-.236-.375A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
@@ -202,7 +201,7 @@
 //  CONFIGURACIÓN
 // ============================================================
 const WA = "5354571729";
-const TASA_CUP = 620; // 1 USD = 620 MN (modificable aquí)
+const TASA_CUP = 620;
 
 const CATEGORIAS = [
   { id:"electricidad",    nombre:"Electricidad y Protección",            ico:"⚡" },
@@ -218,7 +217,7 @@ const CATEGORIAS = [
 
 const WA_ICO = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.5l5.797-1.52A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.583-.497-5.073-1.365l-.363-.215-3.44.902.917-3.349-.236-.375A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>`;
 
-const IMG_PH_ICO = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
+const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
 
 // ============================================================
 //  ESTADO GLOBAL
@@ -233,19 +232,16 @@ let carrito = [];
 // ============================================================
 function isMobile(){ return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent); }
 
-function fmt(p, m){
-  const m2 = m || "USD";
+function fmt(p){
   const val = parseFloat(p) || 0;
   const moneda = monedaActual === "MN" ? "MN" : "USD";
   const tasa = monedaActual === "MN" ? TASA_CUP : 1;
-  const total = (val * tasa).toFixed(2);
-  return `${total} ${moneda}`;
+  return `${(val * tasa).toFixed(2)} ${moneda}`;
 }
 
-function fmtRaw(p, m){
+function fmtRaw(p){
   const val = parseFloat(p) || 0;
-  const tasa = monedaActual === "MN" ? TASA_CUP : 1;
-  return val * tasa;
+  return val * (monedaActual === "MN" ? TASA_CUP : 1);
 }
 
 function nombreCat(id){ return CATEGORIAS.find(c=>c.id===id)?.nombre||id; }
@@ -274,7 +270,7 @@ function toast(msg, type="success"){
 }
 
 // ============================================================
-//  CARRITO (persistente en localStorage) CON VALIDACIÓN DE STOCK
+//  CARRITO (sin stock)
 // ============================================================
 function cargarCarrito(){
   try {
@@ -294,14 +290,7 @@ function actualizarBadge(){
 }
 
 function agregarAlCarrito(producto){
-  // Verificar stock disponible
-  const stockDisponible = producto.stock || 0;
   const existente = carrito.find(i => i.id === producto.id);
-  const cantidadActual = existente ? existente.cantidad : 0;
-  if (cantidadActual + 1 > stockDisponible) {
-    toast(`❌ Solo hay ${stockDisponible} unidades disponibles de "${producto.nombre}"`, "error");
-    return;
-  }
   if(existente){
     existente.cantidad += 1;
   } else {
@@ -325,15 +314,6 @@ function cambiarCantidad(id, delta){
     eliminarDelCarrito(id);
     return;
   }
-  // Verificar que no exceda el stock disponible
-  const productoOriginal = DATA.find(p => p.id === id);
-  if (productoOriginal) {
-    const stockMax = productoOriginal.stock || 0;
-    if (nuevaCant > stockMax) {
-      toast(`❌ Solo hay ${stockMax} unidades disponibles`, "error");
-      return;
-    }
-  }
   item.cantidad = nuevaCant;
   guardarCarrito();
   renderCarrito();
@@ -349,7 +329,7 @@ function vaciarCarrito(){
 }
 
 function totalCarrito(){
-  return carrito.reduce((s,i) => s + fmtRaw(i.precio, i.moneda) * i.cantidad, 0);
+  return carrito.reduce((s,i) => s + fmtRaw(i.precio) * i.cantidad, 0);
 }
 
 function renderCarrito(){
@@ -371,7 +351,7 @@ function renderCarrito(){
       ${item.imagen ? `<img class="cart-item-img" src="${item.imagen}" alt="${item.nombre}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'cart-item-img\\' style=\\'display:flex;align-items:center;justify-content:center;font-size:20px;\\'>🖼️</div>'">` : `<div class="cart-item-img" style="display:flex;align-items:center;justify-content:center;font-size:20px;">🖼️</div>`}
       <div class="cart-item-info">
         <div class="cart-item-nombre">${item.nombre}</div>
-        <div class="cart-item-precio">${fmt(item.precio, item.moneda)}</div>
+        <div class="cart-item-precio">${fmt(item.precio)}</div>
       </div>
       <div class="cart-item-actions">
         <button onclick="cambiarCantidad('${item.id}', -1)">−</button>
@@ -455,39 +435,30 @@ document.getElementById("currencySelect").addEventListener("change", (e)=>{
   if(catActiva === "todas") renderCatalogo();
   else renderCatalogo(catActiva);
   renderCarrito();
-  if(window._modalProducto) actualizarModal(window._modalProducto);
 });
 
 // ============================================================
-//  RENDER CATÁLOGO
+//  RENDER CATÁLOGO (sin stock)
 // ============================================================
 function cardHTML(p, idx, mostrarTag=false){
   const tag = mostrarTag ? `<div class="card-cat-tag">${icoCat(p.categoria)} ${nombreCat(p.categoria)}</div>` : "";
   const hasImg = p.imagen && p.imagen.length > 0;
   const imgSrc = hasImg ? p.imagen : "";
   const imgWrap = `<div class="card-img-wrap">
-    ${hasImg ? `<img class="card-img" src="${imgSrc}" alt="${p.nombre}" loading="lazy" decoding="async" data-idx="${idx}" onerror="console.warn('Imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.card-img-ph').style.display='flex';">` : ''}
+    ${hasImg ? `<img class="card-img" src="${imgSrc}" alt="${p.nombre}" loading="lazy" decoding="async" data-idx="${idx}" onerror="this.style.display='none'; this.parentElement.querySelector('.card-img-ph').style.display='flex';">` : ''}
     <div class="card-img-ph" style="display:${hasImg ? 'none' : 'flex'};" data-idx="${idx}">${IMG_PH_ICO}<span>Sin foto</span></div>
   </div>`;
 
-  const precio = p.precio ? `<div class="card-precio">${fmt(p.precio, p.moneda)}</div>` : `<div class="card-precio" style="font-size:12px;color:var(--suave2);">Consultar</div>`;
-
-  const stock = p.stock !== undefined ? p.stock : 0;
-  let stockClass = "disponible";
-  let stockLabel = `Disponible: ${stock}`;
-  if(stock <= 0){ stockClass = "agotado"; stockLabel = "❌ Agotado"; }
-  else if(stock <= 3){ stockClass = "pocos"; stockLabel = `⚠️ Quedan ${stock}`; }
-  else { stockLabel = `✅ Disponible: ${stock}`; }
+  const precio = p.precio ? `<div class="card-precio">${fmt(p.precio)}</div>` : `<div class="card-precio" style="font-size:12px;color:var(--suave2);">Consultar</div>`;
 
   return `<article class="card">
     ${imgWrap}${tag}
     <div class="card-body">
       <div class="card-nombre" data-idx="${idx}">${p.nombre}</div>
       ${precio}
-      <div class="card-stock ${stockClass}"><span class="dot"></span>${stockLabel}</div>
       <div class="card-actions">
         <button class="card-pedir" data-idx="${idx}" data-action="pedir">${WA_ICO} Pedir</button>
-        <button class="card-add" data-idx="${idx}" data-action="add" ${stock<=0?'disabled style="opacity:0.4;"':''}>+</button>
+        <button class="card-add" data-idx="${idx}" data-action="add">+</button>
       </div>
     </div>
   </article>`;
@@ -504,7 +475,6 @@ function bindCards(container){
     btn.addEventListener("click", e=>{
       e.stopPropagation();
       const p = DATA[+btn.dataset.idx];
-      if(p.stock <= 0){ toast("❌ Producto agotado", "error"); return; }
       agregarAlCarrito(p);
     });
   });
@@ -551,7 +521,7 @@ function renderCatalogo(filtro=null){
 }
 
 // ============================================================
-//  BÚSQUEDA (mejorada: incluye precio y moneda)
+//  BÚSQUEDA (incluye precio y moneda)
 // ============================================================
 function renderBusqueda(q){
   const rb = document.getElementById("resultadosBusqueda");
@@ -632,31 +602,25 @@ function limpiarBusqueda(){
 }
 
 // ============================================================
-//  MODAL (mejorado: no muestra la ruta de la imagen fallida)
+//  MODAL (mejorado: imagen destacada y sin stock)
 // ============================================================
 let _modalProducto = null;
 function abrirModal(p){
   _modalProducto = p;
   document.getElementById("mTag").textContent = `${icoCat(p.categoria)} ${nombreCat(p.categoria)}`;
   document.getElementById("mNombre").textContent = p.nombre;
-  document.getElementById("mPrecio").textContent = fmt(p.precio, p.moneda);
-  const stock = p.stock !== undefined ? p.stock : 0;
-  let stockHTML = "";
-  if(stock <= 0) stockHTML = `<span class="dot" style="background:var(--rojo);"></span>❌ Agotado`;
-  else if(stock <= 3) stockHTML = `<span class="dot" style="background:var(--gold);"></span>⚠️ Quedan ${stock}`;
-  else stockHTML = `<span class="dot" style="background:var(--ok);"></span>✅ Disponible: ${stock}`;
-  document.getElementById("mStock").innerHTML = stockHTML;
+  document.getElementById("mPrecio").textContent = fmt(p.precio);
   document.getElementById("mDesc").textContent = p.descripcion||"";
 
   const hasImg = p.imagen && p.imagen.length > 0;
   const imgSrc = hasImg ? p.imagen : "";
   const wrap = document.getElementById("mImgWrap");
   wrap.innerHTML = `
-    <div style="position:relative; width:100%; aspect-ratio:1/1; background:#fbfbfc; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      ${hasImg ? `<img class="modal-img" src="${imgSrc}" alt="${p.nombre}" loading="lazy" style="max-height:100%; max-width:100%; object-fit:contain;" onerror="console.warn('❌ Modal: imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.modal-img-ph').style.display='flex';">` : ''}
-      <div class="modal-img-ph" style="display:${hasImg ? 'none' : 'flex'}; flex-direction:column; align-items:center; gap:6px; color:var(--suave2);">
+    <div style="position:relative; width:100%; min-height:220px; max-height:320px; display:flex; align-items:center; justify-content:center; background:#f5f5f5;">
+      ${hasImg ? `<img src="${imgSrc}" alt="${p.nombre}" loading="lazy" style="max-width:100%; max-height:320px; object-fit:contain; display:block;" onerror="this.style.display='none'; this.parentElement.querySelector('.modal-placeholder').style.display='flex';">` : ''}
+      <div class="modal-placeholder" style="display:${hasImg ? 'none' : 'flex'}; flex-direction:column; align-items:center; gap:8px; color:#aaa; padding:20px;">
         ${IMG_PH_ICO}
-        <span style="font-size:13px; font-weight:600;">${hasImg ? '❌ Imagen no disponible' : 'Sin foto'}</span>
+        <span style="font-size:14px; font-weight:600;">${hasImg ? '❌ Imagen no disponible' : 'Sin foto'}</span>
       </div>
     </div>
   `;
@@ -664,17 +628,6 @@ function abrirModal(p){
   document.getElementById("mPedir").onclick = ()=>pedirProducto(p);
   document.getElementById("overlay").classList.add("open");
   document.body.style.overflow="hidden";
-}
-
-function actualizarModal(p){
-  if(!p) return;
-  document.getElementById("mPrecio").textContent = fmt(p.precio, p.moneda);
-  const stock = p.stock !== undefined ? p.stock : 0;
-  let stockHTML = "";
-  if(stock <= 0) stockHTML = `<span class="dot" style="background:var(--rojo);"></span>❌ Agotado`;
-  else if(stock <= 3) stockHTML = `<span class="dot" style="background:var(--gold);"></span>⚠️ Quedan ${stock}`;
-  else stockHTML = `<span class="dot" style="background:var(--ok);"></span>✅ Disponible: ${stock}`;
-  document.getElementById("mStock").innerHTML = stockHTML;
 }
 
 function cerrarModal(){
@@ -690,7 +643,7 @@ document.getElementById("modal").addEventListener("touchmove",e=>{ if(e.touches[
 
 function pedirProducto(p){
   const lines=["🛍️ PEDIDO - Ventas Cienfuegos","",`📦 Producto: ${p.nombre}`];
-  if(p.precio) lines.push(`💵 Precio: ${fmt(p.precio, p.moneda)}`);
+  if(p.precio) lines.push(`💵 Precio: ${fmt(p.precio)}`);
   if(p.categoria) lines.push(`🗂️ Categoría: ${nombreCat(p.categoria)}`);
   if(p.descripcion) lines.push(`📝 Descripción: ${p.descripcion}`);
   lines.push("","Hola, me interesa este producto. ¿Está disponible?");
@@ -710,28 +663,10 @@ document.getElementById("headerContact").addEventListener("click", ()=>openWA("H
 // ============================================================
 cargarCarrito();
 
-// Forzar actualización del service worker
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js")
-    .then(reg => {
-      if (reg.waiting) {
-        reg.waiting.postMessage({ type: "SKIP_WAITING" });
-      }
-      reg.addEventListener("updatefound", () => {
-        const newWorker = reg.installing;
-        newWorker.addEventListener("statechange", () => {
-          if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-            if (confirm("Nueva versión disponible. ¿Recargar ahora?")) {
-              window.location.reload();
-            }
-          }
-        });
-      });
-    })
-    .catch(() => {});
+  navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
 
-// Cargar productos
 fetch("productos.json?_=" + Date.now())
   .then(r => r.json())
   .then(data => {
