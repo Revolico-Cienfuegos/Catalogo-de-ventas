@@ -157,7 +157,7 @@
   </div>
 </div>
 
-<!-- ===== FORMULARIO DE PEDIDO (PLANILLA) ===== -->
+<!-- ===== FORMULARIO DE PEDIDO (PLANILLA) SIN MÉTODO DE PAGO ===== -->
 <div class="order-form-overlay" id="orderFormOverlay">
   <div class="order-form" id="orderForm">
     <h3>📋 Completá tu pedido</h3>
@@ -182,16 +182,7 @@
       <input type="text" id="ofReferencia" placeholder="Ej: cerca de la plaza, al lado de la farmacia">
       <div class="error" id="ofReferenciaErr">Completá el punto de referencia</div>
     </div>
-    <!-- MÉTODO DE PAGO -->
-    <div class="field">
-      <label>Método de pago *</label>
-      <select id="ofMetodoPago" style="width:100%; border:1.5px solid var(--linea); border-radius:8px; padding:10px 12px; font-size:13.5px; font-family:inherit; background:#fff; color:var(--texto);">
-        <option value="Efectivo">💵 Efectivo</option>
-        <option value="Transferencia bancaria">🏦 Transferencia bancaria</option>
-        <option value="Transferencia Zelle">🏦 Transferencia Zelle</option>
-        <option value="Transferencia PayPal">🏦 Transferencia PayPal</option>
-      </select>
-    </div>
+    <!-- CAMPO DE MÉTODO DE PAGO ELIMINADO -->
     <div class="field">
       <label>Observaciones (opcional)</label>
       <textarea id="ofObservaciones" placeholder="Algo más que quieras decirnos..."></textarea>
@@ -236,6 +227,7 @@ let DATA = [];
 let catActiva = "todas";
 let monedaActual = "MN"; // MONEDA POR DEFECTO: MN
 let carrito = [];
+let productoParaPedir = null; // Producto seleccionado para pedido directo (desde tarjeta)
 
 // ============================================================
 //  UTILIDADES
@@ -388,15 +380,38 @@ document.getElementById("cartOverlay").addEventListener("click", (e)=>{
 document.getElementById("cartClear").addEventListener("click", vaciarCarrito);
 
 // ============================================================
-//  FORMULARIO DE PEDIDO (PLANILLA) con método de pago
+//  FORMULARIO DE PEDIDO (PLANILLA) - SIN MÉTODO DE PAGO
 // ============================================================
+// Función para abrir la planilla con un producto específico (desde tarjeta)
+function abrirPlanilla(producto){
+  productoParaPedir = producto;
+  document.getElementById("orderFormOverlay").classList.add("open");
+  // Limpiar campos previos
+  document.getElementById("ofNombre").value = "";
+  document.getElementById("ofTelefono").value = "";
+  document.getElementById("ofDireccion").value = "";
+  document.getElementById("ofReferencia").value = "";
+  document.getElementById("ofObservaciones").value = "";
+  document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
+}
+
+// Evento para "Finalizar pedido" desde el carrito (abre planilla sin producto específico)
 document.getElementById("cartCheckout").addEventListener("click", ()=>{
   if(carrito.length === 0){ toast("El carrito está vacío", "error"); return; }
+  productoParaPedir = null; // No hay producto específico, se usará el carrito
   document.getElementById("orderFormOverlay").classList.add("open");
+  // Limpiar campos
+  document.getElementById("ofNombre").value = "";
+  document.getElementById("ofTelefono").value = "";
+  document.getElementById("ofDireccion").value = "";
+  document.getElementById("ofReferencia").value = "";
+  document.getElementById("ofObservaciones").value = "";
+  document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
 });
 
 document.getElementById("ofCancel").addEventListener("click", ()=>{
   document.getElementById("orderFormOverlay").classList.remove("open");
+  productoParaPedir = null;
 });
 
 document.getElementById("ofSend").addEventListener("click", ()=>{
@@ -405,7 +420,6 @@ document.getElementById("ofSend").addEventListener("click", ()=>{
   const telefono = document.getElementById("ofTelefono").value.trim();
   const direccion = document.getElementById("ofDireccion").value.trim();
   const referencia = document.getElementById("ofReferencia").value.trim();
-  const metodoPago = document.getElementById("ofMetodoPago").value;
   const obs = document.getElementById("ofObservaciones").value.trim();
 
   document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
@@ -417,9 +431,18 @@ document.getElementById("ofSend").addEventListener("click", ()=>{
   if(!ok) return;
 
   const fecha = new Date().toLocaleDateString("es-CU", { day:"2-digit", month:"2-digit", year:"numeric" });
-  const items = carrito.map(i => `* ${i.nombre} x${i.cantidad}`).join("\n");
-  const total = totalCarrito();
   const moneda = monedaActual;
+
+  let items, total;
+  if(productoParaPedir){
+    // Pedido de un solo producto desde la tarjeta
+    items = `* ${productoParaPedir.nombre} x1`;
+    total = fmtRaw(productoParaPedir.precio);
+  } else {
+    // Pedido desde el carrito
+    items = carrito.map(i => `* ${i.nombre} x${i.cantidad}`).join("\n");
+    total = totalCarrito();
+  }
 
   const msg = `❗❗ PLANILLA DE VENTA ❗❗
 📅 Fecha: ${fecha}
@@ -428,7 +451,6 @@ document.getElementById("ofSend").addEventListener("click", ()=>{
 📦 Equipo(s) a comprar:
 ${items}
 💵 Cantidad y tipo de moneda: ${total.toFixed(2)} ${moneda}
-💳 Método de pago: ${metodoPago}
 💵 Cambio: 
 🗺️ Dirección: ${direccion}
 🗺️ Punto de referencia: ${referencia}
@@ -436,6 +458,7 @@ ${items}
 Muchas gracias.`;
 
   document.getElementById("orderFormOverlay").classList.remove("open");
+  productoParaPedir = null;
   openWA(msg);
 });
 
@@ -481,7 +504,12 @@ function bindCards(container){
     el.addEventListener("click",()=>abrirModal(DATA[+el.dataset.idx]));
   });
   container.querySelectorAll("[data-action='pedir']").forEach(btn=>{
-    btn.addEventListener("click", e=>{ e.stopPropagation(); abrirModal(DATA[+btn.dataset.idx]); });
+    btn.addEventListener("click", e=>{
+      e.stopPropagation();
+      const producto = DATA[+btn.dataset.idx];
+      // Abrir la planilla en lugar del modal
+      abrirPlanilla(producto);
+    });
   });
   container.querySelectorAll("[data-action='add']").forEach(btn=>{
     btn.addEventListener("click", e=>{
@@ -637,7 +665,10 @@ function abrirModal(p){
     </div>
   `;
 
-  document.getElementById("mPedir").onclick = ()=>pedirProducto(p);
+  document.getElementById("mPedir").onclick = ()=>{
+    // Al hacer clic en "Pedir por WhatsApp" en el modal, abrimos la planilla con ese producto
+    abrirPlanilla(p);
+  };
   document.getElementById("overlay").classList.add("open");
   document.body.style.overflow="hidden";
 }
@@ -653,14 +684,7 @@ let ty=0;
 document.getElementById("modal").addEventListener("touchstart",e=>{ty=e.touches[0].clientY;},{passive:true});
 document.getElementById("modal").addEventListener("touchmove",e=>{ if(e.touches[0].clientY-ty>60) cerrarModal(); },{passive:true});
 
-function pedirProducto(p){
-  const lines=["🛍️ PEDIDO - Ventas Cienfuegos","",`📦 Producto: ${p.nombre}`];
-  if(p.precio) lines.push(`💵 Precio: ${fmt(p.precio)}`);
-  if(p.categoria) lines.push(`🗂️ Categoría: ${nombreCat(p.categoria)}`);
-  if(p.descripcion) lines.push(`📝 Descripción: ${p.descripcion}`);
-  lines.push("","Hola, me interesa este producto. ¿Está disponible?");
-  openWA(lines.join("\n"));
-}
+// Eliminamos la función pedirProducto porque ahora usamos abrirPlanilla
 
 // ============================================================
 //  CARGA DE PRODUCTOS (con fallback a localStorage y manejo de errores)
