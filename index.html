@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 <title>Ventas Cienfuegos</title>
 
-<!-- ===== GOOGLE ANALYTICS (cambia G-TU_ID_AQUI) ===== -->
+<!-- ===== GOOGLE ANALYTICS ===== -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PYG8LH258"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -48,8 +48,11 @@
     <div class="header-actions">
       <div class="moneda-selector">
         <select id="currencySelect">
-          <option value="MN">MN</option>
           <option value="USD" selected>USD</option>
+          <option value="MN">MN (700)</option>
+          <option value="Zelle">Zelle (1.05)</option>
+          <option value="Tarjeta">Tarjeta (1.1)</option>
+          <option value="Euro">Euro (0.93)</option>
         </select>
       </div>
       <button class="cart-icon" id="cartToggle" aria-label="Carrito">
@@ -211,7 +214,15 @@
 //  CONFIGURACIÓN
 // ============================================================
 const WA = "5354571729";
-const TASA_CUP = 640; // 1 USD = 640 MN
+
+// Tasas de conversión desde USD
+const TASAS = {
+  USD: 1,
+  MN: 700,          // 1 USD = 700 MN
+  Zelle: 1.05,      // 1 USD = 1.05 (recargo Zelle)
+  Tarjeta: 1.1,     // 1 USD = 1.1 (recargo tarjeta)
+  Euro: 0.93        // 1 USD = 0.93 EUR
+};
 
 const CATEGORIAS = [
   { id:"electricidad",    nombre:"Electricidad y Protección",            ico:"⚡" },
@@ -234,7 +245,7 @@ const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
 // ============================================================
 let DATA = [];
 let catActiva = "todas";
-let monedaActual = "USD";
+let monedaActual = "USD"; // Clave de TASAS
 let carrito = [];
 let productoParaPedir = null;
 
@@ -245,14 +256,15 @@ function isMobile(){ return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent
 
 function fmt(p){
   const val = parseFloat(p) || 0;
-  const moneda = monedaActual === "MN" ? "MN" : "USD";
-  const tasa = monedaActual === "MN" ? TASA_CUP : 1;
-  return `${(val * tasa).toFixed(2)} ${moneda}`;
+  const factor = TASAS[monedaActual] || 1;
+  const total = (val * factor).toFixed(2);
+  return `${total} ${monedaActual}`;
 }
 
 function fmtRaw(p){
   const val = parseFloat(p) || 0;
-  return val * (monedaActual === "MN" ? TASA_CUP : 1);
+  const factor = TASAS[monedaActual] || 1;
+  return val * factor;
 }
 
 function nombreCat(id){ return CATEGORIAS.find(c=>c.id===id)?.nombre||id; }
@@ -323,7 +335,6 @@ function agregarAlCarrito(producto){
   guardarCarrito();
   toast(`✅ ${producto.nombre} agregado al carrito`);
 
-  // 🔹 GA EVENT: AGREGAR AL CARRITO
   trackEvent('Carrito', 'add_to_cart', producto.nombre, parseFloat(producto.precio));
 }
 
@@ -410,7 +421,6 @@ document.getElementById("cartClear").addEventListener("click", vaciarCarrito);
 function abrirPlanilla(producto){
   productoParaPedir = producto;
   document.getElementById("orderFormOverlay").classList.add("open");
-  // Limpiar campos previos
   document.getElementById("ofNombre").value = "";
   document.getElementById("ofTelefono").value = "";
   document.getElementById("ofDireccion").value = "";
@@ -418,7 +428,6 @@ function abrirPlanilla(producto){
   document.getElementById("ofObservaciones").value = "";
   document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
 
-  // 🔹 GA EVENT: INICIO DE CHECKOUT (desde tarjeta)
   if (producto) {
     trackEvent('Checkout', 'begin_checkout', producto.nombre, parseFloat(producto.precio));
   }
@@ -435,7 +444,6 @@ document.getElementById("cartCheckout").addEventListener("click", ()=>{
   document.getElementById("ofObservaciones").value = "";
   document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
 
-  // 🔹 GA EVENT: INICIO DE CHECKOUT (desde carrito)
   trackEvent('Checkout', 'begin_checkout', 'Desde carrito', totalCarrito());
 });
 
@@ -485,7 +493,6 @@ ${items}
 📝 Observaciones: ${obs || "(Ninguna)"}
 Muchas gracias.`;
 
-  // 🔹 GA EVENT: ENVÍO DE PEDIDO (PURCHASE)
   trackEvent('Checkout', 'purchase', 'Pedido completado', total);
 
   document.getElementById("orderFormOverlay").classList.remove("open");
@@ -494,7 +501,7 @@ Muchas gracias.`;
 });
 
 // ============================================================
-//  MONEDA
+//  MONEDA (cambio de selector)
 // ============================================================
 document.getElementById("currencySelect").addEventListener("change", (e)=>{
   monedaActual = e.target.value;
