@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 <title>Ventas Cienfuegos</title>
+
+<!-- ===== GOOGLE ANALYTICS (cambia G-TU_ID_AQUI) ===== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PYG8LH258"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8PYG8LH258');
+</script>
+
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0f2a43">
@@ -41,7 +51,7 @@
           <option value="MN">MN</option>
           <option value="USD" selected>USD</option>
         </select>
-     </div>
+      </div>
       <button class="cart-icon" id="cartToggle" aria-label="Carrito">
         🛒
         <span class="cart-badge" id="cartBadge">0</span>
@@ -157,7 +167,7 @@
   </div>
 </div>
 
-<!-- ===== FORMULARIO DE PEDIDO (PLANILLA) SIN MÉTODO DE PAGO ===== -->
+<!-- ===== FORMULARIO DE PEDIDO (PLANILLA) ===== -->
 <div class="order-form-overlay" id="orderFormOverlay">
   <div class="order-form" id="orderForm">
     <h3>📋 Completá tu pedido</h3>
@@ -182,7 +192,6 @@
       <input type="text" id="ofReferencia" placeholder="Ej: cerca de la plaza, al lado de la farmacia">
       <div class="error" id="ofReferenciaErr">Completá el punto de referencia</div>
     </div>
-    <!-- CAMPO DE MÉTODO DE PAGO ELIMINADO -->
     <div class="field">
       <label>Observaciones (opcional)</label>
       <textarea id="ofObservaciones" placeholder="Algo más que quieras decirnos..."></textarea>
@@ -225,9 +234,9 @@ const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
 // ============================================================
 let DATA = [];
 let catActiva = "todas";
-let monedaActual = "USD"; // MONEDA POR DEFECTO: USD
+let monedaActual = "USD";
 let carrito = [];
-let productoParaPedir = null; // Producto seleccionado para pedido directo (desde tarjeta)
+let productoParaPedir = null;
 
 // ============================================================
 //  UTILIDADES
@@ -272,7 +281,20 @@ function toast(msg, type="success"){
 }
 
 // ============================================================
-//  CARRITO (sin stock)
+//  GOOGLE ANALYTICS - EVENTOS PERSONALIZADOS
+// ============================================================
+function trackEvent(category, action, label, value){
+  if (typeof gtag === 'function') {
+    gtag('event', action, {
+      'event_category': category,
+      'event_label': label || undefined,
+      'value': value || undefined
+    });
+  }
+}
+
+// ============================================================
+//  CARRITO
 // ============================================================
 function cargarCarrito(){
   try {
@@ -300,6 +322,9 @@ function agregarAlCarrito(producto){
   }
   guardarCarrito();
   toast(`✅ ${producto.nombre} agregado al carrito`);
+
+  // 🔹 GA EVENT: AGREGAR AL CARRITO
+  trackEvent('Carrito', 'add_to_cart', producto.nombre, parseFloat(producto.precio));
 }
 
 function eliminarDelCarrito(id){
@@ -380,9 +405,8 @@ document.getElementById("cartOverlay").addEventListener("click", (e)=>{
 document.getElementById("cartClear").addEventListener("click", vaciarCarrito);
 
 // ============================================================
-//  FORMULARIO DE PEDIDO (PLANILLA) - SIN MÉTODO DE PAGO
+//  FORMULARIO DE PEDIDO (PLANILLA)
 // ============================================================
-// Función para abrir la planilla con un producto específico (desde tarjeta)
 function abrirPlanilla(producto){
   productoParaPedir = producto;
   document.getElementById("orderFormOverlay").classList.add("open");
@@ -393,20 +417,26 @@ function abrirPlanilla(producto){
   document.getElementById("ofReferencia").value = "";
   document.getElementById("ofObservaciones").value = "";
   document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
+
+  // 🔹 GA EVENT: INICIO DE CHECKOUT (desde tarjeta)
+  if (producto) {
+    trackEvent('Checkout', 'begin_checkout', producto.nombre, parseFloat(producto.precio));
+  }
 }
 
-// Evento para "Finalizar pedido" desde el carrito (abre planilla sin producto específico)
 document.getElementById("cartCheckout").addEventListener("click", ()=>{
   if(carrito.length === 0){ toast("El carrito está vacío", "error"); return; }
-  productoParaPedir = null; // No hay producto específico, se usará el carrito
+  productoParaPedir = null;
   document.getElementById("orderFormOverlay").classList.add("open");
-  // Limpiar campos
   document.getElementById("ofNombre").value = "";
   document.getElementById("ofTelefono").value = "";
   document.getElementById("ofDireccion").value = "";
   document.getElementById("ofReferencia").value = "";
   document.getElementById("ofObservaciones").value = "";
   document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
+
+  // 🔹 GA EVENT: INICIO DE CHECKOUT (desde carrito)
+  trackEvent('Checkout', 'begin_checkout', 'Desde carrito', totalCarrito());
 });
 
 document.getElementById("ofCancel").addEventListener("click", ()=>{
@@ -435,11 +465,9 @@ document.getElementById("ofSend").addEventListener("click", ()=>{
 
   let items, total;
   if(productoParaPedir){
-    // Pedido de un solo producto desde la tarjeta
     items = `* ${productoParaPedir.nombre} x1`;
     total = fmtRaw(productoParaPedir.precio);
   } else {
-    // Pedido desde el carrito
     items = carrito.map(i => `* ${i.nombre} x${i.cantidad}`).join("\n");
     total = totalCarrito();
   }
@@ -457,6 +485,9 @@ ${items}
 📝 Observaciones: ${obs || "(Ninguna)"}
 Muchas gracias.`;
 
+  // 🔹 GA EVENT: ENVÍO DE PEDIDO (PURCHASE)
+  trackEvent('Checkout', 'purchase', 'Pedido completado', total);
+
   document.getElementById("orderFormOverlay").classList.remove("open");
   productoParaPedir = null;
   openWA(msg);
@@ -473,7 +504,7 @@ document.getElementById("currencySelect").addEventListener("change", (e)=>{
 });
 
 // ============================================================
-//  RENDER CATÁLOGO (sin stock)
+//  RENDER CATÁLOGO
 // ============================================================
 function cardHTML(p, idx, mostrarTag=false){
   const tag = mostrarTag ? `<div class="card-cat-tag">${icoCat(p.categoria)} ${nombreCat(p.categoria)}</div>` : "";
@@ -507,7 +538,6 @@ function bindCards(container){
     btn.addEventListener("click", e=>{
       e.stopPropagation();
       const producto = DATA[+btn.dataset.idx];
-      // Abrir la planilla en lugar del modal
       abrirPlanilla(producto);
     });
   });
@@ -561,7 +591,7 @@ function renderCatalogo(filtro=null){
 }
 
 // ============================================================
-//  BÚSQUEDA (incluye precio y moneda)
+//  BÚSQUEDA
 // ============================================================
 function renderBusqueda(q){
   const rb = document.getElementById("resultadosBusqueda");
@@ -642,7 +672,7 @@ function limpiarBusqueda(){
 }
 
 // ============================================================
-//  MODAL (mejorado: sin stock y sin ruta de imagen fallida)
+//  MODAL
 // ============================================================
 let _modalProducto = null;
 function abrirModal(p){
@@ -666,7 +696,6 @@ function abrirModal(p){
   `;
 
   document.getElementById("mPedir").onclick = ()=>{
-    // Al hacer clic en "Pedir por WhatsApp" en el modal, abrimos la planilla con ese producto
     abrirPlanilla(p);
   };
   document.getElementById("overlay").classList.add("open");
@@ -684,13 +713,10 @@ let ty=0;
 document.getElementById("modal").addEventListener("touchstart",e=>{ty=e.touches[0].clientY;},{passive:true});
 document.getElementById("modal").addEventListener("touchmove",e=>{ if(e.touches[0].clientY-ty>60) cerrarModal(); },{passive:true});
 
-// Eliminamos la función pedirProducto porque ahora usamos abrirPlanilla
-
 // ============================================================
-//  CARGA DE PRODUCTOS (con fallback a localStorage y manejo de errores)
+//  CARGA DE PRODUCTOS
 // ============================================================
 function cargarProductos(){
-  // Intentar cargar desde localStorage primero (en caso de que el admin haya guardado)
   const local = localStorage.getItem("vc_admin_productos");
   if(local) {
     try {
@@ -705,7 +731,6 @@ function cargarProductos(){
     } catch(e) {}
   }
 
-  // Si no hay localStorage, cargar desde el servidor
   const url = "productos.json?_=" + Date.now();
   fetch(url, { 
     cache: "no-store",
@@ -718,7 +743,6 @@ function cargarProductos(){
     .then(data => {
       if (Array.isArray(data) && data.length > 0) {
         DATA = data;
-        // Guardar en localStorage como respaldo
         localStorage.setItem("vc_admin_productos", JSON.stringify(DATA));
         buildCatsNav();
         renderCatalogo();
@@ -729,7 +753,6 @@ function cargarProductos(){
     })
     .catch(err => {
       console.error("❌ Error cargando productos:", err);
-      // Mostrar mensaje amigable
       document.getElementById("skeletons").style.display = "none";
       document.getElementById("vacio").style.display = "block";
       document.getElementById("vacio").innerHTML = `
@@ -759,7 +782,6 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
 
-// Cargar productos
 cargarProductos();
 </script>
 </body>
