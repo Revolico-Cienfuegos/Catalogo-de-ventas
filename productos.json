@@ -183,10 +183,10 @@
     "id": "p_1783047912138",
     "categoria": "solar",
     "nombre": "🔥 Controlador Solar MPPT de 48V, 60V y 72V y 1200W 🔥",
-    "precio": "180",
+    "precio": "130",
     "moneda": "USD",
-    "descripcion": "✅ PV INPUT 12-60VDC/30A, MAX CHARGE CURRENT 15A\n✅ POWER MAX 1200W\n✅ Baterías compatibles 48V, 60V y 72V\n✅ Incluye conector MC4 para los cables de entrada del panel solar\n✅ Regalo con la compra: breaker DC 32A y 2 conectores MC4\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "imagenes/ControladorS-01.jpeg"
+    "descripcion": "✅ PV INPUT 12-60VDC/30A, MAX CHARGE CURRENT 15A\n✅ POWER MAX 1200W\n✅ Baterías compatibles 48V, 60V y 72V\n✅ Incluye conector MC4 para los cables de entrada del panel solar\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
+    "imagen": "imagenes/controladors.jpeg"
   },
   {
     "id": "p_1783048072042",
@@ -646,5 +646,32 @@
     "moneda": "USD",
     "descripcion": "Cocinas de petróleo o keroseno de 10 mechas con mechas de repuesto \n✅Capacidad del tanque 1L de queroseno\n✅Consumo 0.13 L/H\n✅Cantidad de mechas 10\n✅Material: Lámina de hierro con esmalte resistente\n✅Portátil y fácil de usar\n✅Dimensiones: 21 cm de altura y 17cm de diámetro\n🛡️Garantía: NO TIENE",
     "imagen": "imagenes/Fogon-mecha.jpeg"
+  },
+  {
+    "id": "p_1783562803461",
+    "categoria": "solar",
+    "nombre": "🔥Rollo de Cable eléctrico 10 AWG🔥",
+    "precio": "170",
+    "moneda": "USD",
+    "descripcion": "Rollo de Cable eléctrico 10 AWG \n✅100% cobre marca Q7\n✅Longitud 100 M\n🛡️Garantía no tiene es nuevo en caja",
+    "imagen": "imagenes/rollo-01.jpeg"
+  },
+  {
+    "id": "p_1783562942805",
+    "categoria": "iluminacion",
+    "nombre": "🔥Lámpara led de 1000W con panel solar🔥",
+    "precio": "55",
+    "moneda": "USD",
+    "descripcion": "✅Dimensiones de la lámpara 32 x 26.5 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
+    "imagen": "imagenes/lampara-08.jpeg"
+  },
+  {
+    "id": "p_1783563267484",
+    "categoria": "electricidad",
+    "nombre": "🔥Caja de distribución de 4 vías marca Q7🔥",
+    "precio": "10",
+    "moneda": "USD",
+    "descripcion": "🛡️Garantía no tiene es nuevo en caja",
+    "imagen": "imagenes/caja-q7.jpeg"
   }
 ]
