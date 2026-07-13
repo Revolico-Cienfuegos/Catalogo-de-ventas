@@ -67,6 +67,7 @@
     </div>
 
     <div class="header-actions">
+      <!-- ===== SELECTOR DE MONEDA ===== -->
       <div class="moneda-selector">
         <select id="currencySelect">
           <option value="USD" selected>USD</option>
@@ -196,7 +197,7 @@
   </div>
 </div>
 
-<!-- ===== FORMULARIO DE PEDIDO (PLANILLA) SIN MÉTODO DE PAGO ===== -->
+<!-- ===== FORMULARIO DE PEDIDO (SIN MÉTODO DE PAGO) ===== -->
 <div class="order-form-overlay" id="orderFormOverlay">
   <div class="order-form" id="orderForm">
     <h3>📋 Completá tu pedido</h3>
@@ -221,6 +222,7 @@
       <input type="text" id="ofReferencia" placeholder="Ej: cerca de la plaza, al lado de la farmacia">
       <div class="error" id="ofReferenciaErr">Completá el punto de referencia</div>
     </div>
+    <!-- ELIMINADO: campo de método de pago -->
     <div class="field">
       <label>Observaciones (opcional)</label>
       <textarea id="ofObservaciones" placeholder="Algo más que quieras decirnos..."></textarea>
@@ -241,21 +243,21 @@
 // ============================================================
 const WA = "5354571729";
 
-// Tasas de conversión desde USD (para el selector de moneda)
+// Tasas de conversión desde USD
 const TASAS = {
   USD: 1,
-  MN: 680,          // 1 USD = 680 MN
-  Zelle: 1.05,      // 1 USD = 1.05 (recargo Zelle)
-  Tarjeta: 1.1,     // 1 USD = 1.1 (recargo tarjeta)
-  Euro: 0.93        // 1 USD = 0.93 EUR
+  MN: 680,
+  Zelle: 1.05,
+  Tarjeta: 1.1,
+  Euro: 0.93
 };
 
 // ============================================================
-//  CATEGORÍAS (con "Garantía y Domicilio" primero)
+//  CATEGORÍAS
 // ============================================================
 const CATEGORIAS = [
-  { id:"garantia-domicilio", nombre:"Garantía y Domicilio", ico:"🛡️", especial:true },
-  { id:"todas",              nombre:"Todos",                  ico:"🏪", especial:false },
+  { id:"garantia-domicilio", nombre:"🛡️ Garantía y Domicilio", ico:"🛡️", especial:true },
+  { id:"todas",              nombre:"🏪 Todos",                  ico:"🏪", especial:false },
   { id:"electricidad",       nombre:"Electricidad y Protección", ico:"⚡" },
   { id:"solar",              nombre:"Energía Solar y Respaldo",  ico:"☀️" },
   { id:"moviles",            nombre:"Dispositivos Móviles y Carga Portátil", ico:"📱" },
@@ -270,6 +272,19 @@ const CATEGORIAS = [
 const WA_ICO = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.5l5.797-1.52A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.583-.497-5.073-1.365l-.363-.215-3.44.902.917-3.349-.236-.375A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>`;
 
 const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
+
+// ============================================================
+//  FUNCIÓN PARA LIMPIAR NOMBRES (elimina emojis para ordenar)
+// ============================================================
+function limpiarNombreParaOrdenar(nombre) {
+  // Elimina emojis y caracteres especiales que puedan interferir
+  return nombre
+    .replace(/[\u{1F300}-\u{1FAFF}]/gu, '') // Emojis
+    .replace(/[\u2600-\u27BF]/gu, '')       // Símbolos
+    .replace(/[🔥⭐✅🚚🛡️💵💳❗ℹ️]/g, '')      // Emojis específicos
+    .trim()
+    .toLowerCase();
+}
 
 // ============================================================
 //  ESTADO GLOBAL
@@ -528,7 +543,7 @@ Muchas gracias.`;
 });
 
 // ============================================================
-//  MONEDA (selector en header)
+//  MONEDA
 // ============================================================
 document.getElementById("currencySelect").addEventListener("change", (e)=>{
   monedaActual = e.target.value;
@@ -537,7 +552,7 @@ document.getElementById("currencySelect").addEventListener("change", (e)=>{
 });
 
 // ============================================================
-//  RENDERIZADO PRINCIPAL (con orden alfabético)
+//  RENDERIZADO PRINCIPAL (con orden alfabético mejorado)
 // ============================================================
 function renderizarContenido(){
   const contenido = document.getElementById("contenido");
@@ -577,8 +592,13 @@ function renderizarContenido(){
     porCat[cat].push({ p, idx: DATA.indexOf(p) });
   });
 
+  // 🔹 ORDEN ALFABÉTICO (ignorando emojis)
   for (const catId in porCat) {
-    porCat[catId].sort((a, b) => a.p.nombre.localeCompare(b.p.nombre, 'es', { sensitivity: 'base' }));
+    porCat[catId].sort((a, b) => {
+      const nombreA = limpiarNombreParaOrdenar(a.p.nombre);
+      const nombreB = limpiarNombreParaOrdenar(b.p.nombre);
+      return nombreA.localeCompare(nombreB, 'es', { sensitivity: 'base' });
+    });
   }
 
   const orden = CATEGORIAS.filter(c => c.id !== "garantia-domicilio" && c.id !== "todas").map(c => c.id).filter(id => porCat[id]);
@@ -723,7 +743,7 @@ function renderGarantiaDomicilio() {
 }
 
 // ============================================================
-//  RENDER CATÁLOGO (productos)
+//  RENDER CATÁLOGO
 // ============================================================
 function cardHTML(p, idx, mostrarTag=false){
   const tag = mostrarTag ? `<div class="card-cat-tag">${icoCat(p.categoria)} ${nombreCat(p.categoria)}</div>` : "";
@@ -770,7 +790,7 @@ function bindCards(container){
 }
 
 // ============================================================
-//  BÚSQUEDA
+//  BÚSQUEDA (con orden alfabético mejorado)
 // ============================================================
 function renderBusqueda(q){
   const rb = document.getElementById("resultadosBusqueda");
@@ -790,7 +810,12 @@ function renderBusqueda(q){
     return hay.includes(ql);
   });
 
-  res.sort((a, b) => a.p.nombre.localeCompare(b.p.nombre, 'es', { sensitivity: 'base' }));
+  // 🔹 ORDEN ALFABÉTICO (ignorando emojis)
+  res.sort((a, b) => {
+    const nombreA = limpiarNombreParaOrdenar(a.p.nombre);
+    const nombreB = limpiarNombreParaOrdenar(b.p.nombre);
+    return nombreA.localeCompare(nombreB, 'es', { sensitivity: 'base' });
+  });
 
   label.style.display="block";
   label.textContent = res.length ? `${res.length} resultado${res.length!==1?"s":""} para "${q}"` : `Sin resultados para "${q}"`;
