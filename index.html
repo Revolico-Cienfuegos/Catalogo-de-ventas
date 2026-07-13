@@ -99,7 +99,7 @@
   </div>
 </div>
 
-<nav class="cats-scroll" id="catsNav" style="display:none;">
+<nav class="cats-scroll" id="catsNav" style="display:none; position: sticky; z-index: 30; background:var(--navy2); border-bottom:2px solid var(--gold); overflow-x:auto; overflow-y:hidden; white-space:nowrap; scrollbar-width:none; padding:0 8px; box-shadow:0 2px 6px rgba(0,0,0,.08);">
   <div class="cats-inner" id="catsInner"></div>
 </nav>
 
@@ -222,7 +222,6 @@
       <input type="text" id="ofReferencia" placeholder="Ej: cerca de la plaza, al lado de la farmacia">
       <div class="error" id="ofReferenciaErr">Completá el punto de referencia</div>
     </div>
-    <!-- ELIMINADO: campo de método de pago -->
     <div class="field">
       <label>Observaciones (opcional)</label>
       <textarea id="ofObservaciones" placeholder="Algo más que quieras decirnos..."></textarea>
@@ -256,8 +255,8 @@ const TASAS = {
 //  CATEGORÍAS
 // ============================================================
 const CATEGORIAS = [
-  { id:"garantia-domicilio", nombre:"🛡️ Garantía y Domicilio", ico:"🛡️", especial:true },
-  { id:"todas",              nombre:"🏪 Todos",                  ico:"🏪", especial:false },
+  { id:"garantia-domicilio", nombre:"Garantía y Domicilio", ico:"🛡️", especial:true },
+  { id:"todas",              nombre:"Todos",                  ico:"🏪", especial:false },
   { id:"electricidad",       nombre:"Electricidad y Protección", ico:"⚡" },
   { id:"solar",              nombre:"Energía Solar y Respaldo",  ico:"☀️" },
   { id:"moviles",            nombre:"Dispositivos Móviles y Carga Portátil", ico:"📱" },
@@ -277,11 +276,10 @@ const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
 //  FUNCIÓN PARA LIMPIAR NOMBRES (elimina emojis para ordenar)
 // ============================================================
 function limpiarNombreParaOrdenar(nombre) {
-  // Elimina emojis y caracteres especiales que puedan interferir
   return nombre
-    .replace(/[\u{1F300}-\u{1FAFF}]/gu, '') // Emojis
-    .replace(/[\u2600-\u27BF]/gu, '')       // Símbolos
-    .replace(/[🔥⭐✅🚚🛡️💵💳❗ℹ️]/g, '')      // Emojis específicos
+    .replace(/[\u{1F300}-\u{1FAFF}]/gu, '')
+    .replace(/[\u2600-\u27BF]/gu, '')
+    .replace(/[🔥⭐✅🚚🛡️💵💳❗ℹ️]/g, '')
     .trim()
     .toLowerCase();
 }
@@ -592,7 +590,6 @@ function renderizarContenido(){
     porCat[cat].push({ p, idx: DATA.indexOf(p) });
   });
 
-  // 🔹 ORDEN ALFABÉTICO (ignorando emojis)
   for (const catId in porCat) {
     porCat[catId].sort((a, b) => {
       const nombreA = limpiarNombreParaOrdenar(a.p.nombre);
@@ -810,7 +807,6 @@ function renderBusqueda(q){
     return hay.includes(ql);
   });
 
-  // 🔹 ORDEN ALFABÉTICO (ignorando emojis)
   res.sort((a, b) => {
     const nombreA = limpiarNombreParaOrdenar(a.p.nombre);
     const nombreB = limpiarNombreParaOrdenar(b.p.nombre);
@@ -925,6 +921,23 @@ document.getElementById("overlay").addEventListener("click",e=>{ if(e.target.id=
 let ty=0;
 document.getElementById("modal").addEventListener("touchstart",e=>{ty=e.touches[0].clientY;},{passive:true});
 document.getElementById("modal").addEventListener("touchmove",e=>{ if(e.touches[0].clientY-ty>60) cerrarModal(); },{passive:true});
+
+// ============================================================
+//  AJUSTAR POSICIÓN DE LA BARRA DE CATEGORÍAS (para móvil)
+// ============================================================
+function ajustarTopCategorias() {
+  const header = document.querySelector('.site-header');
+  const cats = document.getElementById('catsNav');
+  if (header && cats) {
+    const headerHeight = header.offsetHeight;
+    cats.style.top = headerHeight + 'px';
+  }
+}
+
+// Ejecutar al cargar y al redimensionar
+window.addEventListener('load', ajustarTopCategorias);
+window.addEventListener('resize', ajustarTopCategorias);
+window.addEventListener('scroll', ajustarTopCategorias);
 
 // ============================================================
 //  CARGA DE PRODUCTOS
