@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-<title>Ventas Cienfuegos</title>
+<title>VENTACIEN</title>
 
 <!-- ===== GOOGLE ANALYTICS ===== -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PYG8LH258"></script>
@@ -44,15 +44,15 @@
 </head>
 <body>
 
-<div class="util-bar">🇨🇺 Cienfuegos, Cuba · Atención directa por WhatsApp · Respuesta rápida</div>
+<div class="util-bar">🇨🇺 VENTACIEN · Todo lo que necesitas, cerca de ti</div>
 
 <header class="site-header">
   <div class="header-inner">
     <div class="logo">
-      <div class="logo-badge">VC</div>
+      <img src="imagenes/logo-ventacien.png" alt="VENTACIEN" style="height:40px; width:auto; margin-right:8px;">
       <div>
-        <div class="logo-nombre">Ventas Cienfuegos</div>
-        <span class="logo-sub">Tienda online</span>
+        <div class="logo-nombre">VENTACIEN</div>
+        <span class="logo-sub">Todo lo que necesitas, cerca de ti</span>
       </div>
     </div>
 
@@ -67,7 +67,6 @@
     </div>
 
     <div class="header-actions">
-      <!-- ===== SELECTOR DE MONEDA ===== -->
       <div class="moneda-selector">
         <select id="currencySelect">
           <option value="USD" selected>USD</option>
@@ -115,12 +114,8 @@
     </div>
   </div>
 
-  <!-- ===== CONTENEDOR DE PRODUCTOS ===== -->
   <div id="contenido" style="display:none;"></div>
-
-  <!-- ===== CONTENEDOR DE GARANTÍA Y DOMICILIO ===== -->
   <div id="contenidoGarantia" style="display:none;"></div>
-
   <div id="resultadosBusqueda" style="display:none;"></div>
   <div id="vacio" class="empty" style="display:none;">
     <div class="ico">🛍️</div>
@@ -131,8 +126,9 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-col">
-      <h4>Ventas Cienfuegos</h4>
-      <p>Catálogo de productos con atención directa por WhatsApp. Pedidos rápidos, sin complicaciones, entrega en Cienfuegos.</p>
+      <h4>VENTACIEN</h4>
+      <img src="imagenes/banner-ventacien.png" alt="VENTACIEN" style="max-width:100%; border-radius:8px; margin-top:8px;">
+      <p style="font-size:12px; color:rgba(255,255,255,0.5); margin-top:6px;">Garantía de calidad · Envíos disponibles · Atención personalizada · Compra segura</p>
     </div>
     <div class="footer-col">
       <h4>Categorías</h4>
@@ -147,7 +143,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© <span id="anioActual"></span> Ventas Cienfuegos</span>
+    <span>© <span id="anioActual"></span> VENTACIEN</span>
     <span>Todos los pedidos se coordinan por WhatsApp</span>
   </div>
 </footer>
@@ -197,7 +193,7 @@
   </div>
 </div>
 
-<!-- ===== FORMULARIO DE PEDIDO (SIN MÉTODO DE PAGO) ===== -->
+<!-- ===== FORMULARIO DE PEDIDO ===== -->
 <div class="order-form-overlay" id="orderFormOverlay">
   <div class="order-form" id="orderForm">
     <h3>📋 Completá tu pedido</h3>
@@ -242,7 +238,6 @@
 // ============================================================
 const WA = "5354571729";
 
-// Tasas de conversión desde USD
 const TASAS = {
   USD: 1,
   MN: 680,
@@ -251,12 +246,9 @@ const TASAS = {
   Euro: 0.93
 };
 
-// ============================================================
-//  CATEGORÍAS
-// ============================================================
 const CATEGORIAS = [
-  { id:"garantia-domicilio", nombre:"Garantía y Domicilio", ico:"🛡️", especial:true },
-  { id:"todas",              nombre:"Todos",                  ico:"🏪", especial:false },
+  { id:"garantia-domicilio", nombre:"🛡️ Garantía y Domicilio", ico:"🛡️", especial:true },
+  { id:"todas",              nombre:"🏪 Todos",                  ico:"🏪", especial:false },
   { id:"electricidad",       nombre:"Electricidad y Protección", ico:"⚡" },
   { id:"solar",              nombre:"Energía Solar y Respaldo",  ico:"☀️" },
   { id:"moviles",            nombre:"Dispositivos Móviles y Carga Portátil", ico:"📱" },
@@ -456,7 +448,7 @@ document.getElementById("cartOverlay").addEventListener("click", (e)=>{
 document.getElementById("cartClear").addEventListener("click", vaciarCarrito);
 
 // ============================================================
-//  FORMULARIO DE PEDIDO (SIN MÉTODO DE PAGO)
+//  FORMULARIO DE PEDIDO
 // ============================================================
 function abrirPlanilla(producto){
   productoParaPedir = producto;
@@ -550,7 +542,7 @@ document.getElementById("currencySelect").addEventListener("change", (e)=>{
 });
 
 // ============================================================
-//  RENDERIZADO PRINCIPAL (con orden alfabético mejorado)
+//  RENDERIZADO PRINCIPAL
 // ============================================================
 function renderizarContenido(){
   const contenido = document.getElementById("contenido");
@@ -787,7 +779,7 @@ function bindCards(container){
 }
 
 // ============================================================
-//  BÚSQUEDA (con orden alfabético mejorado)
+//  BÚSQUEDA
 // ============================================================
 function renderBusqueda(q){
   const rb = document.getElementById("resultadosBusqueda");
@@ -934,7 +926,6 @@ function ajustarTopCategorias() {
   }
 }
 
-// Ejecutar al cargar y al redimensionar
 window.addEventListener('load', ajustarTopCategorias);
 window.addEventListener('resize', ajustarTopCategorias);
 window.addEventListener('scroll', ajustarTopCategorias);
