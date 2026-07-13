@@ -54,15 +54,6 @@
     "imagen": "imagenes/Transfer-03.jpeg"
   },
   {
-    "id": "p_1783046581974",
-    "categoria": "electricidad",
-    "nombre": "🔥 Transfer automático AC 110V 100A/4P marca SACO 🔥",
-    "precio": "60",
-    "moneda": "USD",
-    "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "imagenes/Transfer-04.jpeg"
-  },
-  {
     "id": "p_1783046626189",
     "categoria": "electricidad",
     "nombre": "🔥 Protectores de voltaje 110 V 15 A 🔥",
@@ -144,15 +135,6 @@
     "imagen": "imagenes/22.jpeg"
   },
   {
-    "id": "p_1783047303236",
-    "categoria": "solar",
-    "nombre": "🔥 Inversor de corriente de 12V a 110V Potencia 2500W pico 5000W 🔥",
-    "precio": "220",
-    "moneda": "USD",
-    "descripcion": "✅ Onda pura\n✅ Pantalla frontal muestra Voltaje de batería, Voltaje de salida y Consumo en W\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "imagenes/Inversor-01.jpeg"
-  },
-  {
     "id": "p_1783047395563",
     "categoria": "solar",
     "nombre": "🔥 Inversor de corriente de 24V a 110V 🔥",
@@ -178,15 +160,6 @@
     "moneda": "USD",
     "descripcion": "✅Para motorina\n✅ Onda Pura\n✅ Ideal para quien tiene motorina o triciclos y quiere alimentar la casa\n✅ Levanta refrigerador, nevera, luces, TV, etc.\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
     "imagen": "imagenes/Inversor-04.jpeg"
-  },
-  {
-    "id": "p_1783047912138",
-    "categoria": "solar",
-    "nombre": "🔥 Controlador Solar MPPT de 48V, 60V y 72V y 1200W 🔥",
-    "precio": "130",
-    "moneda": "USD",
-    "descripcion": "✅ PV INPUT 12-60VDC/30A, MAX CHARGE CURRENT 15A\n✅ POWER MAX 1200W\n✅ Baterías compatibles 48V, 60V y 72V\n✅ Incluye conector MC4 para los cables de entrada del panel solar\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "imagenes/controladors.jpeg"
   },
   {
     "id": "p_1783048072042",
@@ -241,15 +214,6 @@
     "moneda": "USD",
     "descripcion": "✅ Baterías Autos, Motos, AGM, GEL, LiFeP04\n🛡️ Garantía 72 horas",
     "imagen": "imagenes/Cargador Int-06.jpeg"
-  },
-  {
-    "id": "p_1783048419218",
-    "categoria": "solar",
-    "nombre": "🔥 KIT de base tipo torre para instalar panel solar 🔥",
-    "precio": "45",
-    "moneda": "USD",
-    "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "imagenes/4.jpeg"
   },
   {
     "id": "p_1783048528137",
@@ -333,15 +297,6 @@
     "imagen": "imagenes/Powerbank-05.jpeg"
   },
   {
-    "id": "p_1783049043720",
-    "categoria": "moviles",
-    "nombre": "🔥 Powerbank o Cargador portátil de 40000 mAh 🔥",
-    "precio": "40",
-    "moneda": "USD",
-    "descripcion": "✅ 4 Puertos USB\n✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 4 puertos de salida USB, 1 puerto de salida Tipo C\n✅ Entrada de carga Tipo C, Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "imagenes/Powerbank-06.jpeg"
-  },
-  {
     "id": "p_1783049159441",
     "categoria": "moviles",
     "nombre": "🔥 Powerbank o Cargador portátil de 50000 mAh 🔥",
@@ -349,15 +304,6 @@
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 4 puertos de salida USB, 1 puerto salida Tipo C\n✅ Puertos de entrada Tipo C y V8\n🛡️ Garantía 72 horas, solo cubre la batería",
     "imagen": "imagenes/Powerbank-07.jpeg"
-  },
-  {
-    "id": "p_1783049308928",
-    "categoria": "moviles",
-    "nombre": "🔥 Powerbank o Cargador portátil de 50000 mAh 🔥",
-    "precio": "45",
-    "moneda": "USD",
-    "descripcion": "✅Con panel solar\n✅ Panel solar\n✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 4 puertos de salida USB, 1 puerto salida Tipo C\n✅ Puertos de entrada Tipo C y V8\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "imagenes/Powerbank-08.jpeg"
   },
   {
     "id": "p_1783049376055",
@@ -612,15 +558,6 @@
     "imagen": "imagenes/olla-cabo.jpeg"
   },
   {
-    "id": "p_1783484871521",
-    "categoria": "audio",
-    "nombre": "Bocina Bluetooth Portatil marca SACO",
-    "precio": "20",
-    "moneda": "USD",
-    "descripcion": "✅2 Bocinas de 3 pulgadas \n✅Salida 10 W\n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1200 mAh\n✅Duración más de 4 horas dependiendo el volumen \n✅Tamaño 11.2 x 12.1 x 26.5 cm\n🛡️Garantia 3 días",
-    "imagen": "imagenes/Bocina-04.jpeg"
-  },
-  {
     "id": "p_1783485384474",
     "categoria": "electricidad",
     "nombre": "Breaker DC2P-125A",
@@ -642,7 +579,7 @@
     "id": "p_1783486195681",
     "categoria": "electrodomesticos",
     "nombre": "Cocinas de petróleo o keroseno de 10 mechas con mechas de repuesto",
-    "precio": "20",
+    "precio": "18",
     "moneda": "USD",
     "descripcion": "Cocinas de petróleo o keroseno de 10 mechas con mechas de repuesto \n✅Capacidad del tanque 1L de queroseno\n✅Consumo 0.13 L/H\n✅Cantidad de mechas 10\n✅Material: Lámina de hierro con esmalte resistente\n✅Portátil y fácil de usar\n✅Dimensiones: 21 cm de altura y 17cm de diámetro\n🛡️Garantía: NO TIENE",
     "imagen": "imagenes/Fogon-mecha.jpeg"
@@ -657,15 +594,6 @@
     "imagen": "imagenes/rollo-01.jpeg"
   },
   {
-    "id": "p_1783562942805",
-    "categoria": "iluminacion",
-    "nombre": "🔥Lámpara led de 1000W con panel solar🔥",
-    "precio": "55",
-    "moneda": "USD",
-    "descripcion": "✅Dimensiones de la lámpara 32 x 26.5 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
-    "imagen": "imagenes/lampara-08.jpeg"
-  },
-  {
     "id": "p_1783563267484",
     "categoria": "electricidad",
     "nombre": "🔥Caja de distribución de 4 vías marca Q7🔥",
@@ -673,5 +601,95 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "imagen": "imagenes/caja-q7.jpeg"
+  },
+  {
+    "id": "p_1783911168026",
+    "categoria": "solar",
+    "nombre": "Controlador Solar MPPT 30A marca Q7",
+    "precio": "170",
+    "moneda": "USD",
+    "descripcion": "- Corriente de carga máxima 30A\n- Voltaje Solar (PV) Max 230V DC\n- Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n\n✅ Garantía no tiene es nuevo y se deja probado \n🛵 Domicilio gratis en Cienfuegos",
+    "imagen": "imagenes/controlador-solar-mppt-30a-marca-q7-1783911102805.jpg"
+  },
+  {
+    "id": "p_1783911303677",
+    "categoria": "audio",
+    "nombre": "Audífonos inalámbricos de casco GX-5",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "- Duración aproximada 4 horas\n\n✅ Garantía no tiene es nuevo y se deja probado\n🛵 Domicilio en Cienfuegos",
+    "imagen": "imagenes/audifinosgx5.jpeg"
+  },
+  {
+    "id": "p_1783911438490",
+    "categoria": "electrodomesticos",
+    "nombre": "OLLA ELÉCTRICA MULTIFUNCIONAL 1.2 L 450W",
+    "precio": "45",
+    "moneda": "USD",
+    "descripcion": "- COLOR: ROJO Y VIOLETA\n- POTENCIA: 450W\n- ANTIADHERENTES \n- SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n\n✅ Garantia 3 días\n🛵 Domicilio gratis en Cienfuegos",
+    "imagen": "imagenes/olla1.2.jpeg"
+  },
+  {
+    "id": "p_1783911662988",
+    "categoria": "electrodomesticos",
+    "nombre": "OLLA ELÉCTRICA MULTIFUNCIONAL 1.5 L 800W",
+    "precio": "60",
+    "moneda": "USD",
+    "descripcion": "- COLOR: AZUL\n- POTENCIA: 400W y 800W\n- ANTIADHERENTES \n- SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n\n✅ Garantia 3 días\n🛵 Domicilio gratis en Cienfuegos",
+    "imagen": "imagenes/olla1.5l.jpeg"
+  },
+  {
+    "id": "p_1783911760843",
+    "categoria": "herramientas",
+    "nombre": "Camara Inteligente WIFI IP con carga por panel solar",
+    "precio": "80",
+    "moneda": "USD",
+    "descripcion": "- Modelo JT-8258PRO\n- Nivel de protección IP66 puede estar fuera de la casa \n- compatible con micro SD de hasta 128 GB \n- Incluye panel solar con base y cable \n- También se puede alimentar con 5V con un cargador de teléfono o con un powerbank para q funcione en los apagones\n- Se revisa desde una aplicación en el teléfono o desde la PC en cualquier parte del mundo 🌎 \n- Necesita tener conexión a internet a través de alguna wifi para transmitir\n\n✅ Garantía no tiene es nuevo en caja y el Cliente debe probarla cuando se la llevan\n🛵 Domicilio gratis en Cienfuegos \nℹ️ El Cliente debe saber lo que esta comprando y como funciona para cuando el repartidor se lo lleve evitar pérdidas de tiempo",
+    "imagen": "imagenes/camarainte.jpeg"
+  },
+  {
+    "id": "p_1783911833359",
+    "categoria": "herramientas",
+    "nombre": "Camara Inteligente WIFI IP con carga por panel solar",
+    "precio": "40",
+    "moneda": "USD",
+    "descripcion": "- Modelo JT-8292\n- Nivel de protección IP44\n- compatible con micro SD de hasta 256 GB \n- Incluye panel solar con base y cable \n- También se puede alimentar con 5V con un cargador de teléfono o con un powerbank para q funcione en los apagones\n- Se revisa desde una aplicación en el teléfono o desde la PC en cualquier parte del mundo 🌎 \n- Necesita tener conexión a internet a través de alguna wifi para transmitir\n\n✅ Garantía no tiene es nuevo en caja y el Cliente debe probarla cuando se la llevan\n🛵 Domicilio gratis en Cienfuegos \nℹ️ El Cliente debe saber lo que esta comprando y como funciona para cuando el repartidor se lo lleve evitar pérdidas de tiempo",
+    "imagen": "imagenes/camarawifi.jpeg"
+  },
+  {
+    "id": "p_1783912015591",
+    "categoria": "solar",
+    "nombre": "Inversor de corriente de 12V a 110V Potencia 2000W pico 4000W",
+    "precio": "180",
+    "moneda": "USD",
+    "descripcion": "- Onda pura\n- Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n\n✅ Garantía no tiene es nuevo en caja y se deja probado\n🛺 Domicilio gratis en Cienfuegos",
+    "imagen": "imagenes/Inversor-08.jpeg"
+  },
+  {
+    "id": "p_1783912295687",
+    "categoria": "moviles",
+    "nombre": "RELOJ INTELIGENTE",
+    "precio": "25",
+    "moneda": "USD",
+    "descripcion": "- Incluye 7 manillas para que lo ajustes a cualquier estilo y nunca lo aburras\n- Aplicación para vincularlo con el teléfono\n- Colores NEGRO y DORADO \n\n✅ Garantía no tiene es nuevo y se deja probado\n🛵 Domicilio gratis en Cienfuegos",
+    "imagen": "imagenes/relojint.jpeg"
+  },
+  {
+    "id": "p_1783912413768",
+    "categoria": "electricidad",
+    "nombre": "Protector de voltaje digital 110V 63A",
+    "precio": "25",
+    "moneda": "USD",
+    "descripcion": "- Corriente ajustable 1A a 63A\n- Bajo Voltaje ajustable 70V a 110V\n- Alto voltaje ajustable 130V a 160V\nIdeal para las instalaciones de sistemas fotoboltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n\n✅ Garantía no tiene es nuevo\n🛵 Domicilio gratis en Cienfuegos",
+    "imagen": "imagenes/protectorv-03.jpeg"
+  },
+  {
+    "id": "p_1783912822507",
+    "categoria": "miscelaneos",
+    "nombre": "Maleta de 12 Kg",
+    "precio": "40",
+    "moneda": "USD",
+    "descripcion": "- Doble zipper para mayor capacidad\n- Candado\n- Ruedas\n\n✅ Garantía no tiene es nueva\n🛵 Domicilio gratis en Cienfuegos",
+    "imagen": "imagenes/maleta.jpeg"
   }
 ]
