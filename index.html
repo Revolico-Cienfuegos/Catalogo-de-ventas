@@ -69,8 +69,11 @@
     <div class="header-actions">
       <div class="moneda-selector">
         <select id="currencySelect">
-          <option value="MN">MN</option>
           <option value="USD" selected>USD</option>
+          <option value="MN">MN (680)</option>
+          <option value="Zelle">Zelle (1.05)</option>
+          <option value="Tarjeta">Tarjeta (1.1)</option>
+          <option value="Euro">Euro (0.93)</option>
         </select>
       </div>
       <button class="cart-icon" id="cartToggle" aria-label="Carrito">
@@ -193,7 +196,7 @@
   </div>
 </div>
 
-<!-- ===== FORMULARIO DE PEDIDO (PLANILLA) ===== -->
+<!-- ===== FORMULARIO DE PEDIDO (PLANILLA) SIN MÉTODO DE PAGO ===== -->
 <div class="order-form-overlay" id="orderFormOverlay">
   <div class="order-form" id="orderForm">
     <h3>📋 Completá tu pedido</h3>
@@ -238,17 +241,17 @@
 // ============================================================
 const WA = "5354571729";
 
-// Tasas de conversión desde USD
+// Tasas de conversión desde USD (para el selector de moneda)
 const TASAS = {
   USD: 1,
-  MN: 700,
-  Zelle: 1.05,
-  Tarjeta: 1.1,
-  Euro: 0.93
+  MN: 680,          // 1 USD = 680 MN
+  Zelle: 1.05,      // 1 USD = 1.05 (recargo Zelle)
+  Tarjeta: 1.1,     // 1 USD = 1.1 (recargo tarjeta)
+  Euro: 0.93        // 1 USD = 0.93 EUR
 };
 
 // ============================================================
-//  CATEGORÍAS (la primera es la especial de Garantía y Domicilio)
+//  CATEGORÍAS (con "Garantía y Domicilio" primero)
 // ============================================================
 const CATEGORIAS = [
   { id:"garantia-domicilio", nombre:"Garantía y Domicilio", ico:"🛡️", especial:true },
@@ -272,7 +275,7 @@ const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" 
 //  ESTADO GLOBAL
 // ============================================================
 let DATA = [];
-let catActiva = "garantia-domicilio"; // <--- CATEGORÍA POR DEFECTO
+let catActiva = "garantia-domicilio";
 let monedaActual = "USD";
 let carrito = [];
 let productoParaPedir = null;
@@ -320,9 +323,6 @@ function toast(msg, type="success"){
   setTimeout(()=>{ if(t.parentNode) t.remove(); }, 3000);
 }
 
-// ============================================================
-//  GOOGLE ANALYTICS - EVENTOS PERSONALIZADOS
-// ============================================================
 function trackEvent(category, action, label, value){
   if (typeof gtag === 'function') {
     gtag('event', action, {
@@ -334,7 +334,7 @@ function trackEvent(category, action, label, value){
 }
 
 // ============================================================
-//  CARRITO
+//  CARRITO (sin stock)
 // ============================================================
 function cargarCarrito(){
   try {
@@ -443,7 +443,7 @@ document.getElementById("cartOverlay").addEventListener("click", (e)=>{
 document.getElementById("cartClear").addEventListener("click", vaciarCarrito);
 
 // ============================================================
-//  FORMULARIO DE PEDIDO (PLANILLA)
+//  FORMULARIO DE PEDIDO (SIN MÉTODO DE PAGO)
 // ============================================================
 function abrirPlanilla(producto){
   productoParaPedir = producto;
@@ -528,7 +528,7 @@ Muchas gracias.`;
 });
 
 // ============================================================
-//  MONEDA
+//  MONEDA (selector en header)
 // ============================================================
 document.getElementById("currencySelect").addEventListener("change", (e)=>{
   monedaActual = e.target.value;
@@ -537,7 +537,7 @@ document.getElementById("currencySelect").addEventListener("change", (e)=>{
 });
 
 // ============================================================
-//  RENDERIZADO PRINCIPAL (con ocultación de skeletons)
+//  RENDERIZADO PRINCIPAL (con orden alfabético)
 // ============================================================
 function renderizarContenido(){
   const contenido = document.getElementById("contenido");
@@ -546,29 +546,23 @@ function renderizarContenido(){
   const resultadosBusqueda = document.getElementById("resultadosBusqueda");
   const skeletons = document.getElementById("skeletons");
 
-  // Ocultar skeletons siempre
   skeletons.style.display = "none";
-
-  // Ocultar todo
   contenido.style.display = "none";
   contenidoGarantia.style.display = "none";
   vacio.style.display = "none";
   resultadosBusqueda.style.display = "none";
 
-  // Si es la categoría especial de garantía
   if (catActiva === "garantia-domicilio") {
     contenidoGarantia.style.display = "block";
     contenidoGarantia.innerHTML = renderGarantiaDomicilio();
     return;
   }
 
-  // Si no hay productos
   if (!DATA.length) {
     vacio.style.display = "block";
     return;
   }
 
-  // Filtro para otras categorías
   const datos = catActiva === "todas" ? DATA : DATA.filter(p => p.categoria === catActiva);
   if (!datos.length) {
     vacio.style.display = "block";
@@ -576,8 +570,6 @@ function renderizarContenido(){
     return;
   }
 
-  // Renderizar productos
-  contenido.style.display = "block";
   const porCat = {};
   datos.forEach((p, i) => {
     const cat = p.categoria || "miscelaneos";
@@ -585,7 +577,13 @@ function renderizarContenido(){
     porCat[cat].push({ p, idx: DATA.indexOf(p) });
   });
 
+  for (const catId in porCat) {
+    porCat[catId].sort((a, b) => a.p.nombre.localeCompare(b.p.nombre, 'es', { sensitivity: 'base' }));
+  }
+
   const orden = CATEGORIAS.filter(c => c.id !== "garantia-domicilio" && c.id !== "todas").map(c => c.id).filter(id => porCat[id]);
+
+  contenido.style.display = "block";
   contenido.innerHTML = orden.map(catId => {
     const cat = CATEGORIAS.find(c => c.id === catId);
     const items = porCat[catId];
@@ -603,7 +601,7 @@ function renderizarContenido(){
 }
 
 // ============================================================
-//  RENDER GARANTÍA Y DOMICILIO (sin duplicar estilos)
+//  RENDER GARANTÍA Y DOMICILIO
 // ============================================================
 function renderGarantiaDomicilio() {
   return `
@@ -792,6 +790,8 @@ function renderBusqueda(q){
     return hay.includes(ql);
   });
 
+  res.sort((a, b) => a.p.nombre.localeCompare(b.p.nombre, 'es', { sensitivity: 'base' }));
+
   label.style.display="block";
   label.textContent = res.length ? `${res.length} resultado${res.length!==1?"s":""} para "${q}"` : `Sin resultados para "${q}"`;
 
@@ -801,7 +801,7 @@ function renderBusqueda(q){
     return;
   }
   rb.style.display="block";
-  rb.innerHTML=`<div class="grid">${res.map(({p,idx})=>cardHTML(p,idx,true)).join("")}</div>`;
+  rb.innerHTML=`<div class="grid">${res.map(({p,idx}) => cardHTML(p, idx, true)).join("")}</div>`;
   bindCards(rb);
 }
 
@@ -827,7 +827,6 @@ function buildCatsNav(){
       limpiarBusqueda();
       renderizarContenido();
 
-      // Scroll suave si es una categoría de productos
       if (catActiva !== "garantia-domicilio" && catActiva !== "todas") {
         const sec = document.getElementById(`cat-${catActiva}`);
         if(sec) sec.scrollIntoView({behavior:"smooth", block:"start"});
