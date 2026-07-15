@@ -234,15 +234,6 @@
     "imagen": "imagenes/Cable-01.jpeg"
   },
   {
-    "id": "p_1783048601601",
-    "categoria": "solar",
-    "nombre": "🔥 Cable de carga solar universal 4 en 1 MC4 a XT60 hembra, XT60 macho, ANDERSON y DC5525 🔥",
-    "precio": "25",
-    "moneda": "USD",
-    "descripcion": "✅ Compatibles con muchos modelos de estaciones de carga\n✅ Tamaño 60 cm\n🛡️ Garantía no tiene es nuevo",
-    "imagen": "imagenes/Cable-03.jpeg"
-  },
-  {
     "id": "p_1783048674424",
     "categoria": "solar",
     "nombre": "🔥 Cable para conectar nauta hogar, router y cámaras de vigilancia a powerbank 🔥",
@@ -259,15 +250,6 @@
     "moneda": "USD",
     "descripcion": "✅ 2 puertos de salida USB\n✅ Entrada de carga Tipo C\n🛡️ Garantía 72 horas solo la batería",
     "imagen": "imagenes/Powerbank-01.jpeg"
-  },
-  {
-    "id": "p_1783048763769",
-    "categoria": "moviles",
-    "nombre": "🔥 Powerbank o Cargador portátil de 20000 mAh 🔥",
-    "precio": "18",
-    "moneda": "USD",
-    "descripcion": "✅ 2 puertos de salida USB\n✅ Puertos de entrada Tipo C y V8\n✅ Colores negro y blanco\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "imagenes/Powerbank-02.jpeg"
   },
   {
     "id": "p_1783048795130",
@@ -385,15 +367,6 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad 3 litros\n✅ Consumo 1500 W\n✅ Control de temperatura hasta 190°\n✅ Olla desmontable de fácil limpieza\n🛡️ Garantía 3 días",
     "imagen": "imagenes/freitera.jpeg"
-  },
-  {
-    "id": "p_1783050069173",
-    "categoria": "audio",
-    "nombre": "🔥 Audífonos inalámbricos de casco 🔥",
-    "precio": "12",
-    "moneda": "USD",
-    "descripcion": "✅ Duración 4 horas\n🛡️ Garantía no tiene es nuevo y se deja probado",
-    "imagen": "imagenes/16.jpeg"
   },
   {
     "id": "p_1783050113677",
@@ -639,15 +612,6 @@
     "imagen": "imagenes/camarainte.jpeg"
   },
   {
-    "id": "p_1783911833359",
-    "categoria": "herramientas",
-    "nombre": "🔥Camara Inteligente WIFI IP con carga por panel solar🔥",
-    "precio": "40",
-    "moneda": "USD",
-    "descripcion": "✅ Modelo JT-8292\n✅ Nivel de protección IP44\n✅ compatible con micro SD de hasta 256 GB \n✅ Incluye panel solar con base y cable \n✅ También se puede alimentar con 5V con un cargador de teléfono o con un powerbank para q funcione en los apagones\n✅ Se revisa desde una aplicación en el teléfono o desde la PC en cualquier parte del mundo 🌎 \n✅ Necesita tener conexión a internet a través de alguna wifi para transmitir\n\n🛡️ Garantía no tiene es nuevo en caja y el Cliente debe probarla cuando se la llevan \nℹ️ El Cliente debe saber lo que esta comprando y como funciona para cuando el repartidor se lo lleve evitar pérdidas de tiempo",
-    "imagen": "imagenes/camarawifi.jpeg"
-  },
-  {
     "id": "p_1783912295687",
     "categoria": "moviles",
     "nombre": "🔥RELOJ INTELIGENTE🔥",
@@ -655,15 +619,6 @@
     "moneda": "USD",
     "descripcion": "✅ Incluye 7 manillas para que lo ajustes a cualquier estilo y nunca lo aburras\n✅ Aplicación para vincularlo con el teléfono\n✅ Colores NEGRO y DORADO \n\n🛡️ Garantía no tiene es nuevo y se deja probado",
     "imagen": "imagenes/relojint.jpeg"
-  },
-  {
-    "id": "p_1783912413768",
-    "categoria": "electricidad",
-    "nombre": "🔥Protector de voltaje digital 110V 63A🔥",
-    "precio": "25",
-    "moneda": "USD",
-    "descripcion": "✅ Corriente ajustable 1A a 63A\n✅ Bajo Voltaje ajustable 70V a 110V\n✅ Alto voltaje ajustable 130V a 160V\n✅ Ideal para las instalaciones de sistemas fotoboltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n\n🛡️ Garantía no tiene es nuevo",
-    "imagen": "imagenes/protectorv-03.jpeg"
   },
   {
     "id": "p_1783912822507",
