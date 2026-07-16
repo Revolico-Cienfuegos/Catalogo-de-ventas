@@ -72,15 +72,6 @@
     "imagen": "imagenes/ProtectorV-02.jpeg"
   },
   {
-    "id": "p_1783046879692",
-    "categoria": "electricidad",
-    "nombre": "🔥 Interruptor de cuchilla 2P-63A marca Voltage 🔥",
-    "precio": "12",
-    "moneda": "USD",
-    "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
-    "imagen": "imagenes/1.jpeg"
-  },
-  {
     "id": "p_1783046915508",
     "categoria": "electricidad",
     "nombre": "🔥 Interruptor de cuchilla 3P-63A marca SACO 🔥",
@@ -277,15 +268,6 @@
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
     "imagen": "imagenes/Powerbank-05.jpeg"
-  },
-  {
-    "id": "p_1783049159441",
-    "categoria": "moviles",
-    "nombre": "🔥 Powerbank o Cargador portátil de 50000 mAh 🔥",
-    "precio": "45",
-    "moneda": "USD",
-    "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 4 puertos de salida USB, 1 puerto salida Tipo C\n✅ Puertos de entrada Tipo C y V8\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "imagenes/Powerbank-07.jpeg"
   },
   {
     "id": "p_1783049376055",
@@ -540,15 +522,6 @@
     "imagen": "imagenes/breake-125.jpeg"
   },
   {
-    "id": "p_1783486087777",
-    "categoria": "miscelaneos",
-    "nombre": "🔥Nebulizador portátil🔥",
-    "precio": "15",
-    "moneda": "USD",
-    "descripcion": "✅Se puede utilizar con 2 pilas AA o alimentándolo por un puerto Tipo C\n✅Ideal para utilizar cuando no hay corriente\n✅Trae 2 boquillas\n🛡️Garantía no tiene",
-    "imagen": "imagenes/nebulizador.jpeg"
-  },
-  {
     "id": "p_1783486195681",
     "categoria": "electrodomesticos",
     "nombre": "🔥Cocinas de petróleo o keroseno de 10 mechas con mechas de repuesto🔥",
@@ -574,15 +547,6 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "imagen": "imagenes/caja-q7.jpeg"
-  },
-  {
-    "id": "p_1783911303677",
-    "categoria": "audio",
-    "nombre": "🔥Audífonos inalámbricos de casco GX-5🔥",
-    "precio": "15",
-    "moneda": "USD",
-    "descripcion": "✅ Duración aproximada 4 horas\n\n🛡️ Garantía no tiene es nuevo y se deja probado",
-    "imagen": "imagenes/audifinosgx5.jpeg"
   },
   {
     "id": "p_1783911438490",
