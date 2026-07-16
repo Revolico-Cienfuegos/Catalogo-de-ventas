@@ -949,18 +949,60 @@ window.addEventListener('scroll', ajustarTopCategorias);
     alert('🛡️ El contenido de esta web está protegido.');
   });
 
-  // Deshabilitar atajos de teclado
+  // Deshabilitar atajos de teclado (incluyendo F12 y otros)
   document.addEventListener('keydown', function(e) {
-    const teclasProhibidas = ['c', 'u', 's', 'p'];
-    if (e.ctrlKey && teclasProhibidas.includes(e.key.toLowerCase())) {
+    // Teclas que queremos bloquear
+    const teclas = {
+      'c': 'Ctrl+C',
+      'u': 'Ctrl+U',
+      's': 'Ctrl+S',
+      'p': 'Ctrl+P',
+      'i': 'Ctrl+Shift+I',
+      'j': 'Ctrl+Shift+J',
+      'F12': 'F12'
+    };
+
+    // Detectar combinaciones
+    if (e.ctrlKey && teclas[e.key.toLowerCase()]) {
       e.preventDefault();
       alert('🛡️ Esta acción no está permitida.');
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) {
+      e.preventDefault();
+      alert('🛡️ Esta acción no está permitida.');
+      return false;
     }
     if (e.key === 'F12') {
       e.preventDefault();
       alert('🛡️ Herramientas de desarrollador deshabilitadas.');
+      // Opcional: redirigir a la página principal o recargar
+      // window.location.href = './index.html'; // Descomentar si quieres redirigir
+      return false;
     }
   });
+
+  // Prevenir arrastre de imágenes (delegado de eventos)
+  document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Añadir crédito automático al copiar
+  document.addEventListener('copy', function(e) {
+    const seleccion = window.getSelection().toString();
+    if (seleccion.length > 10) {
+      const mensaje = seleccion + '\n\n📌 Fuente: VENTACIEN - https://revolico-cienfuegos.github.io/Catalogo-de-ventas/';
+      e.clipboardData.setData('text/plain', mensaje);
+      e.preventDefault();
+    }
+  });
+
+  // Proteger imágenes ya existentes al cargar la página
+  aplicarProteccionImagenes();
+})();
 
   // Proteger imágenes (evitar arrastre)
   document.querySelectorAll('img').forEach(img => {
