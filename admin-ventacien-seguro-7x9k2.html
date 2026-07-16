@@ -465,6 +465,65 @@ document.getElementById("descargarBtn").addEventListener("click",()=>{
   document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
   alert(`✅ Descargado ${productos.length} productos.\n\n1. Sube el archivo productos.json a GitHub (reemplaza el viejo).\n2. Sube las fotos nuevas a la carpeta imagenes/.\n3. Recarga la tienda con Ctrl+F5 para ver los cambios.`);
 });
+
+// ============================================================
+//  PROTECCIÓN DE CONTENIDO (igual que en index.html)
+// ============================================================
+(function protegerContenido() {
+  // Deshabilitar clic derecho
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('🛡️ El contenido de esta web está protegido.');
+  });
+
+  // Deshabilitar atajos de teclado
+  document.addEventListener('keydown', function(e) {
+    const teclasProhibidas = ['c', 'u', 's', 'p'];
+    if (e.ctrlKey && teclasProhibidas.includes(e.key.toLowerCase())) {
+      e.preventDefault();
+      alert('🛡️ Esta acción no está permitida.');
+    }
+    if (e.key === 'F12') {
+      e.preventDefault();
+      alert('🛡️ Herramientas de desarrollador deshabilitadas.');
+    }
+  });
+
+  // Proteger imágenes (evitar arrastre)
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('contextmenu', e => e.preventDefault());
+  });
+
+  // Añadir crédito automático al copiar
+  document.addEventListener('copy', function(e) {
+    const seleccion = window.getSelection().toString();
+    if (seleccion.length > 10) {
+      const mensaje = seleccion + '\n\n📌 Fuente: VENTACIEN - https://revolico-cienfuegos.github.io/Catalogo-de-ventas/';
+      e.clipboardData.setData('text/plain', mensaje);
+      e.preventDefault();
+    }
+  });
+})();
+
+// ============================================================
+//  ACTUALIZACIÓN AUTOMÁTICA DEL SERVICE WORKER (opcional)
+// ============================================================
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(registration => {
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        newWorker.addEventListener('statechange', () => {
+          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+            // No mostramos notificación en el admin para no molestar
+            console.log('🔄 Nueva versión del Service Worker disponible.');
+          }
+        });
+      });
+    })
+    .catch(() => {});
+}
 </script>
 </body>
 </html>
