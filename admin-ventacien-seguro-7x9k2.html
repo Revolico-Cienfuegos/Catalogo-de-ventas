@@ -478,53 +478,16 @@ document.getElementById("descargarBtn").addEventListener("click",()=>{
 
   // Deshabilitar atajos de teclado
   document.addEventListener('keydown', function(e) {
-    // Bloquear Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+P
-    if (e.ctrlKey && ['c', 'u', 's', 'p'].includes(e.key.toLowerCase())) {
+    const teclasProhibidas = ['c', 'u', 's', 'p'];
+    if (e.ctrlKey && teclasProhibidas.includes(e.key.toLowerCase())) {
       e.preventDefault();
       alert('🛡️ Esta acción no está permitida.');
-      return false;
     }
-    // Bloquear Ctrl+Shift+I (Inspeccionar) y Ctrl+Shift+J (Consola)
-    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) {
-      e.preventDefault();
-      alert('🛡️ Esta acción no está permitida.');
-      return false;
-    }
-    // Bloquear F12
     if (e.key === 'F12') {
       e.preventDefault();
       alert('🛡️ Herramientas de desarrollador deshabilitadas.');
-      // REDIRIGIR A LA PÁGINA PRINCIPAL (descomenta la línea de abajo si quieres)
-      // window.location.href = './index.html';
-      // O recargar la página actual
-      // window.location.reload();
-      return false;
     }
   });
-
-  // Prevenir arrastre de imágenes (delegado de eventos)
-  document.addEventListener('dragstart', function(e) {
-    if (e.target.tagName === 'IMG') {
-      e.preventDefault();
-      return false;
-    }
-  });
-
-  // Añadir crédito automático al copiar
-  document.addEventListener('copy', function(e) {
-    const seleccion = window.getSelection().toString();
-    if (seleccion.length > 10) {
-      const mensaje = seleccion + '\n\n📌 Fuente: VENTACIEN - https://revolico-cienfuegos.github.io/Catalogo-de-ventas/';
-      e.clipboardData.setData('text/plain', mensaje);
-      e.preventDefault();
-    }
-  });
-
-  // Aplicar protección a imágenes existentes
-  if (typeof aplicarProteccionImagenes === 'function') {
-    aplicarProteccionImagenes();
-  }
-})();
 
   // Proteger imágenes (evitar arrastre)
   document.querySelectorAll('img').forEach(img => {
