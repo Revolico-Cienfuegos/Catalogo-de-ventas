@@ -504,15 +504,6 @@
     "imagen": "imagenes/23.jpeg"
   },
   {
-    "id": "p_1783484122065",
-    "categoria": "electrodomesticos",
-    "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONAL DE CABO JOROBADO 18 cm, ( 1L)🔥",
-    "precio": "50",
-    "moneda": "USD",
-    "descripcion": "✅MARCA: Royal\n✅INCLUYE:  Vaporera \n✅CAPACIDAD: 1 LT\n✅COLOR: Cremita\n✅POTENCIA: 300-600W\n✅ANTIADHERENTES \n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n🛡️Garantia 3 días",
-    "imagen": "imagenes/olla-cabo.jpeg"
-  },
-  {
     "id": "p_1783485384474",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC2P-125A🔥",
@@ -565,15 +556,6 @@
     "moneda": "USD",
     "descripcion": "✅ COLOR: AZUL\n✅ POTENCIA: 400W y 800W\n✅ ANTIADHERENTES \n✅ SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n\n🛡️ Garantia 3 días",
     "imagen": "imagenes/olla1.5l.jpeg"
-  },
-  {
-    "id": "p_1783911760843",
-    "categoria": "herramientas",
-    "nombre": "🔥Camara Inteligente WIFI IP con carga por panel solar🔥",
-    "precio": "80",
-    "moneda": "USD",
-    "descripcion": "✅ Modelo JT-8258PRO\n✅ Nivel de protección IP66 puede estar fuera de la casa \n✅ compatible con micro SD de hasta 128 GB \n✅ Incluye panel solar con base y cable \n✅ También se puede alimentar con 5V con un cargador de teléfono o con un powerbank para q funcione en los apagones\n✅ Se revisa desde una aplicación en el teléfono o desde la PC en cualquier parte del mundo 🌎 \n✅ Necesita tener conexión a internet a través de alguna wifi para transmitir\n\n🛡️ Garantía no tiene es nuevo en caja y el Cliente debe probarla cuando se la llevan\nℹ️ El Cliente debe saber lo que esta comprando y como funciona para cuando el repartidor se lo lleve evitar pérdidas de tiempo",
-    "imagen": "imagenes/camarainte.jpeg"
   },
   {
     "id": "p_1783912295687",
