@@ -21,7 +21,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="icon-192.png">
 
-<!-- ===== ESTILOS PARA LA PÁGINA DE GARANTÍA Y DOMICILIO ===== -->
 <style>
   .landing-section { max-width:1100px; margin:16px auto; padding:0 14px; }
   .landing-card { background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.06); padding:24px 20px; margin-bottom:20px; border:1px solid #e0d5c0; }
@@ -98,7 +97,6 @@
   </div>
 </div>
 
-<!-- ===== BARRA DE CATEGORÍAS CON SCROLL SNAP ===== -->
 <nav class="cats-scroll" id="catsNav" style="display:none; position: sticky; z-index: 30; background:var(--navy2); border-bottom:2px solid var(--gold); overflow-x:auto; overflow-y:hidden; white-space:nowrap; scrollbar-width:none; padding:0 8px; box-shadow:0 2px 6px rgba(0,0,0,.08); scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;">
   <div class="cats-inner" id="catsInner" style="display:inline-flex; gap:2px; padding:6px 0;"></div>
 </nav>
@@ -115,12 +113,8 @@
     </div>
   </div>
 
-  <!-- ===== CONTENEDOR DE PRODUCTOS ===== -->
   <div id="contenido" style="display:none;"></div>
-
-  <!-- ===== CONTENEDOR DE GARANTÍA Y DOMICILIO ===== -->
   <div id="contenidoGarantia" style="display:none;"></div>
-
   <div id="resultadosBusqueda" style="display:none;"></div>
   <div id="vacio" class="empty" style="display:none;">
     <div class="ico">🛍️</div>
@@ -132,7 +126,7 @@
   <div class="footer-inner">
     <div class="footer-col">
       <h4>VENTACIEN</h4>
-        <p style="font-size:12px; color:rgba(255,255,255,0.5); margin-top:6px;">Garantía de calidad · Envíos disponibles · Atención personalizada · Compra segura</p>
+      <p style="font-size:12px; color:rgba(255,255,255,0.5); margin-top:6px;">Garantía de calidad · Envíos disponibles · Atención personalizada · Compra segura</p>
     </div>
     <div class="footer-col">
       <h4>Categorías</h4>
@@ -152,7 +146,7 @@
   </div>
 </footer>
 
-<!-- ===== MODAL PRODUCTO ===== -->
+<!-- ===== MODAL ===== -->
 <div class="overlay" id="overlay">
   <div class="modal" id="modal">
     <div class="modal-drag"></div>
@@ -171,7 +165,7 @@
   </div>
 </div>
 
-<!-- ===== CARRITO LATERAL ===== -->
+<!-- ===== CARRITO ===== -->
 <div class="cart-overlay" id="cartOverlay">
   <div class="cart-panel" id="cartPanel">
     <div class="cart-header">
@@ -269,7 +263,7 @@ const WA_ICO = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentCol
 const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
 
 // ============================================================
-//  FUNCIÓN PARA LIMPIAR NOMBRES (elimina emojis para ordenar)
+//  FUNCIONES AUXILIARES
 // ============================================================
 function limpiarNombreParaOrdenar(nombre) {
   return nombre
@@ -295,7 +289,7 @@ let carrito = [];
 let productoParaPedir = null;
 
 // ============================================================
-//  PROTECCIÓN DE IMÁGENES
+//  PROTECCIÓN DE IMÁGENES Y CONTENIDO
 // ============================================================
 function aplicarProteccionImagenes() {
   document.querySelectorAll('img').forEach(img => {
@@ -304,9 +298,6 @@ function aplicarProteccionImagenes() {
   });
 }
 
-// ============================================================
-//  PROTECCIÓN DE CONTENIDO
-// ============================================================
 (function protegerContenido() {
   document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
@@ -609,13 +600,13 @@ document.getElementById("currencySelect").addEventListener("change", (e)=>{
 });
 
 // ============================================================
-//  RENDER GARANTÍA Y DOMICILIO (COMPLETA)
+//  RENDER GARANTÍA Y DOMICILIO
 // ============================================================
 function renderGarantiaDomicilio() {
   return `
     <div class="landing-section">
 
-      <!-- ===== 1. GARANTÍA ===== -->
+      <!-- GARANTÍA -->
       <div class="landing-card" style="border-color:#c0392b; border-width:2px;">
         <div class="landing-title" style="color:#c0392b;">
           <span class="ico">🛡️</span> Política de Garantía
@@ -666,7 +657,7 @@ function renderGarantiaDomicilio() {
         </div>
       </div>
 
-      <!-- ===== 2. DOMICILIO GRATIS ===== -->
+      <!-- DOMICILIO GRATIS -->
       <div class="landing-card" style="background:linear-gradient(135deg, #0f2a43, #1a3a5c); color:#fff; border-color:#c8922a; text-align:center; padding:20px;">
         <div style="display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap;">
           <span style="font-size:36px;">🚚</span>
@@ -679,7 +670,7 @@ function renderGarantiaDomicilio() {
         <div style="font-size:12px; opacity:0.7; margin-top:6px;">⏳ Sujeto a disponibilidad de repartidores y condiciones climáticas</div>
       </div>
 
-      <!-- ===== 3. PRECIOS POR MUNICIPIO ===== -->
+      <!-- PRECIOS POR MUNICIPIO -->
       <div class="landing-card">
         <div class="landing-title">
           <span class="ico">🚨</span> Listado de precios de domicilio a Municipios
@@ -928,53 +919,50 @@ function buildCatsNav(){
 }
 
 // ============================================================
-//  SWIPE HORIZONTAL SOBRE EL CONTENIDO (cambiar categoría)
+//  SWIPE HORIZONTAL SOBRE EL CONTENIDO (TODAS LAS CATEGORÍAS)
 // ============================================================
 let touchStartX = 0;
 let touchEndX = 0;
 let isSwiping = false;
 
 document.getElementById('mainContent').addEventListener('touchstart', function(e) {
-  // Solo si hay datos y no estamos en la categoría de garantía
-  if (catActiva === 'garantia-domicilio' || DATA.length === 0) return;
-  // No interferir con scroll vertical
-  if (e.target.closest('.card') || e.target.closest('.modal') || e.target.closest('.cart-overlay')) return;
+  // No interferir con modal o carrito
+  if (e.target.closest('.modal') || e.target.closest('.cart-overlay')) return;
   touchStartX = e.changedTouches[0].screenX;
   isSwiping = true;
 }, { passive: true });
 
 document.getElementById('mainContent').addEventListener('touchmove', function(e) {
   if (!isSwiping) return;
-  // Evitar scroll vertical durante el swipe horizontal
   const deltaX = e.changedTouches[0].screenX - touchStartX;
   if (Math.abs(deltaX) > 10) {
-    // Estamos haciendo un swipe horizontal, prevenir scroll vertical
-    // e.preventDefault(); // (opcional, pero puede afectar)
+    // Prevenir scroll vertical durante el swipe
+    // e.preventDefault(); // (opcional)
   }
 }, { passive: true });
 
 document.getElementById('mainContent').addEventListener('touchend', function(e) {
   if (!isSwiping) return;
   isSwiping = false;
-  if (catActiva === 'garantia-domicilio' || DATA.length === 0) return;
   touchEndX = e.changedTouches[0].screenX;
   const diff = touchStartX - touchEndX;
   if (Math.abs(diff) < 50) return; // umbral mínimo
 
-  const categoriasFiltradas = CATEGORIAS.filter(c => c.id !== 'garantia-domicilio' && c.id !== 'todas');
-  const indices = categoriasFiltradas.map(c => c.id);
-  const currentIndex = indices.indexOf(catActiva);
+  // Obtener todas las categorías en el orden de la barra
+  const todasLasCategorias = CATEGORIAS.map(c => c.id);
+  const currentIndex = todasLasCategorias.indexOf(catActiva);
   let newIndex = currentIndex;
 
-  if (diff > 0 && currentIndex < indices.length - 1) {
+  if (diff > 0 && currentIndex < todasLasCategorias.length - 1) {
     // Deslizar a la izquierda -> siguiente categoría
     newIndex = currentIndex + 1;
   } else if (diff < 0 && currentIndex > 0) {
     // Deslizar a la derecha -> categoría anterior
     newIndex = currentIndex - 1;
   }
+
   if (newIndex !== currentIndex) {
-    const newCat = indices[newIndex];
+    const newCat = todasLasCategorias[newIndex];
     const btn = document.querySelector(`.cat-btn[data-cat="${newCat}"]`);
     if (btn) btn.click();
   }
@@ -1033,7 +1021,6 @@ function abrirModal(p){
   };
   document.getElementById("overlay").classList.add("open");
   document.body.style.overflow="hidden";
-
   aplicarProteccionImagenes();
 }
 
@@ -1049,7 +1036,7 @@ document.getElementById("modal").addEventListener("touchstart",e=>{ty=e.touches[
 document.getElementById("modal").addEventListener("touchmove",e=>{ if(e.touches[0].clientY-ty>60) cerrarModal(); },{passive:true});
 
 // ============================================================
-//  AJUSTAR TOP DE CATEGORÍAS (móvil)
+//  AJUSTAR TOP DE CATEGORÍAS
 // ============================================================
 function ajustarTopCategorias() {
   const header = document.querySelector('.site-header');
