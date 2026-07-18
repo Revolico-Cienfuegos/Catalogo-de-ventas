@@ -101,7 +101,7 @@
   <div class="cats-inner" id="catsInner" style="display:inline-flex; gap:2px; padding:6px 0;"></div>
 </nav>
 
-<main class="main" id="mainContent">
+<main class="main">
   <div id="skeletons">
     <div class="seccion">
       <div class="skel" style="height:16px;width:140px;margin-bottom:12px;border-radius:4px;"></div>
@@ -902,71 +902,17 @@ function buildCatsNav(){
       limpiarBusqueda();
       renderizarContenido();
 
+      // DESPLAZAR LA BARRA PARA CENTRAR EL BOTÓN (SIN MOVER LA PÁGINA)
       const navRect = nav.getBoundingClientRect();
       const btnRect = btn.getBoundingClientRect();
       const scrollLeft = btn.offsetLeft - (navRect.width / 2) + (btnRect.width / 2);
       nav.scrollTo({ left: scrollLeft, behavior: 'smooth' });
-
-      if (catActiva !== "garantia-domicilio" && catActiva !== "todas") {
-        const sec = document.getElementById(`cat-${catActiva}`);
-        if(sec) sec.scrollIntoView({behavior:"smooth", block:"start"});
-      }
     });
   });
 
   nav.style.scrollSnapType = 'x mandatory';
   nav.style.webkitOverflowScrolling = 'touch';
 }
-
-// ============================================================
-//  SWIPE HORIZONTAL SOBRE EL CONTENIDO (TODAS LAS CATEGORÍAS)
-// ============================================================
-let touchStartX = 0;
-let touchEndX = 0;
-let isSwiping = false;
-
-document.getElementById('mainContent').addEventListener('touchstart', function(e) {
-  // No interferir con modal o carrito
-  if (e.target.closest('.modal') || e.target.closest('.cart-overlay')) return;
-  touchStartX = e.changedTouches[0].screenX;
-  isSwiping = true;
-}, { passive: true });
-
-document.getElementById('mainContent').addEventListener('touchmove', function(e) {
-  if (!isSwiping) return;
-  const deltaX = e.changedTouches[0].screenX - touchStartX;
-  if (Math.abs(deltaX) > 10) {
-    // Prevenir scroll vertical durante el swipe
-    // e.preventDefault(); // (opcional)
-  }
-}, { passive: true });
-
-document.getElementById('mainContent').addEventListener('touchend', function(e) {
-  if (!isSwiping) return;
-  isSwiping = false;
-  touchEndX = e.changedTouches[0].screenX;
-  const diff = touchStartX - touchEndX;
-  if (Math.abs(diff) < 50) return; // umbral mínimo
-
-  // Obtener todas las categorías en el orden de la barra
-  const todasLasCategorias = CATEGORIAS.map(c => c.id);
-  const currentIndex = todasLasCategorias.indexOf(catActiva);
-  let newIndex = currentIndex;
-
-  if (diff > 0 && currentIndex < todasLasCategorias.length - 1) {
-    // Deslizar a la izquierda -> siguiente categoría
-    newIndex = currentIndex + 1;
-  } else if (diff < 0 && currentIndex > 0) {
-    // Deslizar a la derecha -> categoría anterior
-    newIndex = currentIndex - 1;
-  }
-
-  if (newIndex !== currentIndex) {
-    const newCat = todasLasCategorias[newIndex];
-    const btn = document.querySelector(`.cat-btn[data-cat="${newCat}"]`);
-    if (btn) btn.click();
-  }
-}, { passive: true });
 
 // ============================================================
 //  BÚSQUEDA (eventos)
