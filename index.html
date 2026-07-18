@@ -288,7 +288,14 @@ function limpiarNombreParaOrdenar(nombre) {
 //  ESTADO GLOBAL
 // ============================================================
 let DATA = [];
-let catActiva = "garantia-domicilio";
+// 🔹 Restaurar categoría guardada en localStorage o usar la predeterminada
+const CATEGORIA_GUARDADA_KEY = 'ventacien_categoria_activa';
+let catActiva = localStorage.getItem(CATEGORIA_GUARDADA_KEY) || "garantia-domicilio";
+// Verificar que la categoría guardada sea válida (exista en CATEGORIAS)
+const categoriasValidas = CATEGORIAS.map(c => c.id);
+if (!categoriasValidas.includes(catActiva)) {
+  catActiva = "garantia-domicilio";
+}
 let monedaActual = "USD";
 let carrito = [];
 let productoParaPedir = null;
@@ -924,6 +931,8 @@ function buildCatsNav(){
       inner.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active"));
       btn.classList.add("active");
       catActiva = btn.dataset.cat;
+      // 🔹 Guardar la categoría seleccionada en localStorage
+      localStorage.setItem(CATEGORIA_GUARDADA_KEY, catActiva);
       limpiarBusqueda();
       renderizarContenido();
 
