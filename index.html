@@ -67,7 +67,6 @@
     </div>
 
     <div class="header-actions">
-      <!-- ===== SELECTOR DE MONEDA ===== -->
       <div class="moneda-selector">
         <select id="currencySelect">
           <option value="USD" selected>USD</option>
@@ -104,7 +103,7 @@
   <div class="cats-inner" id="catsInner" style="display:inline-flex; gap:2px; padding:6px 0;"></div>
 </nav>
 
-<main class="main">
+<main class="main" id="mainContent">
   <div id="skeletons">
     <div class="seccion">
       <div class="skel" style="height:16px;width:140px;margin-bottom:12px;border-radius:4px;"></div>
@@ -198,7 +197,7 @@
   </div>
 </div>
 
-<!-- ===== FORMULARIO DE PEDIDO (SIN MÉTODO DE PAGO) ===== -->
+<!-- ===== FORMULARIO DE PEDIDO ===== -->
 <div class="order-form-overlay" id="orderFormOverlay">
   <div class="order-form" id="orderForm">
     <h3>📋 Completá tu pedido</h3>
@@ -243,7 +242,6 @@
 // ============================================================
 const WA = "5354571729";
 
-// Tasas de conversión desde USD
 const TASAS = {
   USD: 1,
   MN: 680,
@@ -252,9 +250,6 @@ const TASAS = {
   Euro: 0.93
 };
 
-// ============================================================
-//  CATEGORÍAS
-// ============================================================
 const CATEGORIAS = [
   { id:"garantia-domicilio", nombre:"Garantía y Domicilio", ico:"🛡️", especial:true },
   { id:"todas",              nombre:"Todos",                  ico:"🏪", especial:false },
@@ -286,7 +281,7 @@ function limpiarNombreParaOrdenar(nombre) {
 }
 
 // ============================================================
-//  ESTADO GLOBAL (con localStorage para categoría)
+//  ESTADO GLOBAL
 // ============================================================
 let DATA = [];
 const CATEGORIA_GUARDADA_KEY = 'ventacien_categoria_activa';
@@ -300,7 +295,7 @@ let carrito = [];
 let productoParaPedir = null;
 
 // ============================================================
-//  PROTECCIÓN DE IMÁGENES (se ejecuta después de cada renderizado)
+//  PROTECCIÓN DE IMÁGENES
 // ============================================================
 function aplicarProteccionImagenes() {
   document.querySelectorAll('img').forEach(img => {
@@ -310,7 +305,7 @@ function aplicarProteccionImagenes() {
 }
 
 // ============================================================
-//  PROTECCIÓN DE CONTENIDO (mejorada)
+//  PROTECCIÓN DE CONTENIDO
 // ============================================================
 (function protegerContenido() {
   document.addEventListener('contextmenu', function(e) {
@@ -409,7 +404,7 @@ function trackEvent(category, action, label, value){
 }
 
 // ============================================================
-//  CARRITO (sin stock)
+//  CARRITO
 // ============================================================
 function cargarCarrito(){
   try {
@@ -520,7 +515,7 @@ document.getElementById("cartOverlay").addEventListener("click", (e)=>{
 document.getElementById("cartClear").addEventListener("click", vaciarCarrito);
 
 // ============================================================
-//  FORMULARIO DE PEDIDO (SIN MÉTODO DE PAGO)
+//  FORMULARIO DE PEDIDO
 // ============================================================
 function abrirPlanilla(producto){
   productoParaPedir = producto;
@@ -614,7 +609,129 @@ document.getElementById("currencySelect").addEventListener("change", (e)=>{
 });
 
 // ============================================================
-//  RENDERIZADO PRINCIPAL (con orden alfabético mejorado)
+//  RENDER GARANTÍA Y DOMICILIO (COMPLETA)
+// ============================================================
+function renderGarantiaDomicilio() {
+  return `
+    <div class="landing-section">
+
+      <!-- ===== 1. GARANTÍA ===== -->
+      <div class="landing-card" style="border-color:#c0392b; border-width:2px;">
+        <div class="landing-title" style="color:#c0392b;">
+          <span class="ico">🛡️</span> Política de Garantía
+          <span style="font-size:12px; font-weight:400; color:#6b6050; margin-left:8px;">(Leer atentamente)</span>
+        </div>
+        <div style="background:#fdfaf4; border-radius:8px; padding:16px; border:1px solid #e0d5c0;">
+          <p style="font-size:14px; font-weight:700; color:#1a3a5c; margin-bottom:6px;">❌ <span style="color:#c0392b;">NO CUBRE</span> daños por:</p>
+          <ul style="list-style:none; padding:0; margin:0 0 12px 0;">
+            <li style="padding:2px 0 2px 20px; position:relative; font-size:13px;">• Mal uso del equipo</li>
+            <li style="padding:2px 0 2px 20px; position:relative; font-size:13px;">• Golpes, roturas, arañazos</li>
+            <li style="padding:2px 0 2px 20px; position:relative; font-size:13px;">• Deterioro por agua u otros productos nocivos</li>
+            <li style="padding:2px 0 2px 20px; position:relative; font-size:13px;">• Altos voltajes por variaciones eléctricas o instalaciones incorrectas</li>
+            <li style="padding:2px 0 2px 20px; position:relative; font-size:13px;">• Mal uso causado por el cliente <span style="font-size:11px; opacity:0.7;">(recomendamos usar protector de voltaje)</span></li>
+          </ul>
+          <p style="font-size:14px; font-weight:700; color:#1a3a5c;">✅ <span style="color:#1a8a4a;">SOLO CUBRE</span> defecto de fábrica del equipo.</p>
+          <div class="garantia-box">
+            <p style="font-weight:700; color:#1a3a5c; margin-bottom:4px;">📋 Procedimiento:</p>
+            <ul>
+              <li>El CLIENTE debe contactarnos y traer el equipo para que sea revisado por nuestros técnicos especializados, en un plazo de <strong>7 días hábiles</strong>.</li>
+              <li>Siempre se trata de resolver el problema lo antes posible, somos conscientes de las necesidades de cada cual.</li>
+              <li>Si el equipo no tiene solución, se procede al <strong>cambio por otro igual</strong>.</li>
+              <li>Si no hay equipos de reposición, se procede a la <strong>devolución del dinero</strong>.</li>
+            </ul>
+          </div>
+          <div style="margin-top:14px; background:#f5efe4; border-radius:8px; padding:14px 16px;">
+            <p style="font-weight:700; color:#1a3a5c; margin-bottom:4px;">📦 Para hacer efectiva la garantía:</p>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="padding:4px 0 4px 28px; position:relative; font-size:13px;">✅ Presentar el equipo en su <strong>embalaje original</strong> perfectamente conservado (nylon, corchos, cintas, protectores y todos sus accesorios).</li>
+              <li style="padding:4px 0 4px 28px; position:relative; font-size:13px;">✅ El equipo <strong>NO puede haber sido manipulado</strong> por nadie (solo nuestros técnicos autorizados).</li>
+            </ul>
+            <div style="background:#c8922a20; border-left:4px solid #c8922a; padding:10px 14px; margin-top:10px; border-radius:0 6px 6px 0;">
+              <span style="font-weight:700; color:#1a3a5c;">🧏🏻‍♀️ Pierde la garantía si incumple con cualquiera de estos parámetros.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTOS SIN GARANTÍA -->
+        <div style="margin-top:16px; background:#fff5f4; border-radius:8px; padding:16px; border:2px solid #c0392b;">
+          <p style="font-size:15px; font-weight:700; color:#c0392b; text-align:center; margin-bottom:8px;">
+            🚨 <span style="background:#c0392b; color:#fff; padding:0 10px; border-radius:4px;">PRODUCTOS QUE NO TIENEN GARANTÍA</span>
+          </p>
+          <p style="font-size:14px; line-height:1.6; color:#1e2d1e; text-align:center;">
+            El Cliente debe <strong>probar y revisar TODO LO QUE QUIERA</strong> el producto en la tienda o cuando el repartidor se lo lleva.
+          </p>
+          <div style="background:#c0392b; color:#fff; padding:12px; border-radius:6px; margin-top:10px; text-align:center; font-size:16px; font-weight:800; letter-spacing:0.5px;">
+            🚫 UNA VEZ PAGADOS, NO SE ACEPTAN DEVOLUCIONES, NI CAMBIOS, NI RECLAMOS DE NINGÚN TIPO.
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 2. DOMICILIO GRATIS ===== -->
+      <div class="landing-card" style="background:linear-gradient(135deg, #0f2a43, #1a3a5c); color:#fff; border-color:#c8922a; text-align:center; padding:20px;">
+        <div style="display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap;">
+          <span style="font-size:36px;">🚚</span>
+          <div>
+            <span style="font-size:22px; font-weight:800; color:#e8ad48;">¡DOMICILIO GRATIS!</span>
+            <span style="font-size:16px; margin-left:10px;">en Cienfuegos · De 9:00 AM a 6:00 PM (Lunes a Domingo)</span>
+          </div>
+          <span style="background:#c8922a; color:#0f2a43; padding:4px 16px; border-radius:20px; font-size:13px; font-weight:700;">¡APROVECHA!</span>
+        </div>
+        <div style="font-size:12px; opacity:0.7; margin-top:6px;">⏳ Sujeto a disponibilidad de repartidores y condiciones climáticas</div>
+      </div>
+
+      <!-- ===== 3. PRECIOS POR MUNICIPIO ===== -->
+      <div class="landing-card">
+        <div class="landing-title">
+          <span class="ico">🚨</span> Listado de precios de domicilio a Municipios
+          <span class="badge-gratis">Actualizado</span>
+        </div>
+        <div class="landing-sub">📍 <strong>Precios en CUP</strong> (a menos que se indique <span class="highlight">USD</span>)</div>
+        <div class="grid-municipios">
+          <div class="item"><span class="municipio">Palmira</span><span class="precio">2,000 CUP</span></div>
+          <div class="item"><span class="municipio">Espartaco</span><span class="precio">7,000 CUP</span></div>
+          <div class="item"><span class="municipio">Paradero</span><span class="precio">7,000 CUP</span></div>
+          <div class="item"><span class="municipio">Camarones</span><span class="precio">9,000 CUP</span></div>
+          <div class="item"><span class="municipio">Cruces</span><span class="precio">11,000 CUP</span></div>
+          <div class="item"><span class="municipio">Lajas</span><span class="precio">11,000 CUP</span></div>
+          <div class="item"><span class="municipio">Ranchuelo</span><span class="precio">17,000 CUP</span></div>
+          <div class="item"><span class="municipio">Santa Clara</span><span class="precio-usd">100 USD</span></div>
+          <div class="item"><span class="municipio">Rancho Luna</span><span class="precio">7,000 CUP</span></div>
+          <div class="item"><span class="municipio">Pasa Caballo</span><span class="precio">11,000 CUP</span></div>
+          <div class="item"><span class="municipio">Pepito Tey</span><span class="precio">7,000 CUP</span></div>
+          <div class="item"><span class="municipio">Guao</span><span class="precio">7,000 CUP</span></div>
+          <div class="item"><span class="municipio">Cumanayagua</span><span class="precio">11,000 CUP</span></div>
+          <div class="item"><span class="municipio">Barajagua</span><span class="precio">14,000 CUP</span></div>
+          <div class="item"><span class="municipio">Manicaragua</span><span class="precio">17,000 CUP</span></div>
+          <div class="item"><span class="municipio">Abreus</span><span class="precio">7,000 CUP</span></div>
+          <div class="item"><span class="municipio">Rodas</span><span class="precio">11,000 CUP</span></div>
+          <div class="item"><span class="municipio">Ariza</span><span class="precio">3,000 CUP</span></div>
+          <div class="item"><span class="municipio">Cartagena</span><span class="precio">17,000 CUP</span></div>
+          <div class="item"><span class="municipio">Turquino</span><span class="precio">17,000 CUP</span></div>
+          <div class="item"><span class="municipio">Constancia</span><span class="precio">9,000 CUP</span></div>
+          <div class="item"><span class="municipio">Charca</span><span class="precio">9,000 CUP</span></div>
+          <div class="item"><span class="municipio">Horquitas</span><span class="precio">11,000 CUP</span></div>
+          <div class="item"><span class="municipio">Camposeco de Horquitas</span><span class="precio">12,000 CUP</span></div>
+          <div class="item"><span class="municipio">Yaguaramas</span><span class="precio">9,000 CUP</span></div>
+          <div class="item"><span class="municipio">Aguadas</span><span class="precio">15,000 CUP</span></div>
+          <div class="item"><span class="municipio">Campiña</span><span class="precio">15,000 CUP</span></div>
+          <div class="item"><span class="municipio">Covadonga</span><span class="precio">17,000 CUP</span></div>
+          <div class="item"><span class="municipio">Ciego Montero</span><span class="precio">5,000 CUP</span></div>
+          <div class="item"><span class="municipio">Trinidad</span><span class="precio-usd">120 USD</span></div>
+          <div class="item"><span class="municipio">Yaguanabo</span><span class="precio">19,000 CUP</span></div>
+          <div class="item"><span class="municipio">Gavilán</span><span class="precio">14,000 CUP</span></div>
+          <div class="item"><span class="municipio">Sierrita</span><span class="precio">11,000 CUP</span></div>
+          <div class="item"><span class="municipio">Arimao</span><span class="precio">7,000 CUP</span></div>
+        </div>
+        <div style="font-size:12px; color:#6b6050; margin-top:10px; text-align:right; border-top:1px solid #e0d5c0; padding-top:8px;">
+          🚕 *Precios sujetos a cambios sin previo aviso
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// ============================================================
+//  RENDERIZADO PRINCIPAL
 // ============================================================
 function renderizarContenido(){
   const contenido = document.getElementById("contenido");
@@ -684,16 +801,6 @@ function renderizarContenido(){
 }
 
 // ============================================================
-//  RENDER GARANTÍA Y DOMICILIO (igual que antes)
-// ============================================================
-function renderGarantiaDomicilio() {
-  // Esta función es idéntica a la que tenías, la he dejado intacta por brevedad
-  // pero debes copiarla desde tu archivo anterior.
-  // Para este ejemplo, la mantengo resumida.
-  return `<div class="landing-section">...</div>`; // REEMPLAZA ESTO CON TU FUNCIÓN COMPLETA
-}
-
-// ============================================================
 //  RENDER CATÁLOGO
 // ============================================================
 function cardHTML(p, idx, mostrarTag=false){
@@ -741,7 +848,7 @@ function bindCards(container){
 }
 
 // ============================================================
-//  BÚSQUEDA (con orden alfabético mejorado)
+//  BÚSQUEDA
 // ============================================================
 function renderBusqueda(q){
   const rb = document.getElementById("resultadosBusqueda");
@@ -782,7 +889,7 @@ function renderBusqueda(q){
 }
 
 // ============================================================
-//  CATEGORÍAS NAV (con scroll snap y guardado en localStorage)
+//  CATEGORÍAS NAV
 // ============================================================
 function buildCatsNav(){
   const nav = document.getElementById("catsNav");
@@ -795,7 +902,6 @@ function buildCatsNav(){
     </button>`
   ).join("");
 
-  // Scroll suave al hacer clic en un botón
   inner.querySelectorAll(".cat-btn").forEach(btn=>{
     btn.addEventListener("click",()=>{
       inner.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active"));
@@ -805,7 +911,6 @@ function buildCatsNav(){
       limpiarBusqueda();
       renderizarContenido();
 
-      // Desplazar la barra para centrar el botón seleccionado
       const navRect = nav.getBoundingClientRect();
       const btnRect = btn.getBoundingClientRect();
       const scrollLeft = btn.offsetLeft - (navRect.width / 2) + (btnRect.width / 2);
@@ -818,10 +923,62 @@ function buildCatsNav(){
     });
   });
 
-  // Activar el scroll snap en la barra
   nav.style.scrollSnapType = 'x mandatory';
   nav.style.webkitOverflowScrolling = 'touch';
 }
+
+// ============================================================
+//  SWIPE HORIZONTAL SOBRE EL CONTENIDO (cambiar categoría)
+// ============================================================
+let touchStartX = 0;
+let touchEndX = 0;
+let isSwiping = false;
+
+document.getElementById('mainContent').addEventListener('touchstart', function(e) {
+  // Solo si hay datos y no estamos en la categoría de garantía
+  if (catActiva === 'garantia-domicilio' || DATA.length === 0) return;
+  // No interferir con scroll vertical
+  if (e.target.closest('.card') || e.target.closest('.modal') || e.target.closest('.cart-overlay')) return;
+  touchStartX = e.changedTouches[0].screenX;
+  isSwiping = true;
+}, { passive: true });
+
+document.getElementById('mainContent').addEventListener('touchmove', function(e) {
+  if (!isSwiping) return;
+  // Evitar scroll vertical durante el swipe horizontal
+  const deltaX = e.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(deltaX) > 10) {
+    // Estamos haciendo un swipe horizontal, prevenir scroll vertical
+    // e.preventDefault(); // (opcional, pero puede afectar)
+  }
+}, { passive: true });
+
+document.getElementById('mainContent').addEventListener('touchend', function(e) {
+  if (!isSwiping) return;
+  isSwiping = false;
+  if (catActiva === 'garantia-domicilio' || DATA.length === 0) return;
+  touchEndX = e.changedTouches[0].screenX;
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) < 50) return; // umbral mínimo
+
+  const categoriasFiltradas = CATEGORIAS.filter(c => c.id !== 'garantia-domicilio' && c.id !== 'todas');
+  const indices = categoriasFiltradas.map(c => c.id);
+  const currentIndex = indices.indexOf(catActiva);
+  let newIndex = currentIndex;
+
+  if (diff > 0 && currentIndex < indices.length - 1) {
+    // Deslizar a la izquierda -> siguiente categoría
+    newIndex = currentIndex + 1;
+  } else if (diff < 0 && currentIndex > 0) {
+    // Deslizar a la derecha -> categoría anterior
+    newIndex = currentIndex - 1;
+  }
+  if (newIndex !== currentIndex) {
+    const newCat = indices[newIndex];
+    const btn = document.querySelector(`.cat-btn[data-cat="${newCat}"]`);
+    if (btn) btn.click();
+  }
+}, { passive: true });
 
 // ============================================================
 //  BÚSQUEDA (eventos)
@@ -892,7 +1049,7 @@ document.getElementById("modal").addEventListener("touchstart",e=>{ty=e.touches[
 document.getElementById("modal").addEventListener("touchmove",e=>{ if(e.touches[0].clientY-ty>60) cerrarModal(); },{passive:true});
 
 // ============================================================
-//  AJUSTAR POSICIÓN DE LA BARRA DE CATEGORÍAS (para móvil)
+//  AJUSTAR TOP DE CATEGORÍAS (móvil)
 // ============================================================
 function ajustarTopCategorias() {
   const header = document.querySelector('.site-header');
@@ -908,7 +1065,7 @@ window.addEventListener('resize', ajustarTopCategorias);
 window.addEventListener('scroll', ajustarTopCategorias);
 
 // ============================================================
-//  ACTUALIZACIÓN AUTOMÁTICA DEL SERVICE WORKER (sin molestar)
+//  ACTUALIZACIÓN AUTOMÁTICA DEL SERVICE WORKER
 // ============================================================
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js')
@@ -917,7 +1074,6 @@ if ('serviceWorker' in navigator) {
         const newWorker = registration.installing;
         newWorker.addEventListener('statechange', () => {
           if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            // Recargar automáticamente después de 2 segundos
             setTimeout(() => {
               window.location.reload(true);
             }, 2000);
