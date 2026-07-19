@@ -1,4 +1,4 @@
-const CACHE = "vc-v8";
+const CACHE = "vc-v9"; // <--- CAMBIA ESTE NÚMERO CADA VEZ (v9, v10...)
 const ASSETS = [
   "./index.html",
   "./admin-ventacien-seguro-7x9k2.html",
@@ -26,7 +26,8 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   const url = e.request.url;
 
-  if (url.includes('index.html') || url.includes('admin-')) {
+  // SIEMPRE ir a la red para index.html, admin-*.html y productos.json
+  if (url.includes('index.html') || url.includes('admin-') || url.includes('productos.json')) {
     e.respondWith(
       fetch(e.request, { cache: "no-store" })
         .then(res => {
@@ -34,24 +35,12 @@ self.addEventListener("fetch", e => {
           caches.open(CACHE).then(c => c.put(e.request, clone));
           return res;
         })
-        .catch(() => caches.match(e.request))
+        .catch(() => caches.match(e.request)) // fallback a caché si la red falla
     );
     return;
   }
 
-  if (url.includes("productos.json")) {
-    e.respondWith(
-      fetch(e.request, { cache: "no-store" })
-        .then(res => {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
-          return res;
-        })
-        .catch(() => caches.match(e.request))
-    );
-    return;
-  }
-
+  // Para imágenes: caché primero, red después (mejor rendimiento)
   if (url.includes("/imagenes/")) {
     e.respondWith(
       caches.match(e.request).then(cached => {
@@ -66,6 +55,7 @@ self.addEventListener("fetch", e => {
     return;
   }
 
+  // Para el resto: caché primero
   e.respondWith(
     caches.match(e.request).then(cached => cached || fetch(e.request))
   );
