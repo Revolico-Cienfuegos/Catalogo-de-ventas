@@ -1001,7 +1001,7 @@ window.addEventListener('resize', ajustarTopCategorias);
 window.addEventListener('scroll', ajustarTopCategorias);
 
 // ============================================================
-//  ACTUALIZACIÓN AUTOMÁTICA DEL SERVICE WORKER
+//  ACTUALIZACIÓN AUTOMÁTICA DEL SERVICE WORKER (SIN PREGUNTAR)
 // ============================================================
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js')
@@ -1010,9 +1010,8 @@ if ('serviceWorker' in navigator) {
         const newWorker = registration.installing;
         newWorker.addEventListener('statechange', () => {
           if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            setTimeout(() => {
-              window.location.reload(true);
-            }, 2000);
+            // Recarga la página inmediatamente (sin preguntar)
+            window.location.reload(true);
           }
         });
       });
