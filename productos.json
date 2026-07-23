@@ -511,5 +511,23 @@
     "moneda": "USD",
     "descripcion": "✅ Es con el que se hacen los cables de las estaciones de carga ECOFLOW a los paneles solares\n✅Por cantidad 50 unidades o más sale cada unidad a 4 USD \n🛡️ Garantía no tiene",
     "imagen": "imagenes/Conectores-XT60i-F-5usd.jpg"
+  },
+  {
+    "id": "p_1784777109518",
+    "categoria": "miscelaneos",
+    "nombre": "🔥Cepillo blower secador y modelador🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "✅3 en 1 plancha + cepillo + secador\n✅2800 W\n✅Color verde\n🛡️Garantía se deja probado",
+    "imagen": "imagenes/Cepillo-blower-15usd.jpg"
+  },
+  {
+    "id": "p_1784777255573",
+    "categoria": "solar",
+    "nombre": "🔥Paquete de 50 parejas de conectores MC4🔥",
+    "precio": "90",
+    "moneda": "USD",
+    "descripcion": "✅Sale a 1.80 USD cada pareja\n🛡️Garantia no tiene",
+    "imagen": "imagenes/Paquete-parejas-90usd.png"
   }
 ]
