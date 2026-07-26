@@ -1,4 +1,5 @@
 const CACHE = "vc-v12"; // Cambia este número en cada actualización
+
 const ASSETS = [
   "./index.html",
   "./admin-ventacien-seguro-7x9k2.html",
@@ -23,10 +24,16 @@ self.addEventListener("activate", e => {
   );
 });
 
+// Escuchar mensajes para forzar la activación
+self.addEventListener("message", e => {
+  if (e.data === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
 self.addEventListener("fetch", e => {
   const url = e.request.url;
 
-  // HTML y JSON siempre desde la red (actualización inmediata)
   if (url.includes('index.html') || url.includes('admin-') || url.includes('productos.json')) {
     e.respondWith(
       fetch(e.request, { cache: "no-store" })
@@ -40,7 +47,6 @@ self.addEventListener("fetch", e => {
     return;
   }
 
-  // Imágenes: caché primero, red después (rendimiento)
   if (url.includes("/imagenes/")) {
     e.respondWith(
       caches.match(e.request).then(cached => {
@@ -55,7 +61,6 @@ self.addEventListener("fetch", e => {
     return;
   }
 
-  // Otros recursos: caché primero
   e.respondWith(
     caches.match(e.request).then(cached => cached || fetch(e.request))
   );
