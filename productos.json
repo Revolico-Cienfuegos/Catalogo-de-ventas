@@ -90,15 +90,6 @@
     "imagen": "imagenes/Portafusible-fusible-10usd.jpg"
   },
   {
-    "id": "p_1783047170771",
-    "categoria": "electricidad",
-    "nombre": "🔥 Caja de distribución de 8 vías marca Q7 🔥",
-    "precio": "10",
-    "moneda": "USD",
-    "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "imagenes/Caja-distribucion-10usd.jpg"
-  },
-  {
     "id": "p_1783047395563",
     "categoria": "solar",
     "nombre": "🔥 Inversor de corriente de 24V a 110V 🔥",
@@ -457,15 +448,6 @@
     "moneda": "USD",
     "descripcion": "Rollo de Cable eléctrico 10 AWG \n✅100% cobre marca Q7\n✅Longitud 100 M\n🛡️Garantía no tiene es nuevo en caja",
     "imagen": "imagenes/Rollo-Cable-170usd.jpg"
-  },
-  {
-    "id": "p_1783563267484",
-    "categoria": "electricidad",
-    "nombre": "🔥Caja de distribución de 4 vías marca Q7🔥",
-    "precio": "10",
-    "moneda": "USD",
-    "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "imagen": "imagenes/Caja-distribucion-10usd-2.jpg"
   },
   {
     "id": "p_1783911438490",
