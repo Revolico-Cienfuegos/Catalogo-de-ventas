@@ -1,4 +1,4 @@
-const CACHE = "vc-v10"; // Cambia este número en cada actualización
+const CACHE = "vc-v12"; // Cambia este número en cada actualización
 const ASSETS = [
   "./index.html",
   "./admin-ventacien-seguro-7x9k2.html",
