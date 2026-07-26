@@ -540,6 +540,30 @@
       color: var(--gold);
       padding: 6px 12px 0;
     }
+    .card-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      z-index: 2;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      padding: 4px 9px 4px 7px;
+      border-radius: 20px;
+      color: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.22);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .card-badge.badge-vendido {
+      background: linear-gradient(135deg, #ff6a2f, #e6391a);
+    }
+    .card-badge.badge-nuevo {
+      background: linear-gradient(135deg, #2e9bff, #1257c9);
+    }
     .card-body {
       padding: 8px 12px 12px;
       flex: 1;
@@ -1949,6 +1973,38 @@ function renderGarantiaDomicilio() {
 // ============================================================
 //  RENDERIZADO PRINCIPAL
 // ============================================================
+function bloquesTendencias(){
+  const vendidos = [];
+  const nuevos = [];
+  DATA.forEach((p, idx) => {
+    if (p.etiqueta === "mas_vendido") vendidos.push({ p, idx });
+    else if (p.etiqueta === "nuevo") nuevos.push({ p, idx });
+  });
+
+  let html = "";
+  if (vendidos.length){
+    html += `<section class="seccion" id="cat-tend-vendidos">
+      <div class="seccion-header">
+        <span class="seccion-ico">🔥</span>
+        <span class="seccion-titulo">Los Más Vendidos</span>
+        <span class="seccion-count">${vendidos.length} producto${vendidos.length!==1?"s":""}</span>
+      </div>
+      <div class="grid">${vendidos.map(({p, idx}) => cardHTML(p, idx, true)).join("")}</div>
+    </section>`;
+  }
+  if (nuevos.length){
+    html += `<section class="seccion" id="cat-tend-nuevos">
+      <div class="seccion-header">
+        <span class="seccion-ico">🆕</span>
+        <span class="seccion-titulo">Lo Nuevo</span>
+        <span class="seccion-count">${nuevos.length} producto${nuevos.length!==1?"s":""}</span>
+      </div>
+      <div class="grid">${nuevos.map(({p, idx}) => cardHTML(p, idx, true)).join("")}</div>
+    </section>`;
+  }
+  return html;
+}
+
 function renderizarContenido(){
   const contenido = document.getElementById("contenido");
   const contenidoGarantia = document.getElementById("contenidoGarantia");
@@ -1999,7 +2055,8 @@ function renderizarContenido(){
   const orden = CATEGORIAS.filter(c => c.id !== "garantia-domicilio" && c.id !== "todas").map(c => c.id).filter(id => porCat[id]);
 
   contenido.style.display = "block";
-  contenido.innerHTML = orden.map(catId => {
+  const tendenciasPrevias = (catActiva === "todas") ? bloquesTendencias() : "";
+  contenido.innerHTML = tendenciasPrevias + orden.map(catId => {
     const cat = CATEGORIAS.find(c => c.id === catId);
     const items = porCat[catId];
     return `<section class="seccion" id="cat-${catId}">
@@ -2019,11 +2076,18 @@ function renderizarContenido(){
 // ============================================================
 //  RENDER CATÁLOGO
 // ============================================================
+function badgeHTML(p){
+  if (p.etiqueta === "mas_vendido") return `<div class="card-badge badge-vendido">🔥 Más vendido</div>`;
+  if (p.etiqueta === "nuevo") return `<div class="card-badge badge-nuevo">🆕 Nuevo</div>`;
+  return "";
+}
+
 function cardHTML(p, idx, mostrarTag=false){
   const tag = mostrarTag ? `<div class="card-cat-tag">${icoCat(p.categoria)} ${nombreCat(p.categoria)}</div>` : "";
   const hasImg = p.imagen && p.imagen.length > 0;
   const imgSrc = hasImg ? p.imagen : "";
   const imgWrap = `<div class="card-img-wrap">
+    ${badgeHTML(p)}
     ${hasImg ? `<img src="${imgSrc}" alt="${p.nombre}" loading="lazy" decoding="async" data-idx="${idx}" onerror="this.style.display='none'; this.parentElement.querySelector('.card-img-ph').style.display='flex';">` : ''}
     <div class="card-img-ph" style="display:${hasImg ? 'none' : 'flex'};" data-idx="${idx}">${IMG_PH_ICO}<span>Sin foto</span></div>
   </div>`;
@@ -2253,7 +2317,7 @@ function cargarProductos(){
     })
     .then(data => {
       if (Array.isArray(data) && data.length > 0) {
-        DATA = data;
+        DATA = data.filter(p => !p.agotado);
         buildCatsNav();
         renderizarContenido();
         console.log("✅ Productos cargados desde el servidor");
