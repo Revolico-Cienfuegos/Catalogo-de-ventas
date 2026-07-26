@@ -1,4 +1,4 @@
-const CACHE = "vc-v12"; // Cambia este número en cada actualización
+const CACHE = "vc-v13"; // Cambia este número en cada actualización
 
 const ASSETS = [
   "./index.html",
