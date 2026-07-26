@@ -19,6 +19,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
 
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0a1a2b">
   <meta name="mobile-web-app-capable" content="yes">
@@ -2219,43 +2223,25 @@ window.addEventListener('resize', ajustarTopCategorias);
 window.addEventListener('scroll', ajustarTopCategorias);
 
 // ============================================================
-//  ACTUALIZACIÓN AUTOMÁTICA DEL SERVICE WORKER
+//  LIMPIEZA DE SERVICE WORKER (la tienda ya NO usa caché offline;
+//  siempre se muestra la versión más reciente desde internet)
 // ============================================================
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js')
-    .then(registration => {
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing;
-        newWorker.addEventListener('statechange', () => {
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            setTimeout(() => {
-              window.location.reload(true);
-            }, 2000);
-          }
-        });
-      });
-    })
-    .catch(() => {});
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(reg => reg.unregister());
+  });
+}
+if (window.caches) {
+  caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
 }
 
 // ============================================================
 //  CARGA DE PRODUCTOS
 // ============================================================
 function cargarProductos(){
-  const local = localStorage.getItem("vc_admin_productos");
-  if(local) {
-    try {
-      const datos = JSON.parse(local);
-      if(Array.isArray(datos) && datos.length > 0) {
-        DATA = datos;
-        buildCatsNav();
-        renderizarContenido();
-        console.log("✅ Productos cargados desde localStorage (fallback)");
-        return;
-      }
-    } catch(e) {}
-  }
-
+  // Siempre se pide la versión más reciente al servidor (nada de caché
+  // ni de localStorage como fuente principal) para que, en cuanto se
+  // actualice productos.json, todo el que la vea con internet la reciba.
   const url = "productos.json?_=" + Date.now();
   fetch(url, { 
     cache: "no-store",
@@ -2268,7 +2254,6 @@ function cargarProductos(){
     .then(data => {
       if (Array.isArray(data) && data.length > 0) {
         DATA = data;
-        localStorage.setItem("vc_admin_productos", JSON.stringify(DATA));
         buildCatsNav();
         renderizarContenido();
         console.log("✅ Productos cargados desde el servidor");
@@ -2312,11 +2297,6 @@ document.getElementById("headerContact").addEventListener("click", ()=>openWA("H
 //  INICIO
 // ============================================================
 cargarCarrito();
-
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js").catch(()=>{});
-}
-
 cargarProductos();
 </script>
 </body>
