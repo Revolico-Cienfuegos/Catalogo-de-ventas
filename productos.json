@@ -73,7 +73,7 @@
     "moneda": "USD",
     "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Interruptor-cuchilla-20usd.jpg"
   },
   {
@@ -664,7 +664,7 @@
     "moneda": "USD",
     "descripcion": "✅600V\n✅100% cobre\n🛡️Garantía no tiene",
     "etiqueta": "mas_vendido",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Interruptor-cuchilla-12usd.jpg"
   },
   {
@@ -730,7 +730,7 @@
     "moneda": "USD",
     "descripcion": "✅120V/240V\n🛡️Garantía no tiene",
     "etiqueta": "mas_vendido",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Interruptor-cuchilla-18usd.jpg"
   }
 ]
