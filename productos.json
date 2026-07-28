@@ -717,5 +717,49 @@
         "etiqueta": "nuevo",
         "agotado": false,
         "imagen": "imagenes/OLLA-ELECTRICA-70usd-2.jpg"
+    },
+    {
+        "id": "p_1785255052428",
+        "categoria": "solar",
+        "nombre": "🔥Controlador Solar MPPT 60A marca Q7🔥",
+        "precio": "210",
+        "moneda": "USD",
+        "descripcion": "✅Corriente de carga máxima 60A\n✅Voltaje Solar (PV) Max 230V DC\n✅Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n🛡️Garantía no tiene es nuevo y se deja probado",
+        "etiqueta": "nuevo",
+        "agotado": false,
+        "imagen": "imagenes/Controlador-Solar-210usd.jpg"
+    },
+    {
+        "id": "p_1785255099965",
+        "categoria": "audio",
+        "nombre": "🔥Bocina Bluetooth Portatil marca SACO🔥",
+        "precio": "20",
+        "moneda": "USD",
+        "descripcion": "✅2 Bocinas de 3 pulgadas \n✅Salida 10 W\n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1200 mAh\n✅Duración más de 4 horas dependiendo el volumen \n✅Tamaño 11.2 x 12.1 x 26.5 cm\n🛡️Garantía Son nuevas y se le dejan probadas al cliente",
+        "etiqueta": "nuevo",
+        "agotado": false,
+        "imagen": "imagenes/Bocina-Bluetooth-20usd.jpg"
+    },
+    {
+        "id": "p_1785255152476",
+        "categoria": "audio",
+        "nombre": "🔥Bocina Bluetooth Portatil marca SACO🔥",
+        "precio": "25",
+        "moneda": "USD",
+        "descripcion": "✅2 Bocinas de 4 pulgadas \n✅Salida 16 W\n✅Panel solar detras\n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1500 mAh\n✅Duración 3 a 4 horas dependiendo el volumen \n✅Tamaño 15.3 x 15.1 x 32.8 cm\n🛡️ Garantía son nuevas y se le dejan probadas al cliente",
+        "etiqueta": "nuevo",
+        "agotado": false,
+        "imagen": "imagenes/Bocina-Bluetooth-25usd.jpg"
+    },
+    {
+        "id": "p_1785255197956",
+        "categoria": "miscelaneos",
+        "nombre": "🔥 Juego de domino hasta el doble 9 🔥",
+        "precio": "18",
+        "moneda": "USD",
+        "descripcion": "🛡️ Garantía no tiene",
+        "etiqueta": "",
+        "agotado": false,
+        "imagen": "imagenes/Juego-domino-18usd.jpg"
     }
 ]
