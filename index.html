@@ -1981,6 +1981,14 @@ function bloquesTendencias(){
     else if (p.etiqueta === "nuevo") nuevos.push({ p, idx });
   });
 
+  // El más reciente agregado siempre va primero en "Lo Nuevo",
+  // sin importar el orden en que quedó guardado en el archivo.
+  nuevos.sort((a, b) => {
+    const ta = parseInt((a.p.id.match(/\d+/) || ["0"])[0], 10);
+    const tb = parseInt((b.p.id.match(/\d+/) || ["0"])[0], 10);
+    return tb - ta;
+  });
+
   let html = "";
   if (vendidos.length){
     html += `<section class="seccion" id="cat-tend-vendidos">
@@ -2332,7 +2340,7 @@ function cargarProductos(){
       document.getElementById("vacio").innerHTML = `
         <div class="ico">⚠️</div>
         <div style="font-weight:600; margin-bottom:6px;">No se pudieron cargar los productos.</div>
-        <div style="font-size:13px; color:var(--text-secondary);">Verifica tu conexión.</div>
+        <div style="font-size:13px; color:var(--text-secondary);">Verifica tu conexión o que el archivo <code>productos.json</code> exista en el servidor.</div>
         <div style="font-size:12px; margin-top:8px; color:var(--text-muted);">Error: ${err.message || "Desconocido"}</div>
         <button onclick="location.reload()" style="margin-top:12px; padding:8px 20px; background:#0a1a2b; color:#fff; border:none; border-radius:6px; font-weight:700; cursor:pointer;">Recargar</button>
       `;

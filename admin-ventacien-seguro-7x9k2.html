@@ -263,31 +263,38 @@ function login(){
 
 // ── DATOS ──
 function cargar(){
-  const local = localStorage.getItem(LS);
-  if(local){ 
-    try{ 
-      productos=JSON.parse(local); 
-      renderStats(); 
-      renderLista(); 
-      buildFiltro(); 
-      console.log(`✅ Productos cargados desde localStorage (${productos.length} items).`);
-      return; 
-    }catch(e){} 
-  }
-  fetch("productos.json?_="+Date.now())
+  // Siempre se pide la versión más reciente de productos.json al servidor
+  // (nada de caché ni de localStorage como fuente principal), para que en
+  // cuanto subas cambios a GitHub, el panel los muestre desde cualquier
+  // dispositivo apenas lo abras.
+  fetch("productos.json?_="+Date.now(), {
+      cache: "no-store",
+      headers: { "Cache-Control": "no-cache" }
+    })
     .then(r=>r.json())
     .then(d=>{
       productos=Array.isArray(d)?d:[];
       localStorage.setItem(LS, JSON.stringify(productos));
-      renderStats(); 
-      renderLista(); 
+      renderStats();
+      renderLista();
       buildFiltro();
+      console.log(`✅ Productos cargados desde el servidor (${productos.length} items).`);
     })
-    .catch(()=>{ 
-      productos=[]; 
-      renderStats(); 
-      renderLista(); 
-      buildFiltro(); 
+    .catch(()=>{
+      // Si no hay internet, se usa lo último guardado en este navegador
+      // para no dejar el panel vacío.
+      const local = localStorage.getItem(LS);
+      if(local){
+        try{
+          productos=JSON.parse(local);
+          console.log(`⚠️ Sin conexión: se muestran los productos guardados en este navegador (${productos.length} items).`);
+        }catch(e){ productos=[]; }
+      } else {
+        productos=[];
+      }
+      renderStats();
+      renderLista();
+      buildFiltro();
     });
 }
 
