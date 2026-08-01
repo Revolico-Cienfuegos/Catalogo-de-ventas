@@ -170,7 +170,8 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅ Se conecta del ECOFLOW a los cables de paneles solares\n✅ Longitud 30cm\n✅ Material del núcleo cobre puro\n✅ Calibre 10AWG, 6mm²\n✅ Corriente continua 30A y pico de 60A\n🛡️ Garantía no tien",
-    "imagen": "imagenes/Cable-carga-20usd.jpg"
+    "imagen": "imagenes/Cable-carga-20usd.jpg",
+    "agotado": true
   },
   {
     "id": "p_1783048674424",
@@ -188,6 +189,8 @@
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB\n✅ Entrada tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Powerbank-Cargador-26usd.jpg"
   },
   {
@@ -242,6 +245,8 @@
     "precio": "70",
     "moneda": "USD",
     "descripcion": "✅ Color: blanco\n✅ Potencia de 500-900W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Olla-electrica-70usd.jpg"
   },
   {
@@ -260,6 +265,8 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ 2 resistencias\n✅ Potencia 2000 W\n✅ Color negro y blanco\n🛡️ Garantía 7 días",
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Hornilla-electrica-35usd.jpg"
   },
   {
