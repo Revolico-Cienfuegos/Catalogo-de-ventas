@@ -66,10 +66,6 @@ button{cursor:pointer;font-family:inherit;}
 .item-btns{display:flex;gap:6px;flex-shrink:0;}
 .btn-sm{border:1.5px solid var(--linea);background:transparent;color:var(--texto);font-size:12px;padding:6px 10px;border-radius:6px;font-family:inherit;}
 .btn-del{border:1.5px solid var(--rojo);background:transparent;color:var(--rojo);width:34px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;}
-.btn-stock{border:1.5px solid var(--suave);background:transparent;color:var(--suave);width:34px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;}
-.btn-stock.activo{border-color:var(--rojo);background:var(--rojo);color:#fff;}
-.item.agotado{opacity:.5;}
-.item-agotado-tag{color:var(--rojo);font-weight:700;}
 .empty-lista{text-align:center;padding:36px 20px;color:var(--suave);font-size:14px;}
 
 /* FORMULARIO (sin stock) */
@@ -198,20 +194,6 @@ button{cursor:pointer;font-family:inherit;}
       <textarea class="textarea" id="campoDescripcion" placeholder="Características, especificaciones, estado, garantía..."></textarea>
     </div>
 
-    <div class="form-group">
-      <label class="lbl">Etiqueta (pestaña "Tendencias" de la tienda)</label>
-      <select class="input" id="campoEtiqueta">
-        <option value="">Ninguna</option>
-        <option value="mas_vendido">🔥 Más vendido</option>
-        <option value="nuevo">🆕 Nuevo</option>
-      </select>
-    </div>
-
-    <div class="form-group" style="display:flex;align-items:center;gap:8px;">
-      <input type="checkbox" id="campoAgotado" style="width:18px;height:18px;">
-      <label class="lbl" for="campoAgotado" style="margin:0;">🚫 Agotado (ocultarlo de la tienda online)</label>
-    </div>
-
     <button class="btn btn-azul" id="guardarBtn">Guardar producto</button>
     <div class="sep"></div>
     <button class="btn-outline" id="cancelarBtn">Cancelar</button>
@@ -242,6 +224,47 @@ let productos=[], editandoId=null, imagenActual="", archivoPendiente=null, archi
 let filtroCategoria = "todas";
 let textoBusqueda = "";
 
+// ============================================================
+//  NOMBRADO DE IMÁGENES (mismo criterio que imagen.py)
+// ============================================================
+const PALABRAS_IGNORAR = new Set(['de','para','con','por','en','a','el','la','los','las','marca','portátil','digital','inteligente']);
+
+function quitarAcentos(str){
+  return str.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^\x00-\x7F]/g,'');
+}
+
+function slugifyCorto(texto){
+  let t = quitarAcentos(texto);
+  t = t.replace(/[^\w\s-]/g,'');
+  const palabras = t.split(/\s+/).filter(Boolean);
+  const filtradas = palabras.filter(p => !PALABRAS_IGNORAR.has(p.toLowerCase()) && p.length > 2);
+  if(filtradas.length === 0) return 'producto';
+  let base = filtradas.slice(0,2).join('-');
+  if(base.length > 30) base = base.slice(0,30);
+  return base;
+}
+
+function generarNombreImagen(nombreProducto, precio, extension){
+  let limpio = (nombreProducto||'').replace(/[🔥()]/g,'');
+  limpio = limpio.replace(/\[.*?\]/g,'');
+  const base = slugifyCorto(limpio);
+  const nombreBase = `${base}-${precio}usd`;
+
+  const nombresExistentes = new Set(
+    productos
+      .filter(p => p.id !== editandoId)
+      .map(p => (p.imagen||'').split('/').pop())
+  );
+
+  let candidato = `${nombreBase}.${extension}`;
+  let contador = 1;
+  while(nombresExistentes.has(candidato)){
+    contador++;
+    candidato = `${nombreBase}-${contador}.${extension}`;
+  }
+  return candidato;
+}
+
 // ── UTILIDADES ──
 function catNombre(id){ return CATS.find(c=>c.id===id)?.nombre||id; }
 function catIco(id){ return CATS.find(c=>c.id===id)?.ico||"📦"; }
@@ -263,38 +286,31 @@ function login(){
 
 // ── DATOS ──
 function cargar(){
-  // Siempre se pide la versión más reciente de productos.json al servidor
-  // (nada de caché ni de localStorage como fuente principal), para que en
-  // cuanto subas cambios a GitHub, el panel los muestre desde cualquier
-  // dispositivo apenas lo abras.
-  fetch("productos.json?_="+Date.now(), {
-      cache: "no-store",
-      headers: { "Cache-Control": "no-cache" }
-    })
+  const local = localStorage.getItem(LS);
+  if(local){ 
+    try{ 
+      productos=JSON.parse(local); 
+      renderStats(); 
+      renderLista(); 
+      buildFiltro(); 
+      console.log(`✅ Productos cargados desde localStorage (${productos.length} items).`);
+      return; 
+    }catch(e){} 
+  }
+  fetch("productos.json?_="+Date.now())
     .then(r=>r.json())
     .then(d=>{
       productos=Array.isArray(d)?d:[];
       localStorage.setItem(LS, JSON.stringify(productos));
-      renderStats();
-      renderLista();
+      renderStats(); 
+      renderLista(); 
       buildFiltro();
-      console.log(`✅ Productos cargados desde el servidor (${productos.length} items).`);
     })
-    .catch(()=>{
-      // Si no hay internet, se usa lo último guardado en este navegador
-      // para no dejar el panel vacío.
-      const local = localStorage.getItem(LS);
-      if(local){
-        try{
-          productos=JSON.parse(local);
-          console.log(`⚠️ Sin conexión: se muestran los productos guardados en este navegador (${productos.length} items).`);
-        }catch(e){ productos=[]; }
-      } else {
-        productos=[];
-      }
-      renderStats();
-      renderLista();
-      buildFiltro();
+    .catch(()=>{ 
+      productos=[]; 
+      renderStats(); 
+      renderLista(); 
+      buildFiltro(); 
     });
 }
 
@@ -366,15 +382,14 @@ function renderLista(){
     const hasImg = p.imagen && p.imagen.length > 0;
     const imgHtml = hasImg ? `<div style="position:relative;"><img class="item-img" src="${p.imagen}" alt="${p.nombre}" loading="lazy" onerror="console.warn('Admin lista: imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.item-img-ph').style.display='flex';"><div class="item-img-ph" style="display:none;">🖼️</div></div>` : `<div class="item-img-ph">🖼️</div>`;
     return `
-    <div class="item ${p.agotado?'agotado':''}">
+    <div class="item">
       ${imgHtml}
       <div class="item-info">
-        <div class="item-cat">${catIco(p.categoria)} ${catNombre(p.categoria)}${p.etiqueta==="mas_vendido"?' · 🔥 Más vendido':p.etiqueta==="nuevo"?' · 🆕 Nuevo':''}${p.agotado?' · <span class="item-agotado-tag">Agotado</span>':''}</div>
+        <div class="item-cat">${catIco(p.categoria)} ${catNombre(p.categoria)}</div>
         <div class="item-nombre">${p.nombre||"(sin nombre)"}</div>
         <div class="item-precio">${fmt(p.precio,p.moneda)}</div>
       </div>
       <div class="item-btns">
-        <button class="btn-stock ${p.agotado?'activo':''}" data-stock="${p.id}" title="${p.agotado?'Marcar como disponible':'Marcar como agotado'}">${p.agotado?'✅':'🚫'}</button>
         <button class="btn-sm" data-id="${p.id}">✏️</button>
         <button class="btn-del" data-del="${p.id}">✕</button>
       </div>
@@ -383,15 +398,6 @@ function renderLista(){
 
   lista.querySelectorAll(".btn-sm").forEach(b=>b.addEventListener("click",()=>abrirForm(productos.find(p=>p.id===b.dataset.id))));
   lista.querySelectorAll(".btn-del").forEach(b=>b.addEventListener("click",()=>eliminar(b.dataset.del)));
-  lista.querySelectorAll(".btn-stock").forEach(b=>b.addEventListener("click",()=>toggleAgotado(b.dataset.stock)));
-}
-
-function toggleAgotado(id){
-  const p = productos.find(p=>p.id===id);
-  if(!p) return;
-  p.agotado = !p.agotado;
-  guardarLocal();
-  renderLista();
 }
 
 function eliminar(id){
@@ -419,8 +425,6 @@ function abrirForm(p){
   document.getElementById("campoPrecio").value=p?(p.precio||""):"";
   document.getElementById("campoMoneda").value=p?(p.moneda||"USD"):"USD";
   document.getElementById("campoDescripcion").value=p?(p.descripcion||""):"";
-  document.getElementById("campoEtiqueta").value=p?(p.etiqueta||""):"";
-  document.getElementById("campoAgotado").checked=p?!!p.agotado:false;
   const av=document.getElementById("avisoArchivo");
   av.style.display="none"; av.innerHTML="";
   actualizarPicker(p&&p.imagen?p.imagen:null);
@@ -451,10 +455,15 @@ document.getElementById("imgPicker").addEventListener("click",()=>document.getEl
 document.getElementById("fileInput").addEventListener("change",e=>{
   const file=e.target.files?.[0]; if(!file) return;
   if(file.size>8*1024*1024){ alert("Imagen muy grande. Usa menos de 8MB."); return; }
-  const ext=(file.name.split(".").pop()||"jpg").toLowerCase().replace(/[^a-z0-9]/g,"")||"jpg";
   const nombre=document.getElementById("campoNombre").value.trim();
-  const base=nombre?nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,""):"producto";
-  archivoNombre=`${base}-${Date.now()}.${ext}`;
+  const precio=document.getElementById("campoPrecio").value.trim();
+  if(!nombre || !precio){
+    alert("Primero escribe el Nombre y el Precio del producto, y después elige la foto (el nombre del archivo se genera igual que en imagen.py, usando esos dos datos).");
+    e.target.value = "";
+    return;
+  }
+  const ext=(file.name.split(".").pop()||"jpg").toLowerCase().replace(/[^a-z0-9]/g,"")||"jpg";
+  archivoNombre=generarNombreImagen(nombre, precio, ext);
   imagenActual=`imagenes/${archivoNombre}`;
   archivoPendiente=file;
   const reader=new FileReader();
@@ -482,8 +491,6 @@ document.getElementById("guardarBtn").addEventListener("click",()=>{
     precio:document.getElementById("campoPrecio").value.trim(),
     moneda:document.getElementById("campoMoneda").value.trim(),
     descripcion:document.getElementById("campoDescripcion").value.trim(),
-    etiqueta:document.getElementById("campoEtiqueta").value,
-    agotado:document.getElementById("campoAgotado").checked,
     imagen:imagenActual,
   };
   const idx=productos.findIndex(p=>p.id===datos.id);
