@@ -541,7 +541,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Duración aproximada 4 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Audifonos-inalambricos-15usd.jpg"
   },
@@ -552,7 +552,7 @@
     "precio": "12",
     "moneda": "USD",
     "descripcion": "✅Duración 4 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Audifonos-inalambricos-12usd.jpg"
   },
@@ -581,7 +581,7 @@
     "precio": "25",
     "moneda": "USD",
     "descripcion": "✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 70V a 110V\n✅Alto voltaje ajustable 130V a 160V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Protector-voltaje-25usd.jpg"
   },
@@ -612,7 +612,7 @@
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 85V a 215V\n✅Alto voltaje ajustable 130V a 300V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Protector-voltaje-26usd.jpg"
   },
@@ -623,7 +623,7 @@
     "precio": "28",
     "moneda": "USD",
     "descripcion": "✅Corriente ajustable 1A a 80A\n✅Bajo Voltaje ajustable 70V a 110V\n✅Alto voltaje ajustable 130V a 160V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Protector-voltaje-28usd.jpg"
   },
@@ -645,7 +645,7 @@
     "precio": "30",
     "moneda": "USD",
     "descripcion": "✅Corriente ajustable 1A a 80A\n✅Bajo Voltaje ajustable 85V a 215V\n✅Alto voltaje ajustable 130V a 300V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Protector-voltaje-30usd.jpg"
   },
@@ -666,7 +666,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Incluye manguerita larga con duchita pequeña.\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Ducha-Electrica-15usd.jpg"
   },
@@ -699,7 +699,7 @@
     "precio": "60",
     "moneda": "USD",
     "descripcion": "✅COLOR AZUL\n✅ANTIADHERENTES \n✅INCLUYE VAPORERA \n✅TAMAÑOS 1.5 L\n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n✅SE PUEDE COCINAR ARROZ, SOPAS, VIANDAS, FREIR, HACER COSAS AL VAPOR Y MUCHO MAS\n✅POTENCIA: 400W y 800W\n🛡️Garantia 3 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/OLLA-ELECTRICA-60usd.jpg"
   },
@@ -710,7 +710,7 @@
     "precio": "65",
     "moneda": "USD",
     "descripcion": "✅COLOR AZUL\n✅ANTIADHERENTES \n✅INCLUYE VAPORERA \n✅TAMAÑOS 2 L\n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n✅SE PUEDE COCINAR ARROZ, SOPAS, VIANDAS, FREIR, HACER COSAS AL VAPOR Y MUCHO MAS\n✅POTENCIA: 400W y 800W\n🛡️Garantía 3 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/OLLA-ELECTRICA-65usd.jpg"
   },
@@ -721,7 +721,7 @@
     "precio": "70",
     "moneda": "USD",
     "descripcion": "✅COLOR AZUL\n✅ANTIADHERENTES \n✅INCLUYE VAPORERA \n✅TAMAÑOS 2.4 L\n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n✅SE PUEDE COCINAR ARROZ, SOPAS, VIANDAS, FREIR, HACER COSAS AL VAPOR Y MUCHO MAS\n✅POTENCIA: 500W y 1000W\n🛡️Garantía 3 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/OLLA-ELECTRICA-70usd-2.jpg"
   },
@@ -732,7 +732,7 @@
     "precio": "210",
     "moneda": "USD",
     "descripcion": "✅Corriente de carga máxima 60A\n✅Voltaje Solar (PV) Max 230V DC\n✅Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Controlador-Solar-210usd.jpg"
   },
@@ -743,7 +743,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅2 Bocinas de 3 pulgadas \n✅Salida 10 W\n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1200 mAh\n✅Duración más de 4 horas dependiendo el volumen \n✅Tamaño 11.2 x 12.1 x 26.5 cm\n🛡️Garantía Son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Bocina-Bluetooth-20usd.jpg"
   },
@@ -754,7 +754,7 @@
     "precio": "25",
     "moneda": "USD",
     "descripcion": "✅2 Bocinas de 4 pulgadas \n✅Salida 16 W\n✅Panel solar detras\n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1500 mAh\n✅Duración 3 a 4 horas dependiendo el volumen \n✅Tamaño 15.3 x 15.1 x 32.8 cm\n🛡️ Garantía son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Bocina-Bluetooth-25usd.jpg"
   },
@@ -765,7 +765,7 @@
     "precio": "18",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Juego-domino-18usd.jpg"
   },
@@ -811,7 +811,7 @@
     "descripcion": "✅PV INPUT 12-60VDC/30A\n✅MAX CHARGE CURRENT 15A\n✅POWER MAX 1200W\n✅Baterías compatibles 48V, 60V y 72V (los que se le ponen a todos los trisiclos electricos)\n✅Incluye conector MC4 para los cables de entrada del panel solar\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/"
+    "imagen": "imagenes/Controlador-Solar-130usd.jpg"
   },
   {
     "id": "p_1785684969770",
@@ -833,7 +833,7 @@
     "descripcion": "✅Cables integrados iPhone y tipo C,\n✅1 puertos de salida USB\n✅1 puerto de salida tipo C\n✅Puertos de entrada Tipo C\n✅Carga rápida\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/"
+    "imagen": "imagenes/Powerbank-20000-26usd.jpg"
   },
   {
     "id": "p_1785685315713",
@@ -844,7 +844,7 @@
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB\n✅Puertos de entrada Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/"
+    "imagen": "imagenes/Powerbank-20000-21usd.jpg"
   },
   {
     "id": "p_1785685350674",
@@ -855,7 +855,7 @@
     "descripcion": "✅Incluye pinza \n✅Incluye 1200 terminales \n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/"
+    "imagen": "imagenes/Kit-crimpado-20usd.jpg"
   },
   {
     "id": "p_1785685401666",
@@ -866,7 +866,7 @@
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 8\n✅Para tornillos 8-10\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/"
+    "imagen": "imagenes/Terminales-cable-15usd.jpg"
   },
   {
     "id": "p_1785685435314",
@@ -877,7 +877,7 @@
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 6\n✅Para tornillos 8-16\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/"
+    "imagen": "imagenes/Terminales-cable-15usd-2.jpg"
   },
   {
     "id": "p_1785685479034",
@@ -888,6 +888,6 @@
     "descripcion": "✅INCLUYE:\n✅Pinza MC4 \n✅Pinza pelar cables \n✅2 llaves safar y apretar MC4\n✅6 parejas MC4\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/"
+    "imagen": "imagenes/Maleta-instalar-35usd.jpg"
   }
 ]
