@@ -122,9 +122,11 @@
     "id": "p_1783048072042",
     "categoria": "solar",
     "nombre": "🔥 Cargador inteligente para batería de LiFeP04 de 12.8V – 50A 🔥",
-    "precio": "180",
+    "precio": "150",
     "moneda": "USD",
     "descripcion": "✅ No sirve para baterías ni de ácido ni de gel, solo LiFeP04\n🛡️ Garantía 3 días",
+    "etiqueta": "nuevo",
+    "agotado": false,
     "imagen": "imagenes/Cargador-bateria-180usd.jpg"
   },
   {
