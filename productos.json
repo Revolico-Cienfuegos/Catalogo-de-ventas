@@ -678,7 +678,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Caja-distribucion-10usd.jpg"
   },
   {
@@ -768,5 +768,126 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "imagen": "imagenes/Juego-domino-18usd.jpg"
+  },
+  {
+    "id": "p_1785684510362",
+    "categoria": "miscelaneos",
+    "nombre": "🔥Camara Inteligente WIFI IP con carga por panel solar🔥",
+    "precio": "80",
+    "moneda": "USD",
+    "descripcion": "✅Modelo JT-8258PRO\n✅Nivel de protección IP66 puede estar fuera de la casa \n✅compatible con micro SD de hasta 128 GB \n✅Incluye panel solar con base y cable \n✅También se puede alimentar con 5V con un cargador de teléfono o con un powerbank para q funcione en los apagones\n✅Se revisa desde una aplicación en el teléfono o desde la PC en cualquier parte del mundo 🌎 \n✅Necesita tener conexión a internet a través de alguna wifi para transmitir\n🛡️ Garantía no tiene es nuevo en caja y el Cliente debe probarla cuando se la llevan",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/Camara-WIFI-80usd.jpg"
+  },
+  {
+    "id": "p_1785684624747",
+    "categoria": "moviles",
+    "nombre": "🔥Powerbank de 10000 mAh🔥",
+    "precio": "10",
+    "moneda": "USD",
+    "descripcion": "✅2 puerto de salida USB \n✅Entrada de carga Tipo C\n🛡️Garantía 72 horas solo la batería",
+    "etiqueta": "",
+    "agotado": false,
+    "imagen": "imagenes/Powerbank-Cargador-10usd.jpg"
+  },
+  {
+    "id": "p_1785684699434",
+    "categoria": "electricidad",
+    "nombre": "🔥Breaker DC2P-125A🔥",
+    "precio": "20",
+    "moneda": "USD",
+    "descripcion": "🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/Breaker-DC2P-125A-20usd.jpg"
+  },
+  {
+    "id": "p_1785684862363",
+    "categoria": "solar",
+    "nombre": "🔥Controlador Solar MPPT de 48V, 60V y 72V y 1200W🔥",
+    "precio": "130",
+    "moneda": "USD",
+    "descripcion": "✅PV INPUT 12-60VDC/30A\n✅MAX CHARGE CURRENT 15A\n✅POWER MAX 1200W\n✅Baterías compatibles 48V, 60V y 72V (los que se le ponen a todos los trisiclos electricos)\n✅Incluye conector MC4 para los cables de entrada del panel solar\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/"
+  },
+  {
+    "id": "p_1785684969770",
+    "categoria": "herramientas",
+    "nombre": "🔥Pesa digital de gancho marca SACO🔥",
+    "precio": "45",
+    "moneda": "USD",
+    "descripcion": "✅Hasta 300 KG\n🛡️Garantía de deja probada",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/Pesa-gancho-45usd.jpg"
+  },
+  {
+    "id": "p_1785685286107",
+    "categoria": "moviles",
+    "nombre": "🔥Powerbank de 20000 mAh carga rápida con cables🔥",
+    "precio": "26",
+    "moneda": "USD",
+    "descripcion": "✅Cables integrados iPhone y tipo C,\n✅1 puertos de salida USB\n✅1 puerto de salida tipo C\n✅Puertos de entrada Tipo C\n✅Carga rápida\n🛡️Garantía 72 horas , solo cubre la batería",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/"
+  },
+  {
+    "id": "p_1785685315713",
+    "categoria": "moviles",
+    "nombre": "🔥Powerbank de 20000 mAh con cables🔥",
+    "precio": "21",
+    "moneda": "USD",
+    "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB\n✅Puertos de entrada Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/"
+  },
+  {
+    "id": "p_1785685350674",
+    "categoria": "herramientas",
+    "nombre": "🔥Kit de crimpado de terminales electricas con 1200 piezas🔥",
+    "precio": "20",
+    "moneda": "USD",
+    "descripcion": "✅Incluye pinza \n✅Incluye 1200 terminales \n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/"
+  },
+  {
+    "id": "p_1785685401666",
+    "categoria": "herramientas",
+    "nombre": "🔥Terminales de cable de COBRE para cable 8🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 8\n✅Para tornillos 8-10\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/"
+  },
+  {
+    "id": "p_1785685435314",
+    "categoria": "herramientas",
+    "nombre": "🔥Terminales de cable de COBRE para cable 6🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 6\n✅Para tornillos 8-16\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/"
+  },
+  {
+    "id": "p_1785685479034",
+    "categoria": "herramientas",
+    "nombre": "🔥Maleta de instalar conectores MC4 en instalaciones de paneles solares🔥",
+    "precio": "35",
+    "moneda": "USD",
+    "descripcion": "✅INCLUYE:\n✅Pinza MC4 \n✅Pinza pelar cables \n✅2 llaves safar y apretar MC4\n✅6 parejas MC4\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "imagen": "imagenes/"
   }
 ]
