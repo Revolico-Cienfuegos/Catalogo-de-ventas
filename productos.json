@@ -235,9 +235,11 @@
     "id": "p_1783049634591",
     "categoria": "electrodomesticos",
     "nombre": "🔥 Olla eléctrica multifuncional 1.8 L marca Royal 🔥",
-    "precio": "60",
+    "precio": "50",
     "moneda": "USD",
     "descripcion": "✅ Botones táctiles\n✅ Modos de arroz, hot pot, potaje y sopa\n✅ Colores: negro, piel, amarillo, gris\n✅ Potencia de 350W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
+    "etiqueta": "",
+    "agotado": false,
     "imagen": "imagenes/Olla-electrica-60usd.jpg"
   },
   {
@@ -455,18 +457,22 @@
     "id": "p_1783562803461",
     "categoria": "solar",
     "nombre": "🔥Rollo de Cable eléctrico 10 AWG🔥",
-    "precio": "170",
+    "precio": "155",
     "moneda": "USD",
     "descripcion": "Rollo de Cable eléctrico 10 AWG \n✅100% cobre marca Q7\n✅Longitud 100 M\n🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "",
+    "agotado": false,
     "imagen": "imagenes/Rollo-Cable-170usd.jpg"
   },
   {
     "id": "p_1783911438490",
     "categoria": "electrodomesticos",
     "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONAL 1.2 L 450W🔥",
-    "precio": "45",
+    "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ COLOR: ROJO Y VIOLETA\n✅ POTENCIA: 450W\n✅ ANTIADHERENTES \n✅ SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n\n🛡️ Garantia 3 días",
+    "etiqueta": "",
+    "agotado": false,
     "imagen": "imagenes/OLLA-ELECTRICA-45usd.jpg"
   },
   {
@@ -511,28 +517,32 @@
     "id": "p_1784909392424",
     "categoria": "solar",
     "nombre": "🔥Inversor de corriente de 12V a 110V Potencia 1500W pico 3000W🔥",
-    "precio": "160",
+    "precio": "150",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
+    "etiqueta": "",
+    "agotado": false,
     "imagen": "imagenes/Inversor-corriente-160usd-2.jpg"
   },
   {
     "id": "p_1784909504800",
     "categoria": "solar",
     "nombre": "🔥Inversor de corriente de 12V a 110V Potencia 2000W pico 4000W🔥",
-    "precio": "180",
+    "precio": "170",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
+    "etiqueta": "",
+    "agotado": false,
     "imagen": "imagenes/Inversor-corriente-180usd.jpg"
   },
   {
     "id": "p_1784909680439",
     "categoria": "solar",
     "nombre": "🔥Controlador Solar MPPT 30A marca Q7🔥",
-    "precio": "170",
+    "precio": "160",
     "moneda": "USD",
     "descripcion": "✅Corriente de carga máxima 30A\n✅Voltaje Solar (PV) Max 230V DC\n✅Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "mas_vendido",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Controlador-Solar-170usd.jpg"
   },
@@ -680,7 +690,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Caja-distribucion-10usd.jpg"
   },
   {
@@ -698,7 +708,7 @@
     "id": "p_1785117493500",
     "categoria": "electrodomesticos",
     "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONALES 1.5 L🔥",
-    "precio": "60",
+    "precio": "50",
     "moneda": "USD",
     "descripcion": "✅COLOR AZUL\n✅ANTIADHERENTES \n✅INCLUYE VAPORERA \n✅TAMAÑOS 1.5 L\n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n✅SE PUEDE COCINAR ARROZ, SOPAS, VIANDAS, FREIR, HACER COSAS AL VAPOR Y MUCHO MAS\n✅POTENCIA: 400W y 800W\n🛡️Garantia 3 días",
     "etiqueta": "",
@@ -709,7 +719,7 @@
     "id": "p_1785158946709",
     "categoria": "electrodomesticos",
     "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONALES 2 L🔥",
-    "precio": "65",
+    "precio": "55",
     "moneda": "USD",
     "descripcion": "✅COLOR AZUL\n✅ANTIADHERENTES \n✅INCLUYE VAPORERA \n✅TAMAÑOS 2 L\n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n✅SE PUEDE COCINAR ARROZ, SOPAS, VIANDAS, FREIR, HACER COSAS AL VAPOR Y MUCHO MAS\n✅POTENCIA: 400W y 800W\n🛡️Garantía 3 días",
     "etiqueta": "",
@@ -720,7 +730,7 @@
     "id": "p_1785159975884",
     "categoria": "electrodomesticos",
     "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONALES 2.4 L🔥",
-    "precio": "70",
+    "precio": "60",
     "moneda": "USD",
     "descripcion": "✅COLOR AZUL\n✅ANTIADHERENTES \n✅INCLUYE VAPORERA \n✅TAMAÑOS 2.4 L\n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n✅SE PUEDE COCINAR ARROZ, SOPAS, VIANDAS, FREIR, HACER COSAS AL VAPOR Y MUCHO MAS\n✅POTENCIA: 500W y 1000W\n🛡️Garantía 3 días",
     "etiqueta": "",
@@ -731,7 +741,7 @@
     "id": "p_1785255052428",
     "categoria": "solar",
     "nombre": "🔥Controlador Solar MPPT 60A marca Q7🔥",
-    "precio": "210",
+    "precio": "200",
     "moneda": "USD",
     "descripcion": "✅Corriente de carga máxima 60A\n✅Voltaje Solar (PV) Max 230V DC\n✅Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
@@ -834,7 +844,7 @@
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone y tipo C,\n✅1 puertos de salida USB\n✅1 puerto de salida tipo C\n✅Puertos de entrada Tipo C\n✅Carga rápida\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Powerbank-20000-26usd.jpg"
   },
   {
@@ -845,7 +855,7 @@
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB\n✅Puertos de entrada Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Powerbank-20000-21usd.jpg"
   },
   {
@@ -856,7 +866,7 @@
     "moneda": "USD",
     "descripcion": "✅Incluye pinza \n✅Incluye 1200 terminales \n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Kit-crimpado-20usd.jpg"
   },
   {
@@ -889,7 +899,7 @@
     "moneda": "USD",
     "descripcion": "✅INCLUYE:\n✅Pinza MC4 \n✅Pinza pelar cables \n✅2 llaves safar y apretar MC4\n✅6 parejas MC4\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Maleta-instalar-35usd.jpg"
   }
 ]
