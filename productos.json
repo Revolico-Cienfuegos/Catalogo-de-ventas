@@ -318,7 +318,8 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ Compatible con impresoras Canon, Epson y HP\n🛡️ Garantía no tiene, el cliente debe saber utilizarla e informarle, no nos hacemos responsables",
-    "imagen": "imagenes/Pomo-tinta-40usd.jpg"
+    "imagen": "imagenes/Pomo-tinta-40usd.jpg",
+    "agotado": true
   },
   {
     "id": "p_1783048351870",
@@ -493,7 +494,8 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ Doble zipper para mayor capacidad\n✅ Candado\n✅ Ruedas\n\n🛡️ Garantía no tiene es nueva",
-    "imagen": "imagenes/Maleta-40usd.jpg"
+    "imagen": "imagenes/Maleta-40usd.jpg",
+    "agotado": true
   },
   {
     "id": "p_1783963691558",
@@ -556,7 +558,7 @@
     "moneda": "USD",
     "descripcion": "✅Duración aproximada 4 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Audifonos-inalambricos-15usd.jpg"
   },
   {
