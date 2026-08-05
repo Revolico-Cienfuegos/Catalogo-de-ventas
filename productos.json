@@ -24,7 +24,8 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "imagenes/Transfer-automatico-45usd.jpg"
+    "imagen": "imagenes/Transfer-automatico-45usd.jpg",
+    "agotado": true
   },
   {
     "id": "p_1783046497053",
@@ -202,7 +203,8 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ Panel solar\n✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB, 1 puerto salida Tipo C\n✅ Puertos de entrada Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "imagenes/Powerbank-Cargador-35usd.jpg"
+    "imagen": "imagenes/Powerbank-Cargador-35usd.jpg",
+    "agotado": true
   },
   {
     "id": "p_1783048948857",
@@ -833,7 +835,7 @@
     "moneda": "USD",
     "descripcion": "✅Hasta 300 KG\n🛡️Garantía de deja probada",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Pesa-gancho-45usd.jpg"
   },
   {
