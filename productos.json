@@ -242,7 +242,7 @@
     "descripcion": "✅ Botones táctiles\n✅ Modos de arroz, hot pot, potaje y sopa\n✅ Colores: negro, piel, amarillo, gris\n✅ Potencia de 350W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
     "etiqueta": "",
     "agotado": false,
-    "imagen": "imagenes/Olla-electrica-50usd.jpg"
+    "imagen": "imagenes/Olla-electrica-60usd.jpg"
   },
   {
     "id": "p_1783049661623",
@@ -907,14 +907,14 @@
     "imagen": "imagenes/Maleta-instalar-35usd.jpg"
   },
   {
-    "id": "p_1786034995503",
-    "categoria": "moviles",
-    "nombre": "🔥1 Cargador de carga rápida de 38W con 1 cable🔥",
-    "precio": "6",
+    "id": "p_1786043427858",
+    "categoria": "solar",
+    "nombre": "🔥Paquete de  Conectores XT60i-F🔥",
+    "precio": "125",
     "moneda": "USD",
-    "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "",
+    "descripcion": "✅Es con el que se hacen los cables de las estaciones de carga ECOFLOW a los paneles solares\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/Cargador-carga-6usd.jpg"
+    "imagen": "imagenes/Paquete-Conectores-125usd.jpg"
   }
 ]
