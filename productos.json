@@ -242,7 +242,7 @@
     "descripcion": "✅ Botones táctiles\n✅ Modos de arroz, hot pot, potaje y sopa\n✅ Colores: negro, piel, amarillo, gris\n✅ Potencia de 350W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
     "etiqueta": "",
     "agotado": false,
-    "imagen": "imagenes/Olla-electrica-60usd.jpg"
+    "imagen": "imagenes/Olla-electrica-50usd.jpg"
   },
   {
     "id": "p_1783049661623",
@@ -905,5 +905,16 @@
     "etiqueta": "nuevo",
     "agotado": true,
     "imagen": "imagenes/Maleta-instalar-35usd.jpg"
+  },
+  {
+    "id": "p_1786034995503",
+    "categoria": "moviles",
+    "nombre": "🔥1 Cargador de carga rápida de 38W con 1 cable🔥",
+    "precio": "6",
+    "moneda": "USD",
+    "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
+    "etiqueta": "",
+    "agotado": false,
+    "imagen": "imagenes/Cargador-carga-6usd.jpg"
   }
 ]
