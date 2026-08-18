@@ -174,6 +174,9 @@ button{cursor:pointer;font-family:inherit;}
         <option value="herramientas">🔧 Herramientas</option>
         <option value="automotriz">🚗 Automotriz y Medición</option>
         <option value="miscelaneos">🏠 Misceláneos y Hogar</option>
+        <!-- NUEVAS CATEGORÍAS -->
+        <option value="ecoflow">⚡ Ecoflow</option>
+        <option value="motorinas">🛵 Motorinas Eléctricas</option>
       </select>
     </div>
 
@@ -212,6 +215,11 @@ button{cursor:pointer;font-family:inherit;}
       <label class="lbl" for="campoAgotado" style="margin:0;">🚫 Agotado (ocultarlo de la tienda online)</label>
     </div>
 
+    <div class="form-group" style="display:flex;align-items:center;gap:8px;">
+      <input type="checkbox" id="campoDomicilio" style="width:18px;height:18px;" checked>
+      <label class="lbl" for="campoDomicilio" style="margin:0;">🚚 Domicilio gratis (en Cienfuegos)</label>
+    </div>
+
     <button class="btn btn-azul" id="guardarBtn">Guardar producto</button>
     <div class="sep"></div>
     <button class="btn-outline" id="cancelarBtn">Cancelar</button>
@@ -236,6 +244,8 @@ const CATS = [
   {id:"herramientas",nombre:"Herramientas",ico:"🔧"},
   {id:"automotriz",nombre:"Automotriz y Medición",ico:"🚗"},
   {id:"miscelaneos",nombre:"Misceláneos y Hogar",ico:"🏠"},
+  {id:"ecoflow",nombre:"Ecoflow",ico:"⚡"},
+  {id:"motorinas",nombre:"Motorinas Eléctricas",ico:"🛵"},
 ];
 
 let productos=[], editandoId=null, imagenActual="", archivoPendiente=null, archivoNombre="";
@@ -442,6 +452,7 @@ function renderLista(){
         <div class="item-cat">${catIco(p.categoria)} ${catNombre(p.categoria)}${p.etiqueta==="mas_vendido"?' · 🔥 Más vendido':p.etiqueta==="nuevo"?' · 🆕 Nuevo':''}${p.agotado?' · <span class="item-agotado-tag">Agotado</span>':''}</div>
         <div class="item-nombre">${p.nombre||"(sin nombre)"}</div>
         <div class="item-precio">${fmt(p.precio,p.moneda)}</div>
+        ${p.domicilio_gratis === false ? '<div style="font-size:10px;color:#c0392b;font-weight:700;">🚫 Sin domicilio gratis</div>' : ''}
       </div>
       <div class="item-btns">
         <button class="btn-stock ${p.agotado?'activo':''}" data-stock="${p.id}" title="${p.agotado?'Marcar como disponible':'Marcar como agotado'}">${p.agotado?'✅':'🚫'}</button>
@@ -491,6 +502,7 @@ function abrirForm(p){
   document.getElementById("campoDescripcion").value=p?(p.descripcion||""):"";
   document.getElementById("campoEtiqueta").value=p?(p.etiqueta||""):"";
   document.getElementById("campoAgotado").checked=p?!!p.agotado:false;
+  document.getElementById("campoDomicilio").checked=p? (p.domicilio_gratis !== false) : true; // por defecto true
   const av=document.getElementById("avisoArchivo");
   av.style.display="none"; av.innerHTML="";
   actualizarPicker(p&&p.imagen?p.imagen:null);
@@ -571,6 +583,7 @@ document.getElementById("guardarBtn").addEventListener("click",()=>{
     descripcion:document.getElementById("campoDescripcion").value.trim(),
     etiqueta:document.getElementById("campoEtiqueta").value,
     agotado:document.getElementById("campoAgotado").checked,
+    domicilio_gratis:document.getElementById("campoDomicilio").checked,
     imagen:imagenActual,
   };
   const idx=productos.findIndex(p=>p.id===datos.id);

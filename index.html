@@ -564,6 +564,12 @@
     .card-badge.badge-nuevo {
       background: linear-gradient(135deg, #2e9bff, #1257c9);
     }
+    .card-badge.badge-sin-domicilio {
+      background: linear-gradient(135deg, #6c757d, #343a40);
+      top: auto;
+      bottom: 8px;
+      left: 8px;
+    }
     .card-body {
       padding: 8px 12px 12px;
       flex: 1;
@@ -1405,6 +1411,7 @@
       <div class="modal-tag" id="mTag"></div>
       <h2 class="modal-nombre" id="mNombre"></h2>
       <div class="modal-precio" id="mPrecio"></div>
+      <div id="mDomicilio" style="font-size:13px;font-weight:600;margin-bottom:8px;"></div>
       <p class="modal-desc" id="mDesc"></p>
       <button class="modal-pedir" id="mPedir">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.5l5.797-1.52A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.583-.497-5.073-1.365l-.363-.215-3.44.902.917-3.349-.236-.375A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
@@ -1505,6 +1512,9 @@ const CATEGORIAS = [
   { id:"herramientas",       nombre:"Herramientas",              ico:"🔧" },
   { id:"automotriz",         nombre:"Automotriz y Medición",     ico:"🚗" },
   { id:"miscelaneos",        nombre:"Misceláneos y Hogar",       ico:"🏠" },
+  // NUEVAS CATEGORÍAS
+  { id:"ecoflow",            nombre:"Ecoflow",                   ico:"⚡" },
+  { id:"motorinas",          nombre:"Motorinas Eléctricas",      ico:"🛵" },
 ];
 
 const WA_ICO = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.5l5.797-1.52A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.583-.497-5.073-1.365l-.363-.215-3.44.902.917-3.349-.236-.375A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>`;
@@ -1973,6 +1983,13 @@ function renderGarantiaDomicilio() {
 // ============================================================
 //  RENDERIZADO PRINCIPAL
 // ============================================================
+function domicilioBadgeHTML(p) {
+  if (p.domicilio_gratis === false) {
+    return `<div class="card-badge badge-sin-domicilio">🚫 Sin domicilio gratis</div>`;
+  }
+  return "";
+}
+
 function bloquesTendencias(){
   const vendidos = [];
   const nuevos = [];
@@ -2096,6 +2113,7 @@ function cardHTML(p, idx, mostrarTag=false){
   const imgSrc = hasImg ? p.imagen : "";
   const imgWrap = `<div class="card-img-wrap">
     ${badgeHTML(p)}
+    ${domicilioBadgeHTML(p)}
     ${hasImg ? `<img src="${imgSrc}" alt="${p.nombre}" loading="lazy" decoding="async" data-idx="${idx}" onerror="this.style.display='none'; this.parentElement.querySelector('.card-img-ph').style.display='flex';">` : ''}
     <div class="card-img-ph" style="display:${hasImg ? 'none' : 'flex'};" data-idx="${idx}">${IMG_PH_ICO}<span>Sin foto</span></div>
   </div>`;
@@ -2245,6 +2263,14 @@ function abrirModal(p){
   document.getElementById("mNombre").textContent = p.nombre;
   document.getElementById("mPrecio").textContent = fmt(p.precio);
   document.getElementById("mDesc").textContent = p.descripcion||"";
+
+  // Domicilio gratis en modal
+  const domEl = document.getElementById("mDomicilio");
+  if (p.domicilio_gratis === false) {
+    domEl.innerHTML = '🚫 <span style="color:#c0392b;font-weight:700;">Sin domicilio gratis</span>';
+  } else {
+    domEl.innerHTML = '✅ <span style="color:#1a8a4a;">Domicilio gratis disponible</span>';
+  }
 
   const hasImg = p.imagen && p.imagen.length > 0;
   const imgSrc = hasImg ? p.imagen : "";
