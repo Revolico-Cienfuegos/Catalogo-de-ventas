@@ -979,5 +979,29 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "imagen": "imagenes/Protector-voltaje-25usd-2.jpg"
+  },
+  {
+    "id": "p_1787053505818",
+    "categoria": "ecoflow",
+    "nombre": "🔥Estación de energía 1000w 1024wh 🔥",
+    "precio": "650",
+    "moneda": "USD",
+    "descripcion": "✅Nueva en caja , carga de 3 a 4.5h\n🛡️Garantía: que es nueva y se deja probada",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Estacion-energia-650usd.jpg"
+  },
+  {
+    "id": "p_1787053759818",
+    "categoria": "ecoflow",
+    "nombre": "🔥Combo Estación de energía Ecoflow Delta 3 Classic🔥",
+    "precio": "770",
+    "moneda": "USD",
+    "descripcion": "✅ Ventilador recargable Chiq\n✅Potencia pico máxima: 3600 W\n✅Potencia nominal de salida: 1800 W\n✅Capacidad de batería: 1024 Wh\n✅Tensión de salida AC: 110 V\n✅Carga ultra-rápida: De 0 a 80 % en aprox. 56 minutos\n✅Vida útil: 3000+ ciclos de batería\n✅Conectividad: Bluetooth / App\n✅Salidas: AC, USB-C (100W/30W), USB-A, ideales para ventiladores de bajo consumo.",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Combo-Estacion-770usd.jpg"
   }
 ]
