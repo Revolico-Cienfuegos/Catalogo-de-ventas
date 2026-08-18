@@ -800,7 +800,7 @@
     "precio": "80",
     "moneda": "USD",
     "descripcion": "✅Modelo JT-8258PRO\n✅Nivel de protección IP66 puede estar fuera de la casa \n✅compatible con micro SD de hasta 128 GB \n✅Incluye panel solar con base y cable \n✅También se puede alimentar con 5V con un cargador de teléfono o con un powerbank para q funcione en los apagones\n✅Se revisa desde una aplicación en el teléfono o desde la PC en cualquier parte del mundo 🌎 \n✅Necesita tener conexión a internet a través de alguna wifi para transmitir\n🛡️ Garantía no tiene es nuevo en caja y el Cliente debe probarla cuando se la llevan",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Camara-WIFI-80usd.jpg"
   },
@@ -833,7 +833,7 @@
     "precio": "130",
     "moneda": "USD",
     "descripcion": "✅PV INPUT 12-60VDC/30A\n✅MAX CHARGE CURRENT 15A\n✅POWER MAX 1200W\n✅Baterías compatibles 48V, 60V y 72V (los que se le ponen a todos los trisiclos electricos)\n✅Incluye conector MC4 para los cables de entrada del panel solar\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Controlador-Solar-130usd.jpg"
   },
@@ -888,7 +888,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 8\n✅Para tornillos 8-10\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Terminales-cable-15usd.jpg"
   },
@@ -899,7 +899,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 6\n✅Para tornillos 8-16\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Terminales-cable-15usd-2.jpg"
   },
@@ -921,7 +921,7 @@
     "precio": "6",
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Cargador-carga-6usd.jpg"
   },
@@ -932,7 +932,7 @@
     "precio": "125",
     "moneda": "USD",
     "descripcion": "✅Es con el que se hacen los cables de las estaciones de carga ECOFLOW a los paneles solares\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "imagen": "imagenes/Paquete-Conectores-125usd.jpg"
   },
