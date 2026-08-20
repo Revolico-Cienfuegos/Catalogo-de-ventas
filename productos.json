@@ -214,7 +214,7 @@
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Powerbank-Cargador-35usd-2.jpg"
   },
   {
@@ -339,7 +339,8 @@
     "precio": "100",
     "moneda": "USD",
     "descripcion": "✅ Monedas USD, EUR, CAD, MXN, etc.\n✅ Tiene batería recargable de litio para uso portátil\n✅ Pantalla táctil\n✅ Funciona como contadora de billetes\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "imagenes/Detector-billetes-100usd.jpg"
+    "imagen": "imagenes/Detector-billetes-100usd.jpg",
+    "agotado": true
   },
   {
     "id": "p_1783048566252",
@@ -532,7 +533,7 @@
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Inversor-corriente-160usd-2.jpg"
   },
   {
@@ -543,7 +544,7 @@
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Inversor-corriente-180usd.jpg"
   },
   {
@@ -922,7 +923,7 @@
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Cargador-carga-6usd.jpg"
   },
   {
