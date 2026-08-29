@@ -843,11 +843,12 @@
     "id": "p_1785684862363",
     "categoria": "solar",
     "nombre": "🔥Controlador Solar MPPT de 48V, 60V y 72V y 1200W🔥",
-    "precio": "130",
+    "precio": "115",
     "moneda": "USD",
     "descripcion": "✅PV INPUT 12-60VDC/30A\n✅MAX CHARGE CURRENT 15A\n✅POWER MAX 1200W\n✅Baterías compatibles 48V, 60V y 72V (los que se le ponen a todos los trisiclos electricos)\n✅Incluye conector MC4 para los cables de entrada del panel solar\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Controlador-Solar-130usd.jpg"
   },
   {
@@ -1223,5 +1224,17 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Fogon-Infrarrojo-40usd.jpg"
+  },
+  {
+    "id": "p_1788015913530",
+    "categoria": "solar",
+    "nombre": "🔥Caja protectora de corriente directa marca Q7🔥",
+    "precio": "80",
+    "moneda": "USD",
+    "descripcion": "✅Incluye caja 8 vías\n✅Breaker 25A DC\n✅Supresor de picos DC 600V\n✅Portafusibles con fusible 32A\n✅Expansiones para ponerlo a la pared\n✅Trae las conexiones listas para llegar y conectar\n🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Caja-protectora-80usd.jpg"
   }
 ]
