@@ -174,7 +174,7 @@
     "moneda": "USD",
     "descripcion": "✅ Se conecta del ECOFLOW a los cables de paneles solares\n✅ Longitud 30cm\n✅ Material del núcleo cobre puro\n✅ Calibre 10AWG, 6mm²\n✅ Corriente continua 30A y pico de 60A\n🛡️ Garantía no tien",
     "imagen": "imagenes/Cable-carga-20usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783048674424",
@@ -538,8 +538,9 @@
     "precio": "150",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-160usd-2.jpg"
   },
   {
@@ -549,8 +550,9 @@
     "precio": "170",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-180usd.jpg"
   },
   {
@@ -634,8 +636,10 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅Máximo hasta 150 PSI\n✅Es recargable \n✅2 Baterias de 2000 mAh\n✅3 tipos de luces \n✅Compatible con autos, motos, bicicletas, balones, etc.\n✅Accesorios trae boquillas, cables de carga tipo C y funda para guardarlo\n🛡️Garantía es nuevo en caja y se deja probado",
-    "imagen": "imagenes/Compresor-portatil-40usd.jpg",
-    "agotado": false
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Compresor-portatil-40usd.jpg"
   },
   {
     "id": "p_1784910675157",
@@ -887,7 +891,7 @@
     "moneda": "USD",
     "descripcion": "✅Incluye pinza \n✅Incluye 1200 terminales \n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Kit-crimpado-20usd.jpg"
   },
   {
@@ -920,7 +924,7 @@
     "moneda": "USD",
     "descripcion": "✅INCLUYE:\n✅Pinza MC4 \n✅Pinza pelar cables \n✅2 llaves safar y apretar MC4\n✅6 parejas MC4\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Maleta-instalar-35usd.jpg"
   },
   {
@@ -963,8 +967,9 @@
     "precio": "75",
     "moneda": "USD",
     "descripcion": "✅No sirve para baterías ni de ácido ni de gel solo LiFeP04 \n🛡️Garantía 72 horas",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Cargador-bateria-75usd.jpg"
   },
   {
@@ -974,8 +979,9 @@
     "precio": "30",
     "moneda": "USD",
     "descripcion": "✅Corriente ajustable 1A a 80A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Protector-voltaje-30usd-2.jpg"
   },
   {
@@ -985,8 +991,9 @@
     "precio": "25",
     "moneda": "USD",
     "descripcion": "✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Protector-voltaje-25usd-2.jpg"
   },
   {
@@ -996,7 +1003,7 @@
     "precio": "650",
     "moneda": "USD",
     "descripcion": "✅Nueva en caja , carga de 3 a 4.5h\n🛡️Garantía no tiene es nueva y se deja probada",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Estacion-energia-650usd.jpg"
@@ -1008,7 +1015,7 @@
     "precio": "770",
     "moneda": "USD",
     "descripcion": "✅ Ventilador recargable Chiq\n✅Potencia pico máxima: 3600 W\n✅Potencia nominal de salida: 1800 W\n✅Capacidad de batería: 1024 Wh\n✅Tensión de salida AC: 110 V\n✅Carga ultra-rápida: De 0 a 80 % en aprox. 56 minutos\n✅Vida útil: 3000+ ciclos de batería\n✅Conectividad: Bluetooth / App\n✅Salidas: AC, USB-C (100W/30W), USB-A, ideales para ventiladores de bajo consumo.\n🛡️Garantía no tiene es nueva y se deja probada",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Combo-Estacion-770usd.jpg"
@@ -1020,7 +1027,7 @@
     "precio": "1750",
     "moneda": "USD",
     "descripcion": "✅Batería 48vol x 40ah -120km por carga\n✅Motor 1500w",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Moto-IZUKI-1750usd.jpg"
@@ -1032,7 +1039,7 @@
     "precio": "400",
     "moneda": "USD",
     "descripcion": "✅Cargador original\n✅Motor: 350W\n✅Pantalla digital con escáner para APP\n✅Velocidad máxima: 19 MPH\n✅Autonomía: 20–30 km\n✅Gomas sólidas de 8.5\"\n✅Color: Rojo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Patinete-electrico-400usd.jpg"
@@ -1044,7 +1051,7 @@
     "precio": "2000",
     "moneda": "USD",
     "descripcion": "✅Batería de litio lipo4 60v 30 amp",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Motorina-2000usd.jpg"
@@ -1056,7 +1063,7 @@
     "precio": "170",
     "moneda": "USD",
     "descripcion": "✅También hay en color azul y rosado.\n🛡️Garantía : no",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bicicleta-medida-170usd.jpg"
@@ -1068,7 +1075,7 @@
     "precio": "1300",
     "moneda": "USD",
     "descripcion": "🎁REBAJA ‼️‼️‼️\n✅6 meses de garantia 48volt x 30 amp 80 km litio lifepo4\n🛡️Garantía 📝: 1 mes",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bicimotos-1300usd.jpg"
@@ -1080,7 +1087,7 @@
     "precio": "1400",
     "moneda": "USD",
     "descripcion": "✅Batería lithium autonomía de 80 km por carga\n🛡️Garantía 📝:  Probarla y que todo funcione al 💯",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bicicleta-yoazaki-1400usd.jpg"
@@ -1088,14 +1095,14 @@
   {
     "id": "p_1787972445885",
     "categoria": "moviles",
-    "nombre": "🔥 Powerbank de 20000 mAh🔥",
-    "precio": "26",
+    "nombre": "🔥Powerbank de 20000 mAh🔥",
+    "precio": "20",
     "moneda": "USD",
-    "descripcion": "✅ Panel solar \n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB \n✅Entrada tipo C y V8\n✅Linterna \n🛡️Garantía 72 horas",
+    "descripcion": "✅2 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Colores negro y blanco\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": ""
+    "imagen": "imagenes/Powerbank-20000-20usd.jpg"
   },
   {
     "id": "p_1787972699887",
@@ -1107,7 +1114,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": ""
+    "imagen": "imagenes/Lampara-recargable-22usd.jpg"
   },
   {
     "id": "p_1787972978641",
@@ -1119,6 +1126,102 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": ""
+    "imagen": "imagenes/Nebulizador-portatil-15usd.jpg"
+  },
+  {
+    "id": "p_1788011210258",
+    "categoria": "iluminacion",
+    "nombre": "🔥Lámpara led de 1000w con panel solar🔥",
+    "precio": "55",
+    "moneda": "USD",
+    "descripcion": "✅Dimensiones de la lámpara 32 x 26.5 cm\n✅Dimensiones del panel 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Lampara-led-55usd.jpg"
+  },
+  {
+    "id": "p_1788011458514",
+    "categoria": "solar",
+    "nombre": "🔥Inversor de corriente de 12V a 110V Potencia 2500W pico 5000W🔥",
+    "precio": "220",
+    "moneda": "USD",
+    "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Inversor-corriente-220usd.jpg"
+  },
+  {
+    "id": "p_1788011937490",
+    "categoria": "solar",
+    "nombre": "🔥Inversor de corriente de 12V a 110V Potencia 3000W pico 6000W🔥",
+    "precio": "250",
+    "moneda": "USD",
+    "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Inversor-corriente-250usd.jpg"
+  },
+  {
+    "id": "p_1788012231930",
+    "categoria": "electricidad",
+    "nombre": "🔥Supresor de picos eléctricos de corriente directa🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "✅Tipo AC SPD\n✅Voltaje 275V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Supresor-picos-15usd.jpg"
+  },
+  {
+    "id": "p_1788012526324",
+    "categoria": "solar",
+    "nombre": "🔥Conector MC4 tipo Y🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "✅Hecho de cobre puro\n✅1000V\n✅30A\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Conector-MC4-15usd.jpg"
+  },
+  {
+    "id": "p_1788012704097",
+    "categoria": "electricidad",
+    "nombre": "🔥Supresor de picos eléctricos de corriente directa DC 500V🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "✅Tipo DC SPD\n✅Voltaje 500V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Supresor-picos-15usd-2.jpg"
+  },
+  {
+    "id": "p_1788012969594",
+    "categoria": "moviles",
+    "nombre": "🔥TABLET JIAENOVA PAD 17 MAX 🔥",
+    "precio": "180",
+    "moneda": "USD",
+    "descripcion": "✅Pantalla amplia de 10.1” \n✅Resolución HD 800x1280  con buena calidad \n✅Rendimiento fluido\n✅Sistema Android 15 + procesador Octa-Core\n✅Memoria 64GB de almacenamiento + 4GB RAM (expandible con MicroSD) \n✅Cámara frontal 5MP y trasera 13MP\n✅Conectividad WiFi(funciona perfecto tanto en el nauta como x punto de acceso compartida desde otro teléfono) + Bluetooth + SIM(para llamadas y mensajes los datos moviles viene para 5G y en CUBA no funcionan)\n✅Batería 8000 mAh\n🔹 Incluye accesorios GRATIS 🎁\n✔️ Funda protectora\n✔️ Mica\n✔️ Teclado Bluetooth\n✔️ Mouse inalámbrico \n✔️ OTG tipo C de regalo 🎁\n🛡️Garantia no tiene es nueva en caja y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": true,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/TABLET-JIAENOVA-180usd.jpg"
+  },
+  {
+    "id": "p_1788013130121",
+    "categoria": "electrodomesticos",
+    "nombre": "🔥Fogón Infrarrojo marca UNIZUKI 🔥",
+    "precio": "40",
+    "moneda": "USD",
+    "descripcion": "✅Sirven todo tipo de calderos \n✅Pantalla digital \n✅Control táctil \n✅Placa de cristal de alta calidad\n✅Potencia 1200 W\n🛡️Garantía 30 días",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Fogon-Infrarrojo-40usd.jpg"
   }
 ]
