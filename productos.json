@@ -245,7 +245,7 @@
     "moneda": "USD",
     "descripcion": "✅ Botones táctiles\n✅ Modos de arroz, hot pot, potaje y sopa\n✅ Colores: negro, piel, amarillo, gris\n✅ Potencia de 350W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Olla-electrica-50usd-2.jpg"
   },
   {
@@ -539,7 +539,7 @@
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-160usd-2.jpg"
   },
@@ -667,11 +667,12 @@
     "id": "p_1784910839188",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC 2P-20A🔥",
-    "precio": "15",
+    "precio": "20",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-2P-125A-15usd.jpg"
   },
   {
@@ -714,7 +715,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Caja-distribucion-10usd.jpg"
   },
   {
@@ -725,7 +726,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Caja-distribucion-10usd-2.jpg"
   },
   {
@@ -1236,5 +1237,53 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-protectora-80usd.jpg"
+  },
+  {
+    "id": "p_1788105975555",
+    "categoria": "electricidad",
+    "nombre": "🔥Caja de distribución de 8 vías marca Q7🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Caja-distribucion-15usd.jpg"
+  },
+  {
+    "id": "p_1788106350209",
+    "categoria": "automotriz",
+    "nombre": "🔥Compresor portátil de 150 PSI marca SACO🔥",
+    "precio": "45",
+    "moneda": "USD",
+    "descripcion": "✅Máximo hasta 150 PSI\n✅Es recargable \n✅Compatible con autos, motos, bicicletas, balones, etc.\n✅Se puede cargar con 5V puerto tipo C y 12V con entrada de autos\n✅Accesorios trae boquillas, cables de carga tipo C y de 12V auto y funda para guardarlo\n🛡️Garantía es nuevo en caja y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Compresor-portatil-45usd.jpg"
+  },
+  {
+    "id": "p_1788106652276",
+    "categoria": "electrodomesticos",
+    "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONAL DE CABO JOROBADO  1L (18 cm)🔥",
+    "precio": "45",
+    "moneda": "USD",
+    "descripcion": "✅MARCA: Royal\n✅INCLUYE:  Vaporera \n✅CAPACIDAD: 1 LT\n✅COLOR: CREMITA Y AZULITO \n✅POTENCIA: 300-600W\n✅ANTIADHERENTES \n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n🛡️Garantia 3 días",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/OLLA-ELECTRICA-45usd-2.jpg"
+  },
+  {
+    "id": "p_1788106864892",
+    "categoria": "solar",
+    "nombre": "🔥Rollo de Cable eléctrico fotovoltaico marca Q7🔥",
+    "precio": "130",
+    "moneda": "USD",
+    "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Colores rojo y negro\n🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Rollo-Cable-130usd.jpg"
   }
 ]
