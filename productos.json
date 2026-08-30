@@ -518,8 +518,9 @@
     "precio": "5",
     "moneda": "USD",
     "descripcion": "✅ Es con el que se hacen los cables de las estaciones de carga ECOFLOW a los paneles solares\n✅Por cantidad 50 unidades o más sale cada unidad a 4 USD \n🛡️ Garantía no tiene",
-    "etiqueta": "mas_vendido",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Conectores-XT60i-F-5usd.jpg"
   },
   {
@@ -550,7 +551,7 @@
     "precio": "170",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "mas_vendido",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-180usd.jpg"
@@ -1149,7 +1150,7 @@
     "precio": "220",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "mas_vendido",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-220usd.jpg"
@@ -1161,7 +1162,7 @@
     "precio": "250",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "mas_vendido",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-250usd.jpg"
