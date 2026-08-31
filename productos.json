@@ -1253,7 +1253,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-15usd.jpg"
   },
@@ -1424,5 +1424,41 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cepillo-blower-15usd.jpg"
+  },
+  {
+    "id": "p_1788212703805",
+    "categoria": "audio",
+    "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP6227🔥",
+    "precio": "55",
+    "moneda": "USD",
+    "descripcion": "✅2 Bocinas de 6 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 22.6 x 20.3 x 49 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Bocina-Bluetooth-55usd.jpg"
+  },
+  {
+    "id": "p_1788213371053",
+    "categoria": "audio",
+    "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP805🔥",
+    "precio": "55",
+    "moneda": "USD",
+    "descripcion": "✅Bocinas de 8 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 24.2 x 20.3 x 37.9 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Bocina-Bluetooth-55usd-2.jpg"
+  },
+  {
+    "id": "p_1788213585909",
+    "categoria": "audio",
+    "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP4292🔥",
+    "precio": "45",
+    "moneda": "USD",
+    "descripcion": "✅2 Bocinas de 4 pulgadas \n✅Salida 16W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1800 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 18.3 x 17.8 x 40.5 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Bocina-Bluetooth-45usd-2.jpg"
   }
 ]
