@@ -713,23 +713,25 @@
   {
     "id": "p_1785116908083",
     "categoria": "electricidad",
-    "nombre": "🔥Caja de distribución de 4 vías marca Q7 🔥",
-    "precio": "10",
+    "nombre": "🔥Caja de distribución de 8 vías marca Q7 🔥",
+    "precio": "15",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-10usd.jpg"
   },
   {
     "id": "p_1785116984188",
     "categoria": "electricidad",
-    "nombre": "🔥Caja de distribución de 8 vías marca Q7🔥",
+    "nombre": "🔥Caja de distribución de 4 vías marca Q7🔥",
     "precio": "10",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-10usd-2.jpg"
   },
   {
@@ -1246,8 +1248,8 @@
   {
     "id": "p_1788105975555",
     "categoria": "electricidad",
-    "nombre": "🔥Caja de distribución de 8 vías marca Q7🔥",
-    "precio": "15",
+    "nombre": "🔥Caja de distribución de 12 vías marca Q7🔥",
+    "precio": "20",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
