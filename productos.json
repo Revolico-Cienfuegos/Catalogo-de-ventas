@@ -58,11 +58,12 @@
     "id": "p_1783046977069",
     "categoria": "electricidad",
     "nombre": "🔥 Interruptor de cuchilla 3P-63A marca Voltaje 🔥",
-    "precio": "20",
+    "precio": "26",
     "moneda": "USD",
     "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
-    "etiqueta": "",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Interruptor-cuchilla-20usd.jpg"
   },
   {
@@ -214,8 +215,9 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "etiqueta": "",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-Cargador-35usd-2.jpg"
   },
   {
@@ -872,18 +874,19 @@
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone y tipo C,\n✅1 puertos de salida USB\n✅1 puerto de salida tipo C\n✅Puertos de entrada Tipo C\n✅Carga rápida\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Powerbank-20000-26usd.jpg"
   },
   {
     "id": "p_1785685315713",
     "categoria": "moviles",
     "nombre": "🔥Powerbank de 20000 mAh con cables🔥",
-    "precio": "21",
+    "precio": "22",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB\n✅Puertos de entrada Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-20000-21usd.jpg"
   },
   {
@@ -956,11 +959,12 @@
     "id": "p_1787021715301",
     "categoria": "moviles",
     "nombre": "🔥Powerbank de 50000 mAh🔥",
-    "precio": "45",
+    "precio": "50",
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W  \n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas, solo cubre la batería",
     "etiqueta": "nuevo",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-50000-45usd.jpg"
   },
   {
@@ -1286,5 +1290,137 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Rollo-Cable-130usd.jpg"
+  },
+  {
+    "id": "p_1788185282342",
+    "categoria": "moviles",
+    "nombre": "🔥Powerbank de 60000 mAh con panel solar🔥",
+    "precio": "65",
+    "moneda": "USD",
+    "descripcion": "✅Panel solar para cargarlo \n✅Lámpara\n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Colores disponibles negro y blanco \n🛡️Garantía 72 horas , solo cubre la batería",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Powerbank-60000-65usd.jpg"
+  },
+  {
+    "id": "p_1788186271277",
+    "categoria": "moviles",
+    "nombre": "🔥Powerbank de 50000 mAh con panel solar🔥",
+    "precio": "50",
+    "moneda": "USD",
+    "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Powerbank-50000-50usd.jpg"
+  },
+  {
+    "id": "p_1788186403037",
+    "categoria": "herramientas",
+    "nombre": "🔥Alicate de crimpado para conectores de paneles solares MC4🔥",
+    "precio": "18",
+    "moneda": "USD",
+    "descripcion": "🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Alicate-crimpado-18usd.jpg"
+  },
+  {
+    "id": "p_1788186567319",
+    "categoria": "moviles",
+    "nombre": "🔥Powerbank de 40000 mAh modelo MBC-424🔥",
+    "precio": "40",
+    "moneda": "USD",
+    "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅4 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n✅Linterna \n🛡️Garantía 72 horas , solo cubre la batería",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Powerbank-40000-40usd.jpg"
+  },
+  {
+    "id": "p_1788186824073",
+    "categoria": "moviles",
+    "nombre": "🔥Powerbank de 30000 mAh con panel solar modelo P321🔥",
+    "precio": "30",
+    "moneda": "USD",
+    "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Powerbank-30000-30usd.jpg"
+  },
+  {
+    "id": "p_1788186967863",
+    "categoria": "moviles",
+    "nombre": "🔥Powerbank de 20000 mAh modelo DY-205🔥",
+    "precio": "26",
+    "moneda": "USD",
+    "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅1 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Powerbank-20000-26usd-2.jpg"
+  },
+  {
+    "id": "p_1788187222438",
+    "categoria": "electricidad",
+    "nombre": "🔥Transfer automático AC 110V 63A/3P marca Q7🔥",
+    "precio": "55",
+    "moneda": "USD",
+    "descripcion": "🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Transfer-automatico-55usd-2.jpg"
+  },
+  {
+    "id": "p_1788187375029",
+    "categoria": "electrodomesticos",
+    "nombre": "🔥Huevera modelo gallina(para hervir huevo)🔥",
+    "precio": "20",
+    "moneda": "USD",
+    "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores blanco y amarillo y blanco completo \n🛡️Garantia 3 días",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Huevera-modelo-20usd.jpg"
+  },
+  {
+    "id": "p_1788187834860",
+    "categoria": "electrodomesticos",
+    "nombre": "🔥Huevera UNIZUKI (para hervir huevo)🔥",
+    "precio": "20",
+    "moneda": "USD",
+    "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores rosado azul amarillo y blanco\n🛡️Garantia 3 días",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Huevera-UNIZUKI-20usd.jpg"
+  },
+  {
+    "id": "p_1788187994590",
+    "categoria": "iluminacion",
+    "nombre": "🔥Lámpara led de 1000W con panel solar UNIZUKI modelo 805🔥",
+    "precio": "55",
+    "moneda": "USD",
+    "descripcion": "✅Dimensiones de la lámpara 35 x 28 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Lampara-led-55usd-2.jpg"
+  },
+  {
+    "id": "p_1788188232182",
+    "categoria": "miscelaneos",
+    "nombre": "🔥Cepillo blower secador y modelador🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "✅3 en 1 plancha + cepillo + secador\n✅2800 W\n✅color violeta y rosado\n🛡️Garantía se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Cepillo-blower-15usd.jpg"
   }
 ]
