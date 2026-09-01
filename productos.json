@@ -277,8 +277,9 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ 2 resistencias\n✅ Potencia 2000 W\n✅ Color negro y blanco\n🛡️ Garantía 7 días",
-    "etiqueta": "",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Hornilla-electrica-35usd.jpg"
   },
   {
