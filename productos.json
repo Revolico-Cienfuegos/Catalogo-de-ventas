@@ -532,7 +532,8 @@
     "precio": "90",
     "moneda": "USD",
     "descripcion": "✅Sale a 1.80 USD cada pareja\n🛡️Garantia no tiene",
-    "imagen": "imagenes/Paquete-parejas-90usd.png"
+    "imagen": "imagenes/Paquete-parejas-90usd.png",
+    "agotado": true
   },
   {
     "id": "p_1784909392424",
@@ -899,7 +900,7 @@
     "moneda": "USD",
     "descripcion": "✅Incluye pinza \n✅Incluye 1200 terminales \n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Kit-crimpado-20usd.jpg"
   },
   {
@@ -1460,5 +1461,17 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bocina-Bluetooth-45usd-2.jpg"
+  },
+  {
+    "id": "p_1788270814839",
+    "categoria": "audio",
+    "nombre": "🔥Audífonos inalámbricos de casco Labubu🔥",
+    "precio": "15",
+    "moneda": "USD",
+    "descripcion": "✅Duración aproximada 5 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Audifonos-inalambricos-15usd-2.jpg"
   }
 ]
