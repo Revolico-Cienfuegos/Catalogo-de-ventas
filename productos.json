@@ -777,7 +777,7 @@
     "moneda": "USD",
     "descripcion": "✅Corriente de carga máxima 60A\n✅Voltaje Solar (PV) Max 230V DC\n✅Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Controlador-Solar-210usd.jpg"
   },
   {
@@ -1171,7 +1171,7 @@
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "mas_vendido",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-250usd.jpg"
   },
@@ -1327,7 +1327,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Alicate-crimpado-18usd.jpg"
   },
@@ -1411,7 +1411,7 @@
     "moneda": "USD",
     "descripcion": "✅Dimensiones de la lámpara 35 x 28 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-led-55usd-2.jpg"
   },
