@@ -14,17 +14,14 @@
 body{background:var(--crema);color:var(--texto);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;min-height:100vh;font-size:15px;}
 button{cursor:pointer;font-family:inherit;}
 
-/* HEADER */
 .hdr{background:var(--azul);color:#fff;padding:0 16px;}
 .hdr-in{max-width:640px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
 .badge{width:36px;height:36px;border-radius:50%;background:var(--dorado);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#fff;}
 .hdr-titulo{font-weight:700;font-size:15px;margin-left:10px;flex:1;}
 .hdr-link{background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.85);padding:6px 12px;border-radius:20px;font-size:12px;text-decoration:none;}
 
-/* WRAP */
 .wrap{max-width:640px;margin:0 auto;padding:20px 14px 80px;}
 
-/* LOGIN */
 .login-bg{min-height:80vh;display:flex;align-items:center;justify-content:center;}
 .login-card{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:32px 24px;max-width:360px;width:100%;text-align:center;box-shadow:0 4px 20px rgba(26,58,92,0.1);}
 .login-ico{font-size:38px;margin-bottom:10px;}
@@ -37,24 +34,24 @@ button{cursor:pointer;font-family:inherit;}
 .btn-azul{background:var(--azul);color:#fff;}
 .btn-azul:hover{background:var(--azul2);}
 .btn-dorado{background:var(--dorado);color:#fff;}
+.btn-verde{background:#1a8a4a;color:#fff;}
+.btn-verde:hover{background:#0f6a37;}
 .btn-outline{background:transparent;border:1.5px solid var(--linea);color:var(--suave);width:100%;padding:12px;border-radius:8px;font-size:14px;font-weight:600;}
 
-/* PANEL */
 #panel,#form-producto{display:none;}
 .aviso{background:rgba(200,146,42,.1);border:1.5px solid rgba(200,146,42,.35);border-radius:8px;padding:12px 14px;font-size:12.5px;line-height:1.65;color:#5c4a14;margin-bottom:16px;}
 .aviso code{background:rgba(200,146,42,.2);padding:1px 5px;border-radius:3px;font-weight:700;}
 .aviso strong{color:var(--rojo);}
 .acciones-top{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
+.acciones-github{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:#fff;border:1px solid var(--linea);border-radius:10px;padding:12px;margin-bottom:16px;}
+.acciones-github input{flex:1;min-width:140px;border:1.5px solid var(--linea);border-radius:6px;padding:8px 10px;font-size:13px;}
+.acciones-github .btn{width:auto;padding:8px 18px;}
 
-/* FILTRO CATEGORÍA */
 .cat-select{width:100%;border:1.5px solid var(--linea);border-radius:8px;padding:10px 12px;font-size:13.5px;font-family:inherit;background:#fff;color:var(--texto);margin-bottom:16px;}
-
-/* BUSCADOR */
 .buscador-admin{width:100%;border:1.5px solid var(--linea);border-radius:8px;padding:10px 12px;font-size:13.5px;font-family:inherit;background:#fff;color:var(--texto);margin-bottom:12px;}
 .buscador-admin:focus{outline:none;border-color:var(--azul);}
 .resultado-contador{font-size:12px;color:var(--suave);margin-bottom:10px;display:block;}
 
-/* LISTA */
 .lista{display:flex;flex-direction:column;gap:10px;}
 .item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--linea);border-radius:10px;padding:12px;box-shadow:0 1px 4px rgba(26,58,92,.06);}
 .item-img{width:60px;height:60px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--crema2);}
@@ -72,7 +69,6 @@ button{cursor:pointer;font-family:inherit;}
 .item-agotado-tag{color:var(--rojo);font-weight:700;}
 .empty-lista{text-align:center;padding:36px 20px;color:var(--suave);font-size:14px;}
 
-/* FORMULARIO (sin stock) */
 .form-h{font-size:18px;font-weight:800;color:var(--azul);margin-bottom:18px;}
 .form-group{margin-bottom:16px;}
 .form-row{display:flex;gap:12px;margin-bottom:16px;}
@@ -88,11 +84,13 @@ button{cursor:pointer;font-family:inherit;}
 .btn-dl-foto{margin-top:8px;background:var(--dorado);color:#fff;border:none;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:700;font-family:inherit;}
 .sep{height:1px;background:var(--linea);margin:20px 0;}
 
-/* CONTADORES (sin stock) */
 .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px;}
 .stat{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:14px;text-align:center;}
 .stat-n{font-size:24px;font-weight:800;color:var(--azul);}
 .stat-l{font-size:11px;color:var(--suave);text-transform:uppercase;letter-spacing:.06em;}
+
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a3a5c;color:#fff;padding:12px 24px;border-radius:10px;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.3);z-index:999;animation:fadeIn 0.3s;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 </style>
 </head>
 <body>
@@ -125,9 +123,17 @@ button{cursor:pointer;font-family:inherit;}
     <!-- STATS -->
     <div class="stats" id="stats"></div>
 
+    <!-- CONFIGURACIÓN GITHUB -->
+    <div class="acciones-github" id="gitConfig">
+      <input type="text" id="gitRepo" placeholder="usuario/repo (ej: revolico-cienfuegos/Catalogo-de-ventas)" style="flex:2;">
+      <input type="password" id="gitToken" placeholder="Token de GitHub (clásico)" style="flex:2;">
+      <button class="btn btn-azul" id="guardarGitConfig" style="width:auto;padding:8px 18px;">💾 Guardar</button>
+      <button class="btn btn-verde" id="publicarGitBtn" style="width:auto;padding:8px 18px;">🚀 Publicar en GitHub</button>
+    </div>
+
     <div class="aviso">
-      <strong>⚠️ Sincronización:</strong> Los productos que ves aquí están guardados en tu navegador (<code>localStorage</code>). Para que la tienda online los muestre, debes <strong>descargar <code>productos.json</code></strong> y <strong>subirlo a GitHub</strong> reemplazando el viejo. También sube las fotos nuevas a la carpeta <code>imagenes/</code> con el nombre exacto que te indica el panel.<br><br>
-      <strong>📌 IMPORTANTE:</strong> Después de subir los archivos a GitHub, <strong>recarga la tienda con <code>Ctrl+F5</code></strong> (o <code>Cmd+Shift+R</code> en Mac) para forzar la actualización.
+      <strong>⚠️ Sincronización:</strong> Los productos que ves aquí están guardados en tu navegador (<code>localStorage</code>). Para subirlos automáticamente a GitHub, configura tu <strong>token</strong> y <strong>repositorio</strong> arriba y pulsa <strong>Publicar en GitHub</strong>.<br><br>
+      <strong>📌 IMPORTANTE:</strong> Si prefieres el método manual, usa el botón <strong>Descargar JSON</strong> y súbelo a GitHub como siempre.
     </div>
 
     <div class="acciones-top">
@@ -148,7 +154,7 @@ button{cursor:pointer;font-family:inherit;}
     <div class="lista" id="lista"></div>
   </div>
 
-  <!-- FORMULARIO (sin stock) -->
+  <!-- FORMULARIO -->
   <div id="form-producto">
     <div class="form-h" id="formH">Nuevo producto</div>
 
@@ -174,9 +180,8 @@ button{cursor:pointer;font-family:inherit;}
         <option value="herramientas">🔧 Herramientas</option>
         <option value="automotriz">🚗 Automotriz y Medición</option>
         <option value="miscelaneos">🏠 Misceláneos y Hogar</option>
-        <!-- NUEVAS CATEGORÍAS -->
         <option value="ecoflow">⚡ Ecoflow</option>
-        <option value="motorinas">🛵 Vehículos</option>
+        <option value="motorinas">🛵 Movilidad Eléctrica (Bicis, Patinetas, Motorinas)</option>
       </select>
     </div>
 
@@ -231,8 +236,9 @@ button{cursor:pointer;font-family:inherit;}
 // ============================================================
 //  CONFIGURACIÓN
 // ============================================================
-const PASS = "V3nt4C13nFueg0s2026!"; // <--- CONTRASEÑA ROBUSTA
+const PASS = "V3nt4C13nFueg0s2026!";
 const LS = "vc_admin_productos";
+const LS_GIT = "vc_admin_git"; // guarda {repo, token}
 
 const CATS = [
   {id:"electricidad",nombre:"Electricidad y Protección",ico:"⚡"},
@@ -245,87 +251,28 @@ const CATS = [
   {id:"automotriz",nombre:"Automotriz y Medición",ico:"🚗"},
   {id:"miscelaneos",nombre:"Misceláneos y Hogar",ico:"🏠"},
   {id:"ecoflow",nombre:"Ecoflow",ico:"⚡"},
-  {id:"motorinas",nombre:"Vehículos",ico:"🛵"},
+  {id:"motorinas",nombre:"Movilidad Eléctrica",ico:"🛵"},
 ];
 
 let productos=[], editandoId=null, imagenActual="", archivoPendiente=null, archivoNombre="";
 let filtroCategoria = "todas";
 let textoBusqueda = "";
 
-// ============================================================
-//  NOMBRADO DE IMÁGENES (mismo criterio que imagen.py)
-// ============================================================
-const PALABRAS_IGNORAR = new Set(['de','para','con','por','en','a','el','la','los','las','marca','portátil','digital','inteligente']);
-
-function quitarAcentos(str){
-  return str.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^\x00-\x7F]/g,'');
-}
-
-function slugifyCorto(texto){
-  let t = quitarAcentos(texto);
-  t = t.replace(/[^\w\s-]/g,'');
-  const palabras = t.split(/\s+/).filter(Boolean);
-  const filtradas = palabras.filter(p => !PALABRAS_IGNORAR.has(p.toLowerCase()) && p.length > 2);
-  if(filtradas.length === 0) return 'producto';
-  let base = filtradas.slice(0,2).join('-');
-  if(base.length > 30) base = base.slice(0,30);
-  return base;
-}
-
-function generarNombreImagen(nombreProducto, precio, extension){
-  let limpio = (nombreProducto||'').replace(/[🔥()]/g,'');
-  limpio = limpio.replace(/\[.*?\]/g,'');
-  const base = slugifyCorto(limpio);
-  const nombreBase = `${base}-${precio}usd`;
-
-  const nombresExistentes = new Set(
-    productos
-      .filter(p => p.id !== editandoId)
-      .map(p => (p.imagen||'').split('/').pop())
-  );
-
-  let candidato = `${nombreBase}.${extension}`;
-  let contador = 1;
-  while(nombresExistentes.has(candidato)){
-    contador++;
-    candidato = `${nombreBase}-${contador}.${extension}`;
-  }
-  return candidato;
-}
-
-// ============================================================
-//  CONVERSIÓN A JPG (toda foto que se suba se guarda como .jpg)
-// ============================================================
-function convertirAJPEG(file, calidad=0.9){
-  return new Promise((resolve, reject)=>{
-    const reader = new FileReader();
-    reader.onload = (ev)=>{
-      const img = new Image();
-      img.onload = ()=>{
-        const canvas = document.createElement('canvas');
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-        const ctx = canvas.getContext('2d');
-        // Fondo blanco por si la imagen original tenía transparencia (PNG/WEBP)
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob(blob=>{
-          if(blob) resolve(blob); else reject(new Error('No se pudo convertir la imagen a JPG'));
-        }, 'image/jpeg', calidad);
-      };
-      img.onerror = ()=>reject(new Error('No se pudo leer la imagen seleccionada'));
-      img.src = ev.target.result;
-    };
-    reader.onerror = ()=>reject(new Error('No se pudo leer el archivo'));
-    reader.readAsDataURL(file);
-  });
-}
-
 // ── UTILIDADES ──
 function catNombre(id){ return CATS.find(c=>c.id===id)?.nombre||id; }
 function catIco(id){ return CATS.find(c=>c.id===id)?.ico||"📦"; }
 function fmt(p,m){ return p?`${p} ${m||""}`.trim():""; }
+
+function mostrarToast(msg, color="#1a3a5c"){
+  const old = document.querySelector(".toast");
+  if(old) old.remove();
+  const div = document.createElement("div");
+  div.className = "toast";
+  div.textContent = msg;
+  div.style.background = color;
+  document.body.appendChild(div);
+  setTimeout(()=>div.remove(), 4000);
+}
 
 // ── LOGIN ──
 document.getElementById("loginBtn").addEventListener("click", login);
@@ -336,21 +283,109 @@ function login(){
     document.getElementById("loginWrap").style.display="none";
     document.getElementById("panel").style.display="block";
     cargar();
+    cargarConfigGit();
   } else {
     document.getElementById("loginErr").textContent="Contraseña incorrecta";
   }
 }
 
+// ── CONFIGURACIÓN GITHUB ──
+function cargarConfigGit(){
+  const data = localStorage.getItem(LS_GIT);
+  if(data){
+    try{
+      const {repo, token} = JSON.parse(data);
+      document.getElementById("gitRepo").value = repo||"";
+      document.getElementById("gitToken").value = token||"";
+    }catch(e){}
+  }
+}
+
+document.getElementById("guardarGitConfig").addEventListener("click", ()=>{
+  const repo = document.getElementById("gitRepo").value.trim();
+  const token = document.getElementById("gitToken").value.trim();
+  if(!repo || !token){
+    mostrarToast("❌ Completa ambos campos (repo y token)", "#c0392b");
+    return;
+  }
+  localStorage.setItem(LS_GIT, JSON.stringify({repo, token}));
+  mostrarToast("✅ Configuración guardada", "#1a8a4a");
+});
+
+// ── PUBLICAR EN GITHUB ──
+document.getElementById("publicarGitBtn").addEventListener("click", async ()=>{
+  const repo = document.getElementById("gitRepo").value.trim();
+  const token = document.getElementById("gitToken").value.trim();
+  if(!repo || !token){
+    mostrarToast("❌ Configura primero el repositorio y el token", "#c0392b");
+    return;
+  }
+  if(productos.length === 0){
+    mostrarToast("❌ No hay productos para publicar", "#c0392b");
+    return;
+  }
+
+  const btn = document.getElementById("publicarGitBtn");
+  btn.textContent = "⏳ Publicando...";
+  btn.disabled = true;
+
+  try{
+    const contenido = JSON.stringify(productos, null, 2);
+    const sha = await obtenerSHA(repo, token);
+    const resultado = await actualizarArchivo(repo, token, contenido, sha);
+    if(resultado){
+      mostrarToast("✅ Productos publicados en GitHub correctamente", "#1a8a4a");
+    } else {
+      mostrarToast("❌ Error al publicar", "#c0392b");
+    }
+  }catch(err){
+    mostrarToast("❌ Error: "+err.message, "#c0392b");
+  }finally{
+    btn.textContent = "🚀 Publicar en GitHub";
+    btn.disabled = false;
+  }
+});
+
+async function obtenerSHA(repo, token){
+  const url = `https://api.github.com/repos/${repo}/contents/productos.json`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `token ${token}`,
+      Accept: "application/vnd.github.v3+json"
+    }
+  });
+  if(res.status === 404) return null; // archivo no existe
+  if(!res.ok) throw new Error(`Error al obtener SHA: ${res.status} ${res.statusText}`);
+  const data = await res.json();
+  return data.sha;
+}
+
+async function actualizarArchivo(repo, token, contenido, sha){
+  const url = `https://api.github.com/repos/${repo}/contents/productos.json`;
+  const body = {
+    message: "Actualización automática desde el panel admin VENTACIEN",
+    content: btoa(unescape(encodeURIComponent(contenido))),
+    sha: sha || undefined
+  };
+  const res = await fetch(url, {
+    method: "PUT",
+    headers: {
+      Authorization: `token ${token}`,
+      "Content-Type": "application/json",
+      Accept: "application/vnd.github.v3+json"
+    },
+    body: JSON.stringify(body)
+  });
+  if(!res.ok){
+    const err = await res.json();
+    throw new Error(err.message || `HTTP ${res.status}`);
+  }
+  return true;
+}
+
 // ── DATOS ──
 function cargar(){
-  // Siempre se pide la versión más reciente de productos.json al servidor
-  // (nada de caché ni de localStorage como fuente principal), para que en
-  // cuanto subas cambios a GitHub, el panel los muestre desde cualquier
-  // dispositivo apenas lo abras.
-  fetch("productos.json?_="+Date.now(), {
-      cache: "no-store",
-      headers: { "Cache-Control": "no-cache" }
-    })
+  fetch("productos.json?_="+Date.now(), { cache: "no-store", headers: { "Cache-Control": "no-cache" } })
     .then(r=>r.json())
     .then(d=>{
       productos=Array.isArray(d)?d:[];
@@ -358,20 +393,12 @@ function cargar(){
       renderStats();
       renderLista();
       buildFiltro();
-      console.log(`✅ Productos cargados desde el servidor (${productos.length} items).`);
     })
     .catch(()=>{
-      // Si no hay internet, se usa lo último guardado en este navegador
-      // para no dejar el panel vacío.
       const local = localStorage.getItem(LS);
       if(local){
-        try{
-          productos=JSON.parse(local);
-          console.log(`⚠️ Sin conexión: se muestran los productos guardados en este navegador (${productos.length} items).`);
-        }catch(e){ productos=[]; }
-      } else {
-        productos=[];
-      }
+        try{ productos=JSON.parse(local); }catch(e){ productos=[]; }
+      } else { productos=[]; }
       renderStats();
       renderLista();
       buildFiltro();
@@ -399,7 +426,6 @@ function buildFiltro(){
       const n = productos.filter(p=>p.categoria===c.id).length;
       return `<option value="${c.id}">${c.ico} ${c.nombre} (${n})</option>`;
     }).join("");
-  // Restaurar selección previa si existe
   if (filtroCategoria && sel.querySelector(`option[value="${filtroCategoria}"]`)) {
     sel.value = filtroCategoria;
   } else {
@@ -412,19 +438,17 @@ document.getElementById("filtroLista").addEventListener("change", e=>{
   renderLista();
 });
 
-// Buscador en tiempo real
 document.getElementById("buscarProducto").addEventListener("input", e=>{
   textoBusqueda = e.target.value.trim().toLowerCase();
   renderLista();
 });
 
-// ── LISTA CON FILTROS ──
+// ── LISTA ──
 function renderLista(){
   const lista = document.getElementById("lista");
   const empty = document.getElementById("emptyLista");
   const contador = document.getElementById("contadorResultados");
 
-  // Aplicar filtros
   let datos = productos;
   if (filtroCategoria !== "todas") {
     datos = datos.filter(p => p.categoria === filtroCategoria);
@@ -502,7 +526,7 @@ function abrirForm(p){
   document.getElementById("campoDescripcion").value=p?(p.descripcion||""):"";
   document.getElementById("campoEtiqueta").value=p?(p.etiqueta||""):"";
   document.getElementById("campoAgotado").checked=p?!!p.agotado:false;
-  document.getElementById("campoDomicilio").checked=p? (p.domicilio_gratis !== false) : true; // por defecto true
+  document.getElementById("campoDomicilio").checked=p? (p.domicilio_gratis !== false) : true;
   const av=document.getElementById("avisoArchivo");
   av.style.display="none"; av.innerHTML="";
   actualizarPicker(p&&p.imagen?p.imagen:null);
@@ -513,7 +537,6 @@ function abrirForm(p){
 function cerrarForm(){
   document.getElementById("form-producto").style.display="none";
   document.getElementById("panel").style.display="block";
-  // Limpiar búsqueda al salir
   textoBusqueda = "";
   document.getElementById("buscarProducto").value = "";
   renderLista();
@@ -555,6 +578,33 @@ document.getElementById("fileInput").addEventListener("change", async e=>{
     return;
   }
 
+  const PALABRAS_IGNORAR = new Set(['de','para','con','por','en','a','el','la','los','las','marca','portátil','digital','inteligente']);
+  function quitarAcentos(str){ return str.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^\x00-\x7F]/g,''); }
+  function slugifyCorto(texto){
+    let t = quitarAcentos(texto);
+    t = t.replace(/[^\w\s-]/g,'');
+    const palabras = t.split(/\s+/).filter(Boolean);
+    const filtradas = palabras.filter(p => !PALABRAS_IGNORAR.has(p.toLowerCase()) && p.length > 2);
+    if(filtradas.length === 0) return 'producto';
+    let base = filtradas.slice(0,2).join('-');
+    if(base.length > 30) base = base.slice(0,30);
+    return base;
+  }
+  function generarNombreImagen(nombreProducto, precio, extension){
+    let limpio = (nombreProducto||'').replace(/[🔥()]/g,'');
+    limpio = limpio.replace(/\[.*?\]/g,'');
+    const base = slugifyCorto(limpio);
+    const nombreBase = `${base}-${precio}usd`;
+    const nombresExistentes = new Set(productos.filter(p => p.id !== editandoId).map(p => (p.imagen||'').split('/').pop()));
+    let candidato = `${nombreBase}.${extension}`;
+    let contador = 1;
+    while(nombresExistentes.has(candidato)){
+      contador++;
+      candidato = `${nombreBase}-${contador}.${extension}`;
+    }
+    return candidato;
+  }
+
   archivoNombre=generarNombreImagen(nombre, precio, "jpg");
   imagenActual=`imagenes/${archivoNombre}`;
   archivoPendiente=blobJpeg;
@@ -569,6 +619,31 @@ document.getElementById("fileInput").addEventListener("change", async e=>{
     document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
   });
 });
+
+function convertirAJPEG(file, calidad=0.9){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onload = (ev)=>{
+      const img = new Image();
+      img.onload = ()=>{
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0);
+        canvas.toBlob(blob=>{
+          if(blob) resolve(blob); else reject(new Error('No se pudo convertir la imagen a JPG'));
+        }, 'image/jpeg', calidad);
+      };
+      img.onerror = ()=>reject(new Error('No se pudo leer la imagen seleccionada'));
+      img.src = ev.target.result;
+    };
+    reader.onerror = ()=>reject(new Error('No se pudo leer el archivo'));
+    reader.readAsDataURL(file);
+  });
+}
 
 document.getElementById("guardarBtn").addEventListener("click",()=>{
   const cat=document.getElementById("campoCategoria").value;
@@ -590,6 +665,7 @@ document.getElementById("guardarBtn").addEventListener("click",()=>{
   if(idx>=0) productos[idx]=datos; else productos.push(datos);
   guardarLocal(); renderStats(); buildFiltro(); cerrarForm();
   renderLista();
+  mostrarToast("✅ Producto guardado en local. No olvides publicar en GitHub.", "#1a3a5c");
 });
 
 // ── DESCARGAR JSON ──
@@ -606,16 +682,13 @@ document.getElementById("descargarBtn").addEventListener("click",()=>{
 });
 
 // ============================================================
-//  PROTECCIÓN DE CONTENIDO (igual que en index.html)
+//  PROTECCIÓN DE CONTENIDO
 // ============================================================
 (function protegerContenido() {
-  // Deshabilitar clic derecho
   document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
     alert('🛡️ El contenido de esta web está protegido.');
   });
-
-  // Deshabilitar atajos de teclado
   document.addEventListener('keydown', function(e) {
     const teclasProhibidas = ['c', 'u', 's', 'p'];
     if (e.ctrlKey && teclasProhibidas.includes(e.key.toLowerCase())) {
@@ -627,14 +700,10 @@ document.getElementById("descargarBtn").addEventListener("click",()=>{
       alert('🛡️ Herramientas de desarrollador deshabilitadas.');
     }
   });
-
-  // Proteger imágenes (evitar arrastre)
   document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', 'false');
     img.addEventListener('contextmenu', e => e.preventDefault());
   });
-
-  // Añadir crédito automático al copiar
   document.addEventListener('copy', function(e) {
     const seleccion = window.getSelection().toString();
     if (seleccion.length > 10) {
@@ -645,10 +714,7 @@ document.getElementById("descargarBtn").addEventListener("click",()=>{
   });
 })();
 
-// ============================================================
-//  LIMPIEZA DE SERVICE WORKER (el panel ya NO usa caché offline;
-//  esto quita cualquier versión vieja que haya quedado instalada)
-// ============================================================
+// LIMPIEZA DE SERVICE WORKER
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.getRegistrations().then(regs => {
     regs.forEach(reg => reg.unregister());
@@ -657,7 +723,6 @@ if ('serviceWorker' in navigator) {
 if (window.caches) {
   caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
 }
-
 </script>
 </body>
 </html>
