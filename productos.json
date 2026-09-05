@@ -932,17 +932,5 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "imagen": "imagenes/Paquete-Conectores-125usd.jpg"
-  },
-  {
-    "id": "p_1788622639177",
-    "categoria": "electricidad",
-    "nombre": "prueba",
-    "precio": "100",
-    "moneda": "USD",
-    "descripcion": "Garantia no tiene",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/prueba-100usd.jpg"
   }
 ]
