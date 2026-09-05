@@ -132,8 +132,9 @@ button{cursor:pointer;font-family:inherit;}
     </div>
 
     <div class="aviso">
-      <strong>⚠️ Sincronización:</strong> Los productos que ves aquí están guardados en tu navegador (<code>localStorage</code>). Para subirlos automáticamente a GitHub, configura tu <strong>token</strong> y <strong>repositorio</strong> arriba y pulsa <strong>Publicar en GitHub</strong>.<br><br>
-      <strong>📌 IMPORTANTE:</strong> Si prefieres el método manual, usa el botón <strong>Descargar JSON</strong> y súbelo a GitHub como siempre.
+      <strong>⚠️ Sincronización:</strong> Los productos que ves aquí están guardados en tu navegador (<code>localStorage</code>). <br>
+      ✅ <strong>NUEVO:</strong> Al guardar un producto con foto nueva, la imagen se subirá automáticamente a GitHub (si has configurado token y repositorio).<br>
+      <strong>📌 IMPORTANTE:</strong> Si prefieres el método manual, usa el botón <strong>Descargar JSON</strong> y sube las fotos por separado.
     </div>
 
     <div class="acciones-top">
@@ -238,7 +239,7 @@ button{cursor:pointer;font-family:inherit;}
 // ============================================================
 const PASS = "V3nt4C13nFueg0s2026!";
 const LS = "vc_admin_productos";
-const LS_GIT = "vc_admin_git"; // guarda {repo, token}
+const LS_GIT = "vc_admin_git";
 
 const CATS = [
   {id:"electricidad",nombre:"Electricidad y Protección",ico:"⚡"},
@@ -271,7 +272,7 @@ function mostrarToast(msg, color="#1a3a5c"){
   div.textContent = msg;
   div.style.background = color;
   document.body.appendChild(div);
-  setTimeout(()=>div.remove(), 4000);
+  setTimeout(()=>div.remove(), 5000);
 }
 
 // ── LOGIN ──
@@ -301,9 +302,14 @@ function cargarConfigGit(){
   }
 }
 
-document.getElementById("guardarGitConfig").addEventListener("click", ()=>{
+function obtenerConfigGit(){
   const repo = document.getElementById("gitRepo").value.trim();
   const token = document.getElementById("gitToken").value.trim();
+  return {repo, token};
+}
+
+document.getElementById("guardarGitConfig").addEventListener("click", ()=>{
+  const {repo, token} = obtenerConfigGit();
   if(!repo || !token){
     mostrarToast("❌ Completa ambos campos (repo y token)", "#c0392b");
     return;
@@ -312,10 +318,59 @@ document.getElementById("guardarGitConfig").addEventListener("click", ()=>{
   mostrarToast("✅ Configuración guardada", "#1a8a4a");
 });
 
-// ── PUBLICAR EN GITHUB ──
+// ── SUBIR IMAGEN A GITHUB ──
+async function subirImagenAGitHub(repo, token, nombreArchivo, blobImagen){
+  // Verificar si la imagen ya existe para obtener SHA
+  const urlBase = `https://api.github.com/repos/${repo}/contents/imagenes/${nombreArchivo}`;
+  let sha = null;
+  try {
+    const res = await fetch(urlBase, {
+      headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" }
+    });
+    if(res.ok){
+      const data = await res.json();
+      sha = data.sha;
+    } else if(res.status !== 404){
+      throw new Error(`Error al verificar imagen: ${res.status} ${res.statusText}`);
+    }
+  } catch(e){
+    if(!e.message.includes("404")) throw e;
+  }
+
+  // Convertir blob a base64
+  const base64 = await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(',')[1]);
+    reader.onerror = reject;
+    reader.readAsDataURL(blobImagen);
+  });
+
+  const body = {
+    message: `Subir imagen ${nombreArchivo} desde panel admin VENTACIEN`,
+    content: base64,
+    branch: "main" // o "master" según tu repo, ajusta si es necesario
+  };
+  if(sha) body.sha = sha;
+
+  const res = await fetch(urlBase, {
+    method: "PUT",
+    headers: {
+      Authorization: `token ${token}`,
+      "Content-Type": "application/json",
+      Accept: "application/vnd.github.v3+json"
+    },
+    body: JSON.stringify(body)
+  });
+  if(!res.ok){
+    const err = await res.json();
+    throw new Error(err.message || `HTTP ${res.status}`);
+  }
+  return true;
+}
+
+// ── PUBLICAR EN GITHUB (JSON + imágenes pendientes) ──
 document.getElementById("publicarGitBtn").addEventListener("click", async ()=>{
-  const repo = document.getElementById("gitRepo").value.trim();
-  const token = document.getElementById("gitToken").value.trim();
+  const {repo, token} = obtenerConfigGit();
   if(!repo || !token){
     mostrarToast("❌ Configura primero el repositorio y el token", "#c0392b");
     return;
@@ -326,26 +381,46 @@ document.getElementById("publicarGitBtn").addEventListener("click", async ()=>{
   }
 
   const btn = document.getElementById("publicarGitBtn");
-  btn.textContent = "⏳ Publicando...";
+  btn.textContent = "⏳ Subiendo imágenes...";
   btn.disabled = true;
 
-  try{
+  try {
+    // 1. Subir imágenes pendientes (si hay alguna)
+    // Buscamos productos que tengan imagen pero que la imagen no exista en GitHub (opcional)
+    // Como no podemos saberlo fácilmente, subimos la que está en archivoPendiente si existe.
+    // O mejor: recorremos todos los productos y si tienen imagen y la ruta comienza con "imagenes/",
+    // intentamos subirla. Pero no tenemos el blob de todas, solo de la última seleccionada.
+    // Lo más práctico: al guardar producto ya subimos la imagen, así que aquí solo subimos el JSON.
+    // Pero por si acaso, si hay archivoPendiente, lo subimos primero.
+    if(archivoPendiente && archivoNombre){
+      mostrarToast("⏳ Subiendo imagen pendiente...", "#1a3a5c");
+      try {
+        await subirImagenAGitHub(repo, token, archivoNombre, archivoPendiente);
+        // Limpiar pendiente después de subirla
+        archivoPendiente = null;
+        archivoNombre = "";
+        mostrarToast("✅ Imagen subida correctamente", "#1a8a4a");
+      } catch(err) {
+        mostrarToast("⚠️ Error al subir imagen: "+err.message, "#c0392b");
+        // Continuamos con el JSON igualmente
+      }
+    }
+
+    // 2. Subir productos.json
+    mostrarToast("⏳ Publicando productos.json...", "#1a3a5c");
     const contenido = JSON.stringify(productos, null, 2);
     const sha = await obtenerSHA(repo, token);
-    const resultado = await actualizarArchivo(repo, token, contenido, sha);
-    if(resultado){
-      mostrarToast("✅ Productos publicados en GitHub correctamente", "#1a8a4a");
-    } else {
-      mostrarToast("❌ Error al publicar", "#c0392b");
-    }
-  }catch(err){
+    await actualizarArchivo(repo, token, contenido, sha);
+    mostrarToast("✅ Productos publicados en GitHub correctamente", "#1a8a4a");
+  } catch(err){
     mostrarToast("❌ Error: "+err.message, "#c0392b");
-  }finally{
+  } finally {
     btn.textContent = "🚀 Publicar en GitHub";
     btn.disabled = false;
   }
 });
 
+// Funciones auxiliares para JSON
 async function obtenerSHA(repo, token){
   const url = `https://api.github.com/repos/${repo}/contents/productos.json`;
   const res = await fetch(url, {
@@ -354,7 +429,7 @@ async function obtenerSHA(repo, token){
       Accept: "application/vnd.github.v3+json"
     }
   });
-  if(res.status === 404) return null; // archivo no existe
+  if(res.status === 404) return null;
   if(!res.ok) throw new Error(`Error al obtener SHA: ${res.status} ${res.statusText}`);
   const data = await res.json();
   return data.sha;
@@ -645,11 +720,13 @@ function convertirAJPEG(file, calidad=0.9){
   });
 }
 
-document.getElementById("guardarBtn").addEventListener("click",()=>{
+// ── GUARDAR PRODUCTO (con subida automática de imagen) ──
+document.getElementById("guardarBtn").addEventListener("click", async ()=>{
   const cat=document.getElementById("campoCategoria").value;
   const nombre=document.getElementById("campoNombre").value.trim();
   if(!cat){ alert("Selecciona una categoría."); return; }
   if(!nombre){ alert("Ponle un nombre al producto."); return; }
+  
   const datos={
     id:editandoId||("p_"+Date.now()),
     categoria:cat, nombre,
@@ -661,11 +738,36 @@ document.getElementById("guardarBtn").addEventListener("click",()=>{
     domicilio_gratis:document.getElementById("campoDomicilio").checked,
     imagen:imagenActual,
   };
+
+  // Si hay imagen pendiente, intentar subirla a GitHub automáticamente
+  if(archivoPendiente && archivoNombre){
+    const {repo, token} = obtenerConfigGit();
+    if(repo && token){
+      try {
+        mostrarToast("⏳ Subiendo imagen a GitHub...", "#1a3a5c");
+        await subirImagenAGitHub(repo, token, archivoNombre, archivoPendiente);
+        mostrarToast("✅ Imagen subida correctamente", "#1a8a4a");
+        // Limpiar pendiente
+        archivoPendiente = null;
+        archivoNombre = "";
+      } catch(err) {
+        mostrarToast("⚠️ Error al subir imagen: "+err.message+" (el producto se guarda igual)", "#c0392b");
+        // No limpiar pendiente para que el usuario pueda reintentar con "Publicar en GitHub"
+      }
+    } else {
+      mostrarToast("⚠️ Configura GitHub (repo y token) para subir imágenes automáticamente", "#c8922a");
+    }
+  }
+
+  // Guardar en localStorage
   const idx=productos.findIndex(p=>p.id===datos.id);
   if(idx>=0) productos[idx]=datos; else productos.push(datos);
-  guardarLocal(); renderStats(); buildFiltro(); cerrarForm();
+  guardarLocal();
+  renderStats();
+  buildFiltro();
+  cerrarForm();
   renderLista();
-  mostrarToast("✅ Producto guardado en local. No olvides publicar en GitHub.", "#1a3a5c");
+  mostrarToast("✅ Producto guardado en local", "#1a3a5c");
 });
 
 // ── DESCARGAR JSON ──
