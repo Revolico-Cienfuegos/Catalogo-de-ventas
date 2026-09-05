@@ -12,9 +12,12 @@
     "id": "p_1782960543910",
     "categoria": "iluminacion",
     "nombre": "🔥 Lámpara recargable (10x10 cm) 🔥",
-    "precio": "10",
+    "precio": "22",
     "moneda": "USD",
     "descripcion": "✅ Duración de carga 5 horas aproximadamente\n✅ Baterías de litio 2400 mAh\n✅ Panel solar para cargar\n✅ Varios niveles de luz\n✅ Funciona como powerbank\n✅ Tiene soporte, para engancharla e imanes\n✅ Incluye cable USB para cargarla, Dimensiones 10x10 cm\n🛡️ Garantía 72 horas\n🚚 ¡DOMICILIO GRATIS en la ciudad de Cienfuegos!",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-recargable-10usd.jpg"
   },
   {
@@ -58,12 +61,11 @@
     "id": "p_1783046977069",
     "categoria": "electricidad",
     "nombre": "🔥 Interruptor de cuchilla 3P-63A marca Voltaje 🔥",
-    "precio": "26",
+    "precio": "20",
     "moneda": "USD",
     "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Interruptor-cuchilla-20usd.jpg"
   },
   {
@@ -128,7 +130,7 @@
     "moneda": "USD",
     "descripcion": "✅ No sirve para baterías ni de ácido ni de gel, solo LiFeP04\n🛡️ Garantía 3 días",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Cargador-bateria-180usd.jpg"
   },
   {
@@ -175,7 +177,7 @@
     "moneda": "USD",
     "descripcion": "✅ Se conecta del ECOFLOW a los cables de paneles solares\n✅ Longitud 30cm\n✅ Material del núcleo cobre puro\n✅ Calibre 10AWG, 6mm²\n✅ Corriente continua 30A y pico de 60A\n🛡️ Garantía no tien",
     "imagen": "imagenes/Cable-carga-20usd.jpg",
-    "agotado": false
+    "agotado": true
   },
   {
     "id": "p_1783048674424",
@@ -193,9 +195,8 @@
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB\n✅ Entrada tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Powerbank-Cargador-26usd.jpg"
   },
   {
@@ -212,12 +213,9 @@
     "id": "p_1783048948857",
     "categoria": "moviles",
     "nombre": "🔥 Powerbank o Cargador portátil de 40000 mAh 🔥",
-    "precio": "40",
+    "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-Cargador-35usd-2.jpg"
   },
   {
@@ -236,8 +234,7 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ 5 litros\n✅ Sirve para inducción\n🛡️ Garantía de 7 días",
-    "imagen": "imagenes/Olla-presion-40usd.jpg",
-    "agotado": true
+    "imagen": "imagenes/Olla-presion-40usd.jpg"
   },
   {
     "id": "p_1783049634591",
@@ -247,7 +244,7 @@
     "moneda": "USD",
     "descripcion": "✅ Botones táctiles\n✅ Modos de arroz, hot pot, potaje y sopa\n✅ Colores: negro, piel, amarillo, gris\n✅ Potencia de 350W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Olla-electrica-50usd-2.jpg"
   },
   {
@@ -277,9 +274,8 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ 2 resistencias\n✅ Potencia 2000 W\n✅ Color negro y blanco\n🛡️ Garantía 7 días",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Hornilla-electrica-35usd.jpg"
   },
   {
@@ -313,12 +309,9 @@
     "id": "p_1783050113677",
     "categoria": "audio",
     "nombre": "🔥 Soporte de TV de 26''-55'' marca Voltage 🔥",
-    "precio": "20",
+    "precio": "25",
     "moneda": "USD",
     "descripcion": "✅ Capacidad máxima 50 kg\n✅ Material Acero laminado en frío\n🛡️ Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
     "imagen": "imagenes/Soporte-26-55-25usd.jpg"
   },
   {
@@ -347,8 +340,7 @@
     "precio": "100",
     "moneda": "USD",
     "descripcion": "✅ Monedas USD, EUR, CAD, MXN, etc.\n✅ Tiene batería recargable de litio para uso portátil\n✅ Pantalla táctil\n✅ Funciona como contadora de billetes\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "imagenes/Detector-billetes-100usd.jpg",
-    "agotado": true
+    "imagen": "imagenes/Detector-billetes-100usd.jpg"
   },
   {
     "id": "p_1783048566252",
@@ -430,10 +422,7 @@
     "nombre": "🔥 Bocina Bluetooth Portátil marca T&G 🔥",
     "precio": "50",
     "moneda": "USD",
-    "descripcion": "✅ Alta calidad de audio\n✅ 2 Bocinas de 12W\n✅ Super calidad de audio\n✅ Bluetooth\n✅ Tarjeta SD de hasta 32 GB\n✅ Entrada USB\n✅ Batería 3600 mAh para una duración de 3 horas o más dependiendo del volumen\n✅ Tamaño 12 x 12 x 28 cm\n✅ Colores: Naranja\n💵 Precio 50 USD\n🛡️ No tiene garantía, son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "descripcion": "✅ Alta calidad de audio\n✅ 2 Bocinas de 12W\n✅ Super calidad de audio\n✅ Bluetooth\n✅ Tarjeta SD de hasta 32 GB\n✅ Entrada USB\n✅ Batería 3600 mAh para una duración de 3 horas o más dependiendo del volumen\n✅ Tamaño 12 x 12 x 28 cm\n✅ Colores: Rojo, Negro, Gris, Naranja y Azul\n💵 Precio 50 USD\n🛡️ No tiene garantía, son nuevas y se le dejan probadas al cliente",
     "imagen": "imagenes/Bocina-Bluetooth-50usd.jpg"
   },
   {
@@ -461,8 +450,7 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ Incluye antena de 15 cm, funciona perfecto en interiores donde la señal es buena\n✅ Incluye cable HDMI\n🛡️ Garantía 1 mes",
-    "imagen": "imagenes/Cajitas-descodificadoras-35usd.jpg",
-    "agotado": true
+    "imagen": "imagenes/Cajitas-descodificadoras-35usd.jpg"
   },
   {
     "id": "p_1783486195681",
@@ -521,9 +509,8 @@
     "precio": "5",
     "moneda": "USD",
     "descripcion": "✅ Es con el que se hacen los cables de las estaciones de carga ECOFLOW a los paneles solares\n✅Por cantidad 50 unidades o más sale cada unidad a 4 USD \n🛡️ Garantía no tiene",
-    "etiqueta": "",
+    "etiqueta": "mas_vendido",
     "agotado": false,
-    "domicilio_gratis": true,
     "imagen": "imagenes/Conectores-XT60i-F-5usd.jpg"
   },
   {
@@ -533,8 +520,7 @@
     "precio": "90",
     "moneda": "USD",
     "descripcion": "✅Sale a 1.80 USD cada pareja\n🛡️Garantia no tiene",
-    "imagen": "imagenes/Paquete-parejas-90usd.png",
-    "agotado": true
+    "imagen": "imagenes/Paquete-parejas-90usd.png"
   },
   {
     "id": "p_1784909392424",
@@ -543,9 +529,8 @@
     "precio": "150",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
-    "agotado": true,
-    "domicilio_gratis": true,
+    "etiqueta": "",
+    "agotado": false,
     "imagen": "imagenes/Inversor-corriente-160usd-2.jpg"
   },
   {
@@ -555,9 +540,8 @@
     "precio": "170",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "mas_vendido",
+    "etiqueta": "",
     "agotado": false,
-    "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-180usd.jpg"
   },
   {
@@ -619,8 +603,7 @@
     "moneda": "USD",
     "descripcion": "✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 70V a 110V\n✅Alto voltaje ajustable 130V a 160V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
     "etiqueta": "",
-    "agotado": true,
-    "domicilio_gratis": true,
+    "agotado": false,
     "imagen": "imagenes/Protector-voltaje-25usd.jpg"
   },
   {
@@ -641,9 +624,6 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅Máximo hasta 150 PSI\n✅Es recargable \n✅2 Baterias de 2000 mAh\n✅3 tipos de luces \n✅Compatible con autos, motos, bicicletas, balones, etc.\n✅Accesorios trae boquillas, cables de carga tipo C y funda para guardarlo\n🛡️Garantía es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
     "imagen": "imagenes/Compresor-portatil-40usd.jpg"
   },
   {
@@ -672,12 +652,11 @@
     "id": "p_1784910839188",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC 2P-20A🔥",
-    "precio": "20",
+    "precio": "15",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "agotado": true,
     "imagen": "imagenes/Breaker-2P-125A-15usd.jpg"
   },
   {
@@ -715,25 +694,23 @@
   {
     "id": "p_1785116908083",
     "categoria": "electricidad",
-    "nombre": "🔥Caja de distribución de 8 vías marca Q7 🔥",
-    "precio": "15",
+    "nombre": "🔥Caja de distribución de 4 vías marca Q7 🔥",
+    "precio": "10",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Caja-distribucion-10usd.jpg"
   },
   {
     "id": "p_1785116984188",
     "categoria": "electricidad",
-    "nombre": "🔥Caja de distribución de 4 vías marca Q7🔥",
+    "nombre": "🔥Caja de distribución de 8 vías marca Q7🔥",
     "precio": "10",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Caja-distribucion-10usd-2.jpg"
   },
   {
@@ -777,7 +754,7 @@
     "moneda": "USD",
     "descripcion": "✅Corriente de carga máxima 60A\n✅Voltaje Solar (PV) Max 230V DC\n✅Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Controlador-Solar-210usd.jpg"
   },
   {
@@ -787,9 +764,8 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅2 Bocinas de 3 pulgadas \n✅Salida 10 W\n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1200 mAh\n✅Duración más de 4 horas dependiendo el volumen \n✅Tamaño 11.2 x 12.1 x 26.5 cm\n🛡️Garantía Son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "etiqueta": "",
+    "agotado": true,
     "imagen": "imagenes/Bocina-Bluetooth-20usd.jpg"
   },
   {
@@ -821,7 +797,7 @@
     "precio": "80",
     "moneda": "USD",
     "descripcion": "✅Modelo JT-8258PRO\n✅Nivel de protección IP66 puede estar fuera de la casa \n✅compatible con micro SD de hasta 128 GB \n✅Incluye panel solar con base y cable \n✅También se puede alimentar con 5V con un cargador de teléfono o con un powerbank para q funcione en los apagones\n✅Se revisa desde una aplicación en el teléfono o desde la PC en cualquier parte del mundo 🌎 \n✅Necesita tener conexión a internet a través de alguna wifi para transmitir\n🛡️ Garantía no tiene es nuevo en caja y el Cliente debe probarla cuando se la llevan",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "imagen": "imagenes/Camara-WIFI-80usd.jpg"
   },
@@ -851,12 +827,11 @@
     "id": "p_1785684862363",
     "categoria": "solar",
     "nombre": "🔥Controlador Solar MPPT de 48V, 60V y 72V y 1200W🔥",
-    "precio": "115",
+    "precio": "130",
     "moneda": "USD",
     "descripcion": "✅PV INPUT 12-60VDC/30A\n✅MAX CHARGE CURRENT 15A\n✅POWER MAX 1200W\n✅Baterías compatibles 48V, 60V y 72V (los que se le ponen a todos los trisiclos electricos)\n✅Incluye conector MC4 para los cables de entrada del panel solar\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "nuevo",
     "agotado": false,
-    "domicilio_gratis": true,
     "imagen": "imagenes/Controlador-Solar-130usd.jpg"
   },
   {
@@ -878,19 +853,18 @@
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone y tipo C,\n✅1 puertos de salida USB\n✅1 puerto de salida tipo C\n✅Puertos de entrada Tipo C\n✅Carga rápida\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Powerbank-20000-26usd.jpg"
   },
   {
     "id": "p_1785685315713",
     "categoria": "moviles",
     "nombre": "🔥Powerbank de 20000 mAh con cables🔥",
-    "precio": "22",
+    "precio": "21",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB\n✅Puertos de entrada Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
+    "agotado": true,
     "imagen": "imagenes/Powerbank-20000-21usd.jpg"
   },
   {
@@ -911,7 +885,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 8\n✅Para tornillos 8-10\n🛡️Garantía no tiene",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "imagen": "imagenes/Terminales-cable-15usd.jpg"
   },
@@ -922,7 +896,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 6\n✅Para tornillos 8-16\n🛡️Garantía no tiene",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "imagen": "imagenes/Terminales-cable-15usd-2.jpg"
   },
@@ -934,7 +908,7 @@
     "moneda": "USD",
     "descripcion": "✅INCLUYE:\n✅Pinza MC4 \n✅Pinza pelar cables \n✅2 llaves safar y apretar MC4\n✅6 parejas MC4\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Maleta-instalar-35usd.jpg"
   },
   {
@@ -944,7 +918,7 @@
     "precio": "6",
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "imagen": "imagenes/Cargador-carga-6usd.jpg"
   },
@@ -955,524 +929,20 @@
     "precio": "125",
     "moneda": "USD",
     "descripcion": "✅Es con el que se hacen los cables de las estaciones de carga ECOFLOW a los paneles solares\n🛡️Garantía no tiene",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "imagen": "imagenes/Paquete-Conectores-125usd.jpg"
   },
   {
-    "id": "p_1787021715301",
-    "categoria": "moviles",
-    "nombre": "🔥Powerbank de 50000 mAh🔥",
-    "precio": "50",
-    "moneda": "USD",
-    "descripcion": "✅Carga rápida 66W  \n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas, solo cubre la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Powerbank-50000-45usd.jpg"
-  },
-  {
-    "id": "p_1787021855317",
-    "categoria": "solar",
-    "nombre": "🔥Cargador inteligente para batería de LiFeP04 de 12V - 22A🔥",
-    "precio": "75",
-    "moneda": "USD",
-    "descripcion": "✅No sirve para baterías ni de ácido ni de gel solo LiFeP04 \n🛡️Garantía 72 horas",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Cargador-bateria-75usd.jpg"
-  },
-  {
-    "id": "p_1787021981413",
+    "id": "p_1788622639177",
     "categoria": "electricidad",
-    "nombre": "🔥Protector de voltaje digital 220V 80A marca Q7🔥",
-    "precio": "30",
+    "nombre": "prueba",
+    "precio": "100",
     "moneda": "USD",
-    "descripcion": "✅Corriente ajustable 1A a 80A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Protector-voltaje-30usd-2.jpg"
-  },
-  {
-    "id": "p_1787022094494",
-    "categoria": "electricidad",
-    "nombre": "🔥Protector de voltaje digital 110V 63A marca Q7🔥",
-    "precio": "25",
-    "moneda": "USD",
-    "descripcion": "✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Protector-voltaje-25usd-2.jpg"
-  },
-  {
-    "id": "p_1787053505818",
-    "categoria": "ecoflow",
-    "nombre": "🔥Estación de energía 1000w 1024wh 🔥",
-    "precio": "650",
-    "moneda": "USD",
-    "descripcion": "✅Nueva en caja , carga de 3 a 4.5h\n🛡️Garantía no tiene es nueva y se deja probada",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Estacion-energia-650usd.jpg"
-  },
-  {
-    "id": "p_1787053759818",
-    "categoria": "ecoflow",
-    "nombre": "🔥Combo Estación de energía Ecoflow Delta 3 Classic🔥",
-    "precio": "770",
-    "moneda": "USD",
-    "descripcion": "✅ Ventilador recargable Chiq\n✅Potencia pico máxima: 3600 W\n✅Potencia nominal de salida: 1800 W\n✅Capacidad de batería: 1024 Wh\n✅Tensión de salida AC: 110 V\n✅Carga ultra-rápida: De 0 a 80 % en aprox. 56 minutos\n✅Vida útil: 3000+ ciclos de batería\n✅Conectividad: Bluetooth / App\n✅Salidas: AC, USB-C (100W/30W), USB-A, ideales para ventiladores de bajo consumo.\n🛡️Garantía no tiene es nueva y se deja probada",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Combo-Estacion-770usd.jpg"
-  },
-  {
-    "id": "p_1787071179553",
-    "categoria": "motorinas",
-    "nombre": "🔥Moto marca IZUKI BIMINI 🔥",
-    "precio": "1750",
-    "moneda": "USD",
-    "descripcion": "✅Batería 48vol x 40ah -120km por carga\n✅Motor 1500w",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Moto-IZUKI-1750usd.jpg"
-  },
-  {
-    "id": "p_1787071282866",
-    "categoria": "motorinas",
-    "nombre": "🔥Patinete eléctrico🔥",
-    "precio": "400",
-    "moneda": "USD",
-    "descripcion": "✅Cargador original\n✅Motor: 350W\n✅Pantalla digital con escáner para APP\n✅Velocidad máxima: 19 MPH\n✅Autonomía: 20–30 km\n✅Gomas sólidas de 8.5\"\n✅Color: Rojo",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Patinete-electrico-400usd.jpg"
-  },
-  {
-    "id": "p_1787071492033",
-    "categoria": "motorinas",
-    "nombre": "🔥Motorina🔥",
-    "precio": "2000",
-    "moneda": "USD",
-    "descripcion": "✅Batería de litio lipo4 60v 30 amp",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Motorina-2000usd.jpg"
-  },
-  {
-    "id": "p_1787071811201",
-    "categoria": "motorinas",
-    "nombre": "🔥Bicicleta medida 20🔥",
-    "precio": "170",
-    "moneda": "USD",
-    "descripcion": "✅También hay en color azul y rosado.\n🛡️Garantía : no",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Bicicleta-medida-170usd.jpg"
-  },
-  {
-    "id": "p_1787072013640",
-    "categoria": "motorinas",
-    "nombre": "🔥Bicimotos🔥",
-    "precio": "1300",
-    "moneda": "USD",
-    "descripcion": "🎁REBAJA ‼️‼️‼️\n✅6 meses de garantia 48volt x 30 amp 80 km litio lifepo4\n🛡️Garantía 📝: 1 mes",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Bicimotos-1300usd.jpg"
-  },
-  {
-    "id": "p_1787072101152",
-    "categoria": "motorinas",
-    "nombre": "🔥Bicicleta yoazaki 2026 d 48 volt x 28 amperes🔥",
-    "precio": "1400",
-    "moneda": "USD",
-    "descripcion": "✅Batería lithium autonomía de 80 km por carga\n🛡️Garantía 📝:  Probarla y que todo funcione al 💯",
-    "etiqueta": "",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Bicicleta-yoazaki-1400usd.jpg"
-  },
-  {
-    "id": "p_1787972445885",
-    "categoria": "moviles",
-    "nombre": "🔥Powerbank de 20000 mAh🔥",
-    "precio": "20",
-    "moneda": "USD",
-    "descripcion": "✅2 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Colores negro y blanco\n🛡️Garantía 72 horas , solo cubre la batería",
+    "descripcion": "Garantia no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Powerbank-20000-20usd.jpg"
-  },
-  {
-    "id": "p_1787972699887",
-    "categoria": "iluminacion",
-    "nombre": "🔥 Lámpara recargable 🔥",
-    "precio": "22",
-    "moneda": "USD",
-    "descripcion": "✅Duración de carga 5 horas aproximadamente \n✅Baterías de litio 12000 mah\n✅Panel solar para cargar\n✅Varios niveles de luz\n✅Funciona como powerbank \n✅Tiene soporte, para engancharla e imanes\n✅Incluye cable USB para cargarla\n✅Dimensiones 21x17 cm\n🛡️Garantía 72 horas solo la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Lampara-recargable-22usd.jpg"
-  },
-  {
-    "id": "p_1787972978641",
-    "categoria": "miscelaneos",
-    "nombre": "🔥 Nebulizador portátil 🔥",
-    "precio": "15",
-    "moneda": "USD",
-    "descripcion": "✅Se puede utilizar con 2 pilas AA o alimentándolo por un puerto Tipo C\n✅Ideal para utilizar cuando no hay corriente\n✅Trae 2 boquillas\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Nebulizador-portatil-15usd.jpg"
-  },
-  {
-    "id": "p_1788011210258",
-    "categoria": "iluminacion",
-    "nombre": "🔥Lámpara led de 1000w con panel solar🔥",
-    "precio": "55",
-    "moneda": "USD",
-    "descripcion": "✅Dimensiones de la lámpara 32 x 26.5 cm\n✅Dimensiones del panel 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Lampara-led-55usd.jpg"
-  },
-  {
-    "id": "p_1788011458514",
-    "categoria": "solar",
-    "nombre": "🔥Inversor de corriente de 12V a 110V Potencia 2500W pico 5000W🔥",
-    "precio": "220",
-    "moneda": "USD",
-    "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "mas_vendido",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Inversor-corriente-220usd.jpg"
-  },
-  {
-    "id": "p_1788011937490",
-    "categoria": "solar",
-    "nombre": "🔥Inversor de corriente de 12V a 110V Potencia 3000W pico 6000W🔥",
-    "precio": "250",
-    "moneda": "USD",
-    "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "mas_vendido",
-    "agotado": true,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Inversor-corriente-250usd.jpg"
-  },
-  {
-    "id": "p_1788012231930",
-    "categoria": "electricidad",
-    "nombre": "🔥Supresor de picos eléctricos de corriente directa🔥",
-    "precio": "15",
-    "moneda": "USD",
-    "descripcion": "✅Tipo AC SPD\n✅Voltaje 275V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Supresor-picos-15usd.jpg"
-  },
-  {
-    "id": "p_1788012526324",
-    "categoria": "solar",
-    "nombre": "🔥Conector MC4 tipo Y🔥",
-    "precio": "15",
-    "moneda": "USD",
-    "descripcion": "✅Hecho de cobre puro\n✅1000V\n✅30A\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Conector-MC4-15usd.jpg"
-  },
-  {
-    "id": "p_1788012704097",
-    "categoria": "electricidad",
-    "nombre": "🔥Supresor de picos eléctricos de corriente directa DC 500V🔥",
-    "precio": "15",
-    "moneda": "USD",
-    "descripcion": "✅Tipo DC SPD\n✅Voltaje 500V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Supresor-picos-15usd-2.jpg"
-  },
-  {
-    "id": "p_1788012969594",
-    "categoria": "moviles",
-    "nombre": "🔥TABLET JIAENOVA PAD 17 MAX 🔥",
-    "precio": "180",
-    "moneda": "USD",
-    "descripcion": "✅Pantalla amplia de 10.1” \n✅Resolución HD 800x1280  con buena calidad \n✅Rendimiento fluido\n✅Sistema Android 15 + procesador Octa-Core\n✅Memoria 64GB de almacenamiento + 4GB RAM (expandible con MicroSD) \n✅Cámara frontal 5MP y trasera 13MP\n✅Conectividad WiFi(funciona perfecto tanto en el nauta como x punto de acceso compartida desde otro teléfono) + Bluetooth + SIM(para llamadas y mensajes los datos moviles viene para 5G y en CUBA no funcionan)\n✅Batería 8000 mAh\n🔹 Incluye accesorios GRATIS 🎁\n✔️ Funda protectora\n✔️ Mica\n✔️ Teclado Bluetooth\n✔️ Mouse inalámbrico \n✔️ OTG tipo C de regalo 🎁\n🛡️Garantia no tiene es nueva en caja y se deja probado",
-    "etiqueta": "nuevo",
-    "agotado": true,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/TABLET-JIAENOVA-180usd.jpg"
-  },
-  {
-    "id": "p_1788013130121",
-    "categoria": "electrodomesticos",
-    "nombre": "🔥Fogón Infrarrojo marca UNIZUKI 🔥",
-    "precio": "40",
-    "moneda": "USD",
-    "descripcion": "✅Sirven todo tipo de calderos \n✅Pantalla digital \n✅Control táctil \n✅Placa de cristal de alta calidad\n✅Potencia 1200 W\n🛡️Garantía 30 días",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Fogon-Infrarrojo-40usd.jpg"
-  },
-  {
-    "id": "p_1788015913530",
-    "categoria": "solar",
-    "nombre": "🔥Caja protectora de corriente directa marca Q7🔥",
-    "precio": "80",
-    "moneda": "USD",
-    "descripcion": "✅Incluye caja 8 vías\n✅Breaker 25A DC\n✅Supresor de picos DC 600V\n✅Portafusibles con fusible 32A\n✅Expansiones para ponerlo a la pared\n✅Trae las conexiones listas para llegar y conectar\n🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Caja-protectora-80usd.jpg"
-  },
-  {
-    "id": "p_1788105975555",
-    "categoria": "electricidad",
-    "nombre": "🔥Caja de distribución de 12 vías marca Q7🔥",
-    "precio": "20",
-    "moneda": "USD",
-    "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
-    "agotado": true,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Caja-distribucion-15usd.jpg"
-  },
-  {
-    "id": "p_1788106350209",
-    "categoria": "automotriz",
-    "nombre": "🔥Compresor portátil de 150 PSI marca SACO🔥",
-    "precio": "45",
-    "moneda": "USD",
-    "descripcion": "✅Máximo hasta 150 PSI\n✅Es recargable \n✅Compatible con autos, motos, bicicletas, balones, etc.\n✅Se puede cargar con 5V puerto tipo C y 12V con entrada de autos\n✅Accesorios trae boquillas, cables de carga tipo C y de 12V auto y funda para guardarlo\n🛡️Garantía es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Compresor-portatil-45usd.jpg"
-  },
-  {
-    "id": "p_1788106652276",
-    "categoria": "electrodomesticos",
-    "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONAL DE CABO JOROBADO  1L (18 cm)🔥",
-    "precio": "45",
-    "moneda": "USD",
-    "descripcion": "✅MARCA: Royal\n✅INCLUYE:  Vaporera \n✅CAPACIDAD: 1 LT\n✅COLOR: CREMITA Y AZULITO \n✅POTENCIA: 300-600W\n✅ANTIADHERENTES \n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n🛡️Garantia 3 días",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/OLLA-ELECTRICA-45usd-2.jpg"
-  },
-  {
-    "id": "p_1788106864892",
-    "categoria": "solar",
-    "nombre": "🔥Rollo de Cable eléctrico fotovoltaico marca Q7🔥",
-    "precio": "130",
-    "moneda": "USD",
-    "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Colores rojo y negro\n🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Rollo-Cable-130usd.jpg"
-  },
-  {
-    "id": "p_1788185282342",
-    "categoria": "moviles",
-    "nombre": "🔥Powerbank de 60000 mAh con panel solar🔥",
-    "precio": "65",
-    "moneda": "USD",
-    "descripcion": "✅Panel solar para cargarlo \n✅Lámpara\n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Colores disponibles negro y blanco \n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Powerbank-60000-65usd.jpg"
-  },
-  {
-    "id": "p_1788186271277",
-    "categoria": "moviles",
-    "nombre": "🔥Powerbank de 50000 mAh con panel solar🔥",
-    "precio": "50",
-    "moneda": "USD",
-    "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Powerbank-50000-50usd.jpg"
-  },
-  {
-    "id": "p_1788186403037",
-    "categoria": "herramientas",
-    "nombre": "🔥Alicate de crimpado para conectores de paneles solares MC4🔥",
-    "precio": "18",
-    "moneda": "USD",
-    "descripcion": "🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
-    "agotado": true,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Alicate-crimpado-18usd.jpg"
-  },
-  {
-    "id": "p_1788186567319",
-    "categoria": "moviles",
-    "nombre": "🔥Powerbank de 40000 mAh modelo MBC-424🔥",
-    "precio": "40",
-    "moneda": "USD",
-    "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅4 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n✅Linterna \n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Powerbank-40000-40usd.jpg"
-  },
-  {
-    "id": "p_1788186824073",
-    "categoria": "moviles",
-    "nombre": "🔥Powerbank de 30000 mAh con panel solar modelo P321🔥",
-    "precio": "30",
-    "moneda": "USD",
-    "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Powerbank-30000-30usd.jpg"
-  },
-  {
-    "id": "p_1788186967863",
-    "categoria": "moviles",
-    "nombre": "🔥Powerbank de 20000 mAh modelo DY-205🔥",
-    "precio": "26",
-    "moneda": "USD",
-    "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅1 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Powerbank-20000-26usd-2.jpg"
-  },
-  {
-    "id": "p_1788187222438",
-    "categoria": "electricidad",
-    "nombre": "🔥Transfer automático AC 110V 63A/3P marca Q7🔥",
-    "precio": "55",
-    "moneda": "USD",
-    "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Transfer-automatico-55usd-2.jpg"
-  },
-  {
-    "id": "p_1788187375029",
-    "categoria": "electrodomesticos",
-    "nombre": "🔥Huevera modelo gallina(para hervir huevo)🔥",
-    "precio": "20",
-    "moneda": "USD",
-    "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores blanco y amarillo y blanco completo \n🛡️Garantia 3 días",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Huevera-modelo-20usd.jpg"
-  },
-  {
-    "id": "p_1788187834860",
-    "categoria": "electrodomesticos",
-    "nombre": "🔥Huevera UNIZUKI (para hervir huevo)🔥",
-    "precio": "20",
-    "moneda": "USD",
-    "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores rosado azul amarillo y blanco\n🛡️Garantia 3 días",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Huevera-UNIZUKI-20usd.jpg"
-  },
-  {
-    "id": "p_1788187994590",
-    "categoria": "iluminacion",
-    "nombre": "🔥Lámpara led de 1000W con panel solar UNIZUKI modelo 805🔥",
-    "precio": "55",
-    "moneda": "USD",
-    "descripcion": "✅Dimensiones de la lámpara 35 x 28 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
-    "etiqueta": "nuevo",
-    "agotado": true,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Lampara-led-55usd-2.jpg"
-  },
-  {
-    "id": "p_1788188232182",
-    "categoria": "miscelaneos",
-    "nombre": "🔥Cepillo blower secador y modelador🔥",
-    "precio": "15",
-    "moneda": "USD",
-    "descripcion": "✅3 en 1 plancha + cepillo + secador\n✅2800 W\n✅color violeta y rosado\n🛡️Garantía se deja probado",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Cepillo-blower-15usd.jpg"
-  },
-  {
-    "id": "p_1788212703805",
-    "categoria": "audio",
-    "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP6227🔥",
-    "precio": "55",
-    "moneda": "USD",
-    "descripcion": "✅2 Bocinas de 6 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 22.6 x 20.3 x 49 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Bocina-Bluetooth-55usd.jpg"
-  },
-  {
-    "id": "p_1788213371053",
-    "categoria": "audio",
-    "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP805🔥",
-    "precio": "55",
-    "moneda": "USD",
-    "descripcion": "✅Bocinas de 8 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 24.2 x 20.3 x 37.9 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Bocina-Bluetooth-55usd-2.jpg"
-  },
-  {
-    "id": "p_1788213585909",
-    "categoria": "audio",
-    "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP4292🔥",
-    "precio": "45",
-    "moneda": "USD",
-    "descripcion": "✅2 Bocinas de 4 pulgadas \n✅Salida 16W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1800 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 18.3 x 17.8 x 40.5 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Bocina-Bluetooth-45usd-2.jpg"
-  },
-  {
-    "id": "p_1788270814839",
-    "categoria": "audio",
-    "nombre": "🔥Audífonos inalámbricos de casco Labubu🔥",
-    "precio": "15",
-    "moneda": "USD",
-    "descripcion": "✅Duración aproximada 5 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Audifonos-inalambricos-15usd-2.jpg"
+    "imagen": "imagenes/prueba-100usd.jpg"
   }
 ]
