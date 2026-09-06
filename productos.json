@@ -89,9 +89,12 @@
     "id": "p_1783047123853",
     "categoria": "electricidad",
     "nombre": "🔥 Portafusible DC 1P con fusible de 32A 6W y de 25A 6W 🔥",
-    "precio": "10",
+    "precio": "8",
     "moneda": "USD",
-    "descripcion": "✅Si compras mas de 10  \n💵 8 USD\n🛡️ Garantía no tiene",
+    "descripcion": "✅Si compras mas de 10  \n💵 6 USD\n🛡️ Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Portafusible-fusible-10usd.jpg"
   },
   {
@@ -727,7 +730,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-10usd.jpg"
   },
@@ -909,7 +912,7 @@
     "moneda": "USD",
     "descripcion": "✅Incluye pinza \n✅Incluye 1200 terminales \n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Kit-crimpado-20usd.jpg"
   },
   {
@@ -1043,10 +1046,10 @@
     "id": "p_1787071179553",
     "categoria": "motorinas",
     "nombre": "🔥Moto marca IZUKI BIMINI 🔥",
-    "precio": "1750",
+    "precio": "1700",
     "moneda": "USD",
     "descripcion": "✅Batería 48vol x 40ah -120km por carga\n✅Motor 1500w",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Moto-IZUKI-1750usd.jpg"
@@ -1263,7 +1266,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-15usd.jpg"
   },
