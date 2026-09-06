@@ -1509,5 +1509,29 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cable-electrico-2.9usd.jpg"
+  },
+  {
+    "id": "p_1788721008085",
+    "categoria": "electricidad",
+    "nombre": "🔥 Breaker AC 2P 32A 🔥",
+    "precio": "12",
+    "moneda": "USD",
+    "descripcion": "🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Breaker-32A-12usd.jpg"
+  },
+  {
+    "id": "p_1788721086392",
+    "categoria": "electricidad",
+    "nombre": "🔥 Breaker AC 2P 63A",
+    "precio": "12",
+    "moneda": "USD",
+    "descripcion": "🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Breaker-63A-12usd.jpg"
   }
 ]
