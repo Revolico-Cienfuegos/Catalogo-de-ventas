@@ -874,7 +874,7 @@
     "moneda": "USD",
     "descripcion": "✅Hasta 300 KG\n🛡️Garantía de deja probada",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Pesa-gancho-45usd.jpg"
   },
   {
