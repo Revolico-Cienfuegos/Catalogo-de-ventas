@@ -1533,5 +1533,17 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-63A-12usd.jpg"
+  },
+  {
+    "id": "p_1788918725840",
+    "categoria": "electricidad",
+    "nombre": "🔥Combo 1 de Batería + Inversor + Cargador🔥",
+    "precio": "520",
+    "moneda": "USD",
+    "descripcion": "✅Batería de 12V 100A LiFeP04 que dan 1280Wh a consumir\n✅Inversor de onda pura 12V de 2000W pico 4000W\n✅Cargador Inteligente de 12V 10A\n✅Ideal para poner luces, ventiladores, TV, refrigerador, nevera, lavadoras, etc.\n🛡️Garantía no tiene todo es nuevo y se deja probado",
+    "etiqueta": "mas_vendido",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Combo-Bateria-520usd.jpg"
   }
 ]
