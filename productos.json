@@ -388,9 +388,12 @@
     "id": "p_1783048825412",
     "categoria": "herramientas",
     "nombre": "🔥 Candado con alarma marca SACO 🔥",
-    "precio": "12",
+    "precio": "10",
     "moneda": "USD",
     "descripcion": "✅ Incluye pilas de repuesto\n✅ Ideal para poner en disco de freno de motos o triciclos\n🛡️ Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Candado-alarma-12usd.jpg"
   },
   {
@@ -1425,7 +1428,7 @@
     "moneda": "USD",
     "descripcion": "✅Dimensiones de la lámpara 35 x 28 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-led-55usd-2.jpg"
   },
