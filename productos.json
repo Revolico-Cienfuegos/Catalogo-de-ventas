@@ -613,9 +613,12 @@
     "id": "p_1784910023878",
     "categoria": "herramientas",
     "nombre": "🔥Pesa digital de cocina 5 kg marca SACO 🔥",
-    "precio": "15",
+    "precio": "12",
     "moneda": "USD",
     "descripcion": "✅Batería lleva 2 pilas AAA\n✅Alta presión \n🛡️Garantía no tiene es nuevo y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Pesa-cocina-15usd.jpg"
   },
   {
@@ -862,7 +865,7 @@
     "id": "p_1785684862363",
     "categoria": "solar",
     "nombre": "🔥Controlador Solar MPPT de 48V, 60V y 72V y 1200W🔥",
-    "precio": "115",
+    "precio": "100",
     "moneda": "USD",
     "descripcion": "✅PV INPUT 12-60VDC/30A\n✅MAX CHARGE CURRENT 15A\n✅POWER MAX 1200W\n✅Baterías compatibles 48V, 60V y 72V (los que se le ponen a todos los trisiclos electricos)\n✅Incluye conector MC4 para los cables de entrada del panel solar\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "nuevo",
@@ -1518,7 +1521,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-32A-12usd.jpg"
   },
@@ -1530,7 +1533,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-63A-12usd.jpg"
   },
