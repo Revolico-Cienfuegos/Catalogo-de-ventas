@@ -62,7 +62,7 @@
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Interruptor-cuchilla-20usd.jpg"
@@ -92,7 +92,7 @@
     "precio": "8",
     "moneda": "USD",
     "descripcion": "✅Si compras mas de 10  \n💵 6 USD\n🛡️ Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Portafusible-fusible-10usd.jpg"
@@ -198,7 +198,7 @@
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB\n✅ Entrada tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-Cargador-26usd.jpg"
@@ -210,8 +210,10 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ Panel solar\n✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB, 1 puerto salida Tipo C\n✅ Puertos de entrada Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "imagen": "imagenes/Powerbank-Cargador-35usd.jpg",
-    "agotado": true
+    "etiqueta": "",
+    "agotado": true,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Powerbank-Cargador-35usd.jpg"
   },
   {
     "id": "p_1783048948857",
@@ -220,7 +222,7 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-Cargador-35usd-2.jpg"
@@ -282,7 +284,7 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ 2 resistencias\n✅ Potencia 2000 W\n✅ Color negro y blanco\n🛡️ Garantía 7 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Hornilla-electrica-35usd.jpg"
@@ -391,7 +393,7 @@
     "precio": "10",
     "moneda": "USD",
     "descripcion": "✅ Incluye pilas de repuesto\n✅ Ideal para poner en disco de freno de motos o triciclos\n🛡️ Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Candado-alarma-12usd.jpg"
@@ -552,7 +554,7 @@
     "precio": "150",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-160usd-2.jpg"
@@ -619,7 +621,7 @@
     "precio": "12",
     "moneda": "USD",
     "descripcion": "✅Batería lleva 2 pilas AAA\n✅Alta presión \n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Pesa-cocina-15usd.jpg"
@@ -666,7 +668,7 @@
     "precio": "22",
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 85V a 215V\n✅Alto voltaje ajustable 130V a 300V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Protector-voltaje-26usd.jpg"
@@ -678,7 +680,7 @@
     "precio": "22",
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 80A\n✅Bajo Voltaje ajustable 85V a 215V\n✅Alto voltaje ajustable 130V a 300V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Protector-voltaje-28usd.jpg"
@@ -691,7 +693,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-2P-125A-15usd.jpg"
   },
@@ -735,7 +737,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-10usd.jpg"
@@ -747,7 +749,7 @@
     "precio": "10",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-10usd-2.jpg"
@@ -792,7 +794,7 @@
     "precio": "200",
     "moneda": "USD",
     "descripcion": "✅Corriente de carga máxima 60A\n✅Voltaje Solar (PV) Max 230V DC\n✅Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Controlador-Solar-210usd.jpg"
@@ -860,8 +862,9 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-DC2P-125A-20usd.jpg"
   },
   {
@@ -871,7 +874,7 @@
     "precio": "100",
     "moneda": "USD",
     "descripcion": "✅PV INPUT 12-60VDC/30A\n✅MAX CHARGE CURRENT 15A\n✅POWER MAX 1200W\n✅Baterías compatibles 48V, 60V y 72V (los que se le ponen a todos los trisiclos electricos)\n✅Incluye conector MC4 para los cables de entrada del panel solar\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Controlador-Solar-130usd.jpg"
@@ -883,8 +886,9 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅Hasta 300 KG\n🛡️Garantía de deja probada",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Pesa-gancho-45usd.jpg"
   },
   {
@@ -894,8 +898,9 @@
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone y tipo C,\n✅1 puertos de salida USB\n✅1 puerto de salida tipo C\n✅Puertos de entrada Tipo C\n✅Carga rápida\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-20000-26usd.jpg"
   },
   {
@@ -905,7 +910,7 @@
     "precio": "22",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB\n✅Puertos de entrada Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-20000-21usd.jpg"
@@ -917,8 +922,9 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅Incluye pinza \n✅Incluye 1200 terminales \n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Kit-crimpado-20usd.jpg"
   },
   {
@@ -950,8 +956,9 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅INCLUYE:\n✅Pinza MC4 \n✅Pinza pelar cables \n✅2 llaves safar y apretar MC4\n✅6 parejas MC4\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Maleta-instalar-35usd.jpg"
   },
   {
@@ -983,7 +990,7 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W  \n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas, solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-50000-45usd.jpg"
@@ -1007,7 +1014,7 @@
     "precio": "22",
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 80A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Protector-voltaje-30usd-2.jpg"
@@ -1019,7 +1026,7 @@
     "precio": "22",
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Protector-voltaje-25usd-2.jpg"
@@ -1055,7 +1062,7 @@
     "precio": "1700",
     "moneda": "USD",
     "descripcion": "✅Batería 48vol x 40ah -120km por carga\n✅Motor 1500w",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Moto-IZUKI-1750usd.jpg"
@@ -1127,7 +1134,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅2 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Colores negro y blanco\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-20000-20usd.jpg"
@@ -1139,7 +1146,7 @@
     "precio": "22",
     "moneda": "USD",
     "descripcion": "✅Duración de carga 5 horas aproximadamente \n✅Baterías de litio 12000 mah\n✅Panel solar para cargar\n✅Varios niveles de luz\n✅Funciona como powerbank \n✅Tiene soporte, para engancharla e imanes\n✅Incluye cable USB para cargarla\n✅Dimensiones 21x17 cm\n🛡️Garantía 72 horas solo la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-recargable-22usd.jpg"
@@ -1151,7 +1158,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Se puede utilizar con 2 pilas AA o alimentándolo por un puerto Tipo C\n✅Ideal para utilizar cuando no hay corriente\n✅Trae 2 boquillas\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Nebulizador-portatil-15usd.jpg"
@@ -1163,7 +1170,7 @@
     "precio": "55",
     "moneda": "USD",
     "descripcion": "✅Dimensiones de la lámpara 32 x 26.5 cm\n✅Dimensiones del panel 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-led-55usd.jpg"
@@ -1199,7 +1206,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Tipo AC SPD\n✅Voltaje 275V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Supresor-picos-15usd.jpg"
@@ -1208,10 +1215,10 @@
     "id": "p_1788012526324",
     "categoria": "solar",
     "nombre": "🔥Conector MC4 tipo Y🔥",
-    "precio": "15",
+    "precio": "10",
     "moneda": "USD",
     "descripcion": "✅Hecho de cobre puro\n✅1000V\n✅30A\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Conector-MC4-15usd.jpg"
@@ -1223,7 +1230,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Tipo DC SPD\n✅Voltaje 500V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Supresor-picos-15usd-2.jpg"
@@ -1247,7 +1254,7 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅Sirven todo tipo de calderos \n✅Pantalla digital \n✅Control táctil \n✅Placa de cristal de alta calidad\n✅Potencia 1200 W\n🛡️Garantía 30 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Fogon-Infrarrojo-40usd.jpg"
@@ -1259,7 +1266,7 @@
     "precio": "75",
     "moneda": "USD",
     "descripcion": "✅Incluye caja 8 vías\n✅Breaker 25A DC\n✅Supresor de picos DC 600V\n✅Portafusibles con fusible 32A\n✅Expansiones para ponerlo a la pared\n✅Trae las conexiones listas para llegar y conectar\n🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-protectora-80usd.jpg"
@@ -1271,7 +1278,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-15usd.jpg"
@@ -1295,7 +1302,7 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅MARCA: Royal\n✅INCLUYE:  Vaporera \n✅CAPACIDAD: 1 LT\n✅COLOR: CREMITA Y AZULITO \n✅POTENCIA: 300-600W\n✅ANTIADHERENTES \n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n🛡️Garantia 3 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/OLLA-ELECTRICA-45usd-2.jpg"
@@ -1307,7 +1314,7 @@
     "precio": "130",
     "moneda": "USD",
     "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Colores rojo y negro\n🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Rollo-Cable-130usd.jpg"
@@ -1319,7 +1326,7 @@
     "precio": "65",
     "moneda": "USD",
     "descripcion": "✅Panel solar para cargarlo \n✅Lámpara\n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Colores disponibles negro y blanco \n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-60000-65usd.jpg"
@@ -1331,7 +1338,7 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-50000-50usd.jpg"
@@ -1355,7 +1362,7 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅4 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n✅Linterna \n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-40000-40usd.jpg"
@@ -1367,7 +1374,7 @@
     "precio": "30",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-30000-30usd.jpg"
@@ -1379,7 +1386,7 @@
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅1 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-20000-26usd-2.jpg"
@@ -1391,7 +1398,7 @@
     "precio": "55",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Transfer-automatico-55usd-2.jpg"
@@ -1403,7 +1410,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores blanco y amarillo y blanco completo \n🛡️Garantia 3 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Huevera-modelo-20usd.jpg"
@@ -1415,7 +1422,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores rosado azul amarillo y blanco\n🛡️Garantia 3 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Huevera-UNIZUKI-20usd.jpg"
@@ -1427,7 +1434,7 @@
     "precio": "55",
     "moneda": "USD",
     "descripcion": "✅Dimensiones de la lámpara 35 x 28 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-led-55usd-2.jpg"
@@ -1439,7 +1446,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅3 en 1 plancha + cepillo + secador\n✅2800 W\n✅color violeta y rosado\n🛡️Garantía se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cepillo-blower-15usd.jpg"
@@ -1488,7 +1495,7 @@
     "moneda": "USD",
     "descripcion": "✅Duración aproximada 5 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Audifonos-inalambricos-15usd-2.jpg"
   },
@@ -1499,7 +1506,7 @@
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅Consumo 500 W\n✅Capacidad 1.5 litros \n✅Ideal para ECOFLOW y inversores por su bajo consumo de corriente.\n🛡️Garantía 15 días",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Olla-Arrocera-40usd.jpg"
@@ -1511,7 +1518,7 @@
     "precio": "2.9",
     "moneda": "USD",
     "descripcion": "✅ 100% cobre\n✅ Longitud máxima 50 metros\n✅ 10 AWG\n✅ 7.6 mm de diámetro\n✅ Colores rojo y negro\nGarantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cable-electrico-2.9usd.jpg"
