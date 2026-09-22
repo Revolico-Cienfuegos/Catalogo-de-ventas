@@ -80,8 +80,10 @@
     "precio": "13",
     "moneda": "USD",
     "descripcion": "💵 Caja de 6 a 10 USD cada pieza\n🛡️ Garantía no tiene",
-    "imagen": "imagenes/Breaker-DC2P-32A-13usd.jpg",
-    "agotado": false
+    "etiqueta": "mas_vendido",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Breaker-DC2P-32A-13usd.jpg"
   },
   {
     "id": "p_1783047030164_63a",
@@ -345,7 +347,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅ Capacidad máxima 50 kg\n✅ Material Acero laminado en frío\n🛡️ Garantía no tiene es nuevo en caja",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Soporte-26-55-25usd.jpg"
@@ -598,7 +600,7 @@
     "precio": "170",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "mas_vendido",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-180usd.jpg"
@@ -621,7 +623,7 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Duración aproximada 4 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Audifonos-inalambricos-15usd.jpg"
@@ -656,7 +658,7 @@
     "precio": "12",
     "moneda": "USD",
     "descripcion": "✅Batería lleva 2 pilas AAA\n✅Alta presión \n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "",
+    "etiqueta": "mas_vendido",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Pesa-cocina-15usd.jpg"
@@ -691,7 +693,7 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅Máximo hasta 150 PSI\n✅Es recargable \n✅2 Baterias de 2000 mAh\n✅3 tipos de luces \n✅Compatible con autos, motos, bicicletas, balones, etc.\n✅Accesorios trae boquillas, cables de carga tipo C y funda para guardarlo\n🛡️Garantía es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Compresor-portatil-40usd.jpg"
@@ -841,7 +843,7 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅2 Bocinas de 3 pulgadas \n✅Salida 10 W\n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1200 mAh\n✅Duración más de 4 horas dependiendo el volumen \n✅Tamaño 11.2 x 12.1 x 26.5 cm\n🛡️Garantía Son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bocina-Bluetooth-20usd.jpg"
@@ -1493,7 +1495,7 @@
     "precio": "65",
     "moneda": "USD",
     "descripcion": "✅2 Bocinas de 6 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 22.6 x 20.3 x 49 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bocina-Bluetooth-55usd.jpg"
@@ -1505,7 +1507,7 @@
     "precio": "55",
     "moneda": "USD",
     "descripcion": "✅Bocinas de 8 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 24.2 x 20.3 x 37.9 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bocina-Bluetooth-55usd-2.jpg"
@@ -1517,7 +1519,7 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅2 Bocinas de 4 pulgadas \n✅Salida 16W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1800 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 18.3 x 17.8 x 40.5 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bocina-Bluetooth-45usd-2.jpg"
