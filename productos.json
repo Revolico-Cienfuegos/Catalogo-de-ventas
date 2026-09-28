@@ -1597,5 +1597,17 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Combo-Bateria-520usd.jpg"
+  },
+  {
+    "id": "p_1790623092614",
+    "categoria": "solar",
+    "nombre": "🔥Controlador Solar MPPT 100A marca PowMr🔥",
+    "precio": "220",
+    "moneda": "USD",
+    "descripcion": "✅Compatible con:\n✅Batería 12V hasta 1200W y 75V\n✅Batería 24V hasta 2400W y 100V\n✅Batería 36V hasta 3600W y 155V\n✅Batería 48V hasta 4800W y 155V\nℹ️ Es de uso pero como nuevo se usó poco y esta en perfecto estado en su caja y con todos los accesorios \n✅ Garantía no tiene se deja probado en casa del cliente para su tranquilidad",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Controlador-Solar-220usd.jpg"
   }
 ]
