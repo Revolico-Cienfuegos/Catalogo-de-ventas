@@ -1609,5 +1609,101 @@
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Controlador-Solar-220usd.jpg"
+  },
+  {
+    "id": "p_1790629068636",
+    "categoria": "solar",
+    "nombre": "🔥Inversor de corriente de 12V a 110V Potencia 4000W pico 8000W🔥",
+    "precio": "300",
+    "moneda": "USD",
+    "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n✅Levanta de todo neveras, refrigerador, ollas, infrarrojo, lavadora, turbina y todo lo de la casa\n✅Es de uso y de muy buena calidad estoy cambiando a 24v nunca ha tenido ni dado problemas lo dejo probado con todo lo q el Cliente quiera para su tranquilidad \n🛡️ Garantía no tiene\n🚨🚨🚨Es de uso en perfecto estado 🚨🚨🚨",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Inversor-corriente-300usd.jpg"
+  },
+  {
+    "id": "p_1790629169604",
+    "categoria": "solar",
+    "nombre": "🔥Inversor de corriente de 24V a 110V Potencia 2500W pico 5000W🔥",
+    "precio": "200",
+    "moneda": "USD",
+    "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Inversor-corriente-200usd-2.jpg"
+  },
+  {
+    "id": "p_1790629354531",
+    "categoria": "solar",
+    "nombre": "🔥Combo 2 de Batería + Inversor + Cargador🔥",
+    "precio": "915",
+    "moneda": "USD",
+    "descripcion": "✅Batería de 24V 100A LiFeP04 que dan 2560Wh a consumir\n✅Inversor de onda pura 24V de 2000W pico 4000W\n✅Cargador Inteligente de 24V 16A\n✅Ideal para poner luces, ventiladores, TV, refrigerador, nevera, lavadoras, etc.\n🛡️Garantía no tiene todo es nuevo y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Combo-Bateria-915usd.jpg"
+  },
+  {
+    "id": "p_1790629506099",
+    "categoria": "solar",
+    "nombre": "🔥Combo 3 de Batería + Inversor + Controlador Solar 🔥",
+    "precio": "990",
+    "moneda": "USD",
+    "descripcion": "✅Batería de 24V 100A LiFeP04 que dan 2560Wh a consumir\n✅Inversor de onda pura 24V de 2500W pico 5000W marca Q7\n✅Controlador Solar MPPT de 30A marca Q7\n✅Ideal para conectar a 2 paneles. Levanta luces, ventiladores, TV, refrigerador, nevera, lavadoras, etc.\n🛡️Garantía no tiene todo es nuevo y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Combo-Bateria-990usd.jpg"
+  },
+  {
+    "id": "p_1790629648333",
+    "categoria": "moviles",
+    "nombre": "🔥Cargador de carga rápida 120W con 1 cable🔥",
+    "precio": "9",
+    "moneda": "USD",
+    "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Cargador-carga-9usd.jpg"
+  },
+  {
+    "id": "p_1790629743260",
+    "categoria": "moviles",
+    "nombre": "🔥Cargador de carga rápida 65W con 1 cable🔥",
+    "precio": "8",
+    "moneda": "USD",
+    "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Cargador-carga-8usd.jpg"
+  },
+  {
+    "id": "p_1790629876884",
+    "categoria": "moviles",
+    "nombre": "🔥Cargador de carga rápida 45W con 1 cable🔥",
+    "precio": "7",
+    "moneda": "USD",
+    "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Cargador-carga-7usd.jpg"
+  },
+  {
+    "id": "p_1790629957148",
+    "categoria": "moviles",
+    "nombre": "🔥Cargador de 25W con 1 cable🔥",
+    "precio": "5",
+    "moneda": "USD",
+    "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Cargador-25W-5usd.jpg"
   }
 ]
