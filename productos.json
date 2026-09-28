@@ -79,7 +79,7 @@
     "nombre": "🔥 Breaker DC2P-32A 🔥",
     "precio": "13",
     "moneda": "USD",
-    "descripcion": "💵 Caja de 6 a 10 USD cada pieza\n🛡️ Garantía no tiene",
+    "descripcion": "🛡️ Garantía no tiene",
     "etiqueta": "mas_vendido",
     "agotado": false,
     "domicilio_gratis": true,
@@ -89,11 +89,13 @@
     "id": "p_1783047030164_63a",
     "categoria": "electricidad",
     "nombre": "🔥 Breaker DC2P-63A 🔥",
-    "precio": "16",
+    "precio": "12",
     "moneda": "USD",
-    "descripcion": "💵 Caja de 6 a 12 USD cada pieza\n🛡️ Garantía no tiene",
-    "imagen": "imagenes/Breaker-DC2P-63A-16usd.jpg",
-    "agotado": false
+    "descripcion": "💵 Caja de 6 a 10 USD cada pieza\n🛡️ Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": true,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Breaker-DC2P-63A-16usd.jpg"
   },
   {
     "id": "p_1783047123853",
@@ -240,7 +242,7 @@
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-Cargador-35usd-2.jpg"
   },
@@ -262,7 +264,7 @@
     "moneda": "USD",
     "descripcion": "✅ 5 litros\n✅ Sirve para inducción\n🛡️ Garantía de 7 días",
     "imagen": "imagenes/Olla-presion-40usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783049634591",
@@ -294,7 +296,7 @@
     "moneda": "USD",
     "descripcion": "✅ Sirve para inducción\n✅ Incluye plato de cocinar al vapor\n🛡️ Garantía 7 días",
     "imagen": "imagenes/Olla-presion-32usd.jpg",
-    "agotado": false
+    "agotado": true
   },
   {
     "id": "p_1783049829894",
@@ -472,7 +474,7 @@
     "moneda": "USD",
     "descripcion": "✅ Alta calidad de audio\n✅ 2 Bocinas de 12W\n✅ Super calidad de audio\n✅ Bluetooth\n✅ Tarjeta SD de hasta 32 GB\n✅ Entrada USB\n✅ Batería 3600 mAh para una duración de 3 horas o más dependiendo del volumen\n✅ Tamaño 12 x 12 x 28 cm\n✅ Colores: Naranja\n💵 Precio 50 USD\n🛡️ No tiene garantía, son nuevas y se le dejan probadas al cliente",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bocina-Bluetooth-50usd.jpg"
   },
@@ -718,7 +720,7 @@
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 80A\n✅Bajo Voltaje ajustable 85V a 215V\n✅Alto voltaje ajustable 130V a 300V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Protector-voltaje-28usd.jpg"
   },
@@ -1216,11 +1218,11 @@
     "id": "p_1788011458514",
     "categoria": "solar",
     "nombre": "🔥Inversor de corriente de 12V a 110V Potencia 2500W pico 5000W🔥",
-    "precio": "220",
+    "precio": "200",
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "mas_vendido",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-220usd.jpg"
   },
@@ -1400,7 +1402,7 @@
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅4 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n✅Linterna \n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-40000-40usd.jpg"
   },
@@ -1458,7 +1460,7 @@
     "nombre": "🔥Huevera UNIZUKI (para hervir huevo)🔥",
     "precio": "20",
     "moneda": "USD",
-    "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores rosado azul amarillo y blanco\n🛡️Garantia 3 días",
+    "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores rosado, amarillo y blanco\n🛡️Garantia 3 días",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -1540,7 +1542,7 @@
     "id": "p_1788630474590",
     "categoria": "electrodomesticos",
     "nombre": "🔥Olla Arrocera marca Venezia🔥",
-    "precio": "40",
+    "precio": "35",
     "moneda": "USD",
     "descripcion": "✅Consumo 500 W\n✅Capacidad 1.5 litros \n✅Ideal para ECOFLOW y inversores por su bajo consumo de corriente.\n🛡️Garantía 15 días",
     "etiqueta": "",
@@ -1556,7 +1558,7 @@
     "moneda": "USD",
     "descripcion": "✅ 100% cobre\n✅ Longitud máxima 50 metros\n✅ 10 AWG\n✅ 7.6 mm de diámetro\n✅ Colores rojo y negro\nGarantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cable-electrico-2.9usd.jpg"
   },
