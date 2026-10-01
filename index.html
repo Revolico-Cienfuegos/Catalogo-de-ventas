@@ -61,6 +61,9 @@
       --radius-sm: 8px;
       --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --red: #c0392b;
+      --red-light: #e6391a;
+      --green: #1a8a4a;
     }
     html {
       scroll-behavior: smooth;
@@ -361,19 +364,27 @@
     }
 
     /* ===== CATEGORÍAS NAV ===== */
-    .cats-scroll {
+    .cats-wrap {
       background: #fff;
       border-bottom: 1px solid var(--border-color);
       position: sticky;
       top: 0;
       z-index: 50;
-      padding: 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 6px;
+    }
+    .cats-scroll {
+      flex: 1;
+      min-width: 0;
       overflow-x: auto;
       overflow-y: hidden;
       white-space: nowrap;
       scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
+      position: relative;
     }
     .cats-scroll::-webkit-scrollbar {
       display: none;
@@ -381,7 +392,44 @@
     .cats-inner {
       display: inline-flex;
       gap: 4px;
-      padding: 8px 0;
+      padding: 4px 0;
+    }
+    .cats-arrow {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      transition: all var(--transition);
+      padding-bottom: 3px;
+      user-select: none;
+    }
+    .cats-arrow:hover:not(:disabled) {
+      background: var(--navy-light);
+      transform: scale(1.06);
+    }
+    .cats-arrow:active:not(:disabled) {
+      transform: scale(0.92);
+    }
+    .cats-arrow:disabled,
+    .cats-arrow.hidden {
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    @media (max-width: 480px) {
+      .cats-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
     }
     .cat-btn {
       display: inline-flex;
@@ -409,6 +457,19 @@
     .cat-btn:hover:not(.active) {
       background: var(--gray-bg);
       border-color: var(--border-color);
+    }
+    .cat-btn.cat-btn-ofertas {
+      border-color: #e6391a;
+      color: #e6391a;
+    }
+    .cat-btn.cat-btn-ofertas.active {
+      background: linear-gradient(135deg, #e6391a, #ff6a2f);
+      color: #fff;
+      border-color: #e6391a;
+    }
+    .cat-btn.cat-btn-ofertas:hover:not(.active) {
+      background: #fff3f0;
+      border-color: #e6391a;
     }
 
     /* ===== MAIN CONTENT ===== */
@@ -471,6 +532,12 @@
       font-weight: 500;
       margin-left: auto;
     }
+    .seccion.seccion-ofertas .seccion-header {
+      border-bottom-color: #e6391a;
+    }
+    .seccion.seccion-ofertas .seccion-titulo {
+      color: #c0392b;
+    }
 
     /* ===== GRID ===== */
     .grid {
@@ -501,6 +568,13 @@
       box-shadow: var(--shadow-hover);
       transform: translateY(-3px);
       border-color: var(--gold);
+    }
+    .card.card-rebajado {
+      border-color: #e6391a;
+    }
+    .card.card-rebajado:hover {
+      box-shadow: 0 8px 30px rgba(230,57,26,0.22);
+      border-color: #e6391a;
     }
     .card-img-wrap {
       position: relative;
@@ -577,6 +651,19 @@
       bottom: 8px;
       left: 8px;
     }
+    /* Badge de descuento estilo Amazon (-X%) */
+    .card-badge.badge-descuento {
+      top: 8px;
+      right: 8px;
+      left: auto;
+      background: linear-gradient(135deg, #e6391a, #ff6a2f);
+      font-size: 12px;
+      font-weight: 900;
+      padding: 5px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 12px rgba(230,57,26,0.45);
+    }
     .card-body {
       padding: 8px 12px 12px;
       flex: 1;
@@ -596,10 +683,37 @@
       min-height: 34px;
       cursor: pointer;
     }
+    /* Precio normal */
     .card-precio {
       font-size: 17px;
       font-weight: 800;
       color: var(--navy);
+    }
+    /* Precio rebajado estilo Amazon */
+    .card-precio-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .card-precio.rebajado {
+      color: #c0392b;
+      font-size: 18px;
+    }
+    .card-precio-original {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+    .card-descuento-txt {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #c0392b;
+      background: #fdecec;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
     }
     .card-actions {
       display: flex;
@@ -777,6 +891,36 @@
       font-weight: 800;
       color: var(--navy);
       margin-bottom: 10px;
+    }
+    .modal-precio-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .modal-precio-wrap .modal-precio {
+      margin-bottom: 0;
+    }
+    .modal-precio-wrap .modal-precio.rebajado {
+      color: #c0392b;
+      font-size: 26px;
+    }
+    .modal-precio-original {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+    .modal-descuento-badge {
+      background: linear-gradient(135deg, #e6391a, #ff6a2f);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+      box-shadow: 0 3px 10px rgba(230,57,26,0.35);
     }
     .modal-desc {
       font-size: 14px;
@@ -1327,6 +1471,7 @@
         <select id="currencySelect">
           <option value="USD" selected>USD</option>
           <option value="MN">MN (770)</option>
+          <option value="Transferencia">Transferencia (800)</option>
           <option value="Zelle">Zelle (1.05)</option>
           <option value="Tarjeta">Tarjeta (1.1)</option>
           <option value="Euro">Euro (0.93)</option>
@@ -1356,9 +1501,13 @@
 </div>
 
 <!-- ===== CATEGORÍAS ===== -->
-<nav class="cats-scroll" id="catsNav" style="display:none;">
-  <div class="cats-inner" id="catsInner"></div>
-</nav>
+<div class="cats-wrap" id="catsWrap" style="display:none;">
+  <button class="cats-arrow" id="catsArrowLeft" aria-label="Categorías anteriores">‹</button>
+  <nav class="cats-scroll" id="catsNav">
+    <div class="cats-inner" id="catsInner"></div>
+  </nav>
+  <button class="cats-arrow" id="catsArrowRight" aria-label="Más categorías">›</button>
+</div>
 
 <!-- ===== MAIN ===== -->
 <main class="main">
@@ -1417,7 +1566,7 @@
     <div class="modal-body">
       <div class="modal-tag" id="mTag"></div>
       <h2 class="modal-nombre" id="mNombre"></h2>
-      <div class="modal-precio" id="mPrecio"></div>
+      <div id="mPrecioWrap"></div>
       <div id="mDomicilio" style="font-size:13px;font-weight:600;margin-bottom:8px;"></div>
       <p class="modal-desc" id="mDesc"></p>
       <button class="modal-pedir" id="mPedir">
@@ -1502,6 +1651,7 @@ const WA = "5354571729";
 const TASAS = {
   USD: 1,
   MN: 770,
+  Transferencia: 800,
   Zelle: 1.05,
   Tarjeta: 1.1,
   Euro: 0.93
@@ -1509,6 +1659,7 @@ const TASAS = {
 
 const CATEGORIAS = [
   { id:"garantia-domicilio", nombre:"Garantía y Domicilio", ico:"🛡️", especial:true },
+  { id:"ofertas",            nombre:"Ofertas",               ico:"🔥", especial:true },
   { id:"todas",              nombre:"Todos",                  ico:"🏪", especial:false },
   { id:"electricidad",       nombre:"Electricidad y Protección", ico:"⚡" },
   { id:"solar",              nombre:"Energía Solar y Respaldo",  ico:"☀️" },
@@ -1529,6 +1680,11 @@ const WA_ICO = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentCol
 const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
 
 // ============================================================
+//  CONFIG: DÍAS QUE DURA LA ETIQUETA "NUEVO"
+// ============================================================
+const DIAS_NUEVO = 7;
+
+// ============================================================
 //  FUNCIONES AUXILIARES
 // ============================================================
 function limpiarNombreParaOrdenar(nombre) {
@@ -1538,6 +1694,42 @@ function limpiarNombreParaOrdenar(nombre) {
     .replace(/[🔥⭐✅🚚🛡️💵💳❗ℹ️]/g, '')
     .trim()
     .toLowerCase();
+}
+
+// Detecta si un producto tiene descuento (precio_original > precio)
+function tieneDescuento(p){
+  const po = parseFloat(p.precio_original);
+  const pf = parseFloat(p.precio);
+  return !isNaN(po) && !isNaN(pf) && po > pf && po > 0;
+}
+
+// Calcula el porcentaje de descuento (ej: 25)
+function porcentajeDescuento(p){
+  if (!tieneDescuento(p)) return 0;
+  const po = parseFloat(p.precio_original);
+  const pf = parseFloat(p.precio);
+  return Math.round(((po - pf) / po) * 100);
+}
+
+// ============================================================
+//  ETIQUETA "NUEVO" CON EXPIRACIÓN A LOS 7 DÍAS
+// ============================================================
+// Reglas:
+//  - Si p.etiqueta !== "nuevo" → nunca es nuevo.
+//  - Si p.fecha_agregado NO existe → se considera nuevo siempre
+//    (compatibilidad con productos que no tienen fecha).
+//  - Si p.fecha_agregado SÍ existe → es nuevo solo si han pasado
+//    MENOS de DIAS_NUEVO días desde esa fecha.
+function esNuevo(p){
+  if (!p || p.etiqueta !== "nuevo") return false;
+  if (!p.fecha_agregado) return true;
+  const fecha = new Date(p.fecha_agregado);
+  if (isNaN(fecha.getTime())) return true; // fecha inválida → por seguridad, mantener como nuevo
+  const ahora = new Date();
+  const diffMs = ahora.getTime() - fecha.getTime();
+  if (diffMs < 0) return true; // fecha en el futuro → se considera nuevo
+  const diasTranscurridos = diffMs / (1000 * 60 * 60 * 24);
+  return diasTranscurridos < DIAS_NUEVO;
 }
 
 // ============================================================
@@ -1658,6 +1850,21 @@ function trackEvent(category, action, label, value){
       'value': value || undefined
     });
   }
+}
+
+// Scroll a una sección compensando el header y la barra de categorías pegajosas
+function scrollToSeccion(id){
+  const el = document.getElementById(id);
+  if (!el) return;
+  const header = document.querySelector('.site-header');
+  const catsWrap = document.getElementById('catsWrap');
+  const offset = (header?.offsetHeight || 0) + (catsWrap?.offsetHeight || 0) + 12;
+  const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+  window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+}
+
+function scrollAlInicio(){
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ============================================================
@@ -1997,23 +2204,43 @@ function domicilioBadgeHTML(p) {
   return "";
 }
 
+function descuentoBadgeHTML(p){
+  if (!tieneDescuento(p)) return "";
+  const pct = porcentajeDescuento(p);
+  return `<div class="card-badge badge-descuento">-${pct}%</div>`;
+}
+
 function bloquesTendencias(){
   const vendidos = [];
   const nuevos = [];
+  const ofertas = [];
   DATA.forEach((p, idx) => {
+    if (tieneDescuento(p)) ofertas.push({ p, idx });
     if (p.etiqueta === "mas_vendido") vendidos.push({ p, idx });
-    else if (p.etiqueta === "nuevo") nuevos.push({ p, idx });
+    else if (esNuevo(p)) nuevos.push({ p, idx });  // ← Solo si sigue siendo nuevo (<7 días)
   });
 
-  // El más reciente agregado siempre va primero en "Lo Nuevo",
-  // sin importar el orden en que quedó guardado en el archivo.
+  // El más reciente agregado siempre va primero en "Lo Nuevo"
   nuevos.sort((a, b) => {
     const ta = parseInt((a.p.id.match(/\d+/) || ["0"])[0], 10);
     const tb = parseInt((b.p.id.match(/\d+/) || ["0"])[0], 10);
     return tb - ta;
   });
 
+  // Ofertas: las de mayor descuento primero
+  ofertas.sort((a, b) => porcentajeDescuento(b.p) - porcentajeDescuento(a.p));
+
   let html = "";
+  if (ofertas.length){
+    html += `<section class="seccion seccion-ofertas" id="cat-tend-ofertas">
+      <div class="seccion-header">
+        <span class="seccion-ico">🔥</span>
+        <span class="seccion-titulo">Ofertas del día</span>
+        <span class="seccion-count">${ofertas.length} producto${ofertas.length!==1?"s":""} rebajado${ofertas.length!==1?"s":""}</span>
+      </div>
+      <div class="grid">${ofertas.map(({p, idx}) => cardHTML(p, idx, true)).join("")}</div>
+    </section>`;
+  }
   if (vendidos.length){
     html += `<section class="seccion" id="cat-tend-vendidos">
       <div class="seccion-header">
@@ -2062,15 +2289,52 @@ function renderizarContenido(){
     return;
   }
 
-  const datos = catActiva === "todas" ? DATA : DATA.filter(p => p.categoria === catActiva);
+  // Filtrado según categoría activa
+  let datos;
+  if (catActiva === "todas") {
+    datos = DATA;
+  } else if (catActiva === "ofertas") {
+    datos = DATA.filter(p => tieneDescuento(p));
+  } else {
+    datos = DATA.filter(p => p.categoria === catActiva);
+  }
+
   if (!datos.length) {
     vacio.style.display = "block";
-    vacio.innerHTML = `<div class="ico">${icoCat(catActiva)}</div><div>Todavía no hay productos en "${nombreCat(catActiva)}".</div>`;
+    if (catActiva === "ofertas") {
+      vacio.innerHTML = `<div class="ico">🔥</div><div>No hay ofertas disponibles por el momento.</div>`;
+    } else {
+      vacio.innerHTML = `<div class="ico">${icoCat(catActiva)}</div><div>Todavía no hay productos en "${nombreCat(catActiva)}".</div>`;
+    }
     return;
   }
 
+  // ===== Vista especial para "Ofertas": un solo grid, sin agrupar por categoría =====
+  if (catActiva === "ofertas") {
+    contenido.style.display = "block";
+    // Ordenar por mayor descuento primero
+    const ordenadas = datos
+      .map(p => ({ p, idx: DATA.indexOf(p) }))
+      .sort((a, b) => porcentajeDescuento(b.p) - porcentajeDescuento(a.p));
+
+    contenido.innerHTML = `
+      <section class="seccion seccion-ofertas" id="cat-ofertas">
+        <div class="seccion-header">
+          <span class="seccion-ico">🔥</span>
+          <span class="seccion-titulo">Todas las Ofertas</span>
+          <span class="seccion-count">${ordenadas.length} producto${ordenadas.length!==1?"s":""}</span>
+        </div>
+        <div class="grid">${ordenadas.map(({p, idx}) => cardHTML(p, idx, true)).join("")}</div>
+      </section>
+    `;
+    bindCards(contenido);
+    aplicarProteccionImagenes();
+    return;
+  }
+
+  // ===== Agrupar por categoría =====
   const porCat = {};
-  datos.forEach((p, i) => {
+  datos.forEach((p) => {
     const cat = p.categoria || "miscelaneos";
     if (!porCat[cat]) porCat[cat] = [];
     porCat[cat].push({ p, idx: DATA.indexOf(p) });
@@ -2084,7 +2348,10 @@ function renderizarContenido(){
     });
   }
 
-  const orden = CATEGORIAS.filter(c => c.id !== "garantia-domicilio" && c.id !== "todas").map(c => c.id).filter(id => porCat[id]);
+  const orden = CATEGORIAS
+    .filter(c => c.id !== "garantia-domicilio" && c.id !== "todas" && c.id !== "ofertas")
+    .map(c => c.id)
+    .filter(id => porCat[id]);
 
   contenido.style.display = "block";
   const tendenciasPrevias = (catActiva === "todas") ? bloquesTendencias() : "";
@@ -2110,28 +2377,43 @@ function renderizarContenido(){
 // ============================================================
 function badgeHTML(p){
   if (p.etiqueta === "mas_vendido") return `<div class="card-badge badge-vendido">🔥 Más vendido</div>`;
-  if (p.etiqueta === "nuevo") return `<div class="card-badge badge-nuevo">🆕 Nuevo</div>`;
+  if (esNuevo(p)) return `<div class="card-badge badge-nuevo">🆕 Nuevo</div>`;  // ← Solo si sigue siendo nuevo
   return "";
+}
+
+function precioHTMLCard(p){
+  if (tieneDescuento(p)) {
+    const pct = porcentajeDescuento(p);
+    return `<div class="card-precio-wrap">
+      <span class="card-precio rebajado">${fmt(p.precio)}</span>
+      <span class="card-precio-original">${fmt(p.precio_original)}</span>
+      <span class="card-descuento-txt">-${pct}%</span>
+    </div>`;
+  }
+  if (p.precio) {
+    return `<div class="card-precio">${fmt(p.precio)}</div>`;
+  }
+  return `<div class="card-precio" style="font-size:12px;color:var(--text-muted);">Consultar</div>`;
 }
 
 function cardHTML(p, idx, mostrarTag=false){
   const tag = mostrarTag ? `<div class="card-cat-tag">${icoCat(p.categoria)} ${nombreCat(p.categoria)}</div>` : "";
   const hasImg = p.imagen && p.imagen.length > 0;
   const imgSrc = hasImg ? p.imagen : "";
+  const rebajadoClass = tieneDescuento(p) ? " card-rebajado" : "";
   const imgWrap = `<div class="card-img-wrap">
     ${badgeHTML(p)}
+    ${descuentoBadgeHTML(p)}
     ${domicilioBadgeHTML(p)}
     ${hasImg ? `<img src="${imgSrc}" alt="${p.nombre}" loading="lazy" decoding="async" data-idx="${idx}" onerror="this.style.display='none'; this.parentElement.querySelector('.card-img-ph').style.display='flex';">` : ''}
     <div class="card-img-ph" style="display:${hasImg ? 'none' : 'flex'};" data-idx="${idx}">${IMG_PH_ICO}<span>Sin foto</span></div>
   </div>`;
 
-  const precio = p.precio ? `<div class="card-precio">${fmt(p.precio)}</div>` : `<div class="card-precio" style="font-size:12px;color:var(--text-muted);">Consultar</div>`;
-
-  return `<article class="card">
+  return `<article class="card${rebajadoClass}">
     ${imgWrap}${tag}
     <div class="card-body">
       <div class="card-nombre" data-idx="${idx}">${p.nombre}</div>
-      ${precio}
+      ${precioHTMLCard(p)}
       <div class="card-actions">
         <button class="card-pedir" data-idx="${idx}" data-action="pedir">${WA_ICO} Pedir</button>
         <button class="card-add" data-idx="${idx}" data-action="add">+</button>
@@ -2205,15 +2487,17 @@ function renderBusqueda(q){
 //  CATEGORÍAS NAV
 // ============================================================
 function buildCatsNav(){
+  const wrap = document.getElementById("catsWrap");
   const nav = document.getElementById("catsNav");
   const inner = document.getElementById("catsInner");
-  nav.style.display="block";
+  wrap.style.display = "flex";
 
-  inner.innerHTML = CATEGORIAS.map(c =>
-    `<button class="cat-btn ${catActiva === c.id ? 'active' : ''}" data-cat="${c.id}" style="scroll-snap-align:start;">
+  inner.innerHTML = CATEGORIAS.map(c => {
+    const extraClass = c.id === "ofertas" ? " cat-btn-ofertas" : "";
+    return `<button class="cat-btn${extraClass} ${catActiva === c.id ? 'active' : ''}" data-cat="${c.id}" style="scroll-snap-align:start;">
       <span class="cat-ico">${c.ico}</span>${c.nombre}
-    </button>`
-  ).join("");
+    </button>`;
+  }).join("");
 
   inner.querySelectorAll(".cat-btn").forEach(btn=>{
     btn.addEventListener("click",()=>{
@@ -2229,11 +2513,53 @@ function buildCatsNav(){
       const btnRect = btn.getBoundingClientRect();
       const scrollLeft = btn.offsetLeft - (navRect.width / 2) + (btnRect.width / 2);
       nav.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+
+      // ===== Scroll al primer producto de la categoría =====
+      setTimeout(() => {
+        if (catActiva === "garantia-domicilio") {
+          scrollAlInicio();
+        } else if (catActiva === "todas") {
+          scrollAlInicio();
+        } else if (catActiva === "ofertas") {
+          scrollToSeccion("cat-ofertas");
+        } else {
+          scrollToSeccion("cat-" + catActiva);
+        }
+      }, 80);
     });
   });
 
-  nav.style.scrollSnapType = 'x mandatory';
-  nav.style.webkitOverflowScrolling = 'touch';
+  // ===== Flechas de desplazamiento =====
+  const btnLeft  = document.getElementById("catsArrowLeft");
+  const btnRight = document.getElementById("catsArrowRight");
+
+  const SCROLL_STEP = 220;
+
+  btnLeft.addEventListener("click", () => {
+    nav.scrollBy({ left: -SCROLL_STEP, behavior: "smooth" });
+  });
+  btnRight.addEventListener("click", () => {
+    nav.scrollBy({ left: SCROLL_STEP, behavior: "smooth" });
+  });
+
+  function updateArrows(){
+    const maxScroll = nav.scrollWidth - nav.clientWidth;
+    const noOverflow = maxScroll <= 4;
+    if (noOverflow) {
+      btnLeft.classList.add("hidden");
+      btnRight.classList.add("hidden");
+      return;
+    }
+    btnLeft.classList.remove("hidden");
+    btnRight.classList.remove("hidden");
+    btnLeft.disabled  = nav.scrollLeft <= 2;
+    btnRight.disabled = nav.scrollLeft >= maxScroll - 2;
+  }
+
+  nav.addEventListener("scroll", updateArrows, { passive: true });
+  window.addEventListener("resize", updateArrows);
+  setTimeout(updateArrows, 60);
+  setTimeout(updateArrows, 400);
 }
 
 // ============================================================
@@ -2268,8 +2594,24 @@ function abrirModal(p){
   _modalProducto = p;
   document.getElementById("mTag").textContent = `${icoCat(p.categoria)} ${nombreCat(p.categoria)}`;
   document.getElementById("mNombre").textContent = p.nombre;
-  document.getElementById("mPrecio").textContent = fmt(p.precio);
   document.getElementById("mDesc").textContent = p.descripcion||"";
+
+  // ===== Precio (con o sin descuento) =====
+  const precioWrap = document.getElementById("mPrecioWrap");
+  if (tieneDescuento(p)) {
+    const pct = porcentajeDescuento(p);
+    precioWrap.innerHTML = `
+      <div class="modal-precio-wrap">
+        <span class="modal-precio rebajado">${fmt(p.precio)}</span>
+        <span class="modal-precio-original">${fmt(p.precio_original)}</span>
+        <span class="modal-descuento-badge">-${pct}% OFF</span>
+      </div>
+    `;
+  } else if (p.precio) {
+    precioWrap.innerHTML = `<div class="modal-precio">${fmt(p.precio)}</div>`;
+  } else {
+    precioWrap.innerHTML = `<div class="modal-precio" style="font-size:14px;color:var(--text-muted);">Consultar precio</div>`;
+  }
 
   // Domicilio gratis en modal
   const domEl = document.getElementById("mDomicilio");
@@ -2316,7 +2658,7 @@ document.getElementById("modal").addEventListener("touchmove",e=>{ if(e.touches[
 // ============================================================
 function ajustarTopCategorias() {
   const header = document.querySelector('.site-header');
-  const cats = document.getElementById('catsNav');
+  const cats = document.getElementById('catsWrap');
   if (header && cats) {
     const headerHeight = header.offsetHeight;
     cats.style.top = headerHeight + 'px';
@@ -2344,9 +2686,6 @@ if (window.caches) {
 //  CARGA DE PRODUCTOS
 // ============================================================
 function cargarProductos(){
-  // Siempre se pide la versión más reciente al servidor (nada de caché
-  // ni de localStorage como fuente principal) para que, en cuanto se
-  // actualice productos.json, todo el que la vea con internet la reciba.
   const url = "productos.json?_=" + Date.now();
   fetch(url, { 
     cache: "no-store",
