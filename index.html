@@ -233,12 +233,15 @@
       flex-shrink: 0;
       flex-wrap: wrap;
     }
+
+    /* ===== SELECTOR DE MONEDA (COMPACTO) ===== */
     .moneda-selector {
       background: rgba(255,255,255,0.1);
-      border-radius: 20px;
-      padding: 4px 10px;
-      font-size: 12px;
-      font-weight: 600;
+      border-radius: 16px;
+      padding: 0 6px;
+      height: 32px;
+      display: flex;
+      align-items: center;
       border: 1px solid rgba(255,255,255,0.15);
       color: #fff;
     }
@@ -247,13 +250,25 @@
       border: none;
       color: #fff;
       font-weight: 700;
-      font-size: 12px;
-      padding: 2px 4px;
+      font-size: 11px;
+      padding: 0 2px;
       font-family: var(--font);
+      width: auto;
+      max-width: 70px;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      text-align: center;
+    }
+    .moneda-selector select:focus {
+      outline: none;
     }
     .moneda-selector select option {
       color: var(--text-primary);
+      font-size: 13px;
+      background: #fff;
     }
+
     .cart-icon {
       position: relative;
       background: rgba(255,255,255,0.08);
@@ -326,6 +341,14 @@
       }
       .logo-name {
         font-size: 15px;
+      }
+      .moneda-selector {
+        height: 30px;
+        padding: 0 4px;
+      }
+      .moneda-selector select {
+        font-size: 11px;
+        max-width: 60px;
       }
     }
 
@@ -1468,7 +1491,7 @@
 
     <div class="header-actions">
       <div class="moneda-selector">
-        <select id="currencySelect">
+        <select id="currencySelect" title="Cambiar moneda">
           <option value="USD" selected>USD</option>
           <option value="MN">MN (770)</option>
           <option value="Transferencia">Transferencia (800)</option>
@@ -1714,20 +1737,14 @@ function porcentajeDescuento(p){
 // ============================================================
 //  ETIQUETA "NUEVO" CON EXPIRACIÓN A LOS 7 DÍAS
 // ============================================================
-// Reglas:
-//  - Si p.etiqueta !== "nuevo" → nunca es nuevo.
-//  - Si p.fecha_agregado NO existe → se considera nuevo siempre
-//    (compatibilidad con productos que no tienen fecha).
-//  - Si p.fecha_agregado SÍ existe → es nuevo solo si han pasado
-//    MENOS de DIAS_NUEVO días desde esa fecha.
 function esNuevo(p){
   if (!p || p.etiqueta !== "nuevo") return false;
   if (!p.fecha_agregado) return true;
   const fecha = new Date(p.fecha_agregado);
-  if (isNaN(fecha.getTime())) return true; // fecha inválida → por seguridad, mantener como nuevo
+  if (isNaN(fecha.getTime())) return true;
   const ahora = new Date();
   const diffMs = ahora.getTime() - fecha.getTime();
-  if (diffMs < 0) return true; // fecha en el futuro → se considera nuevo
+  if (diffMs < 0) return true;
   const diasTranscurridos = diffMs / (1000 * 60 * 60 * 24);
   return diasTranscurridos < DIAS_NUEVO;
 }
@@ -2217,17 +2234,15 @@ function bloquesTendencias(){
   DATA.forEach((p, idx) => {
     if (tieneDescuento(p)) ofertas.push({ p, idx });
     if (p.etiqueta === "mas_vendido") vendidos.push({ p, idx });
-    else if (esNuevo(p)) nuevos.push({ p, idx });  // ← Solo si sigue siendo nuevo (<7 días)
+    else if (esNuevo(p)) nuevos.push({ p, idx });
   });
 
-  // El más reciente agregado siempre va primero en "Lo Nuevo"
   nuevos.sort((a, b) => {
     const ta = parseInt((a.p.id.match(/\d+/) || ["0"])[0], 10);
     const tb = parseInt((b.p.id.match(/\d+/) || ["0"])[0], 10);
     return tb - ta;
   });
 
-  // Ofertas: las de mayor descuento primero
   ofertas.sort((a, b) => porcentajeDescuento(b.p) - porcentajeDescuento(a.p));
 
   let html = "";
@@ -2289,7 +2304,6 @@ function renderizarContenido(){
     return;
   }
 
-  // Filtrado según categoría activa
   let datos;
   if (catActiva === "todas") {
     datos = DATA;
@@ -2309,10 +2323,8 @@ function renderizarContenido(){
     return;
   }
 
-  // ===== Vista especial para "Ofertas": un solo grid, sin agrupar por categoría =====
   if (catActiva === "ofertas") {
     contenido.style.display = "block";
-    // Ordenar por mayor descuento primero
     const ordenadas = datos
       .map(p => ({ p, idx: DATA.indexOf(p) }))
       .sort((a, b) => porcentajeDescuento(b.p) - porcentajeDescuento(a.p));
@@ -2332,7 +2344,6 @@ function renderizarContenido(){
     return;
   }
 
-  // ===== Agrupar por categoría =====
   const porCat = {};
   datos.forEach((p) => {
     const cat = p.categoria || "miscelaneos";
@@ -2377,7 +2388,7 @@ function renderizarContenido(){
 // ============================================================
 function badgeHTML(p){
   if (p.etiqueta === "mas_vendido") return `<div class="card-badge badge-vendido">🔥 Más vendido</div>`;
-  if (esNuevo(p)) return `<div class="card-badge badge-nuevo">🆕 Nuevo</div>`;  // ← Solo si sigue siendo nuevo
+  if (esNuevo(p)) return `<div class="card-badge badge-nuevo">🆕 Nuevo</div>`;
   return "";
 }
 
@@ -2508,13 +2519,11 @@ function buildCatsNav(){
       limpiarBusqueda();
       renderizarContenido();
 
-      // Desplazar la barra para centrar el botón
       const navRect = nav.getBoundingClientRect();
       const btnRect = btn.getBoundingClientRect();
       const scrollLeft = btn.offsetLeft - (navRect.width / 2) + (btnRect.width / 2);
       nav.scrollTo({ left: scrollLeft, behavior: 'smooth' });
 
-      // ===== Scroll al primer producto de la categoría =====
       setTimeout(() => {
         if (catActiva === "garantia-domicilio") {
           scrollAlInicio();
@@ -2529,7 +2538,6 @@ function buildCatsNav(){
     });
   });
 
-  // ===== Flechas de desplazamiento =====
   const btnLeft  = document.getElementById("catsArrowLeft");
   const btnRight = document.getElementById("catsArrowRight");
 
@@ -2596,7 +2604,6 @@ function abrirModal(p){
   document.getElementById("mNombre").textContent = p.nombre;
   document.getElementById("mDesc").textContent = p.descripcion||"";
 
-  // ===== Precio (con o sin descuento) =====
   const precioWrap = document.getElementById("mPrecioWrap");
   if (tieneDescuento(p)) {
     const pct = porcentajeDescuento(p);
@@ -2613,7 +2620,6 @@ function abrirModal(p){
     precioWrap.innerHTML = `<div class="modal-precio" style="font-size:14px;color:var(--text-muted);">Consultar precio</div>`;
   }
 
-  // Domicilio gratis en modal
   const domEl = document.getElementById("mDomicilio");
   if (p.domicilio_gratis === false) {
     domEl.innerHTML = '🚫 <span style="color:#c0392b;font-weight:700;">Sin domicilio gratis</span>';
@@ -2670,8 +2676,7 @@ window.addEventListener('resize', ajustarTopCategorias);
 window.addEventListener('scroll', ajustarTopCategorias);
 
 // ============================================================
-//  LIMPIEZA DE SERVICE WORKER (la tienda ya NO usa caché offline;
-//  siempre se muestra la versión más reciente desde internet)
+//  LIMPIEZA DE SERVICE WORKER
 // ============================================================
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.getRegistrations().then(regs => {
