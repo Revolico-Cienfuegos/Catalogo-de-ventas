@@ -1614,7 +1614,8 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Controlador-Solar-220usd.jpg"
+    "imagen": "imagenes/Controlador-Solar-220usd.jpg",
+    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629068636",
@@ -1626,7 +1627,8 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Inversor-corriente-300usd.jpg"
+    "imagen": "imagenes/Inversor-corriente-300usd.jpg",
+    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629169604",
@@ -1638,7 +1640,8 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Inversor-corriente-200usd-2.jpg"
+    "imagen": "imagenes/Inversor-corriente-200usd-2.jpg",
+    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629354531",
@@ -1650,7 +1653,8 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Combo-Bateria-915usd.jpg"
+    "imagen": "imagenes/Combo-Bateria-915usd.jpg",
+    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629506099",
@@ -1662,7 +1666,8 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Combo-Bateria-990usd.jpg"
+    "imagen": "imagenes/Combo-Bateria-990usd.jpg",
+    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629648333",
@@ -1674,7 +1679,8 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Cargador-carga-9usd.jpg"
+    "imagen": "imagenes/Cargador-carga-9usd.jpg",
+    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629743260",
@@ -1686,7 +1692,8 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Cargador-carga-8usd.jpg"
+    "imagen": "imagenes/Cargador-carga-8usd.jpg",
+    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629876884",
@@ -1698,7 +1705,8 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Cargador-carga-7usd.jpg"
+    "imagen": "imagenes/Cargador-carga-7usd.jpg",
+    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629957148",
@@ -1710,6 +1718,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Cargador-25W-5usd.jpg"
+    "imagen": "imagenes/Cargador-25W-5usd.jpg",
+    "fecha_agregado": "2026-09-30"
   }
 ]
