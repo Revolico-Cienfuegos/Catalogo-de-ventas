@@ -8,7 +8,7 @@
 :root{
   --azul:#1a3a5c;--azul2:#2a5080;--dorado:#c8922a;
   --crema:#fdfaf4;--crema2:#f5efe4;--linea:#e0d5c0;
-  --texto:#1e2d1e;--suave:#6b6050;--rojo:#c0392b;--radio:10px;
+  --texto:#1e2d1e;--suave:#6b6050;--rojo:#c0392b;--verde:#1a8a4a;--radio:10px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--crema);color:var(--texto);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;min-height:100vh;font-size:15px;}
@@ -34,7 +34,7 @@ button{cursor:pointer;font-family:inherit;}
 .btn-azul{background:var(--azul);color:#fff;}
 .btn-azul:hover{background:var(--azul2);}
 .btn-dorado{background:var(--dorado);color:#fff;}
-.btn-verde{background:#1a8a4a;color:#fff;}
+.btn-verde{background:var(--verde);color:#fff;}
 .btn-verde:hover{background:#0f6a37;}
 .btn-outline{background:transparent;border:1.5px solid var(--linea);color:var(--suave);width:100%;padding:12px;border-radius:8px;font-size:14px;font-weight:600;}
 
@@ -54,12 +54,15 @@ button{cursor:pointer;font-family:inherit;}
 
 .lista{display:flex;flex-direction:column;gap:10px;}
 .item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--linea);border-radius:10px;padding:12px;box-shadow:0 1px 4px rgba(26,58,92,.06);}
+.item.rebajado{border-color:#e6391a;box-shadow:0 1px 6px rgba(230,57,26,.15);}
 .item-img{width:60px;height:60px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--crema2);}
 .item-img-ph{width:60px;height:60px;border-radius:8px;flex-shrink:0;background:var(--crema2);display:flex;align-items:center;justify-content:center;font-size:22px;opacity:.4;}
 .item-info{flex:1;min-width:0;}
 .item-cat{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--dorado);margin-bottom:2px;}
 .item-nombre{font-size:14px;font-weight:700;color:var(--azul);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .item-precio{font-size:12.5px;color:var(--dorado);margin-top:2px;}
+.item-precio .precio-orig{color:#999;text-decoration:line-through;margin-left:4px;font-weight:400;font-size:11.5px;}
+.item-precio .precio-off{background:#fdecec;color:#c0392b;font-weight:800;font-size:10.5px;padding:1px 5px;border-radius:3px;margin-left:4px;}
 .item-btns{display:flex;gap:6px;flex-shrink:0;}
 .btn-sm{border:1.5px solid var(--linea);background:transparent;color:var(--texto);font-size:12px;padding:6px 10px;border-radius:6px;font-family:inherit;}
 .btn-del{border:1.5px solid var(--rojo);background:transparent;color:var(--rojo);width:34px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;}
@@ -84,12 +87,26 @@ button{cursor:pointer;font-family:inherit;}
 .btn-dl-foto{margin-top:8px;background:var(--dorado);color:#fff;border:none;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:700;font-family:inherit;}
 .sep{height:1px;background:var(--linea);margin:20px 0;}
 
+.help-txt{font-size:11.5px;color:var(--suave);margin-top:4px;line-height:1.5;}
+.help-txt code{background:var(--crema2);padding:1px 5px;border-radius:3px;font-weight:700;}
+
+/* Vista previa de la tarjeta en el formulario */
+.preview-card{background:#fff;border:1px solid var(--linea);border-radius:12px;padding:12px;margin-bottom:16px;display:flex;gap:12px;align-items:center;}
+.preview-card.rebajado{border-color:#e6391a;background:linear-gradient(135deg,#fff 70%,#fff5f4);}
+.preview-img{width:60px;height:60px;border-radius:8px;object-fit:cover;background:var(--crema2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;opacity:.5;}
+.preview-info{flex:1;min-width:0;}
+.preview-nombre{font-size:13px;font-weight:700;color:var(--azul);margin-bottom:3px;}
+.preview-precio{font-size:16px;font-weight:800;color:var(--azul);}
+.preview-precio.rebajado{color:#c0392b;}
+.preview-precio-orig{font-size:12px;color:#999;text-decoration:line-through;font-weight:500;margin-left:6px;}
+.preview-off{display:inline-block;background:linear-gradient(135deg,#e6391a,#ff6a2f);color:#fff;font-size:11px;font-weight:900;padding:2px 7px;border-radius:4px;margin-left:6px;letter-spacing:.02em;}
+
 .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px;}
 .stat{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:14px;text-align:center;}
 .stat-n{font-size:24px;font-weight:800;color:var(--azul);}
 .stat-l{font-size:11px;color:var(--suave);text-transform:uppercase;letter-spacing:.06em;}
 
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a3a5c;color:#fff;padding:12px 24px;border-radius:10px;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.3);z-index:999;animation:fadeIn 0.3s;}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a3a5c;color:#fff;padding:12px 24px;border-radius:10px;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.3);z-index:999;animation:fadeIn 0.3s;max-width:90%;text-align:center;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 </style>
 </head>
@@ -134,7 +151,8 @@ button{cursor:pointer;font-family:inherit;}
     <div class="aviso">
       <strong>⚠️ Sincronización:</strong> Los productos que ves aquí están guardados en tu navegador (<code>localStorage</code>). <br>
       ✅ <strong>NUEVO:</strong> Al guardar un producto con foto nueva, la imagen se subirá automáticamente a GitHub (si has configurado token y repositorio).<br>
-      <strong>📌 IMPORTANTE:</strong> Si prefieres el método manual, usa el botón <strong>Descargar JSON</strong> y sube las fotos por separado.
+      <strong>💡 REBAJAS:</strong> Rellena <code>Precio original</code> para activar la rebaja (badge -X% rojo y sección "Ofertas del día").<br>
+      <strong>🆕 NUEVO:</strong> El campo <code>fecha_agregado</code> controla cuándo se quita el badge "Nuevo" (7 días después).
     </div>
 
     <div class="acciones-top">
@@ -158,6 +176,15 @@ button{cursor:pointer;font-family:inherit;}
   <!-- FORMULARIO -->
   <div id="form-producto">
     <div class="form-h" id="formH">Nuevo producto</div>
+
+    <!-- VISTA PREVIA -->
+    <div class="preview-card" id="previewCard">
+      <div class="preview-img" id="previewImg">🖼️</div>
+      <div class="preview-info">
+        <div class="preview-nombre" id="previewNombre">Nombre del producto</div>
+        <div id="previewPrecio"></div>
+      </div>
+    </div>
 
     <div class="form-group">
       <label class="lbl">Foto del producto</label>
@@ -193,13 +220,19 @@ button{cursor:pointer;font-family:inherit;}
 
     <div class="form-row">
       <div style="flex:2;">
-        <label class="lbl">Precio</label>
-        <input type="text" class="input" id="campoPrecio" placeholder="Ej: 85">
+        <label class="lbl">Precio actual (rebajado)</label>
+        <input type="text" class="input" id="campoPrecio" placeholder="Ej: 85" inputmode="decimal">
       </div>
       <div style="flex:1;">
         <label class="lbl">Moneda</label>
         <input type="text" class="input" id="campoMoneda" placeholder="USD">
       </div>
+    </div>
+
+    <div class="form-group">
+      <label class="lbl">Precio original (para REBAJAS — opcional)</label>
+      <input type="text" class="input" id="campoPrecioOriginal" placeholder="Ej: 120 (dejar vacío si no hay rebaja)" inputmode="decimal">
+      <div class="help-txt">💡 Si pones un número <strong>mayor</strong> que el "Precio actual", se activa la rebaja: la tienda mostrará el precio tachado, un badge <code>-X%</code> rojo, y el producto aparecerá en <strong>Ofertas del día</strong>.</div>
     </div>
 
     <div class="form-group">
@@ -214,6 +247,12 @@ button{cursor:pointer;font-family:inherit;}
         <option value="mas_vendido">🔥 Más vendido</option>
         <option value="nuevo">🆕 Nuevo</option>
       </select>
+    </div>
+
+    <div class="form-group" id="grupoFecha" style="display:none;">
+      <label class="lbl">Fecha de agregado (para calcular los 7 días)</label>
+      <input type="date" class="input" id="campoFechaAgregado">
+      <div class="help-txt" id="helpFecha">💡 El badge 🆕 <strong>Nuevo</strong> se quita automáticamente <strong>7 días</strong> después de esta fecha. Se rellena con hoy al marcar "Nuevo" en un producto nuevo.</div>
     </div>
 
     <div class="form-group" style="display:flex;align-items:center;gap:8px;">
@@ -264,6 +303,27 @@ function catNombre(id){ return CATS.find(c=>c.id===id)?.nombre||id; }
 function catIco(id){ return CATS.find(c=>c.id===id)?.ico||"📦"; }
 function fmt(p,m){ return p?`${p} ${m||""}`.trim():""; }
 
+// Detecta si un producto tiene descuento
+function tieneDescuento(p){
+  if (!p) return false;
+  const po = parseFloat(p.precio_original);
+  const pf = parseFloat(p.precio);
+  return !isNaN(po) && !isNaN(pf) && po > pf && po > 0;
+}
+function porcentajeDescuento(p){
+  if (!tieneDescuento(p)) return 0;
+  const po = parseFloat(p.precio_original);
+  const pf = parseFloat(p.precio);
+  return Math.round(((po - pf) / po) * 100);
+}
+function hoyISO(){
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth()+1).padStart(2,'0');
+  const dd = String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${dd}`;
+}
+
 function mostrarToast(msg, color="#1a3a5c"){
   const old = document.querySelector(".toast");
   if(old) old.remove();
@@ -308,523 +368,4 @@ function obtenerConfigGit(){
   return {repo, token};
 }
 
-document.getElementById("guardarGitConfig").addEventListener("click", ()=>{
-  const {repo, token} = obtenerConfigGit();
-  if(!repo || !token){
-    mostrarToast("❌ Completa ambos campos (repo y token)", "#c0392b");
-    return;
-  }
-  localStorage.setItem(LS_GIT, JSON.stringify({repo, token}));
-  mostrarToast("✅ Configuración guardada", "#1a8a4a");
-});
-
-// ── SUBIR IMAGEN A GITHUB ──
-async function subirImagenAGitHub(repo, token, nombreArchivo, blobImagen){
-  // Verificar si la imagen ya existe para obtener SHA
-  const urlBase = `https://api.github.com/repos/${repo}/contents/imagenes/${nombreArchivo}`;
-  let sha = null;
-  try {
-    const res = await fetch(urlBase, {
-      headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" }
-    });
-    if(res.ok){
-      const data = await res.json();
-      sha = data.sha;
-    } else if(res.status !== 404){
-      throw new Error(`Error al verificar imagen: ${res.status} ${res.statusText}`);
-    }
-  } catch(e){
-    if(!e.message.includes("404")) throw e;
-  }
-
-  // Convertir blob a base64
-  const base64 = await new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result.split(',')[1]);
-    reader.onerror = reject;
-    reader.readAsDataURL(blobImagen);
-  });
-
-  const body = {
-    message: `Subir imagen ${nombreArchivo} desde panel admin VENTACIEN`,
-    content: base64,
-    branch: "main" // o "master" según tu repo, ajusta si es necesario
-  };
-  if(sha) body.sha = sha;
-
-  const res = await fetch(urlBase, {
-    method: "PUT",
-    headers: {
-      Authorization: `token ${token}`,
-      "Content-Type": "application/json",
-      Accept: "application/vnd.github.v3+json"
-    },
-    body: JSON.stringify(body)
-  });
-  if(!res.ok){
-    const err = await res.json();
-    throw new Error(err.message || `HTTP ${res.status}`);
-  }
-  return true;
-}
-
-// ── PUBLICAR EN GITHUB (JSON + imágenes pendientes) ──
-document.getElementById("publicarGitBtn").addEventListener("click", async ()=>{
-  const {repo, token} = obtenerConfigGit();
-  if(!repo || !token){
-    mostrarToast("❌ Configura primero el repositorio y el token", "#c0392b");
-    return;
-  }
-  if(productos.length === 0){
-    mostrarToast("❌ No hay productos para publicar", "#c0392b");
-    return;
-  }
-
-  const btn = document.getElementById("publicarGitBtn");
-  btn.textContent = "⏳ Subiendo imágenes...";
-  btn.disabled = true;
-
-  try {
-    // 1. Subir imágenes pendientes (si hay alguna)
-    // Buscamos productos que tengan imagen pero que la imagen no exista en GitHub (opcional)
-    // Como no podemos saberlo fácilmente, subimos la que está en archivoPendiente si existe.
-    // O mejor: recorremos todos los productos y si tienen imagen y la ruta comienza con "imagenes/",
-    // intentamos subirla. Pero no tenemos el blob de todas, solo de la última seleccionada.
-    // Lo más práctico: al guardar producto ya subimos la imagen, así que aquí solo subimos el JSON.
-    // Pero por si acaso, si hay archivoPendiente, lo subimos primero.
-    if(archivoPendiente && archivoNombre){
-      mostrarToast("⏳ Subiendo imagen pendiente...", "#1a3a5c");
-      try {
-        await subirImagenAGitHub(repo, token, archivoNombre, archivoPendiente);
-        // Limpiar pendiente después de subirla
-        archivoPendiente = null;
-        archivoNombre = "";
-        mostrarToast("✅ Imagen subida correctamente", "#1a8a4a");
-      } catch(err) {
-        mostrarToast("⚠️ Error al subir imagen: "+err.message, "#c0392b");
-        // Continuamos con el JSON igualmente
-      }
-    }
-
-    // 2. Subir productos.json
-    mostrarToast("⏳ Publicando productos.json...", "#1a3a5c");
-    const contenido = JSON.stringify(productos, null, 2);
-    const sha = await obtenerSHA(repo, token);
-    await actualizarArchivo(repo, token, contenido, sha);
-    mostrarToast("✅ Productos publicados en GitHub correctamente", "#1a8a4a");
-  } catch(err){
-    mostrarToast("❌ Error: "+err.message, "#c0392b");
-  } finally {
-    btn.textContent = "🚀 Publicar en GitHub";
-    btn.disabled = false;
-  }
-});
-
-// Funciones auxiliares para JSON
-async function obtenerSHA(repo, token){
-  const url = `https://api.github.com/repos/${repo}/contents/productos.json`;
-  const res = await fetch(url, {
-    headers: {
-      Authorization: `token ${token}`,
-      Accept: "application/vnd.github.v3+json"
-    }
-  });
-  if(res.status === 404) return null;
-  if(!res.ok) throw new Error(`Error al obtener SHA: ${res.status} ${res.statusText}`);
-  const data = await res.json();
-  return data.sha;
-}
-
-async function actualizarArchivo(repo, token, contenido, sha){
-  const url = `https://api.github.com/repos/${repo}/contents/productos.json`;
-  const body = {
-    message: "Actualización automática desde el panel admin VENTACIEN",
-    content: btoa(unescape(encodeURIComponent(contenido))),
-    sha: sha || undefined
-  };
-  const res = await fetch(url, {
-    method: "PUT",
-    headers: {
-      Authorization: `token ${token}`,
-      "Content-Type": "application/json",
-      Accept: "application/vnd.github.v3+json"
-    },
-    body: JSON.stringify(body)
-  });
-  if(!res.ok){
-    const err = await res.json();
-    throw new Error(err.message || `HTTP ${res.status}`);
-  }
-  return true;
-}
-
-// ── DATOS ──
-function cargar(){
-  fetch("productos.json?_="+Date.now(), { cache: "no-store", headers: { "Cache-Control": "no-cache" } })
-    .then(r=>r.json())
-    .then(d=>{
-      productos=Array.isArray(d)?d:[];
-      localStorage.setItem(LS, JSON.stringify(productos));
-      renderStats();
-      renderLista();
-      buildFiltro();
-    })
-    .catch(()=>{
-      const local = localStorage.getItem(LS);
-      if(local){
-        try{ productos=JSON.parse(local); }catch(e){ productos=[]; }
-      } else { productos=[]; }
-      renderStats();
-      renderLista();
-      buildFiltro();
-    });
-}
-
-function guardarLocal(){ localStorage.setItem(LS, JSON.stringify(productos)); }
-
-// ── STATS ──
-function renderStats(){
-  const total = productos.length;
-  const cats = new Set(productos.map(p=>p.categoria)).size;
-  document.getElementById("stats").innerHTML=`
-    <div class="stat"><div class="stat-n">${total}</div><div class="stat-l">Productos</div></div>
-    <div class="stat"><div class="stat-n">${cats}</div><div class="stat-l">Categorías</div></div>
-  `;
-}
-
-// ── FILTRO Y BÚSQUEDA ──
-function buildFiltro(){
-  const sel = document.getElementById("filtroLista");
-  const catsActivas = CATS.filter(c=>productos.some(p=>p.categoria===c.id));
-  sel.innerHTML = `<option value="todas">📦 Todos (${productos.length})</option>` +
-    catsActivas.map(c=>{
-      const n = productos.filter(p=>p.categoria===c.id).length;
-      return `<option value="${c.id}">${c.ico} ${c.nombre} (${n})</option>`;
-    }).join("");
-  if (filtroCategoria && sel.querySelector(`option[value="${filtroCategoria}"]`)) {
-    sel.value = filtroCategoria;
-  } else {
-    sel.value = "todas";
-  }
-}
-
-document.getElementById("filtroLista").addEventListener("change", e=>{
-  filtroCategoria = e.target.value;
-  renderLista();
-});
-
-document.getElementById("buscarProducto").addEventListener("input", e=>{
-  textoBusqueda = e.target.value.trim().toLowerCase();
-  renderLista();
-});
-
-// ── LISTA ──
-function renderLista(){
-  const lista = document.getElementById("lista");
-  const empty = document.getElementById("emptyLista");
-  const contador = document.getElementById("contadorResultados");
-
-  let datos = productos;
-  if (filtroCategoria !== "todas") {
-    datos = datos.filter(p => p.categoria === filtroCategoria);
-  }
-  if (textoBusqueda !== "") {
-    datos = datos.filter(p => p.nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").includes(textoBusqueda));
-  }
-
-  contador.textContent = datos.length > 0 ? `🔍 ${datos.length} producto${datos.length!==1?"s":""} encontrado${datos.length!==1?"s":""}` : "";
-
-  if(!datos.length){
-    empty.style.display="block";
-    lista.innerHTML="";
-    return;
-  }
-  empty.style.display="none";
-
-  lista.innerHTML = datos.map(p=>{
-    const hasImg = p.imagen && p.imagen.length > 0;
-    const imgHtml = hasImg ? `<div style="position:relative;"><img class="item-img" src="${p.imagen}" alt="${p.nombre}" loading="lazy" onerror="console.warn('Admin lista: imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.item-img-ph').style.display='flex';"><div class="item-img-ph" style="display:none;">🖼️</div></div>` : `<div class="item-img-ph">🖼️</div>`;
-    return `
-    <div class="item ${p.agotado?'agotado':''}">
-      ${imgHtml}
-      <div class="item-info">
-        <div class="item-cat">${catIco(p.categoria)} ${catNombre(p.categoria)}${p.etiqueta==="mas_vendido"?' · 🔥 Más vendido':p.etiqueta==="nuevo"?' · 🆕 Nuevo':''}${p.agotado?' · <span class="item-agotado-tag">Agotado</span>':''}</div>
-        <div class="item-nombre">${p.nombre||"(sin nombre)"}</div>
-        <div class="item-precio">${fmt(p.precio,p.moneda)}</div>
-        ${p.domicilio_gratis === false ? '<div style="font-size:10px;color:#c0392b;font-weight:700;">🚫 Sin domicilio gratis</div>' : ''}
-      </div>
-      <div class="item-btns">
-        <button class="btn-stock ${p.agotado?'activo':''}" data-stock="${p.id}" title="${p.agotado?'Marcar como disponible':'Marcar como agotado'}">${p.agotado?'✅':'🚫'}</button>
-        <button class="btn-sm" data-id="${p.id}">✏️</button>
-        <button class="btn-del" data-del="${p.id}">✕</button>
-      </div>
-    </div>
-  `}).join("");
-
-  lista.querySelectorAll(".btn-sm").forEach(b=>b.addEventListener("click",()=>abrirForm(productos.find(p=>p.id===b.dataset.id))));
-  lista.querySelectorAll(".btn-del").forEach(b=>b.addEventListener("click",()=>eliminar(b.dataset.del)));
-  lista.querySelectorAll(".btn-stock").forEach(b=>b.addEventListener("click",()=>toggleAgotado(b.dataset.stock)));
-}
-
-function toggleAgotado(id){
-  const p = productos.find(p=>p.id===id);
-  if(!p) return;
-  p.agotado = !p.agotado;
-  guardarLocal();
-  renderLista();
-}
-
-function eliminar(id){
-  if(!confirm("¿Eliminar este producto?")) return;
-  productos = productos.filter(p=>p.id!==id);
-  guardarLocal(); 
-  renderStats(); 
-  buildFiltro(); 
-  renderLista();
-}
-
-// ── FORMULARIO ──
-document.getElementById("nuevoBtn").addEventListener("click",()=>abrirForm(null));
-document.getElementById("cancelarBtn").addEventListener("click",cerrarForm);
-
-function abrirForm(p){
-  document.getElementById("panel").style.display="none";
-  document.getElementById("form-producto").style.display="block";
-  document.getElementById("formH").textContent = p?"Editar producto":"Nuevo producto";
-  editandoId=p?p.id:null;
-  imagenActual=p?(p.imagen||""):"";
-  archivoPendiente=null; archivoNombre="";
-  document.getElementById("campoCategoria").value=p?(p.categoria||""):"";
-  document.getElementById("campoNombre").value=p?(p.nombre||""):"";
-  document.getElementById("campoPrecio").value=p?(p.precio||""):"";
-  document.getElementById("campoMoneda").value=p?(p.moneda||"USD"):"USD";
-  document.getElementById("campoDescripcion").value=p?(p.descripcion||""):"";
-  document.getElementById("campoEtiqueta").value=p?(p.etiqueta||""):"";
-  document.getElementById("campoAgotado").checked=p?!!p.agotado:false;
-  document.getElementById("campoDomicilio").checked=p? (p.domicilio_gratis !== false) : true;
-  const av=document.getElementById("avisoArchivo");
-  av.style.display="none"; av.innerHTML="";
-  actualizarPicker(p&&p.imagen?p.imagen:null);
-  if(p&&p.imagen){ av.style.display="block"; av.innerHTML=`📌 Foto actual: <code>${p.imagen}</code>`; }
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-
-function cerrarForm(){
-  document.getElementById("form-producto").style.display="none";
-  document.getElementById("panel").style.display="block";
-  textoBusqueda = "";
-  document.getElementById("buscarProducto").value = "";
-  renderLista();
-}
-
-function actualizarPicker(src){
-  const pk=document.getElementById("imgPicker");
-  if(src){
-    pk.innerHTML = `<img src="${src}" alt="vista previa" onerror="console.warn('Admin picker: imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.img-ph').style.display='flex';"><div class="img-ph" style="display:none;"><span style="font-size:32px;">🖼️</span><span>Foto no encontrada</span></div>`;
-  } else {
-    pk.innerHTML = `<div class="img-ph"><span style="font-size:32px;">🖼️</span><span>Tocar para elegir foto</span></div>`;
-  }
-}
-
-document.getElementById("imgPicker").addEventListener("click",()=>document.getElementById("fileInput").click());
-
-document.getElementById("fileInput").addEventListener("change", async e=>{
-  const file=e.target.files?.[0]; if(!file) return;
-  if(file.size>8*1024*1024){ alert("Imagen muy grande. Usa menos de 8MB."); return; }
-  const nombre=document.getElementById("campoNombre").value.trim();
-  const precio=document.getElementById("campoPrecio").value.trim();
-  if(!nombre || !precio){
-    alert("Primero escribe el Nombre y el Precio del producto, y después elige la foto (el nombre del archivo se genera igual que en imagen.py, usando esos dos datos).");
-    e.target.value = "";
-    return;
-  }
-
-  const av=document.getElementById("avisoArchivo");
-  av.style.display="block";
-  av.innerHTML = "⏳ Convirtiendo la foto a JPG...";
-
-  let blobJpeg;
-  try{
-    blobJpeg = await convertirAJPEG(file);
-  }catch(err){
-    alert("No se pudo convertir esa foto a JPG. Prueba con otra imagen.");
-    av.style.display="none";
-    e.target.value = "";
-    return;
-  }
-
-  const PALABRAS_IGNORAR = new Set(['de','para','con','por','en','a','el','la','los','las','marca','portátil','digital','inteligente']);
-  function quitarAcentos(str){ return str.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^\x00-\x7F]/g,''); }
-  function slugifyCorto(texto){
-    let t = quitarAcentos(texto);
-    t = t.replace(/[^\w\s-]/g,'');
-    const palabras = t.split(/\s+/).filter(Boolean);
-    const filtradas = palabras.filter(p => !PALABRAS_IGNORAR.has(p.toLowerCase()) && p.length > 2);
-    if(filtradas.length === 0) return 'producto';
-    let base = filtradas.slice(0,2).join('-');
-    if(base.length > 30) base = base.slice(0,30);
-    return base;
-  }
-  function generarNombreImagen(nombreProducto, precio, extension){
-    let limpio = (nombreProducto||'').replace(/[🔥()]/g,'');
-    limpio = limpio.replace(/\[.*?\]/g,'');
-    const base = slugifyCorto(limpio);
-    const nombreBase = `${base}-${precio}usd`;
-    const nombresExistentes = new Set(productos.filter(p => p.id !== editandoId).map(p => (p.imagen||'').split('/').pop()));
-    let candidato = `${nombreBase}.${extension}`;
-    let contador = 1;
-    while(nombresExistentes.has(candidato)){
-      contador++;
-      candidato = `${nombreBase}-${contador}.${extension}`;
-    }
-    return candidato;
-  }
-
-  archivoNombre=generarNombreImagen(nombre, precio, "jpg");
-  imagenActual=`imagenes/${archivoNombre}`;
-  archivoPendiente=blobJpeg;
-  const reader=new FileReader();
-  reader.onload=()=>actualizarPicker(reader.result);
-  reader.readAsDataURL(blobJpeg);
-  av.innerHTML=`📌 Nombre exacto para subir a la carpeta <code>imagenes/</code>:<br><code>${archivoNombre}</code><br><small>La foto se convirtió automáticamente a JPG.</small><br><button class="btn-dl-foto" id="btnDlFoto">⬇ Descargar foto renombrada</button>`;
-  document.getElementById("btnDlFoto").addEventListener("click",()=>{
-    if(!archivoPendiente) return;
-    const url=URL.createObjectURL(archivoPendiente);
-    const a=document.createElement("a"); a.href=url; a.download=archivoNombre;
-    document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
-  });
-});
-
-function convertirAJPEG(file, calidad=0.9){
-  return new Promise((resolve, reject)=>{
-    const reader = new FileReader();
-    reader.onload = (ev)=>{
-      const img = new Image();
-      img.onload = ()=>{
-        const canvas = document.createElement('canvas');
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-        const ctx = canvas.getContext('2d');
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob(blob=>{
-          if(blob) resolve(blob); else reject(new Error('No se pudo convertir la imagen a JPG'));
-        }, 'image/jpeg', calidad);
-      };
-      img.onerror = ()=>reject(new Error('No se pudo leer la imagen seleccionada'));
-      img.src = ev.target.result;
-    };
-    reader.onerror = ()=>reject(new Error('No se pudo leer el archivo'));
-    reader.readAsDataURL(file);
-  });
-}
-
-// ── GUARDAR PRODUCTO (con subida automática de imagen) ──
-document.getElementById("guardarBtn").addEventListener("click", async ()=>{
-  const cat=document.getElementById("campoCategoria").value;
-  const nombre=document.getElementById("campoNombre").value.trim();
-  if(!cat){ alert("Selecciona una categoría."); return; }
-  if(!nombre){ alert("Ponle un nombre al producto."); return; }
-  
-  const datos={
-    id:editandoId||("p_"+Date.now()),
-    categoria:cat, nombre,
-    precio:document.getElementById("campoPrecio").value.trim(),
-    moneda:document.getElementById("campoMoneda").value.trim(),
-    descripcion:document.getElementById("campoDescripcion").value.trim(),
-    etiqueta:document.getElementById("campoEtiqueta").value,
-    agotado:document.getElementById("campoAgotado").checked,
-    domicilio_gratis:document.getElementById("campoDomicilio").checked,
-    imagen:imagenActual,
-  };
-
-  // Si hay imagen pendiente, intentar subirla a GitHub automáticamente
-  if(archivoPendiente && archivoNombre){
-    const {repo, token} = obtenerConfigGit();
-    if(repo && token){
-      try {
-        mostrarToast("⏳ Subiendo imagen a GitHub...", "#1a3a5c");
-        await subirImagenAGitHub(repo, token, archivoNombre, archivoPendiente);
-        mostrarToast("✅ Imagen subida correctamente", "#1a8a4a");
-        // Limpiar pendiente
-        archivoPendiente = null;
-        archivoNombre = "";
-      } catch(err) {
-        mostrarToast("⚠️ Error al subir imagen: "+err.message+" (el producto se guarda igual)", "#c0392b");
-        // No limpiar pendiente para que el usuario pueda reintentar con "Publicar en GitHub"
-      }
-    } else {
-      mostrarToast("⚠️ Configura GitHub (repo y token) para subir imágenes automáticamente", "#c8922a");
-    }
-  }
-
-  // Guardar en localStorage
-  const idx=productos.findIndex(p=>p.id===datos.id);
-  if(idx>=0) productos[idx]=datos; else productos.push(datos);
-  guardarLocal();
-  renderStats();
-  buildFiltro();
-  cerrarForm();
-  renderLista();
-  mostrarToast("✅ Producto guardado en local", "#1a3a5c");
-});
-
-// ── DESCARGAR JSON ──
-document.getElementById("descargarBtn").addEventListener("click",()=>{
-  if(productos.length===0){
-    alert("No hay productos para descargar.");
-    return;
-  }
-  const blob=new Blob([JSON.stringify(productos,null,2)],{type:"application/json"});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement("a"); a.href=url; a.download="productos.json";
-  document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
-  alert(`✅ Descargado ${productos.length} productos.\n\n1. Sube el archivo productos.json a GitHub (reemplaza el viejo).\n2. Sube las fotos nuevas a la carpeta imagenes/.\n3. Recarga la tienda con Ctrl+F5 para ver los cambios.`);
-});
-
-// ============================================================
-//  PROTECCIÓN DE CONTENIDO
-// ============================================================
-(function protegerContenido() {
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    alert('🛡️ El contenido de esta web está protegido.');
-  });
-  document.addEventListener('keydown', function(e) {
-    const teclasProhibidas = ['c', 'u', 's', 'p'];
-    if (e.ctrlKey && teclasProhibidas.includes(e.key.toLowerCase())) {
-      e.preventDefault();
-      alert('🛡️ Esta acción no está permitida.');
-    }
-    if (e.key === 'F12') {
-      e.preventDefault();
-      alert('🛡️ Herramientas de desarrollador deshabilitadas.');
-    }
-  });
-  document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('draggable', 'false');
-    img.addEventListener('contextmenu', e => e.preventDefault());
-  });
-  document.addEventListener('copy', function(e) {
-    const seleccion = window.getSelection().toString();
-    if (seleccion.length > 10) {
-      const mensaje = seleccion + '\n\n📌 Fuente: VENTACIEN - https://revolico-cienfuegos.github.io/Catalogo-de-ventas/';
-      e.clipboardData.setData('text/plain', mensaje);
-      e.preventDefault();
-    }
-  });
-})();
-
-// LIMPIEZA DE SERVICE WORKER
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then(regs => {
-    regs.forEach(reg => reg.unregister());
-  });
-}
-if (window.caches) {
-  caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
-}
-</script>
-</body>
-</html>
+document.getElementById("guardarGitConfig").addEven
