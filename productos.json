@@ -36,10 +36,12 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Transfer-automatico-55usd.jpg"
+    "imagen": "imagenes/Transfer-automatico-55usd.jpg",
+    "precio_original": "55",
+    "fecha_agregado": "2026-10-01"
   },
   {
     "id": "p_1783046626189",
@@ -648,10 +650,12 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Transfer-automatico-60usd.jpg"
+    "imagen": "imagenes/Transfer-automatico-60usd.jpg",
+    "precio_original": "60",
+    "fecha_agregado": "2026-10-01"
   },
   {
     "id": "p_1784910023878",
@@ -1437,10 +1441,12 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "",
+    "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Transfer-automatico-55usd-2.jpg"
+    "imagen": "imagenes/Transfer-automatico-55usd-2.jpg",
+    "precio_original": "55",
+    "fecha_agregado": "2026-10-01"
   },
   {
     "id": "p_1788187375029",
