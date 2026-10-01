@@ -264,7 +264,7 @@
     "moneda": "USD",
     "descripcion": "✅ 5 litros\n✅ Sirve para inducción\n🛡️ Garantía de 7 días",
     "imagen": "imagenes/Olla-presion-40usd.jpg",
-    "agotado": false
+    "agotado": true
   },
   {
     "id": "p_1783049634591",
@@ -296,7 +296,7 @@
     "moneda": "USD",
     "descripcion": "✅ Sirve para inducción\n✅ Incluye plato de cocinar al vapor\n🛡️ Garantía 7 días",
     "imagen": "imagenes/Olla-presion-32usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783049829894",
