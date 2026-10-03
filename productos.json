@@ -1092,7 +1092,7 @@
     "moneda": "USD",
     "descripcion": "✅Nueva en caja , carga de 3 a 4.5h\n🛡️Garantía no tiene es nueva y se deja probada",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Estacion-energia-650usd.jpg"
   },
@@ -1104,7 +1104,7 @@
     "moneda": "USD",
     "descripcion": "✅ Ventilador recargable Chiq\n✅Potencia pico máxima: 3600 W\n✅Potencia nominal de salida: 1800 W\n✅Capacidad de batería: 1024 Wh\n✅Tensión de salida AC: 110 V\n✅Carga ultra-rápida: De 0 a 80 % en aprox. 56 minutos\n✅Vida útil: 3000+ ciclos de batería\n✅Conectividad: Bluetooth / App\n✅Salidas: AC, USB-C (100W/30W), USB-A, ideales para ventiladores de bajo consumo.\n🛡️Garantía no tiene es nueva y se deja probada",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Combo-Estacion-770usd.jpg"
   },
