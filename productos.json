@@ -390,11 +390,14 @@
     "id": "p_1783048566252",
     "categoria": "herramientas",
     "nombre": "🔥 Pesa digital de plato marca SACO 🔥",
-    "precio": "60",
+    "precio": "70",
     "moneda": "USD",
     "descripcion": "✅ Hasta 40 KG\n✅ Tiene baterías recargables\n✅ Pantalla a ambos lados para que el cliente también pueda ver\n✅ Nuevas en caja\n🛡️ Garantía de 72 horas solo la batería, todo lo demás debe revisarlo al momento de la entrega",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Pesa-plato-60usd.jpg",
-    "agotado": true
+    "fecha_agregado": "2026-10-04"
   },
   {
     "id": "p_1783048732268",
