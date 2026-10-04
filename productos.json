@@ -37,7 +37,7 @@
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Transfer-automatico-55usd.jpg",
     "precio_original": "55",
@@ -1373,11 +1373,12 @@
     "nombre": "🔥Rollo de Cable eléctrico fotovoltaico marca Q7🔥",
     "precio": "130",
     "moneda": "USD",
-    "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Colores rojo y negro\n🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "",
-    "agotado": true,
+    "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Color negro\n🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Rollo-Cable-130usd.jpg"
+    "imagen": "imagenes/Rollo-Cable-130usd.jpg",
+    "fecha_agregado": "2026-10-04"
   },
   {
     "id": "p_1788185282342",
@@ -1509,7 +1510,7 @@
     "moneda": "USD",
     "descripcion": "✅3 en 1 plancha + cepillo + secador\n✅2800 W\n✅color violeta y rosado\n🛡️Garantía se deja probado",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cepillo-blower-15usd.jpg"
   },
