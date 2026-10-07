@@ -2007,5 +2007,18 @@
     "domicilio_gratis": true,
     "imagen": "imagenes/Plumones-detectar-10usd.jpg",
     "fecha_agregado": "2026-10-07"
+  },
+  {
+    "id": "p_1791400920084",
+    "categoria": "electricidad",
+    "nombre": "🔥Protector de voltaje digital  o protector de linea 110V 63A🔥",
+    "precio": "18",
+    "moneda": "USD",
+    "descripcion": "✅Corriente ajustable\n✅Bajo Voltaje ajustable\n✅Alto voltaje ajustable\n🛡️Garantía no tiene es nuevo",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Protector-voltaje-18usd.jpg",
+    "fecha_agregado": "2026-10-07"
   }
 ]
