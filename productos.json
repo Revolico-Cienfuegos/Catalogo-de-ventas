@@ -1227,7 +1227,7 @@
     "moneda": "USD",
     "descripcion": "✅Dimensiones de la lámpara 32 x 26.5 cm\n✅Dimensiones del panel 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-led-55usd.jpg"
   },
@@ -1498,7 +1498,7 @@
     "moneda": "USD",
     "descripcion": "✅Dimensiones de la lámpara 35 x 28 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-led-55usd-2.jpg"
   },
@@ -1630,7 +1630,7 @@
     "moneda": "USD",
     "descripcion": "✅Compatible con:\n✅Batería 12V hasta 1200W y 75V\n✅Batería 24V hasta 2400W y 100V\n✅Batería 36V hasta 3600W y 155V\n✅Batería 48V hasta 4800W y 155V\nℹ️ Es de uso pero como nuevo se usó poco y esta en perfecto estado en su caja y con todos los accesorios \n✅ Garantía no tiene se deja probado en casa del cliente para su tranquilidad",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Controlador-Solar-220usd.jpg",
     "fecha_agregado": "2026-09-30"
@@ -1643,24 +1643,11 @@
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n✅Levanta de todo neveras, refrigerador, ollas, infrarrojo, lavadora, turbina y todo lo de la casa\n✅Es de uso y de muy buena calidad estoy cambiando a 24v nunca ha tenido ni dado problemas lo dejo probado con todo lo q el Cliente quiera para su tranquilidad \n🛡️ Garantía no tiene\n🚨🚨🚨Es de uso en perfecto estado 🚨🚨🚨",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-300usd.jpg",
     "precio_original": "300",
     "fecha_agregado": "2026-10-01"
-  },
-  {
-    "id": "p_1790629169604",
-    "categoria": "solar",
-    "nombre": "🔥Inversor de corriente de 24V a 110V Potencia 2500W pico 5000W🔥",
-    "precio": "200",
-    "moneda": "USD",
-    "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
-    "etiqueta": "nuevo",
-    "agotado": false,
-    "domicilio_gratis": true,
-    "imagen": "imagenes/Inversor-corriente-200usd-2.jpg",
-    "fecha_agregado": "2026-09-30"
   },
   {
     "id": "p_1790629354531",
