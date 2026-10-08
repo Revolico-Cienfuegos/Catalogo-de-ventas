@@ -71,7 +71,7 @@
     "moneda": "USD",
     "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Interruptor-cuchilla-20usd.jpg"
   },
@@ -95,7 +95,7 @@
     "moneda": "USD",
     "descripcion": "💵 Caja de 6 a 10 USD cada pieza\n🛡️ Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-DC2P-63A-16usd.jpg"
   },
@@ -762,16 +762,6 @@
     "imagen": "imagenes/Protector-voltaje-30usd.jpg"
   },
   {
-    "id": "p_1784912036089",
-    "categoria": "electricidad",
-    "nombre": "🔥Interruptor de cuchilla 3P-63A marca SACO🔥",
-    "precio": "18",
-    "moneda": "USD",
-    "descripcion": "✅120V/240V\n🛡️Garantía no tiene",
-    "imagen": "imagenes/Interruptor-cuchilla-18usd.jpg",
-    "agotado": true
-  },
-  {
     "id": "p_1785116638699",
     "categoria": "miscelaneos",
     "nombre": "🔥Ducha Electrica 4600W 110V🔥",
@@ -802,7 +792,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-10usd-2.jpg"
   },
@@ -1341,7 +1331,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-15usd.jpg"
   },
@@ -1915,33 +1905,35 @@
   },
   {
     "id": "p_1791399554765",
-    "categoria": "electricidad",
+    "categoria": "solar",
     "nombre": "🔥Bateria 12.8V 100A LiFeP04 🔥",
-    "precio": "290",
+    "precio": "275",
     "moneda": "USD",
     "descripcion": "✅Capacidad 1280 Wh\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bateria-128V-290usd.jpg",
+    "precio_original": "290",
     "fecha_agregado": "2026-10-07"
   },
   {
     "id": "p_1791399720725",
-    "categoria": "electricidad",
+    "categoria": "solar",
     "nombre": "🔥Bateria 12.8V 100A LiFeP04 🔥",
-    "precio": "290",
+    "precio": "275",
     "moneda": "USD",
     "descripcion": "✅Capacidad 1280 Wh\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Bateria-128V-290usd-2.jpg",
+    "precio_original": "290",
     "fecha_agregado": "2026-10-07"
   },
   {
     "id": "p_1791399840549",
-    "categoria": "electricidad",
+    "categoria": "solar",
     "nombre": "🔥Bateria 25.6V 100A LiFeP04 🔥",
     "precio": "590",
     "moneda": "USD",
@@ -1955,7 +1947,7 @@
   },
   {
     "id": "p_1791400009508",
-    "categoria": "electricidad",
+    "categoria": "solar",
     "nombre": "🔥Bateria 12.8V 200A LiFeP04 🔥",
     "precio": "500",
     "moneda": "USD",
@@ -1969,7 +1961,7 @@
   },
   {
     "id": "p_1791400066709",
-    "categoria": "electricidad",
+    "categoria": "solar",
     "nombre": "🔥Bateria 12.8V 200A LiFeP04 🔥",
     "precio": "500",
     "moneda": "USD",
@@ -1983,7 +1975,7 @@
   },
   {
     "id": "p_1791400147388",
-    "categoria": "electricidad",
+    "categoria": "solar",
     "nombre": "🔥Bateria 12.8V 200A LiFeP04 🔥",
     "precio": "500",
     "moneda": "USD",
