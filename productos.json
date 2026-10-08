@@ -22,12 +22,14 @@
   {
     "id": "p_1783022691062",
     "categoria": "electricidad",
-    "nombre": "🔥 Transfer automático AC 110V 125A/2P 🔥",
+    "nombre": "🔥 Transfer automático AC 110V 63A/2P 🔥",
     "precio": "45",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
-    "imagen": "imagenes/Transfer-automatico-45usd.jpg",
-    "agotado": true
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Transfer-automatico-45usd.jpg"
   },
   {
     "id": "p_1783046497053",
@@ -160,7 +162,7 @@
     "moneda": "USD",
     "descripcion": "✅ Baterías Autos, Motos, AGM, GEL, LiFeP04\n🛡️ Garantía 3 días",
     "imagen": "imagenes/Cargador-baterias-125usd.jpg",
-    "agotado": false
+    "agotado": true
   },
   {
     "id": "p_1783048348826",
@@ -223,7 +225,7 @@
     "moneda": "USD",
     "descripcion": "✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB\n✅ Entrada tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-Cargador-26usd.jpg"
   },
@@ -242,12 +244,12 @@
   {
     "id": "p_1783048948857",
     "categoria": "moviles",
-    "nombre": "🔥 Powerbank o Cargador portátil de 40000 mAh 🔥",
+    "nombre": "🔥 Powerbank o Cargador portátil de 40000 mAh modelo MBC-428🔥",
     "precio": "40",
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-Cargador-40usd.jpg",
     "fecha_agregado": "2026-10-07"
@@ -714,7 +716,7 @@
   {
     "id": "p_1784910675157",
     "categoria": "electricidad",
-    "nombre": "🔥Protector de voltaje digital 220V 63A🔥",
+    "nombre": "🔥Protector de voltaje digital  o protector de linea 220V 63A🔥",
     "precio": "18",
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 85V a 215V\n✅Alto voltaje ajustable 130V a 300V\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
@@ -826,7 +828,7 @@
     "moneda": "USD",
     "descripcion": "✅COLOR AZUL\n✅ANTIADHERENTES \n✅INCLUYE VAPORERA \n✅TAMAÑOS 2.4 L\n✅SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n✅SE PUEDE COCINAR ARROZ, SOPAS, VIANDAS, FREIR, HACER COSAS AL VAPOR Y MUCHO MAS\n✅POTENCIA: 500W y 1000W\n🛡️Garantía 3 días",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/OLLA-ELECTRICA-70usd-2.jpg"
   },
   {
@@ -938,7 +940,7 @@
   {
     "id": "p_1785685286107",
     "categoria": "moviles",
-    "nombre": "🔥Powerbank de 20000 mAh carga rápida con cables🔥",
+    "nombre": "🔥Powerbank de 20000 mAh carga rápida con cables modelo SY-M805🔥",
     "precio": "26",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone y tipo C,\n✅1 puertos de salida USB\n✅1 puerto de salida tipo C\n✅Puertos de entrada Tipo C\n✅Carga rápida\n🛡️Garantía 72 horas , solo cubre la batería",
@@ -950,7 +952,7 @@
   {
     "id": "p_1785685315713",
     "categoria": "moviles",
-    "nombre": "🔥Powerbank de 20000 mAh con cables🔥",
+    "nombre": "🔥Powerbank de 20000 mAh con cables modelo P214🔥",
     "precio": "22",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB\n✅Puertos de entrada Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
@@ -1056,7 +1058,7 @@
   {
     "id": "p_1787021981413",
     "categoria": "electricidad",
-    "nombre": "🔥Protector de voltaje digital 220V 80A marca Q7🔥",
+    "nombre": "🔥Protector de voltaje digital  o protector de linea 220V 80A marca Q7🔥",
     "precio": "18",
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 80A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
@@ -1070,7 +1072,7 @@
   {
     "id": "p_1787022094494",
     "categoria": "electricidad",
-    "nombre": "🔥Protector de voltaje digital 110V 63A marca Q7🔥",
+    "nombre": "🔥Protector de voltaje digital  o protector de linea110V 63A marca Q7🔥",
     "precio": "18",
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n🛡️Garantía no tiene es nuevo",
@@ -1183,9 +1185,9 @@
     "nombre": "🔥Powerbank de 20000 mAh🔥",
     "precio": "20",
     "moneda": "USD",
-    "descripcion": "✅2 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Colores negro y blanco\n🛡️Garantía 72 horas , solo cubre la batería",
+    "descripcion": "✅2 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Color negro\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-20000-20usd.jpg"
   },
@@ -1406,7 +1408,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Alicate-crimpado-18usd.jpg"
   },
@@ -1418,14 +1420,14 @@
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅4 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n✅Linterna \n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-40000-40usd.jpg"
   },
   {
     "id": "p_1788186824073",
     "categoria": "moviles",
-    "nombre": "🔥Powerbank de 30000 mAh con panel solar modelo P321🔥",
+    "nombre": "🔥Powerbank de 30000 mAh modelo P321🔥",
     "precio": "30",
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
@@ -1576,7 +1578,7 @@
     "moneda": "USD",
     "descripcion": "✅ 100% cobre\n✅ Longitud máxima 50 metros\n✅ 10 AWG\n✅ 7.6 mm de diámetro\n✅ Colores rojo y negro\nGarantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cable-electrico-2.9usd.jpg"
   },
@@ -1703,7 +1705,7 @@
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cargador-carga-7usd.jpg",
     "fecha_agregado": "2026-09-30"
