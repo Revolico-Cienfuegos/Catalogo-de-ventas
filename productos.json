@@ -85,7 +85,7 @@
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene",
     "etiqueta": "mas_vendido",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-DC2P-32A-13usd.jpg"
   },
@@ -109,7 +109,7 @@
     "moneda": "USD",
     "descripcion": "✅Si compras mas de 10  \n💵 6 USD\n🛡️ Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Portafusible-fusible-10usd.jpg"
   },
@@ -249,7 +249,7 @@
     "moneda": "USD",
     "descripcion": "✅ Carga rápida 66W\n✅ Cables integrados iPhone y tipo C\n✅ 1 puerto de salida USB, 1 puerto de salida Tipo C\n✅ Puerto de entrada de carga Tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-Cargador-40usd.jpg",
     "fecha_agregado": "2026-10-07"
@@ -614,7 +614,7 @@
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-180usd.jpg"
   },
@@ -1247,7 +1247,7 @@
     "moneda": "USD",
     "descripcion": "✅Onda pura\n✅Pantalla frontal muestra Voltaje de bateria, Voltaje de salida y Consumo en W\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "mas_vendido",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-250usd.jpg"
   },
