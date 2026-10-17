@@ -2047,7 +2047,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "",
+    "imagen": "imagenes/Breaker-DC2P-25A-18usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2060,7 +2060,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "",
+    "imagen": "imagenes/Transfer-automatico-60usd-2.jpg",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2073,7 +2073,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "",
+    "imagen": "imagenes/Caja-proteccion-120usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2086,7 +2086,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "",
+    "imagen": "imagenes/Caja-distribucion-30usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2099,7 +2099,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "",
+    "imagen": "imagenes/Extintor-Automatico-10usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2112,7 +2112,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "",
+    "imagen": "imagenes/Pinza-Crimpadora-80usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2125,7 +2125,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "",
+    "imagen": "imagenes/Interruptor-cuchilla-18usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2138,7 +2138,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": ""
+    "imagen": "imagenes/OLLA-ELECTRICA-45usd-3.jpg"
   },
   {
     "id": "p_1792209354374",
@@ -2150,7 +2150,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "",
+    "imagen": "imagenes/Alarma-paneles-35usd.jpg",
     "fecha_agregado": "2026-10-17"
   }
 ]
