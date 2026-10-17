@@ -1369,13 +1369,14 @@
     "id": "p_1788106864892",
     "categoria": "solar",
     "nombre": "🔥Rollo de Cable fotovoltaico marca Q7🔥",
-    "precio": "130",
+    "precio": "120",
     "moneda": "USD",
     "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Color negro\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Rollo-Cable-130usd.jpg",
+    "precio_original": "130",
     "fecha_agregado": "2026-10-04"
   },
   {
