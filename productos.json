@@ -1603,13 +1603,14 @@
     "id": "p_1788721008085",
     "categoria": "electricidad",
     "nombre": "🔥 Breaker AC 2P 32A 🔥",
-    "precio": "20",
+    "precio": "8",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Breaker-32A-12usd.jpg",
+    "precio_original": "20",
     "fecha_agregado": "2026-10-17"
   },
   {
