@@ -535,10 +535,12 @@
     "nombre": "🔥Rollo de Cable eléctrico 10 AWG🔥",
     "precio": "155",
     "moneda": "USD",
-    "descripcion": "Rollo de Cable eléctrico 10 AWG \n✅100% cobre marca Q7\n✅Longitud 100 M\n🛡️Garantía no tiene es nuevo en caja",
-    "etiqueta": "",
+    "descripcion": "💵Precio 1.9 USD por metro\n✅100% cobre marca Q7\n✅Longitud 100 M\n✅Colores rojo y negro\n🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
     "agotado": false,
-    "imagen": "imagenes/Rollo-Cable-170usd.jpg"
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Rollo-Cable-170usd.jpg",
+    "fecha_agregado": "2026-10-16"
   },
   {
     "id": "p_1783911438490",
