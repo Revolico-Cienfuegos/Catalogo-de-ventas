@@ -69,13 +69,15 @@
     "id": "p_1783046977069",
     "categoria": "electricidad",
     "nombre": "🔥 Interruptor de cuchilla 3P-63A marca Voltaje 🔥",
-    "precio": "26",
+    "precio": "22",
     "moneda": "USD",
-    "descripcion": "✅ 600V, 100% cobre\n🛡️ Garantía no tiene",
-    "etiqueta": "",
+    "descripcion": "✅ 600V\n✅  100% cobre\n🛡️ Garantía no tiene",
+    "etiqueta": "nuevo",
     "agotado": true,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Interruptor-cuchilla-20usd.jpg"
+    "imagen": "imagenes/Interruptor-cuchilla-20usd.jpg",
+    "precio_original": "26",
+    "fecha_agregado": "2026-10-17"
   },
   {
     "id": "p_1783047030164_32a",
@@ -84,10 +86,11 @@
     "precio": "13",
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene",
-    "etiqueta": "mas_vendido",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Breaker-DC2P-32A-13usd.jpg"
+    "imagen": "imagenes/Breaker-DC2P-32A-13usd.jpg",
+    "fecha_agregado": "2026-10-17"
   },
   {
     "id": "p_1783047030164_63a",
@@ -109,7 +112,7 @@
     "moneda": "USD",
     "descripcion": "✅Si compras mas de 10  \n💵 6 USD\n🛡️ Garantía no tiene",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Portafusible-fusible-10usd.jpg"
   },
@@ -190,9 +193,11 @@
     "nombre": "🔥 Conectores MC4 para paneles solares 🔥",
     "precio": "4",
     "moneda": "USD",
-    "descripcion": "✅ Por cantidad de 5 o más: 💵 Precio por unidad 3 USD\n✅ Por cantidad de 10 o más: 💵 Precio por unidad 2.50 USD\n🛡️ Garantía no tiene",
-    "imagen": "imagenes/Conectores-MC4-4usd.jpg",
-    "agotado": true
+    "descripcion": "🛡️ Garantía no tiene",
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Conectores-MC4-4usd.jpg"
   },
   {
     "id": "p_1783048565298",
@@ -272,7 +277,7 @@
     "moneda": "USD",
     "descripcion": "✅ 5 litros\n✅ Sirve para inducción\n🛡️ Garantía de 7 días",
     "imagen": "imagenes/Olla-presion-40usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783049634591",
@@ -288,12 +293,13 @@
   {
     "id": "p_1783049661623",
     "categoria": "electrodomesticos",
-    "nombre": "🔥 Olla eléctrica multifuncional 3 L marca VENEZIA 🔥",
-    "precio": "70",
+    "nombre": "🔥 Olla eléctrica multifuncional 2 L marca VENEZIA 🔥",
+    "precio": "55",
     "moneda": "USD",
-    "descripcion": "✅ Color: blanco\n✅ Potencia de 500-900W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
+    "descripcion": "✅ MARCA: VENEZIA\n✅ COLOR: NEGRO , BLANCO , VERDE \n✅ Potencia de 500-900W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
     "etiqueta": "",
     "agotado": true,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Olla-electrica-70usd.jpg"
   },
   {
@@ -304,7 +310,7 @@
     "moneda": "USD",
     "descripcion": "✅ Sirve para inducción\n✅ Incluye plato de cocinar al vapor\n🛡️ Garantía 7 días",
     "imagen": "imagenes/Olla-presion-32usd.jpg",
-    "agotado": false
+    "agotado": true
   },
   {
     "id": "p_1783049829894",
@@ -516,8 +522,10 @@
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅ Incluye antena de 15 cm, funciona perfecto en interiores donde la señal es buena\n✅ Incluye cable HDMI\n🛡️ Garantía 1 mes",
-    "imagen": "imagenes/Cajitas-descodificadoras-35usd.jpg",
-    "agotado": true
+    "etiqueta": "",
+    "agotado": true,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Cajitas-descodificadoras-35usd.jpg"
   },
   {
     "id": "p_1783486195681",
@@ -594,7 +602,7 @@
     "moneda": "USD",
     "descripcion": "✅Sale a 1.80 USD cada pareja\n🛡️Garantia no tiene",
     "imagen": "imagenes/Paquete-parejas-90usd.png",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1784909392424",
@@ -696,12 +704,14 @@
     "id": "p_1784910349742",
     "categoria": "electricidad",
     "nombre": "🔥Interruptor de cuchilla 2P-63A marca Voltage🔥",
-    "precio": "12",
+    "precio": "20",
     "moneda": "USD",
     "descripcion": "✅600V\n✅100% cobre\n🛡️Garantía no tiene",
-    "etiqueta": "",
-    "agotado": true,
-    "imagen": "imagenes/Interruptor-cuchilla-12usd.jpg"
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "imagenes/Interruptor-cuchilla-12usd.jpg",
+    "fecha_agregado": "2026-10-17"
   },
   {
     "id": "p_1784910455310",
@@ -744,14 +754,15 @@
   {
     "id": "p_1784910839188",
     "categoria": "electricidad",
-    "nombre": "🔥Breaker DC 2P-20A🔥",
+    "nombre": "🔥Breaker DC2P-20A🔥",
     "precio": "20",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Breaker-2P-125A-15usd.jpg"
+    "imagen": "imagenes/Breaker-2P-125A-15usd.jpg",
+    "fecha_agregado": "2026-10-17"
   },
   {
     "id": "p_1784910929732",
@@ -773,7 +784,7 @@
     "moneda": "USD",
     "descripcion": "✅Incluye manguerita larga con duchita pequeña.\n🛡️Garantía no tiene es nuevo",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Ducha-Electrica-15usd.jpg"
   },
   {
@@ -784,7 +795,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-10usd.jpg"
   },
@@ -794,7 +805,7 @@
     "nombre": "🔥Caja de distribución de 4 vías marca Q7🔥",
     "precio": "10",
     "moneda": "USD",
-    "descripcion": "🛡️Garantía no tiene es nuevo en caja",
+    "descripcion": "✅ Por cantidad 8 USD (Compra mínima 5 unidades)\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -841,7 +852,7 @@
     "moneda": "USD",
     "descripcion": "✅Corriente de carga máxima 60A\n✅Voltaje Solar (PV) Max 230V DC\n✅Voltaje de batería 12V, 24V, 36V, 48V, 60V, 72V, 84V, 96V.\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Controlador-Solar-210usd.jpg"
   },
@@ -1053,7 +1064,7 @@
     "moneda": "USD",
     "descripcion": "✅No sirve para baterías ni de ácido ni de gel solo LiFeP04 \n🛡️Garantía 72 horas",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cargador-bateria-75usd.jpg"
   },
@@ -1225,7 +1236,7 @@
     "moneda": "USD",
     "descripcion": "✅Dimensiones de la lámpara 32 x 26.5 cm\n✅Dimensiones del panel 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-led-55usd.jpg"
   },
@@ -1335,7 +1346,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-15usd.jpg"
   },
@@ -1371,7 +1382,7 @@
     "nombre": "🔥Rollo de Cable fotovoltaico marca Q7🔥",
     "precio": "120",
     "moneda": "USD",
-    "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Color negro\n🛡️Garantía no tiene es nuevo en caja",
+    "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Colores negro y rojo\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
@@ -1497,7 +1508,7 @@
     "moneda": "USD",
     "descripcion": "✅Dimensiones de la lámpara 35 x 28 cm\n✅Dimensiones del panel: 35 x 35 cm\n✅No se conectan a la corriente solo al panel\n✅Cogen carga en el día y la batería dura toda la noche\n✅Tienen mando a distancia y pilas\n✅Incluye panel solar\n✅Se pueden poner a la interperie o sea se pueden mojar\n🛡️Garantía 72 horas",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Lampara-led-55usd-2.jpg"
   },
@@ -1509,7 +1520,7 @@
     "moneda": "USD",
     "descripcion": "✅3 en 1 plancha + cepillo + secador\n✅2800 W\n✅color violeta y rosado\n🛡️Garantía se deja probado",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cepillo-blower-15usd.jpg"
   },
@@ -1519,7 +1530,7 @@
     "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP6227🔥",
     "precio": "65",
     "moneda": "USD",
-    "descripcion": "✅2 Bocinas de 6 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 22.6 x 20.3 x 49 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
+    "descripcion": "✅2 Bocinas de 6 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 22.6 x 20.3 x 49 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -1531,7 +1542,7 @@
     "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP805🔥",
     "precio": "55",
     "moneda": "USD",
-    "descripcion": "✅Bocinas de 8 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 24.2 x 20.3 x 37.9 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
+    "descripcion": "✅Bocinas de 8 pulgadas \n✅Salida 20W\n✅Incluye micrófono 🎤  \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 3000 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 24.2 x 20.3 x 37.9 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -1543,7 +1554,7 @@
     "nombre": "🔥Bocina Bluetooth Portatil marca UNIZUKI modelo UNSP4292🔥",
     "precio": "45",
     "moneda": "USD",
-    "descripcion": "✅2 Bocinas de 4 pulgadas \n✅Salida 16W\n✅Incluye micrófono 🎤 \n✅Incluye mando a distancia \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1800 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 18.3 x 17.8 x 40.5 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
+    "descripcion": "✅2 Bocinas de 4 pulgadas \n✅Salida 16W\n✅Incluye micrófono 🎤 \n✅Bluetooth \n✅Tarjeta SD de hasta 32 GB\n✅Batería 1800 mAh\n✅Duración 2 a 3 horas dependiendo el volumen \n✅Tamaño 18.3 x 17.8 x 40.5 cm\n🛡️Garantía son nuevas y se le dejan probadas al cliente",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -1557,7 +1568,7 @@
     "moneda": "USD",
     "descripcion": "✅Duración aproximada 5 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Audifonos-inalambricos-15usd-2.jpg"
   },
@@ -1577,25 +1588,27 @@
     "id": "p_1788632459562",
     "categoria": "solar",
     "nombre": "🔥Cable fotovoltaico x metros marca Q7🔥",
-    "precio": "2.9",
+    "precio": "2.8",
     "moneda": "USD",
     "descripcion": "✅ 100% cobre\n✅ Longitud máxima 50 metros\n✅ 10 AWG\n✅ 7.6 mm de diámetro\n✅ Colores rojo y negro\nGarantía no tiene es nuevo en caja",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Cable-electrico-2.9usd.jpg"
+    "imagen": "imagenes/Cable-electrico-2.9usd.jpg",
+    "precio_original": "2.9"
   },
   {
     "id": "p_1788721008085",
     "categoria": "electricidad",
     "nombre": "🔥 Breaker AC 2P 32A 🔥",
-    "precio": "12",
+    "precio": "20",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Breaker-32A-12usd.jpg"
+    "imagen": "imagenes/Breaker-32A-12usd.jpg",
+    "fecha_agregado": "2026-10-17"
   },
   {
     "id": "p_1788721086392",
@@ -1613,13 +1626,14 @@
     "id": "p_1788918725840",
     "categoria": "electricidad",
     "nombre": "🔥Combo 1 de Batería + Inversor + Cargador🔥",
-    "precio": "520",
+    "precio": "490",
     "moneda": "USD",
-    "descripcion": "✅Batería de 12V 100A LiFeP04 que dan 1280Wh a consumir\n✅Inversor de onda pura 12V de 2000W pico 4000W\n✅Cargador Inteligente de 12V 10A\n✅Ideal para poner luces, ventiladores, TV, refrigerador, nevera, lavadoras, etc.\n🛡️Garantía no tiene todo es nuevo y se deja probado",
+    "descripcion": "✅Batería de 12V 100A LiFeP04 que dan 1280Wh a consumir\n✅Inversor de onda pura 12V de 2000W pico 4000W\n✅Cargador Inteligente de 12V 10A\n✅Ideal para poner luces, ventiladores, TV, refrigerador, nevera, lavadoras, etc.\n✅ Incluye 1 gorro de navidad de regalo \n🛡️Garantía no tiene todo es nuevo y se deja probado",
     "etiqueta": "mas_vendido",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Combo-Bateria-520usd.jpg"
+    "imagen": "imagenes/Combo-Bateria-520usd.jpg",
+    "precio_original": "520"
   },
   {
     "id": "p_1790623092614",
@@ -1734,7 +1748,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1152 Wh\n✅ Potencia de 1800 W y pico de 2700 W\n✅ Salida de electricidad de 110 V\n✅ Ideal para refrigeradores, TV, ventiladores, equipos portátiles y carga USB\n✅ Entrada solar de hasta 500 W\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/BLUETTI-AC180-700usd.jpg",
     "fecha_agregado": "2026-10-03"
@@ -1747,7 +1761,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1024 Wh\n✅ Potencia de 1800 W y pico de 3600 W\n✅ Salida de electricidad de 110 V\n✅ Ideal para electrodomésticos básicos del hogar\n✅ Permite alimentar refrigeradores, TV, ventiladores, equipos portátiles y dispositivos USB\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/EcoFlow-DELTA-650usd.jpg",
     "fecha_agregado": "2026-10-03"
@@ -1760,7 +1774,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1070 Wh\n✅ Potencia de 1500 W y pico de 3000 W\n✅ Salidas AC, DC, USB y USB-C\n✅ Entrada para panel solar\n✅ Salida de 110 V para electrodomésticos\n✅ Batería LiFePO4 de larga duración\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Jackery-Explorer-650usd.jpg",
     "fecha_agregado": "2026-10-03"
@@ -1773,7 +1787,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 345 Wh\n✅ Potencia de 500 W y pico de 1000 W\n✅ Salidas AC, DC, USB y USB-C\n✅ Ideal para celulares, laptops y pequeños electrodomésticos\n✅ Diseño compacto y fácil de transportar\n✅ Protección contra sobrecarga y cortocircuito\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/APOWER-Estacion-350usd.jpg",
     "fecha_agregado": "2026-10-03"
@@ -1786,7 +1800,7 @@
     "moneda": "USD",
     "descripcion": "✅ Gran capacidad de 3840 Wh\n✅ Potencia continua de 2600 W y pico de 3900 W\n✅ Entrada solar de hasta 1200 W\n✅ Salidas AC de 110 V / 120 V\n✅ Puertos USB-A y USB-C\n✅ Toma de auto de 12 V / 10 A\n✅ Carga rápida de 0 a 80% en aproximadamente 45 minutos con AC + solar\n✅ Ideal para camping, viajes, trabajo, hogar y emergencias\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/BLUETTI-Elite-1950usd.jpg",
     "fecha_agregado": "2026-10-03"
@@ -1799,7 +1813,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de batería de 4096 Wh\n✅ Potencia continua de 4000 W y pico de 8000 W\n✅ Salidas AC de 120 V / 240 V\n✅ Entrada solar de hasta 2600 W\n✅ Batería LiFePO4 de larga vida útil\n✅ Expandible hasta 48 kWh\n✅ Carga rápida mediante AC + solar\n✅ Ideal para hogar, negocios, trabajo y emergencias\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/EcoFlow-DELTA-2900usd.jpg",
     "fecha_agregado": "2026-10-03"
@@ -1812,7 +1826,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1024 Wh\n✅ Batería adicional para ampliar la autonomía de tu estación de energía\n✅ Compatible con Delta 2, Delta 3, Delta 3 1500 y Delta 3 Plus\n✅ Tecnología de batería LFP para mayor seguridad y vida útil\n✅ Conexión Plug & Play, fácil de instalar\n✅ Diseño compacto y resistente\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/EcoFlow-Extra-650usd.jpg",
     "fecha_agregado": "2026-10-03"
@@ -1820,7 +1834,7 @@
   {
     "id": "p_1791398129894",
     "categoria": "audio",
-    "nombre": "🔥Cajitas descodificadoras de TV - HD marca MBC🔥",
+    "nombre": "🔥Cajitas descodificadoras de TV - HD marca JMD🔥",
     "precio": "35",
     "moneda": "USD",
     "descripcion": "✅Incluye antena de 15 cm funciona perfecto en interiores donde la señal es buena\n✅Incluye cable HDMI\n🛡️Garantía 1 mes",
@@ -1877,7 +1891,7 @@
     "moneda": "USD",
     "descripcion": "✅120V/240V\n✅100% cobre\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Interruptor-cuchilla-22usd.jpg",
     "precio_original": "22",
@@ -1891,7 +1905,7 @@
     "moneda": "USD",
     "descripcion": "✅120V/240V\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Interruptor-cuchilla-24usd.jpg",
     "precio_original": "24",
@@ -2020,5 +2034,121 @@
     "domicilio_gratis": true,
     "imagen": "imagenes/Protector-voltaje-18usd.jpg",
     "fecha_agregado": "2026-10-07"
+  },
+  {
+    "id": "p_1792206407962",
+    "categoria": "electricidad",
+    "nombre": "🔥Breaker DC2P-25A🔥",
+    "precio": "18",
+    "moneda": "USD",
+    "descripcion": "✅  Caja de 6 a 15 USD cada pieza\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "",
+    "fecha_agregado": "2026-10-17"
+  },
+  {
+    "id": "p_1792207726139",
+    "categoria": "electricidad",
+    "nombre": "🔥Transfer automático AC o ATS tipo Mecánico 3P 110V 100A🔥",
+    "precio": "60",
+    "moneda": "USD",
+    "descripcion": "✅ Comnutacion automática de 3 fuentes\n✅ Operación manual de respaldo\n✅ Alta capacidad de corriente 100A\n✅ Diseño compacto y fácil de instalación\n✅ Indicadores de estado de operación\n✅ Material resistente y de larga vida útil\n✅ Por cantidad 5 unidades o más salen a 50 USD \n🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "",
+    "fecha_agregado": "2026-10-17"
+  },
+  {
+    "id": "p_1792207976654",
+    "categoria": "electricidad",
+    "nombre": "🔥Caja de protección para paneles para conectar INVERSOR + PANELES + BATERÍA + CAJA de 32A🔥",
+    "precio": "120",
+    "moneda": "USD",
+    "descripcion": "✅ 1 Breaker DC 32A\n✅ 1 SPD DC 600V\n✅ 2 Portafusible con fusible de 32A\n✅ 1 Breaker AC de 63A\n✅ 1 Protector de linea de 63A\n✅ 1 Breaker DC de 125A \n✅ 1 Caja de 15 vías de exterior de alta calidad preparada con todas las entradas\n✅ Expansiones para fijar a la pared\n🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "",
+    "fecha_agregado": "2026-10-17"
+  },
+  {
+    "id": "p_1792208082852",
+    "categoria": "solar",
+    "nombre": "🔥Caja de distribución de 18 vías alta calidad marca Q7🔥",
+    "precio": "30",
+    "moneda": "USD",
+    "descripcion": "🛡️Garantía no tiene es nuevo en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "",
+    "fecha_agregado": "2026-10-17"
+  },
+  {
+    "id": "p_1792208394885",
+    "categoria": "electricidad",
+    "nombre": "🔥Extintor Automático para Cajas de Breakers🔥",
+    "precio": "10",
+    "moneda": "USD",
+    "descripcion": "🛡️ Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "",
+    "fecha_agregado": "2026-10-17"
+  },
+  {
+    "id": "p_1792208572789",
+    "categoria": "automotriz",
+    "nombre": "🔥Pinza Crimpadora Hidráulica y kit de herramientas de prensado de cables de batería 🔥",
+    "precio": "80",
+    "moneda": "USD",
+    "descripcion": "✅  9 pares de troqueles\n✅  Rango 4-70 mm²\n✅  (4-6-8-10-16-25-35-50-70)\n🛡️Garantía no tiene es nueva en caja",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "",
+    "fecha_agregado": "2026-10-17"
+  },
+  {
+    "id": "p_1792208869741",
+    "categoria": "electricidad",
+    "nombre": "🔥Interruptor de cuchilla 2P-63A marca SACO🔥",
+    "precio": "18",
+    "moneda": "USD",
+    "descripcion": "✅  120V/240V\n🛡️Garantía no tiene",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "",
+    "fecha_agregado": "2026-10-17"
+  },
+  {
+    "id": "p_1792209264975",
+    "categoria": "electrodomesticos",
+    "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONAL 1.2 L DE CABO RECTO🔥",
+    "precio": "45",
+    "moneda": "USD",
+    "descripcion": "✅ MARCA: VENEZIA\n✅  CAPACIDAD: 1.2 LT\n✅  COLOR: NEGRO , BLANCO , VERDE \n✅  POTENCIA: 300-600W\n✅  ANTIADHERENTES \n✅ SON IDEALES PARA ECOFLOW Y PANELES\n✅  TIENEN UN ALTO AHORRO DE ENERGÍA\n🛡️ Garantía 3 días",
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": ""
+  },
+  {
+    "id": "p_1792209354374",
+    "categoria": "miscelaneos",
+    "nombre": "🔥Alarma para paneles solares y casas con mando 🔥",
+    "precio": "35",
+    "moneda": "USD",
+    "descripcion": "✅ Carga mediante panel solar y por cable USB \n✅  Sensor de movimiento \n✅  Ángulo de detección 125°\n✅  Distancia de detección 5 a 8 metros\n✅ Ideal para paneles solares, casas, negocios, patios y almacenes\n🛡️Garantía 3 días",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "imagen": "",
+    "fecha_agregado": "2026-10-17"
   }
 ]
