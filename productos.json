@@ -39,7 +39,7 @@
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Transfer-automatico-55usd.jpg",
     "precio_original": "55",
@@ -278,7 +278,7 @@
     "moneda": "USD",
     "descripcion": "✅ 5 litros\n✅ Sirve para inducción\n🛡️ Garantía de 7 días",
     "imagen": "imagenes/Olla-presion-40usd.jpg",
-    "agotado": false
+    "agotado": true
   },
   {
     "id": "p_1783049634591",
@@ -298,10 +298,11 @@
     "precio": "55",
     "moneda": "USD",
     "descripcion": "✅ MARCA: VENEZIA\n✅ COLOR: NEGRO , BLANCO , VERDE \n✅ Potencia de 500-900W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
-    "etiqueta": "",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Olla-electrica-70usd.jpg"
+    "imagen": "imagenes/Olla-electrica-70usd.jpg",
+    "fecha_agregado": "2026-10-18"
   },
   {
     "id": "p_1783049798207",
@@ -311,7 +312,7 @@
     "moneda": "USD",
     "descripcion": "✅ Sirve para inducción\n✅ Incluye plato de cocinar al vapor\n🛡️ Garantía 7 días",
     "imagen": "imagenes/Olla-presion-32usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783049829894",
@@ -405,7 +406,7 @@
     "nombre": "🔥 Pesa digital de plato marca SACO 🔥",
     "precio": "70",
     "moneda": "USD",
-    "descripcion": "✅ Hasta 40 KG\n✅ Tiene baterías recargables\n✅ Pantalla a ambos lados para que el cliente también pueda ver\n✅ Nuevas en caja\n🛡️ Garantía de 72 horas solo la batería, todo lo demás debe revisarlo al momento de la entrega",
+    "descripcion": "✅ Hasta 40 KG\n✅ Mide en kg y lb\n✅ Tiene baterías recargables\n✅ Pantalla a ambos lados para que el cliente también pueda ver\n✅ Nuevas en caja\n🛡️ Garantía de 72 horas solo la batería, todo lo demás debe revisarlo al momento de la entrega",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
@@ -683,8 +684,8 @@
     "nombre": "🔥Pesa digital de cocina 5 kg marca SACO 🔥",
     "precio": "12",
     "moneda": "USD",
-    "descripcion": "✅Batería lleva 2 pilas AAA\n✅Alta presión \n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "mas_vendido",
+    "descripcion": "✅Batería lleva 2 pilas AAA\n✅Alta presión \n✅ Pesa hasta 5000g\n✅ Da el peso en gramos y onzas\n✅ Ideal para quien hace dieta pesa la comida, quien va al gimnasio y para cocinar comida o reposteria\n🛡️Garantía no tiene es nuevo y se deja probado",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Pesa-cocina-15usd.jpg"
@@ -930,14 +931,14 @@
     "id": "p_1785684862363",
     "categoria": "solar",
     "nombre": "🔥Controlador Solar MPPT de 48V, 60V y 72V y 1200W🔥",
-    "precio": "85",
+    "precio": "80",
     "moneda": "USD",
     "descripcion": "✅PV INPUT 12-60VDC/30A\n✅MAX CHARGE CURRENT 15A\n✅POWER MAX 1200W\n✅Baterías compatibles 48V, 60V y 72V (los que se le ponen a todos los trisiclos electricos)\n✅Incluye conector MC4 para los cables de entrada del panel solar\n🛡️Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Controlador-Solar-130usd.jpg",
-    "precio_original": "100",
+    "precio_original": "85",
     "fecha_agregado": "2026-09-30"
   },
   {
@@ -1496,7 +1497,7 @@
     "nombre": "🔥Huevera UNIZUKI (para hervir huevo)🔥",
     "precio": "20",
     "moneda": "USD",
-    "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores rosado, amarillo y blanco\n🛡️Garantia 3 días",
+    "descripcion": "✅POTENCIA: 350W\n✅Capacidad 7 huevos\n✅Dispara automático al terminar\n✅Colores rosado y amarillo\n🛡️Garantia 3 días",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -1838,13 +1839,14 @@
     "id": "p_1791398129894",
     "categoria": "audio",
     "nombre": "🔥Cajitas descodificadoras de TV - HD marca JMD🔥",
-    "precio": "35",
+    "precio": "33",
     "moneda": "USD",
     "descripcion": "✅Incluye antena de 15 cm funciona perfecto en interiores donde la señal es buena\n✅Incluye cable HDMI\n🛡️Garantía 1 mes",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Cajitas-descodificadoras-35usd-2.jpg",
+    "precio_original": "35",
     "fecha_agregado": "2026-10-07"
   },
   {
