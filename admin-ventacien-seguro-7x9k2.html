@@ -158,6 +158,7 @@ button{cursor:pointer;font-family:inherit;}
       <strong>⚠️ Sincronización:</strong> Los productos que ves aquí están guardados en tu navegador (<code>localStorage</code>). <br>
       ✅ <strong>NUEVO:</strong> Al guardar un producto con foto nueva, la imagen se subirá automáticamente a GitHub (si has configurado token y repositorio).<br>
       <strong>💡 REBAJAS:</strong> Rellena <code>Precio original</code> para activar la rebaja (badge -X% rojo y sección "Ofertas del día").<br>
+      <strong>⏱️ REBAJAS CON TIEMPO:</strong> La rebaja dura <strong>7 días</strong> desde la <code>Fecha de inicio de la rebaja</code>. Pasado ese tiempo, se quita automáticamente.<br>
       <strong>🆕 NUEVO:</strong> El campo <code>fecha_agregado</code> controla cuándo se quita el badge "Nuevo" (7 días después).<br>
       <strong>🎅 GORRO NAVIDEÑO:</strong> Cada producto tiene un checkbox propio para activar/desactivar la cinta verde y el gorro de regalo (independiente del precio).
     </div>
@@ -239,6 +240,12 @@ button{cursor:pointer;font-family:inherit;}
       <div class="help-txt">💡 Si pones un número <strong>mayor</strong> que el "Precio actual", se activa la rebaja: la tienda mostrará el precio tachado, un badge <code>-X%</code> rojo, y el producto aparecerá en <strong>Ofertas del día</strong>.</div>
     </div>
 
+    <div class="form-group" id="grupoFechaRebaja" style="display:none;">
+      <label class="lbl">📅 Fecha de inicio de la rebaja (duración: 7 días)</label>
+      <input type="date" class="input" id="campoFechaRebaja">
+      <div class="help-txt">💡 La rebaja se <strong>quitará automáticamente 7 días</strong> después de esta fecha. Se rellena con hoy al activar una rebaja nueva.</div>
+    </div>
+
     <div class="form-group">
       <label class="lbl">Descripción</label>
       <textarea class="textarea" id="campoDescripcion" placeholder="Características, especificaciones, estado, garantía..."></textarea>
@@ -292,6 +299,7 @@ const PASS = "V3nt4C13nFueg0s2026!";
 const LS = "vc_admin_productos";
 const LS_GIT = "vc_admin_git";
 const UMBRAL_REGALO_USD = 20;
+const DIAS_REBAJA = 7;   // ← duración de la rebaja en días
 
 const CATS = [
   {id:"electricidad",nombre:"Electricidad y Protección",ico:"⚡"},
@@ -316,12 +324,46 @@ function catNombre(id){ return CATS.find(c=>c.id===id)?.nombre||id; }
 function catIco(id){ return CATS.find(c=>c.id===id)?.ico||"📦"; }
 function fmt(p,m){ return p?`${p} ${m||""}`.trim():""; }
 
+// ── REBAJA CON EXPIRACIÓN A LOS 7 DÍAS ──
+// Devuelve true si hay precio_original > precio Y la rebaja aún está vigente
 function tieneDescuento(p){
+  if (!p) return false;
+  const po = parseFloat(p.precio_original);
+  const pf = parseFloat(p.precio);
+  const baseOk = !isNaN(po) && !isNaN(pf) && po > pf && po > 0;
+  if (!baseOk) return false;
+  // Si no tiene fecha_rebaja, se considera rebaja "de siempre" (compatibilidad con productos viejos)
+  if (!p.fecha_rebaja) return true;
+  const fecha = new Date(p.fecha_rebaja);
+  if (isNaN(fecha.getTime())) return true;
+  const ahora = new Date();
+  const diffMs = ahora.getTime() - fecha.getTime();
+  if (diffMs < 0) return true;
+  const diasTranscurridos = diffMs / (1000 * 60 * 60 * 24);
+  return diasTranscurridos < DIAS_REBAJA;
+}
+
+// ¿Tiene rebaja "en bruto" (aunque esté vencida)?
+function tieneRebajaBruta(p){
   if (!p) return false;
   const po = parseFloat(p.precio_original);
   const pf = parseFloat(p.precio);
   return !isNaN(po) && !isNaN(pf) && po > pf && po > 0;
 }
+
+// Días restantes de la rebaja (o null si no hay rebaja o no aplica)
+function diasRestantesRebaja(p){
+  if (!tieneRebajaBruta(p)) return null;
+  if (!p.fecha_rebaja) return null;
+  const fecha = new Date(p.fecha_rebaja);
+  if (isNaN(fecha.getTime())) return null;
+  const ahora = new Date();
+  const diffMs = ahora.getTime() - fecha.getTime();
+  const dias = (1000 * 60 * 60 * 24);
+  const restantes = Math.ceil(DIAS_REBAJA - (diffMs / dias));
+  return Math.max(0, restantes);
+}
+
 function porcentajeDescuento(p){
   if (!tieneDescuento(p)) return 0;
   const po = parseFloat(p.precio_original);
@@ -332,7 +374,8 @@ function porcentajeDescuento(p){
 // ── REGALO NAVIDEÑO ──
 function tieneRegalo(p){
   if (!p) return false;
-  if (typeof p.regalo_navideno === "boolean") return p.regalo_navideno;
+  if (p.regalo_navideno === true || p.regalo_navideno === "true") return true;
+  if (p.regalo_navideno === false || p.regalo_navideno === "false") return false;
   const v = parseFloat(p.precio);
   return !isNaN(v) && v > UMBRAL_REGALO_USD;
 }
@@ -357,7 +400,7 @@ function mostrarToast(msg, color="#1a3a5c"){
 }
 
 // ============================================================
-//  LOGIN MEJORADO
+//  LOGIN
 // ============================================================
 const passInput = document.getElementById("passInput");
 const togglePass = document.getElementById("togglePass");
@@ -375,18 +418,12 @@ togglePass.addEventListener("click", () => {
 
 document.getElementById("loginBtn").addEventListener("click", login);
 passInput.addEventListener("keydown", e=>{ if(e.key==="Enter") login(); });
-
 window.addEventListener("load", ()=>{ passInput.focus(); });
 
 function login(){
   const errEl = document.getElementById("loginErr");
   const escrito = (passInput.value || "").trim();
-
-  if(escrito === ""){
-    errEl.textContent = "Escribe la contraseña.";
-    return;
-  }
-
+  if(escrito === ""){ errEl.textContent = "Escribe la contraseña."; return; }
   if(escrito === PASS){
     errEl.textContent = "";
     document.getElementById("loginWrap").style.display="none";
@@ -648,17 +685,26 @@ function renderLista(){
     const desc = tieneDescuento(p);
     const pct = desc ? porcentajeDescuento(p) : 0;
     const regalo = tieneRegalo(p);
+    const diasRest = diasRestantesRebaja(p);
+    const rebajaVencida = tieneRebajaBruta(p) && !tieneDescuento(p);
+    let rebajaInfo = "";
+    if (desc && diasRest !== null) {
+      rebajaInfo = ` · <span style="color:#c0392b;font-weight:700;">⏱️ ${diasRest} día${diasRest!==1?'s':''} restante${diasRest!==1?'s':''}</span>`;
+    } else if (rebajaVencida) {
+      rebajaInfo = ` · <span style="color:#999;font-weight:700;">⏱️ rebaja vencida</span>`;
+    }
     return `
     <div class="item ${p.agotado?'agotado':''} ${desc?'rebajado':''}">
       ${imgHtml}
       <div class="item-info">
-        <div class="item-cat">${catIco(p.categoria)} ${catNombre(p.categoria)}${p.etiqueta==="mas_vendido"?' · 🔥 Más vendido':p.etiqueta==="nuevo"?' · 🆕 Nuevo':''}${desc?' · 🔥 OFERTA':''}${regalo?' · 🎅 Regalo':''}${p.agotado?' · <span class="item-agotado-tag">Agotado</span>':''}</div>
+        <div class="item-cat">${catIco(p.categoria)} ${catNombre(p.categoria)}${p.etiqueta==="mas_vendido"?' · 🔥 Más vendido':p.etiqueta==="nuevo"?' · 🆕 Nuevo':''}${desc?' · 🔥 OFERTA':''}${regalo?' · 🎅 Regalo':''}${p.agotado?' · <span class="item-agotado-tag">Agotado</span>':''}${rebajaInfo}</div>
         <div class="item-nombre">${p.nombre||"(sin nombre)"}</div>
         <div class="item-precio">${desc 
           ? `${fmt(p.precio,p.moneda)} <span class="precio-orig">${fmt(p.precio_original,p.moneda)}</span> <span class="precio-off">-${pct}%</span>`
           : fmt(p.precio,p.moneda)}</div>
         ${p.domicilio_gratis === false ? '<div style="font-size:10px;color:#c0392b;font-weight:700;">🚫 Sin domicilio gratis</div>' : ''}
         ${p.fecha_agregado && p.etiqueta==="nuevo" ? `<div style="font-size:10px;color:#6b6050;">📅 Agregado: ${p.fecha_agregado}</div>` : ''}
+        ${p.fecha_rebaja && tieneRebajaBruta(p) ? `<div style="font-size:10px;color:#6b6050;">📅 Rebaja iniciada: ${p.fecha_rebaja}</div>` : ''}
       </div>
       <div class="item-btns">
         <button class="btn-stock ${p.agotado?'activo':''}" data-stock="${p.id}" title="${p.agotado?'Marcar como disponible':'Marcar como agotado'}">${p.agotado?'✅':'🚫'}</button>
@@ -711,20 +757,23 @@ function abrirForm(p){
   document.getElementById("campoAgotado").checked=p?!!p.agotado:false;
   document.getElementById("campoDomicilio").checked=p? (p.domicilio_gratis !== false) : true;
 
-  // 🎅 Regalo navideño: respetar valor guardado o inferir por precio (>20 USD)
+  // 🎅 Regalo navideño
   let regaloChecked;
   if (p) {
     if (typeof p.regalo_navideno === "boolean") {
       regaloChecked = p.regalo_navideno;
-    } else {
+    } else if (p.regalo_navideno === "true") { regaloChecked = true; }
+    else if (p.regalo_navideno === "false") { regaloChecked = false; }
+    else {
       const pr = parseFloat(p.precio);
       regaloChecked = !isNaN(pr) && pr > UMBRAL_REGALO_USD;
     }
   } else {
-    regaloChecked = true; // nuevo producto: activado por defecto
+    regaloChecked = true;
   }
   document.getElementById("campoRegalo").checked = regaloChecked;
 
+  // 📅 Etiqueta nuevo
   const etiquetaSel = document.getElementById("campoEtiqueta").value;
   const grupoFecha = document.getElementById("grupoFecha");
   const campoFecha = document.getElementById("campoFechaAgregado");
@@ -734,6 +783,17 @@ function abrirForm(p){
   } else {
     grupoFecha.style.display = "none";
     campoFecha.value = p && p.fecha_agregado ? p.fecha_agregado : "";
+  }
+
+  // 📅 Rebaja con fecha
+  const grupoFechaRebaja = document.getElementById("grupoFechaRebaja");
+  const campoFechaRebaja = document.getElementById("campoFechaRebaja");
+  if (p && tieneRebajaBruta(p)) {
+    grupoFechaRebaja.style.display = "block";
+    campoFechaRebaja.value = p.fecha_rebaja || hoyISO();
+  } else {
+    grupoFechaRebaja.style.display = "none";
+    campoFechaRebaja.value = "";
   }
 
   const av=document.getElementById("avisoArchivo");
@@ -777,6 +837,16 @@ function actualizarPreview(){
 
   const card = document.getElementById("previewCard");
   const precioEl = document.getElementById("previewPrecio");
+
+  // Mostrar / ocultar el grupo de fecha de rebaja según si hay rebaja
+  const grupoFechaRebaja = document.getElementById("grupoFechaRebaja");
+  const campoFechaRebaja = document.getElementById("campoFechaRebaja");
+  if (desc) {
+    grupoFechaRebaja.style.display = "block";
+    if (!campoFechaRebaja.value) campoFechaRebaja.value = hoyISO();
+  } else {
+    grupoFechaRebaja.style.display = "none";
+  }
 
   if(desc){
     card.classList.add("rebajado");
@@ -923,6 +993,7 @@ document.getElementById("guardarBtn").addEventListener("click", async ()=>{
 
   const etiqueta = document.getElementById("campoEtiqueta").value;
   const fechaAgregadoInput = document.getElementById("campoFechaAgregado").value;
+  const fechaRebajaInput = document.getElementById("campoFechaRebaja").value;
 
   const precioStr = document.getElementById("campoPrecio").value.trim();
   const precioOrigStr = document.getElementById("campoPrecioOriginal").value.trim();
@@ -946,8 +1017,11 @@ document.getElementById("guardarBtn").addEventListener("click", async ()=>{
     imagen:imagenActual,
   };
 
-  if(precioOrigStr && !isNaN(poNum) && !isNaN(pNum) && poNum > pNum){
+  const hayRebaja = precioOrigStr && !isNaN(poNum) && !isNaN(pNum) && poNum > pNum;
+  if(hayRebaja){
     datos.precio_original = precioOrigStr;
+    // 📅 Fecha de inicio de la rebaja: si no hay, se rellena con hoy
+    datos.fecha_rebaja = fechaRebajaInput || hoyISO();
   }
 
   if(etiqueta === "nuevo"){
@@ -980,7 +1054,12 @@ document.getElementById("guardarBtn").addEventListener("click", async ()=>{
   buildFiltro();
   cerrarForm();
   renderLista();
-  mostrarToast("✅ Producto guardado en local", "#1a3a5c");
+
+  if (hayRebaja) {
+    mostrarToast(`✅ Producto guardado · Rebaja activa por 7 días`, "#1a3a5c");
+  } else {
+    mostrarToast("✅ Producto guardado en local", "#1a3a5c");
+  }
 });
 
 // ── DESCARGAR JSON ──
