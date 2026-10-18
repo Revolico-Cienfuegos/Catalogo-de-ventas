@@ -29,6 +29,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Transfer-automatico-45usd.jpg"
   },
   {
@@ -41,8 +42,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Transfer-automatico-55usd.jpg",
     "precio_original": "55",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-01"
   },
   {
@@ -494,7 +497,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": false,
+    "regalo_navideno": true,
     "imagen": "imagenes/Lampara-led-45usd.jpg"
   },
   {
@@ -704,8 +707,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Transfer-automatico-60usd.jpg",
     "precio_original": "60",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-01"
   },
   {
@@ -956,6 +961,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Breaker-DC2P-125A-20usd.jpg"
   },
   {
@@ -1384,6 +1390,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Caja-protectora-80usd.jpg"
   },
   {
@@ -1522,8 +1529,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Transfer-automatico-55usd-2.jpg",
     "precio_original": "55",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-01"
   },
   {
@@ -2130,6 +2139,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Transfer-automatico-60usd-2.jpg",
     "fecha_agregado": "2026-10-17"
   },
@@ -2143,6 +2153,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Caja-proteccion-120usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
@@ -2156,6 +2167,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Caja-distribucion-30usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
