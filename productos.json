@@ -121,21 +121,27 @@
     "id": "p_1783047395563",
     "categoria": "solar",
     "nombre": "🔥 Inversor de corriente de 24V a 110V 🔥",
-    "precio": "160",
+    "precio": "140",
     "moneda": "USD",
     "descripcion": "✅ Onda Pura\n✅ Potencia máxima 4000W / Potencia nominal 2000W\n✅ Levanta perfecto neveras, refrigerador, etc.\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-160usd.jpg",
-    "agotado": false
+    "precio_original": "160"
   },
   {
     "id": "p_1783047515435",
     "categoria": "solar",
     "nombre": "🔥 Inversor de corriente de 24V a 110V Potencia 2500W pico 5000W 🔥",
-    "precio": "200",
+    "precio": "180",
     "moneda": "USD",
     "descripcion": "✅ Onda pura\n✅ Pantalla frontal muestra Voltaje de batería, Voltaje de salida y Consumo en W\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
     "imagen": "imagenes/Inversor-corriente-200usd.jpg",
-    "agotado": false
+    "precio_original": "200"
   },
   {
     "id": "p_1783047724563",
