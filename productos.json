@@ -127,8 +127,10 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Inversor-corriente-160usd.jpg",
-    "precio_original": "160"
+    "precio_original": "160",
+    "fecha_rebaja": "2026-10-18"
   },
   {
     "id": "p_1783047515435",
@@ -181,8 +183,11 @@
     "precio": "50",
     "moneda": "USD",
     "descripcion": "✅ Baterías Autos, Motos, AGM, GEL, LiFeP04\n🛡️ Garantía 3 días",
-    "imagen": "imagenes/Cargador-baterias-50usd.jpg",
-    "agotado": false
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
+    "imagen": "imagenes/Cargador-baterias-50usd.jpg"
   },
   {
     "id": "p_1783048392577",
@@ -237,8 +242,9 @@
     "moneda": "USD",
     "descripcion": "✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB\n✅ Entrada tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Powerbank-Cargador-26usd.jpg"
   },
   {
@@ -307,6 +313,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Olla-electrica-70usd.jpg",
     "fecha_agregado": "2026-10-18"
   },
@@ -330,6 +337,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Hornilla-electrica-35usd.jpg"
   },
   {
@@ -342,6 +350,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Hornilla-electrica-16usd.jpg"
   },
   {
@@ -416,6 +425,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Pesa-plato-60usd.jpg",
     "fecha_agregado": "2026-10-04"
   },
@@ -458,8 +468,11 @@
     "precio": "20",
     "moneda": "USD",
     "descripcion": "✅ Duración de carga 5 horas aproximadamente\n✅ Baterías de litio 10000 mAh\n✅ Panel solar para cargar\n✅ 5 niveles de luz a seleccionar\n✅ Funciona como powerbank\n✅ Tiene soporte ajustable y para engancharla\n✅ Incluye cable USB para cargarla\n✅ Dimensiones 17x15 cm\n🛡️ Garantía 72 horas",
-    "imagen": "imagenes/Lampara-recargable-20usd.jpg",
-    "agotado": false
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
+    "imagen": "imagenes/Lampara-recargable-20usd.jpg"
   },
   {
     "id": "p_1783049199860",
@@ -478,8 +491,11 @@
     "precio": "45",
     "moneda": "USD",
     "descripcion": "✅ Dimensiones 22 x 52 cm\n✅ No se conectan a la corriente, solo al panel\n✅ Cogen carga en el día y la batería dura toda la noche\n✅ Tienen sensor de movimiento\n✅ Tienen mando a distancia y pilas\n✅ Incluye panel solar\n✅ Se pueden poner a la intemperie, o sea se pueden mojar\n🛡️ Garantía 3 días",
-    "imagen": "imagenes/Lampara-led-45usd.jpg",
-    "agotado": false
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
+    "imagen": "imagenes/Lampara-led-45usd.jpg"
   },
   {
     "id": "p_1783049686956",
@@ -555,6 +571,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Rollo-Cable-170usd.jpg",
     "fecha_agregado": "2026-10-16"
   },
@@ -568,6 +585,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/OLLA-ELECTRICA-45usd.jpg"
   },
   {
@@ -577,8 +595,11 @@
     "precio": "25",
     "moneda": "USD",
     "descripcion": "✅ Incluye 7 manillas para que lo ajustes a cualquier estilo y nunca lo aburras\n✅ Aplicación para vincularlo con el teléfono\n✅ Colores NEGRO y DORADO \n\n🛡️ Garantía no tiene es nuevo y se deja probado",
-    "imagen": "imagenes/RELOJ-25usd.jpg",
-    "agotado": false
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
+    "imagen": "imagenes/RELOJ-25usd.jpg"
   },
   {
     "id": "p_1783912822507",
@@ -609,8 +630,11 @@
     "precio": "90",
     "moneda": "USD",
     "descripcion": "✅Sale a 1.80 USD cada pareja\n🛡️Garantia no tiene",
-    "imagen": "imagenes/Paquete-parejas-90usd.png",
-    "agotado": false
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
+    "imagen": "imagenes/Paquete-parejas-90usd.png"
   },
   {
     "id": "p_1784909392424",
@@ -731,6 +755,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Compresor-portatil-40usd.jpg"
   },
   {
@@ -943,8 +968,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Controlador-Solar-130usd.jpg",
     "precio_original": "85",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-09-30"
   },
   {
@@ -957,6 +984,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Pesa-gancho-45usd.jpg"
   },
   {
@@ -969,6 +997,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Powerbank-20000-26usd.jpg"
   },
   {
@@ -1027,8 +1056,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Maleta-instalar-35usd.jpg",
     "precio_original": "35",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-01"
   },
   {
@@ -1051,6 +1082,8 @@
     "descripcion": "✅Es con el que se hacen los cables de las estaciones de carga ECOFLOW a los paneles solares\n🛡️Garantía no tiene",
     "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Paquete-Conectores-125usd.jpg"
   },
   {
@@ -1205,13 +1238,16 @@
     "id": "p_1787972445885",
     "categoria": "moviles",
     "nombre": "🔥Powerbank de 20000 mAh🔥",
-    "precio": "20",
+    "precio": "18",
     "moneda": "USD",
     "descripcion": "✅2 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Color negro\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Powerbank-20000-20usd.jpg"
+    "regalo_navideno": true,
+    "imagen": "imagenes/Powerbank-20000-20usd.jpg",
+    "precio_original": "20",
+    "fecha_rebaja": "2026-10-18"
   },
   {
     "id": "p_1787972699887",
@@ -1223,6 +1259,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Lampara-recargable-22usd.jpg"
   },
   {
@@ -1247,6 +1284,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Lampara-led-55usd.jpg"
   },
   {
@@ -1333,6 +1371,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Fogon-Infrarrojo-40usd.jpg"
   },
   {
@@ -1395,8 +1434,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Rollo-Cable-130usd.jpg",
     "precio_original": "130",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-04"
   },
   {
@@ -1495,6 +1536,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Huevera-modelo-20usd.jpg"
   },
   {
@@ -1507,6 +1549,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Huevera-UNIZUKI-20usd.jpg"
   },
   {
@@ -1519,6 +1562,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Lampara-led-55usd-2.jpg"
   },
   {
@@ -1634,7 +1678,7 @@
   },
   {
     "id": "p_1788918725840",
-    "categoria": "electricidad",
+    "categoria": "solar",
     "nombre": "🔥Combo 1 de Batería + Inversor + Cargador🔥",
     "precio": "490",
     "moneda": "USD",
@@ -1642,8 +1686,10 @@
     "etiqueta": "mas_vendido",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Combo-Bateria-520usd.jpg",
-    "precio_original": "520"
+    "precio_original": "520",
+    "fecha_rebaja": "2026-10-18"
   },
   {
     "id": "p_1790623092614",
@@ -1693,8 +1739,9 @@
     "moneda": "USD",
     "descripcion": "✅Batería de 24V 100A LiFeP04 que dan 2560Wh a consumir\n✅Inversor de onda pura 24V de 2500W pico 5000W marca Q7\n✅Controlador Solar MPPT de 30A marca Q7\n✅Ideal para conectar a 2 paneles. Levanta luces, ventiladores, TV, refrigerador, nevera, lavadoras, etc.\n🛡️Garantía no tiene todo es nuevo y se deja probado",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Combo-Bateria-990usd.jpg",
     "fecha_agregado": "2026-09-30"
   },
@@ -1851,8 +1898,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Cajitas-descodificadoras-35usd-2.jpg",
     "precio_original": "35",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-07"
   },
   {
@@ -1946,8 +1995,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Bateria-128V-290usd.jpg",
     "precio_original": "290",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-07"
   },
   {
@@ -1960,8 +2011,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Bateria-128V-290usd-2.jpg",
     "precio_original": "290",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-07"
   },
   {
@@ -1974,8 +2027,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Bateria-256V-590usd.jpg",
     "precio_original": "630",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-07"
   },
   {
@@ -1988,8 +2043,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Bateria-128V-500usd.jpg",
     "precio_original": "530",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-07"
   },
   {
@@ -2002,8 +2059,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Bateria-128V-500usd-2.jpg",
     "precio_original": "530",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-07"
   },
   {
@@ -2016,8 +2075,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Bateria-128V-500usd-3.jpg",
     "precio_original": "530",
+    "fecha_rebaja": "2026-10-18",
     "fecha_agregado": "2026-10-07"
   },
   {
@@ -2121,6 +2182,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Pinza-Crimpadora-80usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
@@ -2159,6 +2221,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Alarma-paneles-35usd.jpg",
     "fecha_agregado": "2026-10-17"
   }
