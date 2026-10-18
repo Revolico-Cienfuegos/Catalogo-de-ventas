@@ -330,7 +330,6 @@
         <span class="logo-sub">TIENDA ONLINE</span>
       </div>
     </div>
-
     <div class="search-wrap">
       <div class="search-box">
         <input type="text" id="searchInput" placeholder="Buscar productos..." autocomplete="off">
@@ -340,7 +339,6 @@
         </button>
       </div>
     </div>
-
     <div class="header-actions">
       <div class="moneda-selector">
         <select id="currencySelect" title="Cambiar moneda">
@@ -440,7 +438,6 @@
       </div>
     </div>
   </div>
-
   <div id="contenido" style="display:none;"></div>
   <div id="contenidoGarantia" style="display:none;"></div>
   <div id="resultadosBusqueda" style="display:none;"></div>
@@ -593,10 +590,8 @@ const WA_ICO = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentCol
 
 const IMG_PH_ICO = `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
 
-// ============================================================
-//  CONFIG: DÍAS QUE DURA LA ETIQUETA "NUEVO"
-// ============================================================
 const DIAS_NUEVO = 7;
+const DIAS_REBAJA = 7;   // ← duración de la rebaja
 
 // ============================================================
 //  FUNCIONES AUXILIARES
@@ -610,10 +605,23 @@ function limpiarNombreParaOrdenar(nombre) {
     .toLowerCase();
 }
 
+// ── REBAJA CON EXPIRACIÓN A LOS 7 DÍAS ──
+// Devuelve true si hay descuento real Y la rebaja aún está vigente
 function tieneDescuento(p){
+  if (!p) return false;
   const po = parseFloat(p.precio_original);
   const pf = parseFloat(p.precio);
-  return !isNaN(po) && !isNaN(pf) && po > pf && po > 0;
+  const baseOk = !isNaN(po) && !isNaN(pf) && po > pf && po > 0;
+  if (!baseOk) return false;
+  // Productos viejos sin fecha_rebaja → se considera rebaja válida indefinidamente
+  if (!p.fecha_rebaja) return true;
+  const fecha = new Date(p.fecha_rebaja);
+  if (isNaN(fecha.getTime())) return true;
+  const ahora = new Date();
+  const diffMs = ahora.getTime() - fecha.getTime();
+  if (diffMs < 0) return true;
+  const diasTranscurridos = diffMs / (1000 * 60 * 60 * 24);
+  return diasTranscurridos < DIAS_REBAJA;
 }
 
 function porcentajeDescuento(p){
@@ -658,7 +666,6 @@ function aplicarProteccionImagenes() {
     e.preventDefault();
     alert('🛡️ El contenido de esta web está protegido.');
   });
-
   document.addEventListener('keydown', function(e) {
     if (e.ctrlKey && ['c', 'u', 's', 'p'].includes(e.key.toLowerCase())) {
       e.preventDefault();
@@ -676,14 +683,12 @@ function aplicarProteccionImagenes() {
       return false;
     }
   });
-
   document.addEventListener('dragstart', function(e) {
     if (e.target.tagName === 'IMG') {
       e.preventDefault();
       return false;
     }
   });
-
   document.addEventListener('copy', function(e) {
     const seleccion = window.getSelection().toString();
     if (seleccion.length > 10) {
@@ -692,7 +697,6 @@ function aplicarProteccionImagenes() {
       e.preventDefault();
     }
   });
-
   aplicarProteccionImagenes();
 })();
 
@@ -890,7 +894,6 @@ document.getElementById("cartCheckout").addEventListener("click", ()=>{
   document.getElementById("ofReferencia").value = "";
   document.getElementById("ofObservaciones").value = "";
   document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
-
   trackEvent('Checkout', 'begin_checkout', 'Desde carrito', totalCarrito());
 });
 
@@ -908,7 +911,6 @@ document.getElementById("ofSend").addEventListener("click", ()=>{
   const obs = document.getElementById("ofObservaciones").value.trim();
 
   document.querySelectorAll(".order-form .error").forEach(e=>e.style.display="none");
-
   if(!nombre){ document.getElementById("ofNombreErr").style.display="block"; ok=false; }
   if(!telefono){ document.getElementById("ofTelefonoErr").style.display="block"; ok=false; }
   if(!direccion){ document.getElementById("ofDireccionErr").style.display="block"; ok=false; }
@@ -941,7 +943,6 @@ ${items}
 Muchas gracias.`;
 
   trackEvent('Checkout', 'purchase', 'Pedido completado', total);
-
   document.getElementById("orderFormOverlay").classList.remove("open");
   productoParaPedir = null;
   openWA(msg);
@@ -1235,19 +1236,14 @@ function renderizarContenido(){
 
 // ============================================================
 //  PROMOCIÓN NAVIDAD: gorro de regalo
-//  ✅ CORREGIDO: ahora respeta el campo "regalo_navideno" que
-//  el admin guarda por producto (checkbox). Si el campo no
-//  existe (productos viejos), usa la regla antigua de > 20 USD.
 // ============================================================
 const UMBRAL_REGALO_USD = 20;
 const HAT_ICO = '<svg class="hat-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17.5C5 9 10 4.5 17 5.5c1.6 2.4 2.6 6.6 3 12z" fill="#d13b4d"/><rect x="2.5" y="16" width="19" height="4.6" rx="2.3" fill="#faf6ec"/><circle cx="18.6" cy="5" r="2.4" fill="#faf6ec"/></svg>';
 
 function tieneRegalo(p){
   if (!p) return false;
-  // El admin guarda true/false; aceptamos también "true"/"false" (strings) por seguridad
   if (p.regalo_navideno === true || p.regalo_navideno === "true") return true;
   if (p.regalo_navideno === false || p.regalo_navideno === "false") return false;
-  // Productos viejos sin el campo: fallback a la regla de precio > 20 USD
   const v = parseFloat(p.precio);
   return !isNaN(v) && v > UMBRAL_REGALO_USD;
 }
@@ -1561,9 +1557,10 @@ function cargarProductos(){
         buildCatsNav();
         renderizarContenido();
         console.log("✅ Productos cargados desde el servidor");
-        // Debug útil: muestra cuántos productos tienen gorro
         const conGorro = DATA.filter(p => tieneRegalo(p)).length;
+        const conRebajaActiva = DATA.filter(p => tieneDescuento(p)).length;
         console.log(`🎅 Productos con gorro navideño: ${conGorro}/${DATA.length}`);
+        console.log(`🔥 Productos con rebaja vigente: ${conRebajaActiva}/${DATA.length}`);
       } else {
         throw new Error("El archivo productos.json está vacío o no es válido");
       }
