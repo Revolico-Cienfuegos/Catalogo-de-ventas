@@ -158,7 +158,8 @@ button{cursor:pointer;font-family:inherit;}
       <strong>⚠️ Sincronización:</strong> Los productos que ves aquí están guardados en tu navegador (<code>localStorage</code>). <br>
       ✅ <strong>NUEVO:</strong> Al guardar un producto con foto nueva, la imagen se subirá automáticamente a GitHub (si has configurado token y repositorio).<br>
       <strong>💡 REBAJAS:</strong> Rellena <code>Precio original</code> para activar la rebaja (badge -X% rojo y sección "Ofertas del día").<br>
-      <strong>🆕 NUEVO:</strong> El campo <code>fecha_agregado</code> controla cuándo se quita el badge "Nuevo" (7 días después).
+      <strong>🆕 NUEVO:</strong> El campo <code>fecha_agregado</code> controla cuándo se quita el badge "Nuevo" (7 días después).<br>
+      <strong>🎅 GORRO NAVIDEÑO:</strong> Cada producto tiene un checkbox propio para activar/desactivar la cinta verde y el gorro de regalo (independiente del precio).
     </div>
 
     <div class="acciones-top">
@@ -268,6 +269,14 @@ button{cursor:pointer;font-family:inherit;}
       <label class="lbl" for="campoDomicilio" style="margin:0;">🚚 Domicilio gratis (en Cienfuegos)</label>
     </div>
 
+    <div class="form-group" style="display:flex;align-items:center;gap:8px;">
+      <input type="checkbox" id="campoRegalo" style="width:18px;height:18px;" checked>
+      <label class="lbl" for="campoRegalo" style="margin:0;">🎅 Gorro navideño de regalo (promoción de Navidad)</label>
+    </div>
+    <div class="help-txt" style="margin-top:-8px;margin-bottom:14px;">
+      💡 Si lo desmarcas, el producto <strong>no</strong> mostrará la cinta verde ni el gorro navideño en la tienda, aunque su precio supere los 20 USD.
+    </div>
+
     <button class="btn btn-azul" id="guardarBtn">Guardar producto</button>
     <div class="sep"></div>
     <button class="btn-outline" id="cancelarBtn">Cancelar</button>
@@ -282,6 +291,7 @@ button{cursor:pointer;font-family:inherit;}
 const PASS = "V3nt4C13nFueg0s2026!";
 const LS = "vc_admin_productos";
 const LS_GIT = "vc_admin_git";
+const UMBRAL_REGALO_USD = 20;
 
 const CATS = [
   {id:"electricidad",nombre:"Electricidad y Protección",ico:"⚡"},
@@ -318,6 +328,15 @@ function porcentajeDescuento(p){
   const pf = parseFloat(p.precio);
   return Math.round(((po - pf) / po) * 100);
 }
+
+// ── REGALO NAVIDEÑO ──
+function tieneRegalo(p){
+  if (!p) return false;
+  if (typeof p.regalo_navideno === "boolean") return p.regalo_navideno;
+  const v = parseFloat(p.precio);
+  return !isNaN(v) && v > UMBRAL_REGALO_USD;
+}
+
 function hoyISO(){
   const d = new Date();
   const y = d.getFullYear();
@@ -343,7 +362,6 @@ function mostrarToast(msg, color="#1a3a5c"){
 const passInput = document.getElementById("passInput");
 const togglePass = document.getElementById("togglePass");
 
-// Mostrar/ocultar contraseña
 togglePass.addEventListener("click", () => {
   if (passInput.type === "password") {
     passInput.type = "text";
@@ -358,7 +376,6 @@ togglePass.addEventListener("click", () => {
 document.getElementById("loginBtn").addEventListener("click", login);
 passInput.addEventListener("keydown", e=>{ if(e.key==="Enter") login(); });
 
-// Foco automático al cargar
 window.addEventListener("load", ()=>{ passInput.focus(); });
 
 function login(){
@@ -630,11 +647,12 @@ function renderLista(){
     const imgHtml = hasImg ? `<div style="position:relative;"><img class="item-img" src="${p.imagen}" alt="${p.nombre}" loading="lazy" onerror="console.warn('Admin lista: imagen no encontrada:', this.src); this.style.display='none'; this.parentElement.querySelector('.item-img-ph').style.display='flex';"><div class="item-img-ph" style="display:none;">🖼️</div></div>` : `<div class="item-img-ph">🖼️</div>`;
     const desc = tieneDescuento(p);
     const pct = desc ? porcentajeDescuento(p) : 0;
+    const regalo = tieneRegalo(p);
     return `
     <div class="item ${p.agotado?'agotado':''} ${desc?'rebajado':''}">
       ${imgHtml}
       <div class="item-info">
-        <div class="item-cat">${catIco(p.categoria)} ${catNombre(p.categoria)}${p.etiqueta==="mas_vendido"?' · 🔥 Más vendido':p.etiqueta==="nuevo"?' · 🆕 Nuevo':''}${desc?' · 🔥 OFERTA':''}${p.agotado?' · <span class="item-agotado-tag">Agotado</span>':''}</div>
+        <div class="item-cat">${catIco(p.categoria)} ${catNombre(p.categoria)}${p.etiqueta==="mas_vendido"?' · 🔥 Más vendido':p.etiqueta==="nuevo"?' · 🆕 Nuevo':''}${desc?' · 🔥 OFERTA':''}${regalo?' · 🎅 Regalo':''}${p.agotado?' · <span class="item-agotado-tag">Agotado</span>':''}</div>
         <div class="item-nombre">${p.nombre||"(sin nombre)"}</div>
         <div class="item-precio">${desc 
           ? `${fmt(p.precio,p.moneda)} <span class="precio-orig">${fmt(p.precio_original,p.moneda)}</span> <span class="precio-off">-${pct}%</span>`
@@ -692,7 +710,21 @@ function abrirForm(p){
   document.getElementById("campoEtiqueta").value=p?(p.etiqueta||""):"";
   document.getElementById("campoAgotado").checked=p?!!p.agotado:false;
   document.getElementById("campoDomicilio").checked=p? (p.domicilio_gratis !== false) : true;
-  
+
+  // 🎅 Regalo navideño: respetar valor guardado o inferir por precio (>20 USD)
+  let regaloChecked;
+  if (p) {
+    if (typeof p.regalo_navideno === "boolean") {
+      regaloChecked = p.regalo_navideno;
+    } else {
+      const pr = parseFloat(p.precio);
+      regaloChecked = !isNaN(pr) && pr > UMBRAL_REGALO_USD;
+    }
+  } else {
+    regaloChecked = true; // nuevo producto: activado por defecto
+  }
+  document.getElementById("campoRegalo").checked = regaloChecked;
+
   const etiquetaSel = document.getElementById("campoEtiqueta").value;
   const grupoFecha = document.getElementById("grupoFecha");
   const campoFecha = document.getElementById("campoFechaAgregado");
@@ -910,6 +942,7 @@ document.getElementById("guardarBtn").addEventListener("click", async ()=>{
     etiqueta:etiqueta,
     agotado:document.getElementById("campoAgotado").checked,
     domicilio_gratis:document.getElementById("campoDomicilio").checked,
+    regalo_navideno:document.getElementById("campoRegalo").checked,
     imagen:imagenActual,
   };
 
