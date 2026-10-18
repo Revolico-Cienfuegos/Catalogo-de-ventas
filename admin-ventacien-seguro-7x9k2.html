@@ -53,6 +53,19 @@ button{cursor:pointer;font-family:inherit;}
 .acciones-github input{flex:1;min-width:140px;border:1.5px solid var(--linea);border-radius:6px;padding:8px 10px;font-size:13px;}
 .acciones-github .btn{width:auto;padding:8px 18px;}
 
+/* ===== PANEL TASAS DE CAMBIO ===== */
+.tasas-panel{background:#fff;border:1.5px solid var(--dorado);border-radius:10px;padding:14px;margin-bottom:16px;}
+.tasas-titulo{font-size:13px;font-weight:800;color:var(--azul);margin-bottom:10px;display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.04em;}
+.tasas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:10px;}
+.tasa-item{display:flex;flex-direction:column;gap:3px;}
+.tasa-item label{font-size:10.5px;font-weight:700;color:var(--suave);text-transform:uppercase;letter-spacing:.04em;}
+.tasa-item input{border:1.5px solid var(--linea);border-radius:6px;padding:7px 9px;font-size:14px;font-family:inherit;font-weight:700;color:var(--azul);background:#fff;width:100%;}
+.tasa-item input:focus{outline:none;border-color:var(--azul);}
+.tasa-item input[readonly]{background:var(--crema2);color:var(--suave);cursor:not-allowed;}
+.tasas-btns{display:flex;flex-wrap:wrap;gap:8px;}
+.tasas-btns .btn{width:auto;padding:8px 14px;font-size:12px;}
+.tasas-help{font-size:11px;color:var(--suave);margin-top:8px;line-height:1.5;}
+
 .cat-select{width:100%;border:1.5px solid var(--linea);border-radius:8px;padding:10px 12px;font-size:13.5px;font-family:inherit;background:#fff;color:var(--texto);margin-bottom:16px;}
 .buscador-admin{width:100%;border:1.5px solid var(--linea);border-radius:8px;padding:10px 12px;font-size:13.5px;font-family:inherit;background:#fff;color:var(--texto);margin-bottom:12px;}
 .buscador-admin:focus{outline:none;border-color:var(--azul);}
@@ -147,20 +160,40 @@ button{cursor:pointer;font-family:inherit;}
 
     <div class="stats" id="stats"></div>
 
+    <!-- TASAS DE CAMBIO -->
+    <div class="tasas-panel">
+      <div class="tasas-titulo">💱 Tasas de cambio (afectan los precios de la tienda)</div>
+      <div class="tasas-grid">
+        <div class="tasa-item"><label>USD (base)</label><input type="number" id="tasaUSD" value="1" step="0.01" readonly></div>
+        <div class="tasa-item"><label>MN (CUP)</label><input type="number" id="tasaMN" value="810" step="1"></div>
+        <div class="tasa-item"><label>Transferencia</label><input type="number" id="tasaTransferencia" value="825" step="1"></div>
+        <div class="tasa-item"><label>Zelle</label><input type="number" id="tasaZelle" value="1.05" step="0.01"></div>
+        <div class="tasa-item"><label>Tarjeta</label><input type="number" id="tasaTarjeta" value="1.1" step="0.01"></div>
+        <div class="tasa-item"><label>Euro</label><input type="number" id="tasaEuro" value="0.90" step="0.01"></div>
+      </div>
+      <div class="tasas-btns">
+        <button class="btn btn-azul" id="guardarTasasBtn">💾 Guardar (local)</button>
+        <button class="btn btn-verde" id="publicarTasasBtn">🚀 Publicar en GitHub</button>
+        <button class="btn btn-dorado" id="descargarTasasBtn">⬇ Descargar tasas.json</button>
+      </div>
+      <div class="tasas-help">💡 El <strong>USD</strong> siempre es 1 (es la moneda base). Los demás valores son el multiplicador desde USD. Ej: si MN = 810, un producto de 10 USD se mostrará como <code>8,100 MN</code>.</div>
+    </div>
+
     <div class="acciones-github" id="gitConfig">
       <input type="text" id="gitRepo" placeholder="usuario/repo (ej: revolico-cienfuegos/Catalogo-de-ventas)" style="flex:2;">
       <input type="password" id="gitToken" placeholder="Token de GitHub (clásico)" style="flex:2;">
       <button class="btn btn-azul" id="guardarGitConfig" style="width:auto;padding:8px 18px;">💾 Guardar</button>
-      <button class="btn btn-verde" id="publicarGitBtn" style="width:auto;padding:8px 18px;">🚀 Publicar en GitHub</button>
+      <button class="btn btn-verde" id="publicarGitBtn" style="width:auto;padding:8px 18px;">🚀 Publicar productos</button>
     </div>
 
     <div class="aviso">
       <strong>⚠️ Sincronización:</strong> Los productos que ves aquí están guardados en tu navegador (<code>localStorage</code>). <br>
-      ✅ <strong>NUEVO:</strong> Al guardar un producto con foto nueva, la imagen se subirá automáticamente a GitHub (si has configurado token y repositorio).<br>
+      ✅ Al guardar un producto con foto nueva, la imagen se subirá automáticamente a GitHub (si has configurado token y repositorio).<br>
+      <strong>💱 TASAS:</strong> Edita los valores del panel de arriba y pulsa <strong>🚀 Publicar en GitHub</strong> para que la tienda use las nuevas tasas. También puedes descargar <code>tasas.json</code> y subirlo manualmente.<br>
       <strong>💡 REBAJAS:</strong> Rellena <code>Precio original</code> para activar la rebaja (badge -X% rojo y sección "Ofertas del día").<br>
       <strong>⏱️ REBAJAS CON TIEMPO:</strong> La rebaja dura <strong>7 días</strong> desde la <code>Fecha de inicio de la rebaja</code>. Pasado ese tiempo, se quita automáticamente.<br>
       <strong>🆕 NUEVO:</strong> El campo <code>fecha_agregado</code> controla cuándo se quita el badge "Nuevo" (7 días después).<br>
-      <strong>🎅 GORRO NAVIDEÑO:</strong> Cada producto tiene un checkbox propio para activar/desactivar la cinta verde y el gorro de regalo (independiente del precio).
+      <strong>🎅 GORRO NAVIDEÑO:</strong> Cada producto tiene un checkbox propio para activar/desactivar la cinta verde y el gorro de regalo.
     </div>
 
     <div class="acciones-top">
@@ -298,8 +331,19 @@ button{cursor:pointer;font-family:inherit;}
 const PASS = "V3nt4C13nFueg0s2026!";
 const LS = "vc_admin_productos";
 const LS_GIT = "vc_admin_git";
+const LS_TASAS = "vc_admin_tasas";
 const UMBRAL_REGALO_USD = 20;
-const DIAS_REBAJA = 7;   // ← duración de la rebaja en días
+const DIAS_REBAJA = 7;
+
+// Tasas por defecto (deben coincidir con las del index)
+const TASAS_DEFAULT = {
+  USD: 1,
+  MN: 810,
+  Transferencia: 825,
+  Zelle: 1.05,
+  Tarjeta: 1.1,
+  Euro: 0.90
+};
 
 const CATS = [
   {id:"electricidad",nombre:"Electricidad y Protección",ico:"⚡"},
@@ -324,15 +368,12 @@ function catNombre(id){ return CATS.find(c=>c.id===id)?.nombre||id; }
 function catIco(id){ return CATS.find(c=>c.id===id)?.ico||"📦"; }
 function fmt(p,m){ return p?`${p} ${m||""}`.trim():""; }
 
-// ── REBAJA CON EXPIRACIÓN A LOS 7 DÍAS ──
-// Devuelve true si hay precio_original > precio Y la rebaja aún está vigente
 function tieneDescuento(p){
   if (!p) return false;
   const po = parseFloat(p.precio_original);
   const pf = parseFloat(p.precio);
   const baseOk = !isNaN(po) && !isNaN(pf) && po > pf && po > 0;
   if (!baseOk) return false;
-  // Si no tiene fecha_rebaja, se considera rebaja "de siempre" (compatibilidad con productos viejos)
   if (!p.fecha_rebaja) return true;
   const fecha = new Date(p.fecha_rebaja);
   if (isNaN(fecha.getTime())) return true;
@@ -343,7 +384,6 @@ function tieneDescuento(p){
   return diasTranscurridos < DIAS_REBAJA;
 }
 
-// ¿Tiene rebaja "en bruto" (aunque esté vencida)?
 function tieneRebajaBruta(p){
   if (!p) return false;
   const po = parseFloat(p.precio_original);
@@ -351,7 +391,6 @@ function tieneRebajaBruta(p){
   return !isNaN(po) && !isNaN(pf) && po > pf && po > 0;
 }
 
-// Días restantes de la rebaja (o null si no hay rebaja o no aplica)
 function diasRestantesRebaja(p){
   if (!tieneRebajaBruta(p)) return null;
   if (!p.fecha_rebaja) return null;
@@ -371,7 +410,6 @@ function porcentajeDescuento(p){
   return Math.round(((po - pf) / po) * 100);
 }
 
-// ── REGALO NAVIDEÑO ──
 function tieneRegalo(p){
   if (!p) return false;
   if (p.regalo_navideno === true || p.regalo_navideno === "true") return true;
@@ -430,12 +468,104 @@ function login(){
     document.getElementById("panel").style.display="block";
     cargar();
     cargarConfigGit();
+    cargarTasasAdmin();
   } else {
     errEl.innerHTML = "❌ Contraseña incorrecta.<br><small style='color:#6b6050;'>Revisa mayúsculas, números (1 vs l, 0 vs O) y el signo <b>!</b> al final. Sin espacios.</small>";
     passInput.focus();
     passInput.select();
   }
 }
+
+// ============================================================
+//  TASAS DE CAMBIO (ADMIN)
+// ============================================================
+function leerInputsTasas(){
+  return {
+    USD: 1,
+    MN: parseFloat(document.getElementById("tasaMN").value) || TASAS_DEFAULT.MN,
+    Transferencia: parseFloat(document.getElementById("tasaTransferencia").value) || TASAS_DEFAULT.Transferencia,
+    Zelle: parseFloat(document.getElementById("tasaZelle").value) || TASAS_DEFAULT.Zelle,
+    Tarjeta: parseFloat(document.getElementById("tasaTarjeta").value) || TASAS_DEFAULT.Tarjeta,
+    Euro: parseFloat(document.getElementById("tasaEuro").value) || TASAS_DEFAULT.Euro,
+  };
+}
+
+function rellenarInputsTasas(tasas){
+  document.getElementById("tasaUSD").value = 1;
+  document.getElementById("tasaMN").value = tasas.MN;
+  document.getElementById("tasaTransferencia").value = tasas.Transferencia;
+  document.getElementById("tasaZelle").value = tasas.Zelle;
+  document.getElementById("tasaTarjeta").value = tasas.Tarjeta;
+  document.getElementById("tasaEuro").value = tasas.Euro;
+}
+
+async function cargarTasasAdmin(){
+  let tasas = { ...TASAS_DEFAULT };
+  // 1) Intentar servidor
+  try {
+    const res = await fetch("tasas.json?_="+Date.now(), { cache: "no-store" });
+    if (res.ok) {
+      const data = await res.json();
+      if (data && typeof data === "object") {
+        tasas = { ...TASAS_DEFAULT, ...data, USD: 1 };
+      }
+    }
+  } catch(e){ /* fallback */ }
+  // 2) Fallback localStorage
+  if (!tasas.MN || tasas.MN === TASAS_DEFAULT.MN) {
+    try {
+      const local = localStorage.getItem(LS_TASAS);
+      if (local) {
+        const data = JSON.parse(local);
+        if (data && typeof data === "object") {
+          tasas = { ...TASAS_DEFAULT, ...data, USD: 1 };
+        }
+      }
+    } catch(_) {}
+  }
+  rellenarInputsTasas(tasas);
+  localStorage.setItem(LS_TASAS, JSON.stringify(tasas));
+  console.log("💱 Tasas cargadas en admin:", tasas);
+}
+
+document.getElementById("guardarTasasBtn").addEventListener("click", ()=>{
+  const tasas = leerInputsTasas();
+  localStorage.setItem(LS_TASAS, JSON.stringify(tasas));
+  mostrarToast("✅ Tasas guardadas en local", "#1a8a4a");
+});
+
+document.getElementById("publicarTasasBtn").addEventListener("click", async ()=>{
+  const {repo, token} = obtenerConfigGit();
+  if(!repo || !token){
+    mostrarToast("❌ Configura primero el repositorio y el token de GitHub", "#c0392b");
+    return;
+  }
+  const tasas = leerInputsTasas();
+  const btn = document.getElementById("publicarTasasBtn");
+  btn.textContent = "⏳ Publicando...";
+  btn.disabled = true;
+  try {
+    const contenido = JSON.stringify(tasas, null, 2);
+    const sha = await obtenerSHAArchivo(repo, token, "tasas.json");
+    await actualizarArchivoEnRepo(repo, token, "tasas.json", contenido, sha);
+    localStorage.setItem(LS_TASAS, JSON.stringify(tasas));
+    mostrarToast("✅ Tasas publicadas en GitHub correctamente", "#1a8a4a");
+  } catch(err) {
+    mostrarToast("❌ Error: " + err.message, "#c0392b");
+  } finally {
+    btn.textContent = "🚀 Publicar en GitHub";
+    btn.disabled = false;
+  }
+});
+
+document.getElementById("descargarTasasBtn").addEventListener("click", ()=>{
+  const tasas = leerInputsTasas();
+  const blob = new Blob([JSON.stringify(tasas, null, 2)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a"); a.href = url; a.download = "tasas.json";
+  document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+  mostrarToast("✅ tasas.json descargado · súbelo a GitHub", "#1a3a5c");
+});
 
 // ── CONFIGURACIÓN GITHUB ──
 function cargarConfigGit(){
@@ -513,7 +643,45 @@ async function subirImagenAGitHub(repo, token, nombreArchivo, blobImagen){
   return true;
 }
 
-// ── PUBLICAR EN GITHUB ──
+// ── GITHUB: helpers genéricos ──
+async function obtenerSHAArchivo(repo, token, nombreArchivo){
+  const url = `https://api.github.com/repos/${repo}/contents/${nombreArchivo}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `token ${token}`,
+      Accept: "application/vnd.github.v3+json"
+    }
+  });
+  if(res.status === 404) return null;
+  if(!res.ok) throw new Error(`Error al obtener SHA de ${nombreArchivo}: ${res.status} ${res.statusText}`);
+  const data = await res.json();
+  return data.sha;
+}
+
+async function actualizarArchivoEnRepo(repo, token, nombreArchivo, contenido, sha){
+  const url = `https://api.github.com/repos/${repo}/contents/${nombreArchivo}`;
+  const body = {
+    message: `Actualización de ${nombreArchivo} desde panel admin VENTACIEN`,
+    content: btoa(unescape(encodeURIComponent(contenido))),
+    sha: sha || undefined
+  };
+  const res = await fetch(url, {
+    method: "PUT",
+    headers: {
+      Authorization: `token ${token}`,
+      "Content-Type": "application/json",
+      Accept: "application/vnd.github.v3+json"
+    },
+    body: JSON.stringify(body)
+  });
+  if(!res.ok){
+    const err = await res.json();
+    throw new Error(err.message || `HTTP ${res.status}`);
+  }
+  return true;
+}
+
+// ── PUBLICAR PRODUCTOS ──
 document.getElementById("publicarGitBtn").addEventListener("click", async ()=>{
   const {repo, token} = obtenerConfigGit();
   if(!repo || !token){
@@ -544,53 +712,16 @@ document.getElementById("publicarGitBtn").addEventListener("click", async ()=>{
 
     mostrarToast("⏳ Publicando productos.json...", "#1a3a5c");
     const contenido = JSON.stringify(productos, null, 2);
-    const sha = await obtenerSHA(repo, token);
-    await actualizarArchivo(repo, token, contenido, sha);
+    const sha = await obtenerSHAArchivo(repo, token, "productos.json");
+    await actualizarArchivoEnRepo(repo, token, "productos.json", contenido, sha);
     mostrarToast("✅ Productos publicados en GitHub correctamente", "#1a8a4a");
   } catch(err){
     mostrarToast("❌ Error: "+err.message, "#c0392b");
   } finally {
-    btn.textContent = "🚀 Publicar en GitHub";
+    btn.textContent = "🚀 Publicar productos";
     btn.disabled = false;
   }
 });
-
-async function obtenerSHA(repo, token){
-  const url = `https://api.github.com/repos/${repo}/contents/productos.json`;
-  const res = await fetch(url, {
-    headers: {
-      Authorization: `token ${token}`,
-      Accept: "application/vnd.github.v3+json"
-    }
-  });
-  if(res.status === 404) return null;
-  if(!res.ok) throw new Error(`Error al obtener SHA: ${res.status} ${res.statusText}`);
-  const data = await res.json();
-  return data.sha;
-}
-
-async function actualizarArchivo(repo, token, contenido, sha){
-  const url = `https://api.github.com/repos/${repo}/contents/productos.json`;
-  const body = {
-    message: "Actualización automática desde el panel admin VENTACIEN",
-    content: btoa(unescape(encodeURIComponent(contenido))),
-    sha: sha || undefined
-  };
-  const res = await fetch(url, {
-    method: "PUT",
-    headers: {
-      Authorization: `token ${token}`,
-      "Content-Type": "application/json",
-      Accept: "application/vnd.github.v3+json"
-    },
-    body: JSON.stringify(body)
-  });
-  if(!res.ok){
-    const err = await res.json();
-    throw new Error(err.message || `HTTP ${res.status}`);
-  }
-  return true;
-}
 
 // ── DATOS ──
 function cargar(){
@@ -757,13 +888,11 @@ function abrirForm(p){
   document.getElementById("campoAgotado").checked=p?!!p.agotado:false;
   document.getElementById("campoDomicilio").checked=p? (p.domicilio_gratis !== false) : true;
 
-  // 🎅 Regalo navideño
   let regaloChecked;
   if (p) {
-    if (typeof p.regalo_navideno === "boolean") {
-      regaloChecked = p.regalo_navideno;
-    } else if (p.regalo_navideno === "true") { regaloChecked = true; }
-    else if (p.regalo_navideno === "false") { regaloChecked = false; }
+    if (typeof p.regalo_navideno === "boolean") regaloChecked = p.regalo_navideno;
+    else if (p.regalo_navideno === "true") regaloChecked = true;
+    else if (p.regalo_navideno === "false") regaloChecked = false;
     else {
       const pr = parseFloat(p.precio);
       regaloChecked = !isNaN(pr) && pr > UMBRAL_REGALO_USD;
@@ -773,7 +902,6 @@ function abrirForm(p){
   }
   document.getElementById("campoRegalo").checked = regaloChecked;
 
-  // 📅 Etiqueta nuevo
   const etiquetaSel = document.getElementById("campoEtiqueta").value;
   const grupoFecha = document.getElementById("grupoFecha");
   const campoFecha = document.getElementById("campoFechaAgregado");
@@ -785,7 +913,6 @@ function abrirForm(p){
     campoFecha.value = p && p.fecha_agregado ? p.fecha_agregado : "";
   }
 
-  // 📅 Rebaja con fecha
   const grupoFechaRebaja = document.getElementById("grupoFechaRebaja");
   const campoFechaRebaja = document.getElementById("campoFechaRebaja");
   if (p && tieneRebajaBruta(p)) {
@@ -821,7 +948,6 @@ function actualizarPicker(src){
   }
 }
 
-// ── VISTA PREVIA EN VIVO ──
 function actualizarPreview(){
   const nombre = document.getElementById("campoNombre").value.trim() || "Nombre del producto";
   const precio = document.getElementById("campoPrecio").value.trim();
@@ -838,7 +964,6 @@ function actualizarPreview(){
   const card = document.getElementById("previewCard");
   const precioEl = document.getElementById("previewPrecio");
 
-  // Mostrar / ocultar el grupo de fecha de rebaja según si hay rebaja
   const grupoFechaRebaja = document.getElementById("grupoFechaRebaja");
   const campoFechaRebaja = document.getElementById("campoFechaRebaja");
   if (desc) {
@@ -1020,7 +1145,6 @@ document.getElementById("guardarBtn").addEventListener("click", async ()=>{
   const hayRebaja = precioOrigStr && !isNaN(poNum) && !isNaN(pNum) && poNum > pNum;
   if(hayRebaja){
     datos.precio_original = precioOrigStr;
-    // 📅 Fecha de inicio de la rebaja: si no hay, se rellena con hoy
     datos.fecha_rebaja = fechaRebajaInput || hoyISO();
   }
 
