@@ -92,6 +92,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Breaker-DC2P-32A-13usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
@@ -105,6 +106,7 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Breaker-DC2P-63A-16usd.jpg",
     "fecha_agregado": "2026-10-17"
   },
@@ -312,7 +314,7 @@
     "nombre": "🔥 Olla eléctrica multifuncional 2 L marca VENEZIA 🔥",
     "precio": "55",
     "moneda": "USD",
-    "descripcion": "✅ MARCA: VENEZIA\n✅ COLOR: NEGRO , BLANCO , VERDE \n✅ Potencia de 500-900W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
+    "descripcion": "✅ MARCA: VENEZIA\n✅ COLOR: BLANCO Y VERDE \n✅ Potencia de 500-900W\n✅ Antiadherentes\n✅ Son ideales para ECOFLOW y paneles solares\n✅ Tienen un alto ahorro de energía\n🛡️ Garantía 3 días",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
@@ -328,7 +330,7 @@
     "moneda": "USD",
     "descripcion": "✅ Sirve para inducción\n✅ Incluye plato de cocinar al vapor\n🛡️ Garantía 7 días",
     "imagen": "imagenes/Olla-presion-32usd.jpg",
-    "agotado": false
+    "agotado": true
   },
   {
     "id": "p_1783049829894",
@@ -380,13 +382,16 @@
     "id": "p_1783050113677",
     "categoria": "audio",
     "nombre": "🔥 Soporte de TV de 26''-55'' marca Voltage 🔥",
-    "precio": "20",
+    "precio": "18",
     "moneda": "USD",
     "descripcion": "✅ Capacidad máxima 50 kg\n✅ Material Acero laminado en frío\n🛡️ Garantía no tiene es nuevo en caja",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Soporte-26-55-25usd.jpg"
+    "regalo_navideno": false,
+    "imagen": "imagenes/Soporte-26-55-25usd.jpg",
+    "precio_original": "20",
+    "fecha_rebaja": "2026-10-17"
   },
   {
     "id": "p_1783048291308",
@@ -422,7 +427,7 @@
     "id": "p_1783048566252",
     "categoria": "herramientas",
     "nombre": "🔥 Pesa digital de plato marca SACO 🔥",
-    "precio": "70",
+    "precio": "60",
     "moneda": "USD",
     "descripcion": "✅ Hasta 40 KG\n✅ Mide en kg y lb\n✅ Tiene baterías recargables\n✅ Pantalla a ambos lados para que el cliente también pueda ver\n✅ Nuevas en caja\n🛡️ Garantía de 72 horas solo la batería, todo lo demás debe revisarlo al momento de la entrega",
     "etiqueta": "nuevo",
@@ -430,6 +435,8 @@
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Pesa-plato-60usd.jpg",
+    "precio_original": "70",
+    "fecha_rebaja": "2026-10-21",
     "fecha_agregado": "2026-10-04"
   },
   {
@@ -582,14 +589,16 @@
     "id": "p_1783911438490",
     "categoria": "electrodomesticos",
     "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONAL 1.2 L 450W🔥",
-    "precio": "30",
+    "precio": "28",
     "moneda": "USD",
     "descripcion": "✅ COLOR: ROJO Y VIOLETA\n✅ POTENCIA: 450W\n✅ ANTIADHERENTES \n✅ SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n\n🛡️ Garantia 3 días",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
-    "imagen": "imagenes/OLLA-ELECTRICA-45usd.jpg"
+    "imagen": "imagenes/OLLA-ELECTRICA-45usd.jpg",
+    "precio_original": "30",
+    "fecha_rebaja": "2026-10-21"
   },
   {
     "id": "p_1783912295687",
@@ -717,13 +726,16 @@
     "id": "p_1784910023878",
     "categoria": "herramientas",
     "nombre": "🔥Pesa digital de cocina 5 kg marca SACO 🔥",
-    "precio": "12",
+    "precio": "10",
     "moneda": "USD",
     "descripcion": "✅Batería lleva 2 pilas AAA\n✅Alta presión \n✅ Pesa hasta 5000g\n✅ Da el peso en gramos y onzas\n✅ Ideal para quien hace dieta pesa la comida, quien va al gimnasio y para cocinar comida o reposteria\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Pesa-cocina-15usd.jpg"
+    "regalo_navideno": false,
+    "imagen": "imagenes/Pesa-cocina-15usd.jpg",
+    "precio_original": "12",
+    "fecha_rebaja": "2026-10-21"
   },
   {
     "id": "p_1784910119478",
@@ -741,13 +753,16 @@
     "id": "p_1784910349742",
     "categoria": "electricidad",
     "nombre": "🔥Interruptor de cuchilla 2P-63A marca Voltage🔥",
-    "precio": "20",
+    "precio": "16",
     "moneda": "USD",
     "descripcion": "✅600V\n✅100% cobre\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Interruptor-cuchilla-12usd.jpg",
+    "precio_original": "20",
+    "fecha_rebaja": "2026-10-21",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -793,14 +808,16 @@
     "id": "p_1784910839188",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC2P-20A🔥",
-    "precio": "18",
+    "precio": "15",
     "moneda": "USD",
-    "descripcion": "✅ Caja de 6 a 15 USD cada pieza\n🛡️Garantía no tiene es nuevo en caja",
+    "descripcion": "✅ Caja de 6 a 12 USD cada pieza\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Breaker-2P-125A-15usd.jpg",
-    "precio_original": "20",
+    "precio_original": "18",
+    "fecha_rebaja": "2026-10-21",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -955,14 +972,16 @@
     "id": "p_1785684699434",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC2P-125A🔥",
-    "precio": "20",
+    "precio": "18",
     "moneda": "USD",
     "descripcion": "✅ Caja de 6 a 15 USD cada unidad\n🛡️Garantía no tiene",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "imagenes/Breaker-DC2P-125A-20usd.jpg"
+    "imagen": "imagenes/Breaker-DC2P-125A-20usd.jpg",
+    "precio_original": "20",
+    "fecha_rebaja": "2026-10-21"
   },
   {
     "id": "p_1785684862363",
@@ -1320,13 +1339,14 @@
   {
     "id": "p_1788012231930",
     "categoria": "electricidad",
-    "nombre": "🔥Supresor de picos eléctricos de corriente directa🔥",
+    "nombre": "🔥Supresor de picos eléctricos o SPD de corriente alterna AC 275V🔥",
     "precio": "15",
     "moneda": "USD",
-    "descripcion": "✅Tipo AC SPD\n✅Voltaje 275V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n🛡️Garantía no tiene",
+    "descripcion": "✅Tipo AC SPD\n✅Voltaje 275V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n✅Precio por cantidad 11 USD (Compra mínima 10 unidades)\n🛡️Garantía no tiene",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Supresor-picos-15usd.jpg"
   },
   {
@@ -1346,13 +1366,14 @@
   {
     "id": "p_1788012704097",
     "categoria": "electricidad",
-    "nombre": "🔥Supresor de picos eléctricos de corriente directa DC 500V🔥",
+    "nombre": "🔥Supresor de picos eléctricos o SPD de corriente directa DC 500V🔥",
     "precio": "15",
     "moneda": "USD",
-    "descripcion": "✅Tipo DC SPD\n✅Voltaje 500V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n🛡️Garantía no tiene",
+    "descripcion": "✅Tipo DC SPD\n✅Voltaje 500V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n✅ Precio por cantidad 13 USD (Compra mínima 10 unidades)\n🛡️Garantía no tiene",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Supresor-picos-15usd-2.jpg"
   },
   {
@@ -1669,8 +1690,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Breaker-32A-12usd.jpg",
     "precio_original": "20",
+    "fecha_rebaja": "2026-10-17",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -1695,7 +1718,7 @@
     "etiqueta": "mas_vendido",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": false,
+    "regalo_navideno": true,
     "imagen": "imagenes/Combo-Bateria-520usd.jpg",
     "precio_original": "520",
     "fecha_rebaja": "2026-10-18"
@@ -1987,28 +2010,32 @@
     "id": "p_1791399155285",
     "categoria": "electricidad",
     "nombre": "🔥Interruptor de cuchilla 3P-63A marca SACO 🔥",
-    "precio": "20",
+    "precio": "18",
     "moneda": "USD",
     "descripcion": "✅120V/240V\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Interruptor-cuchilla-24usd.jpg",
-    "precio_original": "24",
+    "precio_original": "20",
+    "fecha_rebaja": "2026-10-21",
     "fecha_agregado": "2026-10-07"
   },
   {
     "id": "p_1791399269693",
     "categoria": "electricidad",
     "nombre": "🔥Interruptor de cuchilla 3P-63A marca PROEFIX🔥",
-    "precio": "20",
+    "precio": "18",
     "moneda": "USD",
     "descripcion": "✅120V/240V\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Interruptor-cuchilla-24usd-2.jpg",
-    "precio_original": "24",
+    "precio_original": "20",
+    "fecha_rebaja": "2026-10-21",
     "fecha_agregado": "2026-10-07"
   },
   {
@@ -2137,13 +2164,16 @@
     "id": "p_1792206407962",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC2P-25A🔥",
-    "precio": "18",
+    "precio": "15",
     "moneda": "USD",
-    "descripcion": "✅  Caja de 6 a 15 USD cada pieza\n🛡️Garantía no tiene",
+    "descripcion": "✅  Caja de 6 a 12 USD cada pieza\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Breaker-DC2P-25A-18usd.jpg",
+    "precio_original": "18",
+    "fecha_rebaja": "2026-10-21",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2219,13 +2249,16 @@
     "id": "p_1792208869741",
     "categoria": "electricidad",
     "nombre": "🔥Interruptor de cuchilla 2P-63A marca SACO🔥",
-    "precio": "18",
+    "precio": "14",
     "moneda": "USD",
     "descripcion": "✅  120V/240V\n🛡️Garantía no tiene",
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Interruptor-cuchilla-18usd.jpg",
+    "precio_original": "18",
+    "fecha_rebaja": "2026-10-21",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2244,7 +2277,7 @@
     "id": "p_1792209354374",
     "categoria": "miscelaneos",
     "nombre": "🔥Alarma para paneles solares y casas con mando 🔥",
-    "precio": "35",
+    "precio": "30",
     "moneda": "USD",
     "descripcion": "✅ Carga mediante panel solar y por cable USB \n✅  Sensor de movimiento \n✅  Ángulo de detección 125°\n✅  Distancia de detección 5 a 8 metros\n✅ Ideal para paneles solares, casas, negocios, patios y almacenes\n🛡️Garantía 3 días",
     "etiqueta": "nuevo",
@@ -2252,6 +2285,8 @@
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Alarma-paneles-35usd.jpg",
+    "precio_original": "35",
+    "fecha_rebaja": "2026-10-21",
     "fecha_agregado": "2026-10-17"
   }
 ]
