@@ -1851,7 +1851,7 @@
     "id": "p_1791000972312",
     "categoria": "ecoflow",
     "nombre": "🔥 EcoFlow DELTA 3 Clásica 🔥",
-    "precio": "630",
+    "precio": "600",
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1024 Wh\n✅ Potencia de 1800 W y pico de 3600 W\n✅ Salida de electricidad de 110 V\n✅ Ideal para electrodomésticos básicos del hogar\n✅ Permite alimentar refrigeradores, TV, ventiladores, equipos portátiles y dispositivos USB\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
@@ -1860,14 +1860,14 @@
     "regalo_navideno": false,
     "imagen": "imagenes/EcoFlow-DELTA-650usd.jpg",
     "precio_original": "650",
-    "fecha_rebaja": "2026-10-18",
+    "fecha_rebaja": "2026-10-23",
     "fecha_agregado": "2026-10-03"
   },
   {
     "id": "p_1791001089163",
     "categoria": "ecoflow",
     "nombre": "🔥 Jackery Explorer 1000 V2 🔥",
-    "precio": "600",
+    "precio": "580",
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1070 Wh\n✅ Potencia de 1500 W y pico de 3000 W\n✅ Salidas AC, DC, USB y USB-C\n✅ Entrada para panel solar\n✅ Salida de 110 V para electrodomésticos\n✅ Batería LiFePO4 de larga duración\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
@@ -1875,8 +1875,8 @@
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Jackery-Explorer-650usd.jpg",
-    "precio_original": "650",
-    "fecha_rebaja": "2026-10-18",
+    "precio_original": "600",
+    "fecha_rebaja": "2026-10-23",
     "fecha_agregado": "2026-10-03"
   },
   {
@@ -1913,7 +1913,7 @@
     "id": "p_1791001383363",
     "categoria": "ecoflow",
     "nombre": "🔥 EcoFlow DELTA Pro 3 🔥",
-    "precio": "2850",
+    "precio": "2800",
     "moneda": "USD",
     "descripcion": "✅ Capacidad de batería de 4096 Wh\n✅ Potencia continua de 4000 W y pico de 8000 W\n✅ Salidas AC de 120 V / 240 V\n✅ Entrada solar de hasta 2600 W\n✅ Batería LiFePO4 de larga vida útil\n✅ Expandible hasta 48 kWh\n✅ Carga rápida mediante AC + solar\n✅ Ideal para hogar, negocios, trabajo y emergencias\n🛡️ Garantía 15 días",
     "etiqueta": "nuevo",
@@ -1921,9 +1921,9 @@
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/EcoFlow-DELTA-2900usd.jpg",
-    "precio_original": "2900",
+    "precio_original": "2850",
     "fecha_rebaja": "2026-10-18",
-    "fecha_agregado": "2026-10-03"
+    "fecha_agregado": "2026-10-23"
   },
   {
     "id": "p_1791001488310",
