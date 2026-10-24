@@ -220,14 +220,16 @@
     "id": "p_1783048565298",
     "categoria": "solar",
     "nombre": "🔥 Cable de carga solar para ECOFLOW XT60i a MC4 🔥",
-    "precio": "18",
+    "precio": "15",
     "moneda": "USD",
     "descripcion": "✅ Se conecta del ECOFLOW a los cables de paneles solares\n✅ Longitud 30cm\n✅ Material del núcleo cobre puro\n✅ Calibre 10AWG, 6mm²\n✅ Corriente continua 30A y pico de 60A\n🛡️ Garantía no tien",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Cable-carga-20usd.jpg",
-    "precio_original": "20"
+    "precio_original": "18",
+    "fecha_rebaja": "2026-10-21"
   },
   {
     "id": "p_1783048674424",
@@ -1359,8 +1361,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Conector-MC4-15usd.jpg",
     "precio_original": "10",
+    "fecha_rebaja": "2026-10-23",
     "fecha_agregado": "2026-10-01"
   },
   {
