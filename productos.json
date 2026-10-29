@@ -1549,10 +1549,12 @@
     "precio": "18",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Alicate-crimpado-18usd.jpg"
+    "regalo_navideno": false,
+    "imagen": "imagenes/Alicate-crimpado-18usd.jpg",
+    "fecha_agregado": "2026-10-29"
   },
   {
     "id": "p_1788186567319",
@@ -1703,10 +1705,12 @@
     "precio": "15",
     "moneda": "USD",
     "descripcion": "✅Duración aproximada 5 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "imagen": "imagenes/Audifonos-inalambricos-15usd-2.jpg"
+    "regalo_navideno": false,
+    "imagen": "imagenes/Audifonos-inalambricos-15usd-2.jpg",
+    "fecha_agregado": "2026-10-29"
   },
   {
     "id": "p_1788630474590",
