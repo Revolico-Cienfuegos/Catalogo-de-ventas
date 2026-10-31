@@ -17,7 +17,7 @@
     "moneda": "USD",
     "descripcion": "✅ Duración de carga 5 horas aproximadamente\n✅ Baterías de litio 2400 mAh\n✅ Panel solar para cargar\n✅ Varios niveles de luz\n✅ Funciona como powerbank\n✅ Tiene soporte, para engancharla e imanes\n✅ Incluye cable USB para cargarla, Dimensiones 10x10 cm\n🛡️ Garantía 72 horas\n🚚 ¡DOMICILIO GRATIS en la ciudad de Cienfuegos!",
     "imagen": "imagenes/Lampara-recargable-10usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783022691062",
@@ -56,7 +56,7 @@
     "moneda": "USD",
     "descripcion": "🛡️ Garantía 72 horas",
     "imagen": "imagenes/Protectores-voltaje-9usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783046660589",
@@ -66,7 +66,7 @@
     "moneda": "USD",
     "descripcion": "🛡️ Garantía 72 horas",
     "imagen": "imagenes/Protectores-voltaje-10usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783046977069",
@@ -227,7 +227,7 @@
     "moneda": "USD",
     "descripcion": "✅ Se conecta del ECOFLOW a los cables de paneles solares\n✅ Longitud 30cm\n✅ Material del núcleo cobre puro\n✅ Calibre 10AWG, 6mm²\n✅ Corriente continua 30A y pico de 60A\n✅ Incluye pareja de conectores MC4 de regalo\n✅ Precio por cantidad 10 USD (Compra mínima 5 unidades)\n🛡️ Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Cable-carga-20usd.jpg",
@@ -242,7 +242,7 @@
     "moneda": "USD",
     "descripcion": "✅ Voltaje de salida 5V, 9V y 12V\n✅ Entrada USB 5V\n✅Precio por cantidad 2.5 (Compra mínima 10 unidades)\n🛡️ Garantía se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Cable-conectar-5usd.jpg"
@@ -250,12 +250,12 @@
   {
     "id": "p_1783048795130",
     "categoria": "moviles",
-    "nombre": "🔥 Powerbank o Cargador portátil de 20000 mAh  DY56r 🔥",
+    "nombre": "🔥 Powerbank o Cargador portátil de 20000 mAh  DY56 🔥",
     "precio": "24",
     "moneda": "USD",
     "descripcion": "✅ Cables integrados iPhone, tipo C, V8 y tipo A\n✅ 2 puertos de salida USB\n✅ Entrada tipo C y V8\n✅ Linterna\n🛡️ Garantía 72 horas, solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Powerbank-Cargador-26usd.jpg",
@@ -296,7 +296,7 @@
     "moneda": "USD",
     "descripcion": "✅ 2 Salidas: 1 USB y 1 Tipo C\n✅ Incluye 2 cables: uno Tipo C - Tipo C y otro USB - V8\n🛡️ Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Cargador-carga-10usd.jpg"
@@ -400,7 +400,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad máxima 50 kg\n✅ Material Acero laminado en frío\n🛡️ Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Soporte-26-55-25usd.jpg",
@@ -425,7 +425,7 @@
     "moneda": "USD",
     "descripcion": "✅ 32 tonos de timbre\n✅ Batería 23A de 12V que puede durar 1 año con 20 pulsaciones por día o más si se utiliza menos\n✅ La parte que va afuera de la casa es de pilas y la de adentro que suena se conecta a un toma corriente de 110V (no es recargable)\n🛡️ Garantía no tiene es nuevo y se deja probado",
     "imagen": "imagenes/Timbre-inalambrico-7usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783048415900",
@@ -471,7 +471,7 @@
     "moneda": "USD",
     "descripcion": "✅ Batería de litio\n🛡️ Garantía no tiene es nuevo y se deja probado",
     "imagen": "imagenes/Mascara-Soldar-15usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783048825412",
@@ -481,7 +481,7 @@
     "moneda": "USD",
     "descripcion": "✅ Incluye pilas de repuesto\n✅ Ideal para poner en disco de freno de motos o triciclos\n🛡️ Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Candado-alarma-12usd.jpg"
   },
@@ -493,7 +493,7 @@
     "moneda": "USD",
     "descripcion": "✅ Duración de carga 5 horas aproximadamente\n✅ Baterías de litio 10000 mAh\n✅ Panel solar para cargar\n✅ 5 niveles de luz a seleccionar\n✅ Funciona como powerbank\n✅ Tiene soporte ajustable y para engancharla\n✅ Incluye cable USB para cargarla\n✅ Dimensiones 17x15 cm\n🛡️ Garantía 72 horas",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Lampara-recargable-20usd.jpg"
@@ -506,7 +506,7 @@
     "moneda": "USD",
     "descripcion": "✅ Duración de carga de 6 a 7 horas aproximadamente\n✅ Baterías de litio\n✅ Panel solar para cargar\n✅ Linterna de un lado\n✅ Funciona como powerbank\n✅ Dimensiones 15x11 cm\n🛡️ Garantía 72 horas, solo cubre la batería",
     "imagen": "imagenes/Lampara-recargable-12usd.jpg",
-    "agotado": true
+    "agotado": false
   },
   {
     "id": "p_1783049545283",
@@ -516,7 +516,7 @@
     "moneda": "USD",
     "descripcion": "✅ Dimensiones 22 x 52 cm\n✅ No se conectan a la corriente, solo al panel\n✅ Cogen carga en el día y la batería dura toda la noche\n✅ Tienen sensor de movimiento\n✅ Tienen mando a distancia y pilas\n✅ Incluye panel solar\n✅ Se pueden poner a la intemperie, o sea se pueden mojar\n🛡️ Garantía 3 días",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Lampara-led-45usd.jpg"
@@ -603,7 +603,7 @@
     "moneda": "USD",
     "descripcion": "💵Precio 1.9 USD por metro\n✅100% cobre marca Q7\n✅Longitud 100 M\n✅Colores rojo y negro\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Rollo-Cable-170usd.jpg",
@@ -632,7 +632,7 @@
     "moneda": "USD",
     "descripcion": "✅ Incluye 7 manillas para que lo ajustes a cualquier estilo y nunca lo aburras\n✅ Aplicación para vincularlo con el teléfono\n✅ Color DORADO \n🛡️ Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/RELOJ-25usd.jpg"
@@ -722,7 +722,7 @@
     "moneda": "USD",
     "descripcion": "✅Duración aproximada 4 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Audifonos-inalambricos-15usd.jpg"
   },
@@ -734,7 +734,7 @@
     "moneda": "USD",
     "descripcion": "✅Duración 4 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Audifonos-inalambricos-12usd.jpg"
   },
   {
@@ -975,7 +975,7 @@
     "moneda": "USD",
     "descripcion": "🛡️ Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Juego-domino-18usd.jpg"
   },
   {
@@ -997,7 +997,7 @@
     "moneda": "USD",
     "descripcion": "✅2 puerto de salida USB \n✅Entrada de carga Tipo C\n🛡️Garantía 72 horas solo la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Powerbank-Cargador-10usd.jpg"
   },
   {
@@ -1052,7 +1052,7 @@
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone y tipo C,\n✅1 puertos de salida USB\n✅1 puerto de salida tipo C\n✅Puertos de entrada Tipo C\n✅Carga rápida\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Powerbank-20000-26usd.jpg",
@@ -1067,7 +1067,7 @@
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅1 puertos de salida USB\n✅Puertos de entrada Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Powerbank-20000-21usd.jpg",
@@ -1094,7 +1094,7 @@
     "moneda": "USD",
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 8\n✅Para tornillos 8-10\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Terminales-cable-15usd.jpg"
   },
   {
@@ -1105,7 +1105,7 @@
     "moneda": "USD",
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 6\n✅Para tornillos 8-16\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Terminales-cable-15usd-2.jpg"
   },
   {
@@ -1116,7 +1116,7 @@
     "moneda": "USD",
     "descripcion": "✅INCLUYE:\n✅Pinza MC4 \n✅Pinza pelar cables \n✅2 llaves safar y apretar MC4\n✅6 parejas MC4\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Maleta-instalar-35usd.jpg",
@@ -1132,7 +1132,7 @@
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Cargador-carga-6usd.jpg"
   },
   {
@@ -1158,7 +1158,7 @@
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W  \n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas, solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-50000-45usd.jpg"
   },
@@ -1310,7 +1310,7 @@
     "moneda": "USD",
     "descripcion": "✅2 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Color negro\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Powerbank-20000-20usd.jpg",
@@ -1325,7 +1325,7 @@
     "moneda": "USD",
     "descripcion": "✅Duración de carga 5 horas aproximadamente \n✅Baterías de litio 12000 mah\n✅Panel solar para cargar\n✅Varios niveles de luz\n✅Funciona como powerbank \n✅Tiene soporte, para engancharla e imanes\n✅Incluye cable USB para cargarla\n✅Dimensiones 21x17 cm\n🛡️Garantía 72 horas solo la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Lampara-recargable-22usd.jpg"
@@ -1338,7 +1338,7 @@
     "moneda": "USD",
     "descripcion": "✅Se puede utilizar con 2 pilas AA o alimentándolo por un puerto Tipo C\n✅Ideal para utilizar cuando no hay corriente\n✅Trae 2 boquillas\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Nebulizador-portatil-15usd.jpg"
   },
@@ -1507,7 +1507,7 @@
     "moneda": "USD",
     "descripcion": "✅100% cobre\n✅Longitud 50 metros\n✅10 AWG\n✅7.6 mm de diámetro\n✅Colores negro y rojo\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Rollo-Cable-130usd.jpg",
@@ -1523,7 +1523,7 @@
     "moneda": "USD",
     "descripcion": "✅Panel solar para cargarlo \n✅Lámpara\n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅Puertos de entrada Tipo C y V8\n✅Colores disponibles negro y blanco \n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Powerbank-60000-65usd.jpg",
@@ -1538,7 +1538,7 @@
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-50000-50usd.jpg"
   },
@@ -1550,7 +1550,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Alicate-crimpado-18usd.jpg",
@@ -1588,7 +1588,7 @@
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W\n✅Cables integrados iPhone y tipo C\n✅1 puerto de salida USB \n✅1 puerto de salida Tipo C\n✅Entrada de carga Tipo C\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Powerbank-20000-26usd-2.jpg",
@@ -1706,7 +1706,7 @@
     "moneda": "USD",
     "descripcion": "✅Duración aproximada 5 horas\n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Audifonos-inalambricos-15usd-2.jpg",
@@ -1732,7 +1732,7 @@
     "moneda": "USD",
     "descripcion": "✅ 100% cobre\n✅ Longitud máxima 50 metros\n✅ 10 AWG\n✅ 7.6 mm de diámetro\n✅ Colores rojo y negro\n✅ Mínimo comprar 10 metros en total, menos de 10 metros debe pasar por la tienda o pagar el domicilio\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Cable-electrico-2.9usd.jpg",
@@ -1777,7 +1777,7 @@
     "moneda": "USD",
     "descripcion": "✅Batería de 12V 100A LiFeP04 que dan 1280Wh a consumir\n✅Inversor de onda pura 12V de 2000W pico 4000W\n✅Cargador Inteligente de 12V 10A\n✅Ideal para poner luces, ventiladores, TV, refrigerador, nevera, lavadoras, etc.\n✅ Incluye 1 gorro de navidad de regalo \n🛡️Garantía no tiene todo es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Combo-Bateria-520usd.jpg",
@@ -1846,7 +1846,7 @@
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Cargador-carga-9usd.jpg",
@@ -1860,7 +1860,7 @@
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Cargador-carga-8usd.jpg",
@@ -1873,11 +1873,12 @@
     "precio": "7",
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
-    "etiqueta": "nuevo",
-    "agotado": true,
+    "etiqueta": "",
+    "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Cargador-carga-7usd.jpg",
-    "fecha_agregado": "2026-09-30"
+    "fecha_agregado": "2026-09-23"
   },
   {
     "id": "p_1790629957148",
@@ -1887,7 +1888,7 @@
     "moneda": "USD",
     "descripcion": "✅1 Salidas 1 USB\n✅Incluye 1 cable Tipo C o V8 a elección del cliente \n🛡️Garantía no tiene es nuevo y se deja probado",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Cargador-25W-5usd.jpg",
@@ -2053,7 +2054,7 @@
     "moneda": "USD",
     "descripcion": "✅Longitud máxima 100 metros\n✅Colores rojo y negro\n✅ Mínimo comprar por metros 10 metros en total pueden ser 5 y 5. Menos de 10 metros debe venir a la tienda o pagar el domicilio\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Cable-electrico-1.9usd.jpg",
@@ -2209,7 +2210,7 @@
     "moneda": "USD",
     "descripcion": "✅Color blanco\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Plumones-detectar-10usd.jpg",
@@ -2310,7 +2311,7 @@
     "moneda": "USD",
     "descripcion": "✅  9 pares de troqueles\n✅  Rango 4-70 mm²\n✅  (4-6-8-10-16-25-35-50-70)\n🛡️Garantía no tiene es nueva en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Pinza-Crimpadora-80usd.jpg",
@@ -2352,7 +2353,7 @@
     "moneda": "USD",
     "descripcion": "✅ Carga mediante panel solar y por cable USB \n✅ Sensor de movimiento \n✅ Ángulo de detección 125°\n✅ Distancia de detección 5 a 8 metros\n✅ Ideal para paneles solares, casas, negocios, patios y almacenes\n✅ Precio por cantidad 25 USD (Compra mínima 5 unidades)\n🛡️Garantía 3 días",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Alarma-paneles-35usd.jpg",
