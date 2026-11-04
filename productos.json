@@ -615,7 +615,7 @@
     "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONAL 1.2 L 450W🔥",
     "precio": "28",
     "moneda": "USD",
-    "descripcion": "✅ COLOR: ROJO Y VIOLETA\n✅ POTENCIA: 450W\n✅ ANTIADHERENTES \n✅ SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n\n🛡️ Garantia 3 días",
+    "descripcion": "✅ COLOR: VIOLETA\n✅ POTENCIA: 450W\n✅ ANTIADHERENTES \n✅ SON IDEALES PARA ECOFLOW Y PANELES,PUES TIENEN UN ALTO AHORRO DE ENERGÍA\n\n🛡️ Garantia 3 días",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -1158,7 +1158,7 @@
     "moneda": "USD",
     "descripcion": "✅Carga rápida 66W  \n✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas, solo cubre la batería",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-50000-45usd.jpg"
   },
@@ -1443,7 +1443,7 @@
     "moneda": "USD",
     "descripcion": "✅Sirven todo tipo de calderos \n✅Pantalla digital \n✅Control táctil \n✅Placa de cristal de alta calidad\n✅Potencia 1200 W\n🛡️Garantía 30 días",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Fogon-Infrarrojo-40usd.jpg"
@@ -1538,7 +1538,7 @@
     "moneda": "USD",
     "descripcion": "✅Cables integrados iPhone, tipo C, V8 y tipo A\n✅4 puertos de salida USB\n✅1 puerto salida Tipo C \n✅Puertos de entrada Tipo C y V8\n🛡️Garantía 72 horas , solo cubre la batería",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Powerbank-50000-50usd.jpg"
   },
@@ -2339,10 +2339,11 @@
     "nombre": "🔥OLLA ELÉCTRICA MULTIFUNCIONAL 1.2 L DE CABO RECTO🔥",
     "precio": "45",
     "moneda": "USD",
-    "descripcion": "✅ MARCA: VENEZIA\n✅  CAPACIDAD: 1.2 LT\n✅  COLOR: NEGRO , BLANCO , VERDE \n✅  POTENCIA: 300-600W\n✅  ANTIADHERENTES \n✅ SON IDEALES PARA ECOFLOW Y PANELES\n✅  TIENEN UN ALTO AHORRO DE ENERGÍA\n🛡️ Garantía 3 días",
+    "descripcion": "✅ MARCA: VENEZIA\n✅  CAPACIDAD: 1.2 LT\n✅  COLOR: BLANCO , VERDE \n✅  POTENCIA: 300-600W\n✅  ANTIADHERENTES \n✅ SON IDEALES PARA ECOFLOW Y PANELES\n✅  TIENEN UN ALTO AHORRO DE ENERGÍA\n🛡️ Garantía 3 días",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/OLLA-ELECTRICA-45usd-3.jpg"
   },
   {
