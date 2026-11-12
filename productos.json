@@ -1918,7 +1918,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1024 Wh\n✅ Potencia de 1800 W y pico de 3600 W\n✅ Salida de electricidad de 110 V\n✅ Ideal para electrodomésticos básicos del hogar\n✅ Permite alimentar refrigeradores, TV, ventiladores, equipos portátiles y dispositivos USB\n🛡️ Garantía 15 días",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/EcoFlow-DELTA-650usd.jpg",
