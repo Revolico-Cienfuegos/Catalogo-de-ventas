@@ -1378,7 +1378,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": false,
+    "regalo_navideno": true,
     "imagen": "imagenes/Inversor-corriente-250usd.jpg"
   },
   {
