@@ -1495,8 +1495,10 @@
     "etiqueta": "nuevo",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/OLLA-ELECTRICA-45usd-2.jpg",
     "precio_original": "45",
+    "fecha_rebaja": "2026-11-01",
     "fecha_agregado": "2026-10-01"
   },
   {
@@ -2252,7 +2254,7 @@
     "id": "p_1792207726139",
     "categoria": "electricidad",
     "nombre": "🔥Transfer automático AC o ATS tipo Mecánico 3P 110V 100A🔥",
-    "precio": "60",
+    "precio": "50",
     "moneda": "USD",
     "descripcion": "✅ Comnutacion automática de 3 fuentes\n✅ Operación manual de respaldo\n✅ Alta capacidad de corriente 100A\n✅ Diseño compacto y fácil de instalación\n✅ Indicadores de estado de operación\n✅ Material resistente y de larga vida útil\n✅ Por cantidad 5 unidades o más salen a 50 USD \n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
@@ -2260,6 +2262,8 @@
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Transfer-automatico-60usd-2.jpg",
+    "precio_original": "60",
+    "fecha_rebaja": "2026-11-09",
     "fecha_agregado": "2026-10-17"
   },
   {
