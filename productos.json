@@ -402,7 +402,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": false,
+    "regalo_navideno": true,
     "imagen": "imagenes/Soporte-26-55-25usd.jpg",
     "precio_original": "20",
     "fecha_rebaja": "2026-10-17"
@@ -1198,7 +1198,7 @@
     "moneda": "USD",
     "descripcion": "✅Se puede configurar para 110V\n✅Corriente ajustable 1A a 63A\n✅Bajo Voltaje ajustable 80V a 210V\n✅Alto voltaje ajustable 130V a 300V\n✅Tiempo de retardo1-999S\n✅Ideal para las instalaciones de sistemas fotovoltaico o para quien quiere proteger toda la casa de los altos y bajos voltajes\n✅Por cantidad 5 unidades en 15 USD\n🛡️Garantía no tiene es nuevo",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Protector-voltaje-25usd-2.jpg",
@@ -1454,7 +1454,7 @@
     "nombre": "🔥Caja protectora de corriente directa marca Q7🔥",
     "precio": "75",
     "moneda": "USD",
-    "descripcion": "✅Incluye caja 8 vías\n✅Breaker 25A DC\n✅Supresor de picos DC 600V\n✅Portafusibles con fusible 32A\n✅Expansiones para ponerlo a la pared\n✅Trae las conexiones listas para llegar y conectar\n🛡️Garantía no tiene es nuevo en caja",
+    "descripcion": "✅Incluye caja 8 vías\n✅Breaker 25A DC\n✅Supresor de picos DC 600V\n✅Portafusibles con fusible 32A\n✅Expansiones para ponerlo a la pared\n✅Trae las conexiones listas para llegar y conectar\n✅ Precio por cantidad 65 USD(Compra minima 5)\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -1469,7 +1469,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-15usd.jpg"
   },
@@ -2084,7 +2084,7 @@
     "moneda": "USD",
     "descripcion": "✅120V/240V\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Interruptor-cuchilla-24usd.jpg",
@@ -2365,5 +2365,19 @@
     "precio_original": "30",
     "fecha_rebaja": "2026-10-26",
     "fecha_agregado": "2026-10-17"
+  },
+  {
+    "id": "p_1794451843625",
+    "categoria": "miscelaneos",
+    "nombre": "🔥Gorro de navidad🔥",
+    "precio": "4",
+    "moneda": "USD",
+    "descripcion": "✅ Precio por cantidad 3 USD(Compra mínima 5 unidades )",
+    "etiqueta": "nuevo",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
+    "imagen": "",
+    "fecha_agregado": "2026-11-09"
   }
 ]
