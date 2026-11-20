@@ -72,17 +72,17 @@
     "id": "p_1783046977069",
     "categoria": "electricidad",
     "nombre": "🔥 Interruptor de cuchilla 3P-63A marca Voltaje 🔥",
-    "precio": "22",
+    "precio": "20",
     "moneda": "USD",
     "descripcion": "✅ 600V\n✅  100% cobre\n🛡️ Garantía no tiene",
-    "etiqueta": "",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Interruptor-cuchilla-20usd.jpg",
-    "precio_original": "26",
-    "fecha_rebaja": "2026-10-23",
-    "fecha_agregado": "2026-10-17"
+    "precio_original": "22",
+    "fecha_rebaja": "2026-11-20",
+    "fecha_agregado": "2026-11-20"
   },
   {
     "id": "p_1783047030164_32a",
@@ -102,10 +102,10 @@
     "id": "p_1783047030164_63a",
     "categoria": "electricidad",
     "nombre": "🔥 Breaker DC2P-63A 🔥",
-    "precio": "12",
+    "precio": "13",
     "moneda": "USD",
     "descripcion": "✅  Caja de 6 a 10 USD cada pieza\n🛡️ Garantía no tiene",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
@@ -128,16 +128,16 @@
     "id": "p_1783047395563",
     "categoria": "solar",
     "nombre": "🔥 Inversor de corriente de 24V a 110V 🔥",
-    "precio": "140",
+    "precio": "120",
     "moneda": "USD",
     "descripcion": "✅ Onda Pura\n✅ Potencia máxima 4000W / Potencia nominal 2000W\n✅ Levanta perfecto neveras, refrigerador, etc.\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Inversor-corriente-160usd.jpg",
-    "precio_original": "160",
-    "fecha_rebaja": "2026-10-18"
+    "precio_original": "140",
+    "fecha_rebaja": "2026-10-19"
   },
   {
     "id": "p_1783047515435",
@@ -159,8 +159,11 @@
     "precio": "135",
     "moneda": "USD",
     "descripcion": "✅Para motorina\n✅ Onda Pura\n✅ Ideal para quien tiene motorina o triciclos y quiere alimentar la casa\n✅ Levanta refrigerador, nevera, luces, TV, etc.\n🛡️ Garantía no tiene es nuevo en caja y se deja probado",
-    "imagen": "imagenes/Inversor-corriente-135usd.jpg",
-    "agotado": false
+    "etiqueta": "",
+    "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
+    "imagen": "imagenes/Inversor-corriente-135usd.jpg"
   },
   {
     "id": "p_1783048072042",
@@ -229,7 +232,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": false,
+    "regalo_navideno": true,
     "imagen": "imagenes/Cable-carga-20usd.jpg",
     "precio_original": "18",
     "fecha_rebaja": "2026-10-21"
@@ -257,7 +260,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Powerbank-Cargador-26usd.jpg",
     "precio_original": "26",
     "fecha_rebaja": "2026-10-26",
@@ -352,11 +355,11 @@
     "nombre": "🔥 Hornilla eléctrica marca SACO 🔥",
     "precio": "30",
     "moneda": "USD",
-    "descripcion": "✅ 2 resistencias\n✅ Potencia 2000 W\n✅ Color negro y blanco\n🛡️ Garantía 7 días",
+    "descripcion": "✅ 2 resistencias\n✅ Potencia 2000 W\n✅ Color blanco\n🛡️ Garantía 7 días",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Hornilla-electrica-35usd.jpg"
   },
   {
@@ -365,11 +368,11 @@
     "nombre": "🔥 Hornilla eléctrica de 1 resistencia marca Saco 🔥",
     "precio": "14",
     "moneda": "USD",
-    "descripcion": "✅ Potencia 1000W\n✅ Color blanco y negro\n🛡️ Garantía 7 días",
+    "descripcion": "✅ Potencia 1000W\n✅ Color blanco\n🛡️ Garantía 7 días",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Hornilla-electrica-16usd.jpg"
   },
   {
@@ -402,7 +405,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Soporte-26-55-25usd.jpg",
     "precio_original": "20",
     "fecha_rebaja": "2026-10-17"
@@ -445,7 +448,7 @@
     "moneda": "USD",
     "descripcion": "✅ Hasta 40 KG\n✅ Mide en kg y lb\n✅ Tiene baterías recargables\n✅ Pantalla a ambos lados para que el cliente también pueda ver\n✅ Nuevas en caja\n🛡️ Garantía de 72 horas solo la batería, todo lo demás debe revisarlo al momento de la entrega",
     "etiqueta": "nuevo",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": true,
     "imagen": "imagenes/Pesa-plato-60usd.jpg",
@@ -495,7 +498,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Lampara-recargable-20usd.jpg"
   },
   {
@@ -518,7 +521,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Lampara-led-45usd.jpg"
   },
   {
@@ -564,7 +567,7 @@
     "nombre": "🔥 Bocina con porta teléfono 🔥",
     "precio": "10",
     "moneda": "USD",
-    "descripcion": "✅ Pequeña pero muy potente y con mucha calidad de audio\n✅ Batería 800 mAh que dura 5 horas\n✅ Luces led de 5 modos y que se pueden apagar\n✅ Tamaño 87mm x 87mm\n✅ Potencia 5W con muy buena calidad de audio\n✅ Colores negro y rojo\n No tiene garantía, es nueva y se deja probada",
+    "descripcion": "✅ Pequeña pero muy potente y con mucha calidad de audio\n✅ Batería 800 mAh que dura 5 horas\n✅ Luces led de 5 modos y que se pueden apagar\n✅ Tamaño 87mm x 87mm\n✅ Potencia 5W con muy buena calidad de audio\n✅ Colores negro, verde, azul yrojo\n No tiene garantía, es nueva y se deja probada",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
@@ -699,6 +702,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Inversor-corriente-180usd.jpg"
   },
   {
@@ -839,16 +843,16 @@
     "id": "p_1784910839188",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC2P-20A🔥",
-    "precio": "15",
+    "precio": "13",
     "moneda": "USD",
-    "descripcion": "✅ Caja de 6 a 12 USD cada pieza\n🛡️Garantía no tiene es nuevo en caja",
+    "descripcion": "✅ Caja de 6 a 13 USD cada pieza\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Breaker-2P-125A-15usd.jpg",
-    "precio_original": "18",
-    "fecha_rebaja": "2026-10-21",
+    "precio_original": "15",
+    "fecha_rebaja": "2026-11-21",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -871,7 +875,7 @@
     "moneda": "USD",
     "descripcion": "✅Incluye manguerita larga con duchita pequeña.\n🛡️Garantía no tiene es nuevo",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "imagen": "imagenes/Ducha-Electrica-15usd.jpg"
   },
   {
@@ -995,25 +999,25 @@
     "nombre": "🔥Powerbank de 10000 mAh🔥",
     "precio": "10",
     "moneda": "USD",
-    "descripcion": "✅2 puerto de salida USB \n✅Entrada de carga Tipo C\n🛡️Garantía 72 horas solo la batería",
+    "descripcion": "✅2 puerto de salida USB \n✅Entrada de carga Tipo C\n✅ Colores negro y blanco\n🛡️Garantía 72 horas solo la batería",
     "etiqueta": "",
     "agotado": false,
+    "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Powerbank-Cargador-10usd.jpg"
   },
   {
     "id": "p_1785684699434",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC2P-125A🔥",
-    "precio": "18",
+    "precio": "20",
     "moneda": "USD",
-    "descripcion": "✅ Caja de 6 a 15 USD cada unidad\n🛡️Garantía no tiene",
+    "descripcion": "✅ Caja de 6 a 18 USD cada unidad\n🛡️Garantía no tiene",
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "imagenes/Breaker-DC2P-125A-20usd.jpg",
-    "precio_original": "20",
-    "fecha_rebaja": "2026-10-21"
+    "imagen": "imagenes/Breaker-DC2P-125A-20usd.jpg"
   },
   {
     "id": "p_1785684862363",
@@ -1039,7 +1043,7 @@
     "moneda": "USD",
     "descripcion": "✅Hasta 300 KG\n🛡️Garantía de deja probada",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Pesa-gancho-45usd.jpg"
@@ -1054,7 +1058,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Powerbank-20000-26usd.jpg",
     "precio_original": "26",
     "fecha_rebaja": "2026-10-29"
@@ -1069,7 +1073,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Powerbank-20000-21usd.jpg",
     "precio_original": "22",
     "fecha_rebaja": "2026-10-26"
@@ -1105,7 +1109,7 @@
     "moneda": "USD",
     "descripcion": "✅Son las que van a las baterías\n✅Cantidad 25 unidades\n✅Para cable 6\n✅Para tornillos 8-16\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "imagen": "imagenes/Terminales-cable-15usd-2.jpg"
   },
   {
@@ -1312,7 +1316,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Powerbank-20000-20usd.jpg",
     "precio_original": "20",
     "fecha_rebaja": "2026-10-18"
@@ -1327,7 +1331,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Lampara-recargable-22usd.jpg"
   },
   {
@@ -1365,7 +1369,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Inversor-corriente-220usd.jpg"
   },
   {
@@ -1378,7 +1382,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Inversor-corriente-250usd.jpg"
   },
   {
@@ -1469,7 +1473,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "imagen": "imagenes/Caja-distribucion-15usd.jpg"
   },
@@ -1548,7 +1552,7 @@
     "id": "p_1788186403037",
     "categoria": "herramientas",
     "nombre": "🔥Alicate de crimpado para conectores de paneles solares MC4🔥",
-    "precio": "18",
+    "precio": "16",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
     "etiqueta": "",
@@ -1556,6 +1560,8 @@
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Alicate-crimpado-18usd.jpg",
+    "precio_original": "18",
+    "fecha_rebaja": "2026-11-20",
     "fecha_agregado": "2026-10-29"
   },
   {
@@ -1592,7 +1598,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Powerbank-20000-26usd-2.jpg",
     "precio_original": "26",
     "fecha_rebaja": "2026-10-26"
@@ -1605,7 +1611,7 @@
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "nuevo",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Transfer-automatico-55usd-2.jpg",
@@ -1674,6 +1680,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Bocina-Bluetooth-55usd.jpg"
   },
   {
@@ -1686,6 +1693,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Bocina-Bluetooth-55usd-2.jpg"
   },
   {
@@ -1698,6 +1706,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
+    "regalo_navideno": true,
     "imagen": "imagenes/Bocina-Bluetooth-45usd-2.jpg"
   },
   {
@@ -1760,16 +1769,16 @@
   {
     "id": "p_1788721086392",
     "categoria": "electricidad",
-    "nombre": "🔥 Breaker AC 2P 63A",
-    "precio": "12",
+    "nombre": "🔥 Breaker AC 2P 63A 🔥",
+    "precio": "8",
     "moneda": "USD",
     "descripcion": "🛡️Garantía no tiene",
-    "etiqueta": "",
-    "agotado": true,
+    "etiqueta": "nuevo",
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Breaker-63A-12usd.jpg",
-    "fecha_agregado": "2026-10-15"
+    "fecha_agregado": "2026-11-20"
   },
   {
     "id": "p_1788918725840",
@@ -1781,7 +1790,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Combo-Bateria-520usd.jpg",
     "precio_original": "520",
     "fecha_rebaja": "2026-10-18"
@@ -1918,7 +1927,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1024 Wh\n✅ Potencia de 1800 W y pico de 3600 W\n✅ Salida de electricidad de 110 V\n✅ Ideal para electrodomésticos básicos del hogar\n✅ Permite alimentar refrigeradores, TV, ventiladores, equipos portátiles y dispositivos USB\n🛡️ Garantía 15 días",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/EcoFlow-DELTA-650usd.jpg",
@@ -1934,7 +1943,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1070 Wh\n✅ Potencia de 1500 W y pico de 3000 W\n✅ Salidas AC, DC, USB y USB-C\n✅ Entrada para panel solar\n✅ Salida de 110 V para electrodomésticos\n✅ Batería LiFePO4 de larga duración\n🛡️ Garantía 15 días",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Jackery-Explorer-650usd.jpg",
@@ -1950,7 +1959,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 345 Wh\n✅ Potencia de 500 W y pico de 1000 W\n✅ Salidas AC, DC, USB y USB-C\n✅ Ideal para celulares, laptops y pequeños electrodomésticos\n✅ Diseño compacto y fácil de transportar\n✅ Protección contra sobrecarga y cortocircuito\n🛡️ Garantía 15 días",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/APOWER-Estacion-350usd.jpg",
@@ -1980,7 +1989,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de batería de 4096 Wh\n✅ Potencia continua de 4000 W y pico de 8000 W\n✅ Salidas AC de 120 V / 240 V\n✅ Entrada solar de hasta 2600 W\n✅ Batería LiFePO4 de larga vida útil\n✅ Expandible hasta 48 kWh\n✅ Carga rápida mediante AC + solar\n✅ Ideal para hogar, negocios, trabajo y emergencias\n🛡️ Garantía 15 días",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/EcoFlow-DELTA-2900usd.jpg",
@@ -1996,7 +2005,7 @@
     "moneda": "USD",
     "descripcion": "✅ Capacidad de 1024 Wh\n✅ Batería adicional para ampliar la autonomía de tu estación de energía\n✅ Compatible con Delta 2, Delta 3, Delta 3 1500 y Delta 3 Plus\n✅ Tecnología de batería LFP para mayor seguridad y vida útil\n✅ Conexión Plug & Play, fácil de instalar\n✅ Diseño compacto y resistente\n🛡️ Garantía 15 días",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/EcoFlow-Extra-650usd.jpg",
@@ -2030,7 +2039,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Inversor-corriente-190usd.jpg",
     "fecha_agregado": "2026-10-07"
   },
@@ -2044,7 +2053,7 @@
     "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
-    "regalo_navideno": true,
+    "regalo_navideno": false,
     "imagen": "imagenes/Inversor-corriente-150usd.jpg",
     "fecha_agregado": "2026-10-07"
   },
@@ -2116,7 +2125,7 @@
     "moneda": "USD",
     "descripcion": "✅Capacidad 1280 Wh\n🛡️Garantía no tiene es nuevo en caja",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Bateria-128V-290usd.jpg",
@@ -2238,16 +2247,16 @@
     "id": "p_1792206407962",
     "categoria": "electricidad",
     "nombre": "🔥Breaker DC2P-25A🔥",
-    "precio": "15",
+    "precio": "13",
     "moneda": "USD",
-    "descripcion": "✅  Caja de 6 a 12 USD cada pieza\n🛡️Garantía no tiene",
-    "etiqueta": "nuevo",
+    "descripcion": "✅  Caja de 6 a 13 USD cada pieza\n🛡️Garantía no tiene",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Breaker-DC2P-25A-18usd.jpg",
-    "precio_original": "18",
-    "fecha_rebaja": "2026-10-21",
+    "precio_original": "15",
+    "fecha_rebaja": "2026-11-20",
     "fecha_agregado": "2026-10-17"
   },
   {
@@ -2315,7 +2324,7 @@
     "moneda": "USD",
     "descripcion": "✅  9 pares de troqueles\n✅  Rango 4-70 mm²\n✅  (4-6-8-10-16-25-35-50-70)\n🛡️Garantía no tiene es nueva en caja",
     "etiqueta": "",
-    "agotado": false,
+    "agotado": true,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Pinza-Crimpadora-80usd.jpg",
@@ -2373,7 +2382,7 @@
     "precio": "4",
     "moneda": "USD",
     "descripcion": "✅ Precio por cantidad 3 USD(Compra mínima 5 unidades )",
-    "etiqueta": "nuevo",
+    "etiqueta": "",
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
