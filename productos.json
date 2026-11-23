@@ -2384,7 +2384,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Gorro-navidad-4usd.jpg",
     "fecha_agregado": "2026-11-09"
   },
   {
@@ -2398,7 +2398,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/OLLA-ELECTRICA-65usd-2.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2412,7 +2412,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/OLLA-ELECTRICA-55usd.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2426,7 +2426,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Panel-solar-30usd.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2440,7 +2440,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Pesa-balanza-40usd.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2454,7 +2454,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Powerbank-40000-40usd-2.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2468,7 +2468,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Panel-solar-25usd.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2482,7 +2482,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Ventilador-recargable-65usd.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2496,7 +2496,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Breaker-AC2P-40A-8usd.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2510,7 +2510,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Transfer-automatico-60usd-3.jpg",
     "fecha_agregado": "2026-11-23"
   },
   {
@@ -2524,7 +2524,7 @@
     "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
-    "imagen": "",
+    "imagen": "imagenes/Pesa-plato-60usd-2.jpg",
     "fecha_agregado": "2026-11-23"
   }
 ]
