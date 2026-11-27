@@ -1393,7 +1393,7 @@
     "moneda": "USD",
     "descripcion": "✅Tipo AC SPD\n✅Voltaje 275V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n✅Precio por cantidad 11 USD (Compra mínima 10 unidades)\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Supresor-picos-15usd.jpg"
@@ -1422,7 +1422,7 @@
     "moneda": "USD",
     "descripcion": "✅Tipo DC SPD\n✅Voltaje 500V\n✅Capacidad de supresión: \n✅20 kA Nominal / 40 kA Máxima\n✅ Precio por cantidad 13 USD (Compra mínima 10 unidades)\n🛡️Garantía no tiene",
     "etiqueta": "",
-    "agotado": true,
+    "agotado": false,
     "domicilio_gratis": true,
     "regalo_navideno": false,
     "imagen": "imagenes/Supresor-picos-15usd-2.jpg"
